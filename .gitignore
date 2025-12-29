@@ -38,6 +38,11 @@ yarn.lock
 *.swp
 *.swo
 *~
+.project
+.settings/
+
+# Claude
+.claude/
 
 # OS
 .DS_Store
@@ -60,6 +65,7 @@ tmp/
 .parcel-cache/
 .next/
 .nuxt/
+.serena/
 
 # Build outputs
 target/
