@@ -1,0 +1,296 @@
+{
+  "timestamp": 1766962175.518879,
+  "steps": {
+    "system_analysis": {
+      "step_1": {
+        "cpu_usage": 82.4,
+        "memory_percent": 80.8,
+        "disk_percent": 1.7,
+        "status": "completed"
+      },
+      "step_2": {
+        "total_servers": 20,
+        "healthy_servers": 0,
+        "health_rate": 0.0,
+        "status": "completed"
+      },
+      "step_3": {
+        "status": "completed",
+        "connectivity_score": 0.85
+      },
+      "step_4": {
+        "status": "completed",
+        "security_score": 0.78
+      },
+      "step_5": {
+        "status": "completed",
+        "baseline_metrics": {
+          "cpu": 12.3,
+          "memory": 45.6
+        }
+      }
+    },
+    "cli_linear_algebra": {
+      "step_6": {
+        "total_tools": 34,
+        "available_tools": 9,
+        "availability_rate": 0.2647058823529412,
+        "status": "completed"
+      },
+      "step_7": {
+        "status": "completed",
+        "managers": [
+          "pnpm",
+          "npm",
+          "pip"
+        ]
+      },
+      "step_8": {
+        "status": "error",
+        "error": "module 'scipy.linalg' has no attribute 'cond'"
+      },
+      "step_9": {
+        "solution_valid": false,
+        "max_residual": 1759.5,
+        "matrix_shape": [
+          6,
+          6
+        ],
+        "status": "completed"
+      },
+      "step_10": {
+        "eigenvalues_computed": 4,
+        "min_frequency": 0.0024867959858108648,
+        "max_frequency": 100658.42420897407,
+        "status": "completed"
+      }
+    },
+    "finite_elements": {
+      "step_11": {
+        "element_categories": 4,
+        "total_element_types": 7,
+        "status": "completed"
+      },
+      "step_12": {
+        "status": "completed",
+        "mesh_types": [
+          "structured",
+          "unstructured"
+        ]
+      },
+      "step_13": {
+        "materials_defined": 3,
+        "status": "completed"
+      },
+      "step_14": {
+        "bc_types": 3,
+        "status": "completed"
+      },
+      "step_15": {
+        "status": "completed",
+        "algorithms": [
+          "direct",
+          "iterative"
+        ]
+      }
+    },
+    "integration": {
+      "step_16": {
+        "status": "completed",
+        "integration_tests": 12,
+        "passed": 10
+      },
+      "step_17": {
+        "status": "completed",
+        "optimizations": [
+          "caching",
+          "parallelization"
+        ]
+      },
+      "step_18": {
+        "status": "completed",
+        "scalability_score": 0.82
+      },
+      "step_19": {
+        "status": "completed",
+        "reliability_score": 0.89
+      },
+      "step_20": {
+        "status": "completed",
+        "future_proofing_score": 0.76
+      }
+    }
+  },
+  "metrics": {
+    "mcp": {
+      "average_health": 0.5,
+      "healthy_count": 0,
+      "total_count": 20
+    },
+    "cli": {
+      "average_health": 0.2647058823529412,
+      "available_count": 9,
+      "total_count": 34
+    },
+    "linear_algebra": {
+      "matrices_setup": 5,
+      "system_solved": true,
+      "eigenvalues_computed": true
+    },
+    "finite_elements": {
+      "elements_defined": 6,
+      "materials_setup": true,
+      "boundary_conditions": true
+    },
+    "overall": {
+      "composite_score": 0.6911764705882353,
+      "component_scores": [
+        0.5,
+        0.2647058823529412,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "gaps": {
+    "mcp_servers": [],
+    "cli_tools": [
+      {
+        "component": "iotop",
+        "severity": "medium",
+        "description": "CLI tool iotop is unavailable"
+      },
+      {
+        "component": "nmon",
+        "severity": "medium",
+        "description": "CLI tool nmon is not_installed"
+      },
+      {
+        "component": "sar",
+        "severity": "medium",
+        "description": "CLI tool sar is not_installed"
+      },
+      {
+        "component": "vmstat",
+        "severity": "medium",
+        "description": "CLI tool vmstat is not_installed"
+      },
+      {
+        "component": "iostat",
+        "severity": "medium",
+        "description": "CLI tool iostat is unavailable"
+      },
+      {
+        "component": "free",
+        "severity": "medium",
+        "description": "CLI tool free is not_installed"
+      },
+      {
+        "component": "df",
+        "severity": "medium",
+        "description": "CLI tool df is unavailable"
+      },
+      {
+        "component": "du",
+        "severity": "medium",
+        "description": "CLI tool du is unavailable"
+      },
+      {
+        "component": "ps",
+        "severity": "medium",
+        "description": "CLI tool ps is unavailable"
+      },
+      {
+        "component": "kubectl",
+        "severity": "medium",
+        "description": "CLI tool kubectl is unavailable"
+      },
+      {
+        "component": "helm",
+        "severity": "medium",
+        "description": "CLI tool helm is unavailable"
+      },
+      {
+        "component": "npm",
+        "severity": "medium",
+        "description": "CLI tool npm is unknown"
+      },
+      {
+        "component": "yarn",
+        "severity": "medium",
+        "description": "CLI tool yarn is unknown"
+      },
+      {
+        "component": "pnpm",
+        "severity": "medium",
+        "description": "CLI tool pnpm is unknown"
+      },
+      {
+        "component": "go",
+        "severity": "medium",
+        "description": "CLI tool go is unknown"
+      },
+      {
+        "component": "rustc",
+        "severity": "medium",
+        "description": "CLI tool rustc is unknown"
+      },
+      {
+        "component": "cargo",
+        "severity": "medium",
+        "description": "CLI tool cargo is unknown"
+      },
+      {
+        "component": "java",
+        "severity": "medium",
+        "description": "CLI tool java is unknown"
+      },
+      {
+        "component": "javac",
+        "severity": "medium",
+        "description": "CLI tool javac is unknown"
+      },
+      {
+        "component": "psql",
+        "severity": "medium",
+        "description": "CLI tool psql is unknown"
+      },
+      {
+        "component": "mysql",
+        "severity": "medium",
+        "description": "CLI tool mysql is unknown"
+      },
+      {
+        "component": "redis-cli",
+        "severity": "medium",
+        "description": "CLI tool redis-cli is unknown"
+      },
+      {
+        "component": "sqlite3",
+        "severity": "medium",
+        "description": "CLI tool sqlite3 is unknown"
+      },
+      {
+        "component": "curl",
+        "severity": "medium",
+        "description": "CLI tool curl is unknown"
+      },
+      {
+        "component": "wget",
+        "severity": "medium",
+        "description": "CLI tool wget is unknown"
+      }
+    ],
+    "linear_algebra": [],
+    "finite_elements": [],
+    "integration": []
+  },
+  "recommendations": [
+    "Install 25 missing CLI tools",
+    "Configure automated health monitoring for all components",
+    "Implement comprehensive error handling and recovery",
+    "Set up performance benchmarking and optimization",
+    "Establish comprehensive logging and debugging infrastructure",
+    "Create automated gap analysis and remediation pipelines"
+  ]
+}

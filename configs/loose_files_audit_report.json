@@ -1,0 +1,445 @@
+{
+  "timestamp": 1766954182.134024,
+  "user_root_audit": {
+    "directory": "${USER_HOME:-$HOME}",
+    "loose_files": [
+      {
+        "path": "${USER_HOME:-$HOME}/.zsh_history",
+        "name": ".zsh_history",
+        "size": 103,
+        "modified": 1766954178.404998,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      }
+    ],
+    "organized_files": [
+      "infra",
+      "docs",
+      "testing",
+      "scripts",
+      "api",
+      "data"
+    ],
+    "violations": [
+      "Loose file: .zsh_history"
+    ],
+    "total_violations": 1
+  },
+  "developer_audit": {
+    "directory": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}",
+    "loose_files": [
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/loose_files_audit_output.log",
+        "name": "loose_files_audit_output.log",
+        "size": 3003,
+        "modified": 1766954179.2696054,
+        "violation": "Loose file in root directory",
+        "recommended_location": "logs/"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.chezmoi.toml",
+        "name": ".chezmoi.toml",
+        "size": 1111,
+        "modified": 1766954127.1465423,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/ai-agency-use-cases.md",
+        "name": "ai-agency-use-cases.md",
+        "size": 6974,
+        "modified": 1766954174.0294044,
+        "violation": "Loose file in root directory",
+        "recommended_location": "docs/"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/pixi.toml",
+        "name": "pixi.toml",
+        "size": 3356,
+        "modified": 1766954110.820053,
+        "violation": "Loose file in root directory",
+        "recommended_location": "docs/ or appropriate subdirectory"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/setup-neo4j.sh",
+        "name": "setup-neo4j.sh",
+        "size": 2160,
+        "modified": 1766954173.095283,
+        "violation": "Loose file in root directory",
+        "recommended_location": "scripts/"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/network-proxy-setup.sh",
+        "name": "network-proxy-setup.sh",
+        "size": 1798,
+        "modified": 1766954174.036924,
+        "violation": "Loose file in root directory",
+        "recommended_location": "scripts/"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/audit_loose_files_fixed.py",
+        "name": "audit_loose_files_fixed.py",
+        "size": 13574,
+        "modified": 1766954180.3554935,
+        "violation": "Loose file in root directory",
+        "recommended_location": "scripts/"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.java-version",
+        "name": ".java-version",
+        "size": 9,
+        "modified": 1766954000.5974898,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.cursorrules",
+        "name": ".cursorrules",
+        "size": 3743,
+        "modified": 1766954078.8060453,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.java-config",
+        "name": ".java-config",
+        "size": 896,
+        "modified": 1766954070.4085221,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/phase1_pixi.toml",
+        "name": "phase1_pixi.toml",
+        "size": 1143,
+        "modified": 1766954127.1690693,
+        "violation": "Loose file in root directory",
+        "recommended_location": "docs/ or appropriate subdirectory"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.editorconfig",
+        "name": ".editorconfig",
+        "size": 790,
+        "modified": 1766954070.4085312,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.gitignore",
+        "name": ".gitignore",
+        "size": 1449,
+        "modified": 1766954000.6926184,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.env",
+        "name": ".env",
+        "size": 1935,
+        "modified": 1766952345.5173843,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/pixi_simple.toml",
+        "name": "pixi_simple.toml",
+        "size": 815,
+        "modified": 1766954127.1678007,
+        "violation": "Loose file in root directory",
+        "recommended_location": "docs/ or appropriate subdirectory"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.prettierrc",
+        "name": ".prettierrc",
+        "size": 125,
+        "modified": 1766954076.418633,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.gitattributes",
+        "name": ".gitattributes",
+        "size": 128,
+        "modified": 1766950743.6222427,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/setup-postgresql.sh",
+        "name": "setup-postgresql.sh",
+        "size": 1456,
+        "modified": 1766954172.7359498,
+        "violation": "Loose file in root directory",
+        "recommended_location": "scripts/"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/polyglot-integration-setup.sh",
+        "name": "polyglot-integration-setup.sh",
+        "size": 20734,
+        "modified": 1766954164.5985923,
+        "violation": "Loose file in root directory",
+        "recommended_location": "scripts/"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.eslintrc.js",
+        "name": ".eslintrc.js",
+        "size": 311,
+        "modified": 1766954076.4185843,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/pixi-comprehensive.toml",
+        "name": "pixi-comprehensive.toml",
+        "size": 2826,
+        "modified": 1766954110.8199267,
+        "violation": "Loose file in root directory",
+        "recommended_location": "docs/ or appropriate subdirectory"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/loose_files_audit_finite_element_analysis.sh",
+        "name": "loose_files_audit_finite_element_analysis.sh",
+        "size": 15884,
+        "modified": 1766954154.315875,
+        "violation": "Loose file in root directory",
+        "recommended_location": "scripts/"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/api-smoke-tests.sh",
+        "name": "api-smoke-tests.sh",
+        "size": 1397,
+        "modified": 1766954174.0329041,
+        "violation": "Loose file in root directory",
+        "recommended_location": "scripts/"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/gibson-cli-integration.sh",
+        "name": "gibson-cli-integration.sh",
+        "size": 1904,
+        "modified": 1766954174.0423288,
+        "violation": "Loose file in root directory",
+        "recommended_location": "scripts/"
+      },
+      {
+        "path": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.mise.toml",
+        "name": ".mise.toml",
+        "size": 268,
+        "modified": 1766954000.603216,
+        "violation": "Loose file in root directory",
+        "recommended_location": ".config/ or chezmoi managed"
+      }
+    ],
+    "organized_files": [
+      "infra",
+      "docs",
+      "testing",
+      "graphql",
+      "federation",
+      "configs",
+      "scripts",
+      "api",
+      "data"
+    ],
+    "violations": [
+      "Loose file: loose_files_audit_output.log",
+      "Loose file: .chezmoi.toml",
+      "Loose file: ai-agency-use-cases.md",
+      "Loose file: pixi.toml",
+      "Loose file: setup-neo4j.sh",
+      "Loose file: network-proxy-setup.sh",
+      "Loose file: audit_loose_files_fixed.py",
+      "Loose file: .java-version",
+      "Loose file: .cursorrules",
+      "Loose file: .java-config",
+      "Loose file: phase1_pixi.toml",
+      "Loose file: .editorconfig",
+      "Loose file: .gitignore",
+      "Loose file: .env",
+      "Loose file: pixi_simple.toml",
+      "Loose file: .prettierrc",
+      "Loose file: .gitattributes",
+      "Loose file: setup-postgresql.sh",
+      "Loose file: polyglot-integration-setup.sh",
+      "Loose file: .eslintrc.js",
+      "Loose file: pixi-comprehensive.toml",
+      "Loose file: loose_files_audit_finite_element_analysis.sh",
+      "Loose file: api-smoke-tests.sh",
+      "Loose file: gibson-cli-integration.sh",
+      "Loose file: .mise.toml"
+    ],
+    "total_violations": 25
+  },
+  "cursor_rules": {
+    "rule_files": [
+      "1password-integration.mdc"
+    ],
+    "compliance_issues": [],
+    "missing_directories": [],
+    "compliant": true
+  },
+  "git_hooks": {
+    "hooks_found": [],
+    "missing_hooks": [
+      "pre-commit",
+      "post-commit",
+      "pre-push",
+      "post-merge"
+    ],
+    "issues": [
+      "Missing event-driven hooks: pre-commit, post-commit, pre-push, post-merge",
+      "Git hooks missing MCP server integration",
+      "Git hooks missing Lefthook integration"
+    ],
+    "mcp_integration": false,
+    "lefthook_integration": false,
+    "event_driven": false
+  },
+  "reorganization_plan": {
+    "actions_required": [
+      "Move 26 loose files",
+      "Create 0 missing directories",
+      "Implement 4 Git hooks",
+      "Fix 0 rule violations"
+    ],
+    "files_to_move": [
+      {
+        "source": "${USER_HOME:-$HOME}/.zsh_history",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/loose_files_audit_output.log",
+        "destination": "logs/",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.chezmoi.toml",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/ai-agency-use-cases.md",
+        "destination": "docs/",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/pixi.toml",
+        "destination": "docs/ or appropriate subdirectory",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/setup-neo4j.sh",
+        "destination": "scripts/",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/network-proxy-setup.sh",
+        "destination": "scripts/",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/audit_loose_files_fixed.py",
+        "destination": "scripts/",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.java-version",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.cursorrules",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.java-config",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/phase1_pixi.toml",
+        "destination": "docs/ or appropriate subdirectory",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.editorconfig",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.gitignore",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.env",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/pixi_simple.toml",
+        "destination": "docs/ or appropriate subdirectory",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.prettierrc",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.gitattributes",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/setup-postgresql.sh",
+        "destination": "scripts/",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/polyglot-integration-setup.sh",
+        "destination": "scripts/",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.eslintrc.js",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/pixi-comprehensive.toml",
+        "destination": "docs/ or appropriate subdirectory",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/loose_files_audit_finite_element_analysis.sh",
+        "destination": "scripts/",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/api-smoke-tests.sh",
+        "destination": "scripts/",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/gibson-cli-integration.sh",
+        "destination": "scripts/",
+        "reason": "Loose file in root directory"
+      },
+      {
+        "source": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/.mise.toml",
+        "destination": ".config/ or chezmoi managed",
+        "reason": "Loose file in root directory"
+      }
+    ],
+    "directories_to_create": [],
+    "hooks_to_implement": [
+      "pre-commit",
+      "post-commit",
+      "pre-push",
+      "post-merge"
+    ],
+    "rules_to_enforce": []
+  }
+}

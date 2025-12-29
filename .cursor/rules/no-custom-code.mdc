@@ -1,0 +1,36 @@
+---
+description: Enforces vendor compliance by prohibiting custom implementations
+globs: *
+alwaysApply: true
+---
+
+# No Custom Code Rule
+
+## Core Principle
+**ZERO CUSTOM CODE**: All implementations must use vendor solutions, community libraries, or official SDKs
+
+## Prohibited Patterns
+- ❌ Custom React components
+- ❌ Custom hooks
+- ❌ Custom utilities
+- ❌ Custom configurations
+- ❌ Custom styling frameworks
+- ❌ Complex build setups
+- ❌ Custom business logic implementations
+- ❌ Custom UI components and designs
+- ❌ Custom database schemas and migrations
+- ❌ Custom API endpoints and services
+- ❌ Custom documentation and analysis
+
+## Required Vendor Solutions
+- ✅ Use only vendor-sourced libraries and tools
+- ✅ Import from approved vendor repositories
+- ✅ Use vendor CLI tools and SDKs
+- ✅ Implement vendor architectural patterns
+- ✅ Follow vendor documentation and best practices
+
+## Enforcement
+- Pre-commit hooks enforce these rules
+- CI/CD pipelines validate compliance
+- Code reviews check for violations
+- Automated tools prevent custom code commits

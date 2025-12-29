@@ -1,0 +1,1 @@
+Fixed Claude Code hook recursion by removing UserPromptSubmit hook from `~/.claude/settings.json` after logs showed exponential growth of hook ARGUMENTS with the hook’s own prompt text, causing "Failed to stringify hook UserPromptSubmit input" and recursive JSON errors. Backup created at `~/.claude/settings.json.bak-20251219025553`.

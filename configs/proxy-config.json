@@ -1,0 +1,45 @@
+{
+  "proxies": {
+    "http": {
+      "host": "127.0.0.1",
+      "port": 3128,
+      "auth": false
+    },
+    "https": {
+      "host": "127.0.0.1",
+      "port": 3128,
+      "auth": false
+    },
+    "socks5": {
+      "host": "127.0.0.1",
+      "port": 1080,
+      "auth": false
+    }
+  },
+  "rules": {
+    "direct": [
+      "localhost",
+      "127.0.0.1",
+      "*.local",
+      "10.0.0.0/8",
+      "172.16.0.0/12",
+      "192.168.0.0/16"
+    ],
+    "proxy": [
+      "*.api.github.com",
+      "*.anthropic.com",
+      "*.openai.com",
+      "*.huggingface.co",
+      "*.supabase.co",
+      "*.clerk.dev",
+      "*.neo4j.io",
+      "*.postgresql.org"
+    ]
+  },
+  "monitoring": {
+    "enabled": true,
+    "log_requests": true,
+    "log_responses": false,
+    "metrics_port": 9090
+  }
+}

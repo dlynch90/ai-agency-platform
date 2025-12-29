@@ -1,0 +1,1 @@
+After symlinking duplicates to SSOT, `task sprawl:audit` shows only one MCP config file remaining: `~/.config/mcp/mcp-ssot.json` (SSOT is clean). Stray MCP configs in verdent/gemini/aitk/obot/Skill_Seekers/mcp_unified are now symlinks to `~/.config/mcp/ssot.json`.

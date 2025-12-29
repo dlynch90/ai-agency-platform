@@ -1,0 +1,8 @@
+Online governance/requirements references gathered (Dec 21, 2025) for monorepo standardization:
+- Turborepo official docs: monorepo structure expects root package.json, lockfile, turbo.json, pnpm-workspace.yaml, and package.json in each package; recommends apps/ and packages/ directories; Turborepo does NOT support nested packages like apps/** or packages/** (avoid package.json at apps/a and apps/a/b). Source: https://turborepo.ai/docs/crafting-your-repository/structuring-a-repository
+- pnpm official docs: a workspace must have pnpm-workspace.yaml at repo root. Source: https://pnpm.io/next/workspaces/
+- Git submodules: .gitmodules maps path->URL; submodules track specific commits (not branches) and require explicit update. Sources: https://git-scm.com/docs/git-submodule/ and https://www.atlassian.com/git/tutorials/git-submodule
+- NIST SSDF (SP 800-218 v1.1) is final; practices grouped as Prepare Organization, Protect Software, Produce Well‑Secured Software, Respond to Vulnerabilities. Source: https://csrc.nist.gov/projects/ssdf and publication page https://www.nist.gov/publications/secure-software-development-framework-ssdf-version-11-recommendations-mitigating-risk
+- EO 14028 SBOM minimum elements categories: data fields, automation support, practices/processes; standard SBOM formats include SPDX, CycloneDX, SWID. Source: https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains-software-1
+- SLSA is a supply-chain security framework with tracks/levels; v1.2 is current and v1.0 introduced stable spec/levels. Source: https://slsa.dev/ (and spec pages)
+- CycloneDX is an SBOM standard (ECMA‑424) per CycloneDX site. Source: https://cyclonedx.org/

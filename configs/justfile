@@ -1,0 +1,172 @@
+# Unified Task Runner for Multi-Language Development
+# Using just - vendor solution for command running
+
+# Default environment setup
+default: setup-dev
+
+# Environment activation commands
+setup-dev: mise-setup pixi-setup java-setup
+
+# Tool version management
+mise-setup:
+    #!/usr/bin/env bash
+    echo "🔧 Setting up tool versions with mise..."
+    mise install
+    mise use python@3.14.2
+    mise use node@25.2.1
+    mise use java@21.0.5+11
+    mise use rust@1.92.0
+    echo "✅ Tool versions configured"
+
+# Python/FEA environment
+pixi-setup:
+    #!/usr/bin/env bash
+    echo "🐍 Setting up Python FEA environment..."
+    pixi install
+    pixi run start
+    echo "✅ FEA environment ready"
+
+# Java environment
+java-setup:
+    #!/usr/bin/env bash
+    echo "☕ Setting up Java environment..."
+    cd java-enterprise-golden-path && ./mvnw --version
+    echo "✅ Java environment ready"
+
+# Development workflows
+dev-fea: mise-setup pixi-setup
+    #!/usr/bin/env bash
+    echo "🔬 Starting FEA development environment..."
+    pixi run fea
+
+dev-ros: mise-setup
+    #!/usr/bin/env bash
+    echo "🤖 Starting ROS2 development environment..."
+    cd pixi-ros2 && pixi install && pixi run setup-dev
+
+dev-node: mise-setup
+    #!/usr/bin/env bash
+    echo "⚛️ Starting Node.js development environment..."
+    cd pixi-node && pixi install && pixi run setup
+
+dev-java: mise-setup java-setup
+    #!/usr/bin/env bash
+    echo "🏢 Starting Java enterprise development..."
+    cd java-enterprise-golden-path && ./mvnw clean compile
+
+# Quality checks
+quality: lint test
+
+lint:
+    #!/usr/bin/env bash
+    echo "🔍 Running linters..."
+    pixi run lint
+    cd pixi-node && pixi run lint
+    cd java-enterprise-golden-path && ./mvnw spotless:check
+    echo "✅ Linting complete"
+
+test:
+    #!/usr/bin/env bash
+    echo "🧪 Running tests..."
+    pixi run test
+    cd pixi-node && pixi run test
+    cd java-enterprise-golden-path && ./mvnw test
+    echo "✅ Testing complete"
+
+# Build commands
+build:
+    #!/usr/bin/env bash
+    echo "🔨 Building all projects..."
+    pixi run build
+    cd pixi-node && pixi run build
+    cd java-enterprise-golden-path && ./mvnw clean package -DskipTests
+    echo "✅ Build complete"
+
+# Clean commands
+clean:
+    #!/usr/bin/env bash
+    echo "🧹 Cleaning all environments..."
+    pixi run clean
+    cd pixi-node && pixi run clean
+    cd java-enterprise-golden-path && ./mvnw clean
+    rm -rf target/
+    echo "✅ Cleanup complete"
+
+# CI/CD simulation
+ci: quality build
+    #!/usr/bin/env bash
+    echo "🚀 Running CI pipeline..."
+    echo "✅ CI pipeline complete"
+
+# Environment information
+info:
+    #!/usr/bin/env bash
+    echo "📊 Environment Information:"
+    echo "=========================="
+    mise --version
+    echo ""
+    pixi --version
+    echo ""
+    java --version
+    echo ""
+    node --version
+    echo ""
+    python --version
+    echo ""
+    rustc --version
+
+# Help
+help:
+    #!/usr/bin/env bash
+    echo "🎯 Unified Development Environment"
+    echo "=================================="
+    echo ""
+    echo "Available commands:"
+    echo "  setup-dev      - Setup all development environments"
+    echo "  dev-fea        - Start FEA development"
+    echo "  dev-ros        - Start ROS2 development"
+    echo "  dev-node       - Start Node.js development"
+    echo "  dev-java       - Start Java enterprise development"
+    echo "  quality        - Run all quality checks"
+    echo "  build          - Build all projects"
+    echo "  clean          - Clean all environments"
+    echo "  ci             - Run CI pipeline"
+    echo "  info           - Show environment information"
+    echo ""
+    echo "Use 'just <command>' to run any command"
+# AGI Automation Commands
+agi-start: setup-dev
+    #!/usr/bin/env bash
+    echo "🤖 Starting AGI Environment..."
+    ./scripts/start-agi-environment.sh
+
+agi-stop:
+    #!/usr/bin/env bash
+    echo "🛑 Stopping AGI Environment..."
+    pkill -f "agi-orchestrator.py" || echo "AGI orchestrator not running"
+
+agi-status:
+    #!/usr/bin/env bash
+    echo "📊 AGI Environment Status:"
+    echo "=========================="
+    pgrep -f "agi-orchestrator.py" && echo "✅ AGI orchestrator running" || echo "❌ AGI orchestrator not running"
+    ./scripts/test-api-connectivity.sh
+
+agi-task task:
+    #!/usr/bin/env bash
+    echo "🎯 Running AGI task: {{task}}"
+    python3 scripts/agi/agi-orchestrator.py "{{task}"
+
+# Comprehensive system validation
+validate-all: validate-setup test-connectivity
+    #!/usr/bin/env bash
+    echo "🔍 Running comprehensive system validation..."
+    ./scripts/validate-environments.sh
+    ./scripts/test-api-connectivity.sh
+    echo "✅ System validation complete"
+
+# Environment connectivity tests
+test-connectivity:
+    #!/usr/bin/env bash
+    echo "🔗 Testing system connectivity..."
+    ./scripts/test-api-connectivity.sh

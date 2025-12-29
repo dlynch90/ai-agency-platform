@@ -1,0 +1,276 @@
+# AI Agency Platform - Vendor-Only Development Rules
+# ENFORCEMENT: These rules are MANDATORY. Violations will be blocked at commit.
+
+## CRITICAL: VENDOR-ONLY POLICY
+
+### Zero Custom Code Tolerance
+- ALL code must use vendor packages, official SDKs, or community libraries
+- NO custom wrappers around vendor tools (use vendor APIs directly)
+- NO shell script wrappers (use npm scripts or vendor CLIs)
+- NO custom utility functions that duplicate npm/pip package functionality
+- NO custom logging (use winston, pino, or vendor logging)
+- NO custom HTTP clients (use axios, got, or vendor SDKs)
+- NO custom database wrappers (use Prisma, vendor drivers directly)
+
+### Approved Vendor Stack (ONLY use these)
+| Category | Approved Vendors | PROHIBITED |
+|----------|------------------|------------|
+| Package Manager | pnpm, npm, pixi | yarn (legacy), custom installers |
+| Build System | Turborepo, Vite | custom build scripts, webpack configs |
+| ORM | Prisma | custom SQL, raw pg/mysql drivers |
+| Auth | Clerk, Supabase Auth | custom JWT, custom auth logic |
+| Secrets | 1Password CLI (op) | .env files with secrets, hardcoded |
+| Testing | Vitest, Playwright | Jest (deprecated), custom test runners |
+| Linting | ESLint, Prettier | custom linters, manual formatting |
+| Logging | winston, pino | console.log, custom loggers |
+| HTTP | axios, got, fetch | custom HTTP wrappers |
+| GraphQL | Apollo, Pothos | custom GraphQL resolvers |
+| State | Zustand, TanStack Query | Redux (deprecated), custom state |
+| UI | Radix, Tailwind CSS | custom CSS, custom components |
+| Monitoring | Prometheus, Grafana | custom metrics, custom dashboards |
+| CI/CD | GitHub Actions | custom CI scripts, Jenkins |
+| LLM | LiteLLM, LangChain | custom LLM wrappers |
+| MCP | @modelcontextprotocol/sdk | custom MCP implementations |
+
+### Hardcoded Paths - STRICTLY PROHIBITED
+- NEVER use absolute paths like `/Users/`, `/home/`, `/opt/`
+- ALWAYS use environment variables: `${DEVELOPER_DIR}`, `process.env.HOME`
+- Use Chezmoi templating for cross-platform paths
+
+### File Type Rules
+| Extension | Rule |
+|-----------|------|
+| `.sh` | PROHIBITED (use npm scripts) |
+| `.py` (standalone) | Must use click/typer CLI framework |
+| `.js` (utilities) | Must be in proper package with tests |
+| `.config.js` | Use cosmiconfig or package.json |
+
+## MONOREPO STRUCTURE (Turborepo)
+
+```
+/
+├── apps/                    # Deployable applications
+│   ├── web/                # Next.js frontend
+│   ├── api/                # Hono/Fastify backend
+│   └── admin/              # Admin dashboard
+├── packages/               # Shared packages
+│   ├── ui/                 # Shared UI components (Radix + Tailwind)
+│   ├── db/                 # Prisma client + schema
+│   ├── config/             # Shared configurations
+│   ├── utils/              # Shared utilities (use lodash instead of custom)
+│   └── types/              # Shared TypeScript types
+├── services/               # Microservices
+│   ├── auth/               # Auth service (Clerk integration)
+│   ├── ai/                 # AI/ML service (LiteLLM)
+│   ├── graph/              # GraphQL federation gateway
+│   └── workers/            # Background workers (Temporal)
+├── configs/                # Centralized configs
+│   ├── promptfoo/          # LLM evaluation
+│   └── deepeval/           # ML evaluation
+└── tests/                  # Integration/E2E tests
+```
+
+## 10 REAL-WORLD USE CASES (Ollama MCP + Multi-Tenant)
+
+### Use Case 1: E-Commerce Personalization
+- **Tenant**: Retail brands
+- **AI**: Product recommendations via Ollama embeddings
+- **Federation**: Products, Users, Orders subgraphs
+- **Vendor Stack**: Prisma + Qdrant + LiteLLM
+
+### Use Case 2: Healthcare Patient Triage
+- **Tenant**: Healthcare providers
+- **AI**: Symptom analysis via medical LLM
+- **Federation**: Patients, Providers, Appointments subgraphs
+- **Vendor Stack**: Prisma + Neo4j + Ollama HIPAA-compliant
+
+### Use Case 3: Financial Portfolio Optimization
+- **Tenant**: Investment firms
+- **AI**: Risk assessment, portfolio balancing
+- **Federation**: Accounts, Transactions, Analytics subgraphs
+- **Vendor Stack**: Prisma + TimescaleDB + LiteLLM
+
+### Use Case 4: Legal Document Analysis
+- **Tenant**: Law firms
+- **AI**: Contract review, clause extraction
+- **Federation**: Cases, Documents, Clients subgraphs
+- **Vendor Stack**: Prisma + Elasticsearch + Ollama
+
+### Use Case 5: Real Estate Valuation
+- **Tenant**: Real estate agencies
+- **AI**: Property value prediction, market analysis
+- **Federation**: Properties, Agents, Transactions subgraphs
+- **Vendor Stack**: Prisma + PostGIS + LiteLLM
+
+### Use Case 6: Educational Adaptive Learning
+- **Tenant**: EdTech platforms
+- **AI**: Learning path optimization, content recommendation
+- **Federation**: Students, Courses, Assessments subgraphs
+- **Vendor Stack**: Prisma + Redis + Ollama
+
+### Use Case 7: Manufacturing Quality Control
+- **Tenant**: Manufacturing companies
+- **AI**: Defect detection, predictive maintenance
+- **Federation**: Products, Sensors, Maintenance subgraphs
+- **Vendor Stack**: Prisma + InfluxDB + LiteLLM
+
+### Use Case 8: Customer Service Automation
+- **Tenant**: SaaS companies
+- **AI**: Ticket classification, response generation
+- **Federation**: Tickets, Customers, Knowledge subgraphs
+- **Vendor Stack**: Prisma + Qdrant + Ollama
+
+### Use Case 9: Supply Chain Optimization
+- **Tenant**: Logistics companies
+- **AI**: Route optimization, demand forecasting
+- **Federation**: Shipments, Inventory, Routes subgraphs
+- **Vendor Stack**: Prisma + Neo4j + LiteLLM
+
+### Use Case 10: HR Talent Matching
+- **Tenant**: Staffing agencies
+- **AI**: Resume parsing, candidate matching
+- **Federation**: Candidates, Jobs, Companies subgraphs
+- **Vendor Stack**: Prisma + Qdrant + Ollama
+
+## GRAPHQL FEDERATION (Apollo Federation v2)
+
+### Subgraph Requirements
+- Each subgraph is a separate service in `services/`
+- Use @apollo/subgraph for federation
+- Share types via `packages/types/`
+- Use Pothos for type-safe schema building
+
+### Gateway Requirements
+- Use @apollo/gateway for composition
+- Implement per-tenant routing
+- Use Redis for query caching
+
+## OPTUNA HYPERPARAMETERIZATION
+
+### Required for All AI Features
+```yaml
+hyperparameters:
+  model: [llama3.2, codellama, gpt-4o, claude-sonnet-4]
+  temperature: [0.0, 0.3, 0.7, 1.0]
+  top_p: [0.5, 0.9, 1.0]
+  max_tokens: [256, 512, 1024, 2048]
+objectives:
+  - maximize: accuracy
+  - minimize: latency_ms
+  - minimize: cost_per_1k
+```
+
+### MLflow Integration
+- Track all experiments in MLflow
+- Log parameters, metrics, artifacts
+- Use MLflow model registry for deployment
+
+## TDD REQUIREMENTS
+
+### Test Coverage Minimums
+- Unit tests: 80% coverage (required)
+- Integration tests: 60% coverage (required)
+- E2E tests: Critical paths only
+
+### Test Naming Convention
+```
+*.test.ts     → Unit tests (Vitest)
+*.spec.ts     → Integration tests (Vitest)
+*.e2e.ts      → E2E tests (Playwright)
+```
+
+### Test Location
+- Co-located with source: `src/feature/feature.test.ts`
+- Shared fixtures: `tests/fixtures/`
+
+## GOVERNANCE ENFORCEMENT
+
+### Pre-Commit Hooks (Lefthook)
+1. `lint` - ESLint check
+2. `typecheck` - TypeScript strict
+3. `format:check` - Prettier verify
+4. `vendor-audit` - Check for custom code violations
+5. `test:unit` - Run affected unit tests
+
+### CI Pipeline Requirements
+1. All tests pass
+2. No TypeScript errors
+3. No lint errors
+4. Vendor compliance score > 90%
+5. No custom wrappers detected
+
+### Blocking Patterns (Auto-Rejected)
+```regex
+# Hardcoded paths
+/Users/|/home/|/opt/|C:\\
+
+# Custom wrappers
+function.*wrapper|class.*Wrapper|.*Helper\.ts$
+
+# Deprecated patterns
+console\.log|require\(|module\.exports
+
+# Shell scripts in source
+#!/bin/bash|#!/bin/sh
+
+# Custom implementations of vendor features
+new Pool\(|createClient\(|new Redis\(
+```
+
+## SPRAWL PREVENTION
+
+### Single Source of Truth
+- ONE package.json at root (workspaces for packages)
+- ONE tsconfig.json at root (extends in packages)
+- ONE .env.example at root (no nested .env files)
+- ONE prisma/schema.prisma (multi-schema via @@map)
+
+### Forbidden Duplications
+- NO duplicate dependencies across packages
+- NO duplicate type definitions
+- NO duplicate configuration files
+- NO duplicate test utilities
+
+## COMMANDS CHEAT SHEET
+
+```bash
+# Development
+pnpm dev                    # Start all services
+pnpm build                  # Build all packages
+turbo run dev --filter=web  # Start specific app
+
+# Testing
+pnpm test                   # Run all tests
+pnpm test:tdd               # TDD watch mode
+pnpm test:e2e               # E2E tests
+
+# Database
+pnpm db:generate            # Generate Prisma client
+pnpm db:push                # Push schema changes
+pnpm db:studio              # Open Prisma Studio
+
+# Evaluation
+pnpm evaluate:promptfoo     # Run LLM evaluations
+pnpm evaluate:deepeval      # Run ML evaluations
+
+# Infrastructure
+pnpm infrastructure:up      # Start Docker services
+pnpm infrastructure:down    # Stop Docker services
+
+# Validation
+pnpm validate               # Full validation suite
+pnpm validate:vendor        # Vendor compliance check
+```
+
+## EXCEPTION PROCESS
+
+### No exceptions without:
+1. Written justification in ADR format
+2. Approval from architecture team
+3. Scheduled migration plan to vendor solution
+4. Monitoring for custom code usage
+
+### Temporary exceptions must include:
+- Expiration date
+- Migration ticket reference
+- Fallback vendor solution identified

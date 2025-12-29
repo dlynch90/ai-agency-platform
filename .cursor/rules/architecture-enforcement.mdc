@@ -1,0 +1,106 @@
+---
+description: Enforces monorepo structure, microservices, and event-driven patterns
+globs: *
+alwaysApply: true
+---
+
+# Architecture Enforcement Rules
+
+## Directory Structure Requirements
+- ✅ `/docs/` - All markdown documentation
+- ✅ `/logs/` - All log files and reports
+- ✅ `/testing/` - All tests and test suites
+- ✅ `/infra/` - All infrastructure, containers, Kubernetes
+- ✅ `/data/` - All databases, datasets, models
+- ✅ `/api/` - API definitions and implementations
+- ✅ `/graphql/` - GraphQL schemas and resolvers
+- ✅ `/federation/` - API federation configuration
+
+## File Organization Standards
+- ❌ No loose files in root directories
+- ❌ No hardcoded paths or values
+- ✅ All configurations parameterized
+- ✅ All variables and constants defined
+- ✅ Single source of truth (SSOT) for all resources
+- ✅ Registry and catalog systems for all assets
+
+## Vendor Technology Integration
+### Data Layer
+- ✅ PostgreSQL with vendor adapters
+- ✅ Neo4j for graph data
+- ✅ Supabase for backend services
+- ✅ Clerk for authentication
+
+### Orchestration Layer
+- ✅ Apache Kafka for event streaming
+- ✅ Temporal for workflow orchestration
+- ✅ N8N for workflow automation
+- ✅ LangChain/LangGraph for AI orchestration
+
+### Vendor Layer
+- ✅ Template libraries from approved vendors
+- ✅ RBAC implementations from vendors
+- ✅ Multitenant architecture from vendors
+
+### Infrastructure Layer
+- ✅ Use case scenarios from vendor documentation
+- ✅ Containerization with vendor tools
+- ✅ Atomic modularization patterns
+
+### Federation Layer
+- ✅ GraphQL federation with vendor tools
+- ✅ API gateway from approved vendors
+- ✅ Service mesh from vendor implementations
+
+### Authentication Layer
+- ✅ Vendor authentication providers
+- ✅ OAuth/OIDC from approved vendors
+
+### AI/ML Layer
+- ✅ Hugging Face for model management
+- ✅ Vendor ML pipelines and frameworks
+
+### Services Layer
+- ✅ Microservices architecture
+- ✅ Event-driven communication
+- ✅ CQRS pattern implementation
+
+### Documentation Layer
+- ✅ Vendor documentation tools
+- ✅ API documentation generators
+- ✅ Architecture documentation systems
+
+## Quality Enforcement
+### Functional Requirements
+- ✅ All features documented and tested
+- ✅ Performance requirements defined
+- ✅ Scalability requirements specified
+
+### Behavioral Layer
+- ✅ Tests and evaluations for all components
+- ✅ Monitoring and observability implemented
+- ✅ Error handling and recovery defined
+
+## Template and Boilerplate Standards
+- ✅ Cookiecutter-style project templates
+- ✅ Vendor-provided boilerplates only
+- ✅ Standardized project structure
+- ✅ Reproducible setup processes
+
+## Build and Deployment
+- ✅ Makefile/task/just files for automation
+- ✅ Vendor CI/CD pipelines
+- ✅ Infrastructure as Code (IaC)
+- ✅ Automated testing and validation
+
+## Security and Compliance
+- ✅ 1Password for secrets management
+- ✅ Vendor security scanning tools
+- ✅ Compliance automation scripts
+- ✅ Audit trails and logging
+
+## Performance and Monitoring
+- ✅ Real-time monitoring systems
+- ✅ Performance profiling tools
+- ✅ Automated alerting and response
+- ✅ Resource optimization algorithms

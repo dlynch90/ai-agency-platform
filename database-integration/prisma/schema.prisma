@@ -1,0 +1,345 @@
+// Database integration schema for AI Agency Applications
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// E-commerce Personalization Engine
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Personalization data
+  preferences Json?
+  browsingHistory ProductView[]
+
+  // Healthcare Patient Triage
+  patientProfile PatientProfile?
+
+  // Financial Portfolio
+  portfolio Portfolio?
+
+  // Education Platform
+  learningPath LearningPath?
+
+  @@map("users")
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  name        String
+  category    String
+  price       Float
+  description String?
+  createdAt   DateTime @default(now())
+
+  // Views and recommendations
+  views ProductView[]
+
+  @@map("products")
+}
+
+model ProductView {
+  id        String   @id @default(cuid())
+  userId    String
+  productId String
+  viewedAt  DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("product_views")
+}
+
+// Healthcare Patient Triage System
+model PatientProfile {
+  id             String   @id @default(cuid())
+  userId         String   @unique
+  medicalHistory Json?
+  currentSymptoms String?
+  priorityScore  Int?
+  triageStatus   String?  // "low", "medium", "high", "emergency"
+  lastAssessment DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("patient_profiles")
+}
+
+// Financial Portfolio Optimization
+model Portfolio {
+  id          String  @id @default(cuid())
+  userId      String  @unique
+  totalValue  Float   @default(0)
+  riskProfile String? // "conservative", "moderate", "aggressive"
+
+  holdings PortfolioHolding[]
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("portfolios")
+}
+
+model PortfolioHolding {
+  id         String @id @default(cuid())
+  portfolioId String
+  symbol     String
+  shares     Float
+  avgPrice   Float
+
+  portfolio Portfolio @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+
+  @@map("portfolio_holdings")
+}
+
+// Manufacturing Quality Control
+model QualityInspection {
+  id            String   @id @default(cuid())
+  productId     String
+  factoryId     String
+  inspectorId   String?
+  defectFound   Boolean  @default(false)
+  defectType    String?
+  severity      String?  // "minor", "major", "critical"
+  inspectionDate DateTime @default(now())
+  imageUrl      String?
+
+  @@map("quality_inspections")
+}
+
+// Logistics Route Optimization
+model DeliveryRoute {
+  id            String   @id @default(cuid())
+  driverId      String
+  vehicleId     String
+  startLocation Json     // GeoJSON point
+  endLocation   Json     // GeoJSON point
+  waypoints     Json[]   // Array of GeoJSON points
+  estimatedTime Int      // minutes
+  actualTime    Int?
+  status        String   @default("planned") // "planned", "in_progress", "completed"
+  createdAt     DateTime @default(now())
+
+  @@map("delivery_routes")
+}
+
+// Customer Service Chatbot
+model ChatConversation {
+  id          String   @id @default(cuid())
+  userId      String?
+  sessionId   String
+  messages    Json[]   // Array of message objects
+  topic       String?
+  sentiment   String?  // "positive", "neutral", "negative"
+  resolved    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("chat_conversations")
+}
+
+// Real Estate Market Prediction
+model Property {
+  id          String  @id @default(cuid())
+  address     String
+  city        String
+  state       String
+  zipCode     String
+  price       Float
+  bedrooms    Int
+  bathrooms   Float
+  squareFeet  Int
+  propertyType String  // "house", "condo", "townhouse"
+  listedDate  DateTime
+  soldDate    DateTime?
+  status      String   @default("listed") // "listed", "pending", "sold"
+
+  marketPredictions PropertyPrediction[]
+
+  @@map("properties")
+}
+
+model PropertyPrediction {
+  id         String   @id @default(cuid())
+  propertyId String
+  predictedPrice Float
+  confidence Float   // 0-1
+  predictionDate DateTime @default(now())
+
+  property Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+
+  @@map("property_predictions")
+}
+
+// Education Adaptive Learning
+model LearningPath {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  currentLevel Int     @default(1)
+  subjects    Json     // User proficiency by subject
+  goals       Json     // Learning objectives
+  progress    Json     // Current progress tracking
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  assessments Assessment[]
+
+  @@map("learning_paths")
+}
+
+model Assessment {
+  id            String   @id @default(cuid())
+  learningPathId String
+  subject       String
+  score         Float
+  difficulty    String   // "easy", "medium", "hard"
+  completedAt   DateTime @default(now())
+
+  learningPath LearningPath @relation(fields: [learningPathId], references: [id], onDelete: Cascade)
+
+  @@map("assessments")
+}
+
+// Agriculture Crop Optimization
+model CropSensor {
+  id         String   @id @default(cuid())
+  farmId     String
+  fieldId    String
+  sensorType String   // "soil_moisture", "temperature", "ph", "nutrients"
+  location   Json     // GeoJSON point
+  value      Float
+  timestamp  DateTime @default(now())
+
+  @@map("crop_sensors")
+}
+
+// Hospitality Dynamic Pricing
+model HotelRoom {
+  id         String @id @default(cuid())
+  hotelId    String
+  roomNumber String
+  roomType   String // "standard", "deluxe", "suite"
+  basePrice  Float
+
+  bookings RoomBooking[]
+
+  @@map("hotel_rooms")
+}
+
+model RoomBooking {
+  id         String   @id @default(cuid())
+  roomId     String
+  guestId    String?
+  checkIn    DateTime
+  checkOut   DateTime
+  totalPrice Float
+  status     String   @default("confirmed") // "confirmed", "checked_in", "checked_out", "cancelled"
+
+  room HotelRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+
+  @@map("room_bookings")
+}
+
+// Legal Document Analysis
+model LegalDocument {
+  id          String   @id @default(cuid())
+  title       String
+  content     String
+  documentType String   // "contract", "agreement", "policy", "case_law"
+  parties     Json      // Involved parties
+  keyClauses  Json      // Extracted clauses
+  riskScore   Float?
+  analyzedAt  DateTime?
+
+  @@map("legal_documents")
+}
+
+// Supply Chain Predictive Maintenance
+model Equipment {
+  id            String @id @default(cuid())
+  name          String
+  type          String // "machine", "vehicle", "conveyor"
+  location      String
+  manufacturer  String
+  model         String
+  installDate   DateTime
+
+  maintenanceLogs MaintenanceLog[]
+
+  @@map("equipment")
+}
+
+model MaintenanceLog {
+  id           String   @id @default(cuid())
+  equipmentId  String
+  maintenanceType String // "preventive", "corrective", "predictive"
+  description  String
+  performedBy  String?
+  cost         Float?
+  downtime     Int?     // minutes
+  performedAt  DateTime @default(now())
+
+  equipment Equipment @relation(fields: [equipmentId], references: [id], onDelete: Cascade)
+
+  @@map("maintenance_logs")
+}
+
+// Content Marketing Optimization
+model ContentPiece {
+  id            String   @id @default(cuid())
+  title         String
+  content       String
+  authorId      String
+  publishDate   DateTime?
+  status        String   @default("draft") // "draft", "published", "archived"
+  targetAudience Json?
+  tags          String[]
+
+  performanceMetrics ContentPerformance[]
+
+  @@map("content_pieces")
+}
+
+model ContentPerformance {
+  id          String   @id @default(cuid())
+  contentId   String
+  metricType  String   // "views", "engagement", "shares", "conversions"
+  value       Float
+  recordedAt  DateTime @default(now())
+
+  content ContentPiece @relation(fields: [contentId], references: [id], onDelete: Cascade)
+
+  @@map("content_performance")
+}
+
+// Energy Consumption Optimization
+model Building {
+  id              String @id @default(cuid())
+  name            String
+  address         String
+  totalArea       Int   // square feet
+  constructionYear Int?
+
+  energyReadings EnergyReading[]
+
+  @@map("buildings")
+}
+
+model EnergyReading {
+  id         String   @id @default(cuid())
+  buildingId String
+  sensorType String   // "electricity", "gas", "water"
+  value      Float
+  unit       String   // "kWh", "therms", "gallons"
+  timestamp  DateTime @default(now())
+
+  building Building @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+
+  @@map("energy_readings")
+}

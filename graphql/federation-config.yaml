@@ -1,0 +1,150 @@
+# GraphQL Federation Configuration
+# Apollo Federation 2.0 setup for AI Agency
+
+federation_version: 2.0
+
+# Subgraph Services
+subgraphs:
+  - name: "users"
+    url: "http://localhost:4001/graphql"
+    routing_url: "http://localhost:4001/graphql"
+
+  - name: "projects"
+    url: "http://localhost:4002/graphql"
+    routing_url: "http://localhost:4002/graphql"
+
+  - name: "tasks"
+    url: "http://localhost:4003/graphql"
+    routing_url: "http://localhost:4003/graphql"
+
+  - name: "ai-models"
+    url: "http://localhost:4004/graphql"
+    routing_url: "http://localhost:4004/graphql"
+
+  - name: "analytics"
+    url: "http://localhost:4005/graphql"
+    routing_url: "http://localhost:4005/graphql"
+
+# Gateway Configuration
+gateway:
+  port: 4000
+  hostname: "0.0.0.0"
+
+  # Apollo Studio Configuration
+  apollo:
+    key: "${APOLLO_KEY}"
+    graph_ref: "${APOLLO_GRAPH_REF}"
+
+  # CORS Configuration
+  cors:
+    origins:
+      - "http://localhost:3000"
+      - "http://localhost:5173"
+      - "https://studio.apollographql.com"
+    credentials: true
+
+  # Security
+  csrf_prevention: true
+  introspection: "${NODE_ENV}" == "development"
+
+# Schema Composition
+composition:
+  # Disable specific directives
+  disabled_directives:
+    - "@deprecated"
+
+  # Custom scalars
+  scalars:
+    DateTime: "Date"
+    Email: "String"
+    URL: "String"
+
+# Managed Federation
+managed_federation:
+  enabled: true
+  schema_update_interval: 30  # seconds
+
+# Health Checks
+health_checks:
+  enabled: true
+  interval: 30  # seconds
+  timeout: 10   # seconds
+
+# Logging
+logging:
+  level: "info"
+  format: "json"
+  file: "logs/gateway.log"
+
+# Metrics and Monitoring
+metrics:
+  prometheus:
+    enabled: true
+    port: 9090
+    path: "/metrics"
+
+  # Custom metrics
+  custom:
+    - name: "subgraph_request_duration"
+      type: "histogram"
+      description: "Duration of subgraph requests"
+      buckets: [0.1, 0.5, 1, 2, 5, 10]
+
+# Error Handling
+error_handling:
+  # Include stack traces in development
+  include_stack_traces: "${NODE_ENV}" == "development"
+
+  # Custom error formatting
+  format_errors: true
+
+  # Retry configuration
+  retry:
+    max_attempts: 3
+    backoff_multiplier: 1.5
+    initial_delay: 100  # ms
+
+# Caching
+caching:
+  enabled: true
+  ttl: 300  # 5 minutes
+
+  # Cache key configuration
+  key:
+    include:
+      - "operationName"
+      - "query"
+      - "variables"
+
+# Rate Limiting
+rate_limiting:
+  enabled: true
+  strategy: "sliding_window"
+  window_size: 60  # seconds
+  max_requests: 1000
+
+# Plugins
+plugins:
+  - name: "query-complexity"
+    config:
+      max_complexity: 1000
+      default_complexity: 1
+
+  - name: "query-depth"
+    config:
+      max_depth: 10
+
+  - name: "field-usage"
+    config:
+      enabled: true
+
+# Development Tools
+development:
+  # Enable query plan tracing
+  query_plans: "${NODE_ENV}" == "development"
+
+  # Enable schema reporting
+  schema_reporting: true
+
+  # Landing page
+  landing_page: true

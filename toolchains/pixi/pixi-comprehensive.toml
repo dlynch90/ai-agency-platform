@@ -1,0 +1,135 @@
+[workspace]
+authors = ["Daniel Lynch <developer@empathyfirstmedia.com>"]
+channels = ["conda-forge", "https://prefix.dev/conda-forge"]
+name = "comprehensive-developer-environment"
+platforms = ["osx-arm64", "linux-64"]
+version = "0.1.0"
+description = "Comprehensive development environment with all essential tools"
+
+[dependencies]
+# Core Python/ML stack
+python = ">=3.11,<3.12"
+numpy = ">=1.26.0,<2"
+scipy = ">=1.12.0,<2"
+pandas = ">=2.2.0,<3"
+matplotlib = ">=3.8.0,<4"
+jupyter = ">=1.0.0,<2"
+pytorch = ">=2.2.0,<3"
+scikit-learn = ">=1.4.0,<2"
+
+# CLI Tools
+fd-find = "*"
+ripgrep = "*"
+fzf = "*"
+bat = "*"
+jq = "*"
+yq = "*"
+tree = "*"
+htop = "*"
+gh = "*"
+pass = "*"
+gnu-stow = "*"
+zoxide = "*"
+tldr = "*"
+eza = "*"
+sd = "*"
+
+# Shell and Terminal
+tmux = "*"
+starship = "*"
+zsh = "*"
+fish = "*"
+
+# Development Tools
+nodejs = ">=18.0.0,<19"
+npm = "*"
+rust = ">=1.70,<2"
+cargo = "*"
+go = ">=1.21,<2"
+openjdk = ">=21,<22"
+
+# Code Analysis and Linting
+ast-grep = "*"
+ruff = "*"
+mypy = "*"
+oxlint = "*"
+
+# Performance Profiling
+py-spy = "*"
+memory-profiler = "*"
+line-profiler = "*"
+
+# Database and Services
+postgresql = "*"
+redis = "*"
+
+# Cloud Tools
+kubernetes = "*"
+awscli = "*"
+
+# Text Processing
+grep = "*"
+sed = "*"
+gawk = "*"
+
+# File Management
+rsync = "*"
+curl = "*"
+wget = "*"
+
+# Development Servers
+ollama = "*"
+
+# Code Editors
+vim = "*"
+nano = "*"
+
+# System Tools
+procps = "*"
+net-tools = "*"
+
+[tasks]
+# Python environment management
+install = "pip install --upgrade pip setuptools wheel"
+clean = "pip cache purge"
+
+# Testing and quality
+test = "python -c 'import numpy, scipy, matplotlib; print(\"Scientific stack ready\")'"
+test-ml = "python -c 'import torch, sklearn; print(\"ML stack ready\")'"
+test-all = "pixi run test && pixi run test-ml"
+
+# Main entry points
+start = "echo '🚀 Comprehensive Environment Ready!'"
+check = "pixi run test-all && echo '✅ All systems ready!'"
+
+# Code quality
+lint = "ruff check ."
+format = "ruff format ."
+type-check = "mypy ."
+quality = "pixi run lint && pixi run type-check"
+
+# Development tools
+shell = "pixi shell"
+search = "fd --version && rg --version && fzf --version"
+analyze = "ast-grep --version && ruff --version"
+
+# Performance monitoring
+profile = "py-spy --version"
+monitor = "htop"
+benchmark = "python -c 'import time; print(f\"Benchmark start: {time.time()}\")'"
+
+# Cloud and infrastructure
+k8s = "kubectl version --client"
+aws = "aws --version"
+
+# Database tools
+db-status = "pg_isready -h localhost -p 5432 || echo 'PostgreSQL not running'"
+redis-status = "redis-cli ping || echo 'Redis not running'"
+
+# AI/ML tools
+ollama-status = "ollama list || echo 'Ollama not running'"
+
+# Utility tasks
+list-tools = "echo 'Available tools:' && which python fd rg fzf bat jq yq tmux starship rustc go java"
+update = "pixi update"
+doctor = "pixi run check && pixi run list-tools"

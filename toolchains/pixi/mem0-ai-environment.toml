@@ -1,0 +1,102 @@
+[project]
+name = "mem0-ai-integration"
+version = "1.0.0"
+description = "Mem0.ai memory layer integration with PyTorch, GPU acceleration, and MCP tools"
+authors = ["AI Agency Platform"]
+channels = ["conda-forge", "pytorch", "nvidia"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+# Core Python and ML stack
+python = ">=3.11,<3.13"
+pytorch = { version = ">=2.0.0", channel = "pytorch" }
+torchvision = { version = ">=0.15.0", channel = "pytorch" }
+torchaudio = { version = ">=2.0.0", channel = "pytorch" }
+
+# GPU acceleration
+cuda = { version = ">=11.8", channel = "nvidia", optional = true }
+cudatoolkit = { version = ">=11.8", channel = "nvidia", optional = true }
+pytorch-cuda = { version = ">=11.8", channel = "pytorch", optional = true }
+
+# Mem0.ai SDK
+mem0ai = ">=0.1.0"
+
+# Vector databases for memory storage
+qdrant-client = ">=1.6.0"
+chromadb = ">=0.4.0"
+pinecone-client = ">=2.2.0"
+
+# Embedding models
+sentence-transformers = ">=2.2.0"
+transformers = ">=4.21.0"
+huggingface-hub = ">=0.15.0"
+
+# MCP and integration tools
+mcp = ">=0.1.0"
+pydantic = ">=2.0.0"
+pydantic-ai = ">=0.1.0"
+
+# Graph memory support
+neo4j = ">=5.0.0"
+
+# Async and performance
+uvloop = ">=0.17.0"
+aiohttp = ">=3.8.0"
+fastapi = ">=0.104.0"
+
+# Testing and evaluation
+pytest = ">=7.0.0"
+pytest-asyncio = ">=0.21.0"
+deepeval = ">=0.21.0"
+promptfoo = ">=0.50.0"
+
+# Monitoring and observability
+prometheus-client = ">=0.17.0"
+opentelemetry-distro = ">=0.40b0"
+opentelemetry-instrumentation-fastapi = ">=0.40b0"
+
+# Security and secrets
+cryptography = ">=41.0.0"
+
+[feature.gpu]
+dependencies = { cuda = ">=11.8", cudatoolkit = ">=11.8", pytorch-cuda = ">=11.8" }
+platforms = ["linux-64"]
+
+[feature.development]
+dependencies = {
+    "black = \">=23.0.0\"",
+    "isort = \">=5.12.0\"",
+    "mypy = \">=1.0.0\"",
+    "ruff = \">=0.1.0\"",
+    "pre-commit = \">=3.0.0\""
+}
+
+[feature.notebook]
+dependencies = {
+    "jupyter = \">=1.0.0\"",
+    "ipykernel = \">=6.0.0\"",
+    "notebook = \">=7.0.0\"",
+    "jupyterlab = \">=4.0.0\""
+}
+
+[environments]
+default = ["mem0ai", "pytorch", "pydantic", "mcp"]
+gpu = ["mem0ai", "pytorch", "pydantic", "mcp", "gpu"]
+development = ["mem0ai", "pytorch", "pydantic", "mcp", "development"]
+notebook = ["mem0ai", "pytorch", "pydantic", "mcp", "notebook", "development"]
+
+[system-requirements]
+cuda = "11.8"
+
+[tool.pixi.shells]
+zsh = "zsh"
+bash = "bash"
+
+[tool.pixi.tasks]
+setup = "python -m pip install -e ."
+test = "pytest tests/ -v"
+lint = "ruff check . && mypy ."
+format = "black . && isort ."
+install-mcp = "pip install mcp-server-mem0"
+start-mcp = "mcp-server-mem0 --host 0.0.0.0 --port 3001"
+benchmark = "python scripts/benchmark_mem0.py"

@@ -1,0 +1,6 @@
+Updates for mise/path governance:
+- `~/.local/share/chezmoi/dot_config/private_zsh/private_dot_zshrc` now uses shims-only activation: `eval "$(mise activate zsh --shims --no-hook-env)"` placed after PATH-affecting setup to avoid PATH bloat.
+- `~/.local/share/chezmoi/dot_config/private_zsh/private_dot_zprofile` now includes PNPM/Go/Cargo in PATH normalization (MISE_SHIMS -> PNPM_HOME -> XDG_BIN_HOME -> GO_BIN -> CARGO_BIN) for login shells.
+- `~/.local/share/chezmoi/dot_config/private_zsh/private_dot_zshenv` now defines PNPM_HOME/GO_BIN/CARGO_BIN and deterministically prepends PATH entries (removes existing occurrences then prepends in desired order). Also updated `dump_zsh_state` to include PNPM/Go/Cargo so Cursor shell state matches PATH standard.
+- Added `~/.local/share/chezmoi/dot_config/launchd/xdg-env.sh` (executable) to set launchctl env vars (PATH + XDG_* + PNPM_HOME) and applied to `~/.config/launchd/xdg-env.sh`; kickstarted `com.daniellynch.env.xdg` LaunchAgent after script creation to fix `launchctl getenv PATH`.
+- After changes, `zsh -ilc` and `zsh -ic` PATHs align with launchctl PATH and include mise shims first.

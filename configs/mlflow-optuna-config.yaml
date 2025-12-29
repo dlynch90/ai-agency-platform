@@ -1,0 +1,84 @@
+# MLflow + Optuna Hyperparameter Optimization Configuration
+# Integrated with DeepEval for LLM evaluation
+
+mlflow:
+  tracking_uri: http://localhost:5000
+  artifact_root: ${DEVELOPER_DIR:-$HOME/Developer}/mlruns
+  experiment_name: ai-agency-llm-optimization
+  
+  autolog:
+    log_models: true
+    log_input_examples: true
+    log_model_signatures: true
+    
+optuna:
+  study_name: llm-hyperparameter-optimization
+  direction: maximize  # maximize accuracy/quality
+  n_trials: 100
+  n_jobs: 4  # parallel workers
+  
+  storage: sqlite:///${DEVELOPER_DIR:-$HOME/Developer}/data/optuna.db
+  
+  sampler:
+    type: TPESampler
+    n_startup_trials: 10
+    multivariate: true
+    
+  pruner:
+    type: MedianPruner
+    n_startup_trials: 5
+    n_warmup_steps: 10
+    interval_steps: 1
+
+hyperparameters:
+  # LLM Configuration
+  temperature:
+    type: float
+    low: 0.0
+    high: 2.0
+    
+  top_p:
+    type: float
+    low: 0.1
+    high: 1.0
+    
+  max_tokens:
+    type: int
+    low: 256
+    high: 4096
+    step: 256
+    
+  frequency_penalty:
+    type: float
+    low: 0.0
+    high: 2.0
+    
+  presence_penalty:
+    type: float
+    low: 0.0
+    high: 2.0
+
+deepeval:
+  metrics:
+    - name: AnswerRelevancyMetric
+      threshold: 0.7
+    - name: FaithfulnessMetric
+      threshold: 0.8
+    - name: ContextualPrecisionMetric
+      threshold: 0.6
+    - name: HallucinationMetric
+      threshold: 0.9
+    - name: BiasMetric
+      threshold: 0.8
+    - name: ToxicityMetric
+      threshold: 0.95
+      
+  evaluation_model: gpt-4o
+  
+hypothesis_testing:
+  alpha: 0.10
+  n_samples: 5
+  statistical_tests:
+    - binomial
+    - chi_square
+    - mann_whitney_u

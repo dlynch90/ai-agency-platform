@@ -1,0 +1,472 @@
+# LiteLLM Production Configuration
+# Unified Model Gateway with Advanced Routing and Fallbacks
+# Version: 2.0.0
+
+# =============================================================================
+# MODEL LIST - All Available Models
+# =============================================================================
+model_list:
+  # ---------------------------------------------------------------------------
+  # LOCAL MODELS (Ollama) - Self-hosted, No API Costs
+  # ---------------------------------------------------------------------------
+  - model_name: llama3.2
+    litellm_params:
+      model: ollama/llama3.2:3b
+      api_base: ${OLLAMA_API_BASE:-http://localhost:11434}
+      stream: true
+      max_tokens: 4096
+    model_info:
+      mode: chat
+      max_tokens: 131072
+      supports_function_calling: true
+      supports_vision: false
+
+  - model_name: llama3.2-vision
+    litellm_params:
+      model: ollama/llama3.2-vision:11b
+      api_base: ${OLLAMA_API_BASE:-http://localhost:11434}
+      stream: true
+    model_info:
+      mode: chat
+      supports_vision: true
+
+  - model_name: codellama
+    litellm_params:
+      model: ollama/codellama:7b
+      api_base: ${OLLAMA_API_BASE:-http://localhost:11434}
+      stream: true
+      max_tokens: 16384
+    model_info:
+      mode: chat
+      max_tokens: 100000
+      supports_function_calling: false
+
+  - model_name: deepseek-coder-v2
+    litellm_params:
+      model: ollama/deepseek-coder-v2:16b
+      api_base: ${OLLAMA_API_BASE:-http://localhost:11434}
+      stream: true
+    model_info:
+      mode: chat
+      max_tokens: 128000
+      supports_function_calling: true
+
+  - model_name: mistral
+    litellm_params:
+      model: ollama/mistral:latest
+      api_base: ${OLLAMA_API_BASE:-http://localhost:11434}
+      stream: true
+    model_info:
+      mode: chat
+      supports_function_calling: true
+
+  - model_name: qwen2.5-coder
+    litellm_params:
+      model: ollama/qwen2.5-coder:14b
+      api_base: ${OLLAMA_API_BASE:-http://localhost:11434}
+      stream: true
+    model_info:
+      mode: chat
+      max_tokens: 32768
+      supports_function_calling: true
+
+  - model_name: nomic-embed
+    litellm_params:
+      model: ollama/nomic-embed-text:latest
+      api_base: ${OLLAMA_API_BASE:-http://localhost:11434}
+    model_info:
+      mode: embedding
+      embedding_dimensions: 768
+
+  - model_name: mxbai-embed
+    litellm_params:
+      model: ollama/mxbai-embed-large:latest
+      api_base: ${OLLAMA_API_BASE:-http://localhost:11434}
+    model_info:
+      mode: embedding
+      embedding_dimensions: 1024
+
+  # ---------------------------------------------------------------------------
+  # OPENAI MODELS - High Quality Cloud Models
+  # ---------------------------------------------------------------------------
+  - model_name: gpt-4o
+    litellm_params:
+      model: openai/gpt-4o
+      api_key: os.environ/OPENAI_API_KEY
+      max_tokens: 16384
+    model_info:
+      mode: chat
+      max_tokens: 128000
+      supports_function_calling: true
+      supports_vision: true
+      input_cost_per_token: 0.000005
+      output_cost_per_token: 0.000015
+
+  - model_name: gpt-4o-mini
+    litellm_params:
+      model: openai/gpt-4o-mini
+      api_key: os.environ/OPENAI_API_KEY
+      max_tokens: 16384
+    model_info:
+      mode: chat
+      max_tokens: 128000
+      supports_function_calling: true
+      supports_vision: true
+      input_cost_per_token: 0.00000015
+      output_cost_per_token: 0.0000006
+
+  - model_name: o1
+    litellm_params:
+      model: openai/o1
+      api_key: os.environ/OPENAI_API_KEY
+    model_info:
+      mode: chat
+      max_tokens: 200000
+      supports_function_calling: false
+      input_cost_per_token: 0.000015
+      output_cost_per_token: 0.00006
+
+  - model_name: o1-mini
+    litellm_params:
+      model: openai/o1-mini
+      api_key: os.environ/OPENAI_API_KEY
+    model_info:
+      mode: chat
+      max_tokens: 128000
+      supports_function_calling: false
+      input_cost_per_token: 0.000003
+      output_cost_per_token: 0.000012
+
+  - model_name: o3-mini
+    litellm_params:
+      model: openai/o3-mini
+      api_key: os.environ/OPENAI_API_KEY
+    model_info:
+      mode: chat
+      max_tokens: 200000
+      supports_function_calling: true
+
+  - model_name: text-embedding-3-large
+    litellm_params:
+      model: openai/text-embedding-3-large
+      api_key: os.environ/OPENAI_API_KEY
+    model_info:
+      mode: embedding
+      embedding_dimensions: 3072
+      input_cost_per_token: 0.00000013
+
+  - model_name: text-embedding-3-small
+    litellm_params:
+      model: openai/text-embedding-3-small
+      api_key: os.environ/OPENAI_API_KEY
+    model_info:
+      mode: embedding
+      embedding_dimensions: 1536
+      input_cost_per_token: 0.00000002
+
+  # ---------------------------------------------------------------------------
+  # ANTHROPIC MODELS - Best for Coding and Analysis
+  # ---------------------------------------------------------------------------
+  - model_name: claude-opus-4
+    litellm_params:
+      model: anthropic/claude-opus-4-20250514
+      api_key: os.environ/ANTHROPIC_API_KEY
+      max_tokens: 32000
+    model_info:
+      mode: chat
+      max_tokens: 200000
+      supports_function_calling: true
+      supports_vision: true
+      input_cost_per_token: 0.000015
+      output_cost_per_token: 0.000075
+
+  - model_name: claude-sonnet-4
+    litellm_params:
+      model: anthropic/claude-sonnet-4-20250514
+      api_key: os.environ/ANTHROPIC_API_KEY
+      max_tokens: 16000
+    model_info:
+      mode: chat
+      max_tokens: 200000
+      supports_function_calling: true
+      supports_vision: true
+      input_cost_per_token: 0.000003
+      output_cost_per_token: 0.000015
+
+  - model_name: claude-3-5-sonnet
+    litellm_params:
+      model: anthropic/claude-3-5-sonnet-20241022
+      api_key: os.environ/ANTHROPIC_API_KEY
+      max_tokens: 8192
+    model_info:
+      mode: chat
+      max_tokens: 200000
+      supports_function_calling: true
+      supports_vision: true
+      input_cost_per_token: 0.000003
+      output_cost_per_token: 0.000015
+
+  - model_name: claude-3-5-haiku
+    litellm_params:
+      model: anthropic/claude-3-5-haiku-20241022
+      api_key: os.environ/ANTHROPIC_API_KEY
+      max_tokens: 8192
+    model_info:
+      mode: chat
+      max_tokens: 200000
+      supports_function_calling: true
+      supports_vision: true
+      input_cost_per_token: 0.0000008
+      output_cost_per_token: 0.000004
+
+  # ---------------------------------------------------------------------------
+  # GOOGLE MODELS - Gemini Family
+  # ---------------------------------------------------------------------------
+  - model_name: gemini-2.0-flash
+    litellm_params:
+      model: gemini/gemini-2.0-flash-exp
+      api_key: os.environ/GOOGLE_API_KEY
+    model_info:
+      mode: chat
+      max_tokens: 1048576
+      supports_function_calling: true
+      supports_vision: true
+
+  - model_name: gemini-1.5-pro
+    litellm_params:
+      model: gemini/gemini-1.5-pro
+      api_key: os.environ/GOOGLE_API_KEY
+    model_info:
+      mode: chat
+      max_tokens: 2097152
+      supports_function_calling: true
+      supports_vision: true
+      input_cost_per_token: 0.00000125
+      output_cost_per_token: 0.000005
+
+  - model_name: gemini-1.5-flash
+    litellm_params:
+      model: gemini/gemini-1.5-flash
+      api_key: os.environ/GOOGLE_API_KEY
+    model_info:
+      mode: chat
+      max_tokens: 1048576
+      supports_function_calling: true
+      supports_vision: true
+      input_cost_per_token: 0.000000075
+      output_cost_per_token: 0.0000003
+
+  # ---------------------------------------------------------------------------
+  # HUGGING FACE MODELS - Open Source Hosted
+  # ---------------------------------------------------------------------------
+  - model_name: mixtral-8x7b
+    litellm_params:
+      model: huggingface/mistralai/Mixtral-8x7B-Instruct-v0.1
+      api_key: os.environ/HUGGINGFACE_API_KEY
+    model_info:
+      mode: chat
+      supports_function_calling: false
+
+# =============================================================================
+# ROUTER CONFIGURATION - Smart Model Selection with Fallbacks
+# =============================================================================
+
+router_settings:
+  # Primary routing strategy
+  routing_strategy: usage-based-routing-v2
+
+  # Retry configuration
+  num_retries: 3
+  timeout: 300
+  retry_after: 5
+  allowed_fails: 3
+  cooldown_time: 60
+
+  # Load balancing
+  enable_pre_call_checks: true
+
+  # Caching
+  cache: true
+  cache_params:
+    type: redis
+    host: ${REDIS_HOST:-localhost}
+    port: ${REDIS_PORT:-6379}
+    password: os.environ/REDIS_PASSWORD
+    ttl: 3600
+
+  # Model aliases for routing
+  model_group_alias:
+    # General Purpose - Fast
+    fast:
+      - gpt-4o-mini
+      - claude-3-5-haiku
+      - gemini-1.5-flash
+      - llama3.2
+
+    # General Purpose - Smart
+    smart:
+      - claude-sonnet-4
+      - gpt-4o
+      - gemini-1.5-pro
+      - deepseek-coder-v2
+
+    # Reasoning Models
+    reasoning:
+      - o3-mini
+      - o1-mini
+      - claude-opus-4
+
+    # Coding Specialists
+    code:
+      - claude-sonnet-4
+      - deepseek-coder-v2
+      - qwen2.5-coder
+      - codellama
+      - gpt-4o
+
+    # Vision Models
+    vision:
+      - gpt-4o
+      - claude-sonnet-4
+      - gemini-1.5-pro
+      - llama3.2-vision
+
+    # Embeddings
+    embedding:
+      - text-embedding-3-large
+      - text-embedding-3-small
+      - nomic-embed
+      - mxbai-embed
+
+    # Local Only (No API costs)
+    local:
+      - llama3.2
+      - codellama
+      - deepseek-coder-v2
+      - qwen2.5-coder
+      - mistral
+      - nomic-embed
+      - mxbai-embed
+
+# =============================================================================
+# FALLBACK CONFIGURATION
+# =============================================================================
+
+fallbacks:
+  # Smart fallback chains based on use case
+  - model_name: primary-chat
+    fallback_models:
+      - claude-sonnet-4
+      - gpt-4o
+      - gemini-1.5-pro
+      - llama3.2
+
+  - model_name: primary-code
+    fallback_models:
+      - claude-sonnet-4
+      - deepseek-coder-v2
+      - gpt-4o
+      - qwen2.5-coder
+      - codellama
+
+  - model_name: primary-fast
+    fallback_models:
+      - gpt-4o-mini
+      - claude-3-5-haiku
+      - gemini-1.5-flash
+      - llama3.2
+      - mistral
+
+  - model_name: primary-reasoning
+    fallback_models:
+      - o3-mini
+      - o1-mini
+      - claude-opus-4
+      - gpt-4o
+
+  - model_name: primary-embedding
+    fallback_models:
+      - text-embedding-3-large
+      - text-embedding-3-small
+      - nomic-embed
+      - mxbai-embed
+
+# =============================================================================
+# LITELLM SETTINGS
+# =============================================================================
+
+litellm_settings:
+  # Core settings
+  drop_params: true
+  set_verbose: false
+  telemetry: false
+
+  # Budget management
+  max_budget: 500
+  budget_duration: monthly
+
+  # Rate limiting
+  rpm_limit: 1000
+  tpm_limit: 100000
+
+  # Callbacks and observability
+  success_callback:
+    - langfuse
+    - prometheus
+  failure_callback:
+    - langfuse
+    - alerting
+
+  # Langfuse integration
+  langfuse_public_key: os.environ/LANGFUSE_PUBLIC_KEY
+  langfuse_secret_key: os.environ/LANGFUSE_SECRET_KEY
+  langfuse_host: ${LANGFUSE_HOST:-https://cloud.langfuse.com}
+
+# =============================================================================
+# GENERAL SETTINGS
+# =============================================================================
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+  database_url: os.environ/LITELLM_DATABASE_URL
+
+  # Admin UI
+  ui_username: os.environ/LITELLM_UI_USERNAME
+  ui_password: os.environ/LITELLM_UI_PASSWORD
+
+  # Proxy settings
+  custom_auth: false
+
+  # Health check
+  health_check_interval: 30
+
+  # Logging
+  store_model_in_db: true
+  json_logs: true
+  detailed_debug: false
+
+  # CORS
+  allowed_origins:
+    - "*"
+
+# =============================================================================
+# ALERTING CONFIGURATION
+# =============================================================================
+
+alerting:
+  enabled: true
+  alerting_threshold: 300
+
+  alert_types:
+    - spend_alerts
+    - failed_requests
+    - llm_exceptions
+    - daily_reports
+
+  alert_to_webhook_url: os.environ/SLACK_WEBHOOK_URL
+
+  budget_alerts:
+    - 0.50  # 50% of budget
+    - 0.75  # 75% of budget
+    - 0.90  # 90% of budget
+    - 1.00  # 100% of budget

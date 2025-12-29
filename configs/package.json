@@ -1,0 +1,61 @@
+{
+  "name": "ai-agency-platform",
+  "version": "1.0.0",
+  "description": "Enterprise AI Agency Platform with Multi-Client Support",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:e2e": "playwright test",
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
+    "type-check": "tsc --noEmit",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "graphql:codegen": "graphql-code-generator",
+    "start:mcp": "./scripts/start-mcp-ecosystem.sh start",
+    "stop:mcp": "./scripts/start-mcp-ecosystem.sh stop",
+    "fea:analyze": "./scripts/streamlined-fea-analysis.sh"
+  },
+  "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.13.14",
+    "@fastify/postgres": "^5.2.2",
+    "@prisma/client": "^5.7.1",
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.8.1",
+    "hono": "^4.0.0",
+    "prom-client": "^15.1.0",
+    "redis": "^4.6.12",
+    "vitest": "^1.1.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.5",
+    "eslint": "^8.56.0",
+    "prisma": "^5.7.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "ai-agency",
+    "multi-tenant",
+    "enterprise",
+    "graphql",
+    "microservices",
+    "event-driven"
+  ],
+  "author": "AI Agency Platform Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/ai-agency-platform"
+  }
+}

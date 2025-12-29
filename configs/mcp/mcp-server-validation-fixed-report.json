@@ -1,0 +1,122 @@
+{
+  "timestamp": "2025-12-29T03:17:28.754Z",
+  "environment": {
+    "missing": [
+      "GITHUB_TOKEN",
+      "EXA_API_KEY",
+      "TAVILY_API_KEY",
+      "BRAVE_API_KEY",
+      "DATABASE_URL",
+      "NEO4J_PASSWORD",
+      "FIRECRAWL_API_KEY",
+      "QDRANT_URL",
+      "QDRANT_API_KEY",
+      "PINECONE_API_KEY",
+      "CHROMA_SERVER_URL",
+      "AWS_ACCESS_KEY_ID",
+      "AWS_SECRET_ACCESS_KEY",
+      "AWS_REGION",
+      "VERCEL_TOKEN",
+      "SLACK_BOT_TOKEN",
+      "NOTION_API_KEY",
+      "KUBECONFIG",
+      "ANTHROPIC_API_KEY",
+      "OPENAI_API_KEY",
+      "HUGGINGFACE_TOKEN",
+      "REPLICATE_API_TOKEN",
+      "LANGCHAIN_API_KEY",
+      "CONTEXT7_API_KEY",
+      "WEAVIATE_URL",
+      "WEAVIATE_API_KEY",
+      "SUPABASE_URL",
+      "SUPABASE_ANON_KEY",
+      "LINEAR_API_KEY"
+    ],
+    "available": []
+  },
+  "categories": {
+    "ai": [
+      "ollama",
+      "anthropic",
+      "openai",
+      "huggingface"
+    ],
+    "database": [
+      "sqlite",
+      "neo4j",
+      "qdrant",
+      "pinecone",
+      "chroma",
+      "weaviate"
+    ],
+    "cloud": [
+      "aws",
+      "vercel",
+      "supabase"
+    ],
+    "development": [
+      "filesystem",
+      "git",
+      "github",
+      "sequential-thinking",
+      "code-runner"
+    ],
+    "communication": [
+      "slack",
+      "notion"
+    ],
+    "automation": [
+      "task-master",
+      "temporal"
+    ],
+    "search": [
+      "exa",
+      "tavily",
+      "brave-search",
+      "firecrawl"
+    ],
+    "monitoring": [
+      "thinking",
+      "memory",
+      "memory-kg",
+      "taskmaster-ai",
+      "postgres",
+      "puppeteer",
+      "playwright",
+      "deepwiki",
+      "docker",
+      "kubernetes",
+      "universal-rag",
+      "replicate",
+      "langchain",
+      "context7",
+      "linear"
+    ]
+  },
+  "localResults": [
+    {
+      "name": "filesystem",
+      "status": "error",
+      "code": 1,
+      "error": "Error accessing directory /Users/daniellynch/Developer/${DEVELOPER_DIR:-${HOME}/Developer}: Error: ENOENT: no such file or directory, stat '/Users/daniellynch/Developer/${DEVELOPER_DIR:-${HOME}/Develo"
+    },
+    {
+      "name": "git",
+      "status": "timeout",
+      "output": ""
+    },
+    {
+      "name": "sequential-thinking",
+      "status": "error",
+      "code": 1,
+      "error": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nError [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/opt/homebrew/lib/node_modules/zod-to-json-schema/node_modules/zod/v3' is "
+    },
+    {
+      "name": "ollama-chat",
+      "status": "timeout",
+      "output": ""
+    }
+  ],
+  "totalConfigured": 41,
+  "testedLocal": 4
+}

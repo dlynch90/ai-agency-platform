@@ -1,0 +1,688 @@
+{
+  "info": {
+    "name": "Polyglot Development Environment - Smoke Tests",
+    "description": "Comprehensive smoke tests for all services in the polyglot development environment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Database Connectivity Tests",
+      "item": [
+        {
+          "name": "PostgreSQL Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{postgres_url}}/health",
+              "host": ["{{postgres_url}}"],
+              "path": ["health"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"PostgreSQL is healthy\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.status).to.eql(\"healthy\");",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Neo4j Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{neo4j_url}}/",
+              "host": ["{{neo4j_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Neo4j is accessible\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Redis Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{redis_url}}/ping",
+              "host": ["{{redis_url}}"],
+              "path": ["ping"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Redis responds to ping\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    pm.expect(pm.response.text()).to.contain(\"PONG\");",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Qdrant Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{qdrant_url}}/health",
+              "host": ["{{qdrant_url}}"],
+              "path": ["health"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Qdrant is healthy\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.status).to.eql(\"green\");",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "API Gateway Tests",
+      "item": [
+        {
+          "name": "Traefik Dashboard Access",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic {{traefik_auth}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{traefik_url}}/dashboard/",
+              "host": ["{{traefik_url}}"],
+              "path": ["dashboard", ""]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Traefik dashboard is accessible\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Load Balancer Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{traefik_url}}/ping",
+              "host": ["{{traefik_url}}"],
+              "path": ["ping"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Load balancer responds\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    pm.expect(pm.response.text()).to.contain(\"pong\");",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GraphQL Federation Tests",
+      "item": [
+        {
+          "name": "GraphQL Gateway Health",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"query { __typename }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"GraphQL gateway responds\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data.__typename).to.exist;",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "User Service Subgraph",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"query { users { id name } }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"User subgraph accessible via federation\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data).to.have.property('users');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Posts Service Subgraph",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"query { posts { id title content author { name } } }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Posts subgraph with user federation works\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data).to.have.property('posts');",
+                  "    if (jsonData.data.posts && jsonData.data.posts.length > 0) {",
+                  "        pm.expect(jsonData.data.posts[0]).to.have.property('author');",
+                  "        pm.expect(jsonData.data.posts[0].author).to.have.property('name');",
+                  "    }",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Analytics Service Subgraph",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"query { analytics { totalUsers totalPosts engagementRate } }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Analytics subgraph accessible via federation\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data).to.have.property('analytics');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Service Integration Tests",
+      "item": [
+        {
+          "name": "Cross-Service Data Flow",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"mutation { createUser(input: { name: \\\"Test User\\\", email: \\\"test@example.com\\\" }) { id name email posts { id title } analytics { engagementRate } } }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Cross-service mutation works\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data.createUser).to.have.property('id');",
+                  "    pm.expect(jsonData.data.createUser).to.have.property('name');",
+                  "    pm.expect(jsonData.data.createUser).to.have.property('email');",
+                  "    pm.expect(jsonData.data.createUser).to.have.property('posts');",
+                  "    pm.expect(jsonData.data.createUser).to.have.property('analytics');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Cache Integration Test",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Cache-Test",
+                "value": "true"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"query { users { id name email } }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Cache headers present\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    pm.expect(pm.response.headers.get('X-Cache-Status')).to.be.oneOf(['HIT', 'MISS']);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Vector Search Integration",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"query { searchPosts(query: \\\"machine learning\\\", limit: 10) { id title content similarity } }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Vector search integration works\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data).to.have.property('searchPosts');",
+                  "    if (jsonData.data.searchPosts && jsonData.data.searchPosts.length > 0) {",
+                  "        pm.expect(jsonData.data.searchPosts[0]).to.have.property('similarity');",
+                  "        pm.expect(jsonData.data.searchPosts[0].similarity).to.be.a('number');",
+                  "    }",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Performance Tests",
+      "item": [
+        {
+          "name": "Response Time Test",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"query { __typename }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Response time under 100ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(100);",
+                  "});",
+                  "",
+                  "pm.test(\"Response time under 500ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(500);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Concurrent Request Test",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"query { users { id name } }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Handles concurrent requests\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.data).to.have.property('users');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Security Tests",
+      "item": [
+        {
+          "name": "Authentication Required",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"mutation { createPost(input: { title: \\\"Test\\\", content: \\\"Test\\\" }) { id } }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Authentication required for mutations\", function () {",
+                  "    // This should either require auth or return appropriate error",
+                  "    var jsonData = pm.response.json();",
+                  "    if (jsonData.errors) {",
+                  "        pm.expect(jsonData.errors[0].message).to.contain('authentication');",
+                  "    }",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Rate Limiting Test",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\":\"query { __typename }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}/",
+              "host": ["{{graphql_url}}"],
+              "path": ["/"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Rate limiting headers present\", function () {",
+                  "    var rateLimitRemaining = pm.response.headers.get('X-RateLimit-Remaining');",
+                  "    var rateLimitReset = pm.response.headers.get('X-RateLimit-Reset');",
+                  "    if (rateLimitRemaining) {",
+                  "        pm.expect(parseInt(rateLimitRemaining)).to.be.at.least(0);",
+                  "    }",
+                  "    if (rateLimitReset) {",
+                  "        pm.expect(parseInt(rateLimitReset)).to.be.greaterThan(Date.now() / 1000);",
+                  "    }",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Global pre-request script",
+          "pm.globals.set('timestamp', new Date().toISOString());"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Global test script",
+          "pm.test('Response time is reasonable', function () {",
+          "    pm.expect(pm.response.responseTime).to.be.below(5000);",
+          "});",
+          "",
+          "pm.test('Response has proper content type', function () {",
+          "    pm.response.to.have.header('Content-Type');",
+          "});",
+          "",
+          "pm.test('No server errors', function () {",
+          "    pm.response.to.not.have.status(500);",
+          "});"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost",
+      "type": "string"
+    },
+    {
+      "key": "postgres_url",
+      "value": "{{base_url}}:5432",
+      "type": "string"
+    },
+    {
+      "key": "neo4j_url",
+      "value": "{{base_url}}:7474",
+      "type": "string"
+    },
+    {
+      "key": "redis_url",
+      "value": "{{base_url}}:6379",
+      "type": "string"
+    },
+    {
+      "key": "qdrant_url",
+      "value": "{{base_url}}:6333",
+      "type": "string"
+    },
+    {
+      "key": "traefik_url",
+      "value": "{{base_url}}:8080",
+      "type": "string"
+    },
+    {
+      "key": "graphql_url",
+      "value": "{{base_url}}:4000",
+      "type": "string"
+    },
+    {
+      "key": "prometheus_url",
+      "value": "{{base_url}}:9090",
+      "type": "string"
+    },
+    {
+      "key": "grafana_url",
+      "value": "{{base_url}}:3000",
+      "type": "string"
+    },
+    {
+      "key": "kafka_url",
+      "value": "{{base_url}}:9092",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "test_type": "nonlinear_analysis",
+  "timestamp": "2025-12-28T23:31:19-05:00",
+  "plasticity_analysis": {
+    "elastic_limit": 1000,
+    "plastic_behavior_instances": 2,
+    "failure_point": 5000,
+    "ductility_index": 5.00
+  },
+  "contact_analysis": {
+    "contact_points_active": 5,
+    "total_interfaces": 6,
+    "contact_ratio": 83.33,
+    "friction_coefficient": 0.1
+  },
+  "fracture_analysis": {
+    "crack_initiation_points": 2,
+    "crack_propagation_zones": 0,
+    "ultimate_failure_modes": 0,
+    "fracture_toughness": 80
+  },
+  "constitutive_modeling": {
+    "stress_strain_relation": "elastoplastic",
+    "yield_criterion": "von_mises",
+    "hardening_rule": "isotropic",
+    "damage_mechanics": "continuum"
+  },
+  "overall_score": 66
+}

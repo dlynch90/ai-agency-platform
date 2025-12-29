@@ -1,0 +1,101 @@
+{
+  "firecrawl": {
+    "status": "TIMEOUT",
+    "command": "npx firecrawl-mcp"
+  },
+  "sqlite": {
+    "status": "TIMEOUT",
+    "command": "npx mcp-server-sqlite --db-path ${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/data/fea_results.db"
+  },
+  "n8n": {
+    "status": "FAILED",
+    "exitCode": 1,
+    "output": "",
+    "error": "npm error could not determine executable to run\nnpm error A complete log of this run can be found in: ${USER_HOME:-$HOME}/.npm/_logs/2025-12-28T20_40_11_637Z-debug-0.log\n",
+    "command": "npx n8n-nodes-mcp"
+  },
+  "filesystem": {
+    "status": "FAILED",
+    "exitCode": null,
+    "output": "",
+    "error": "",
+    "command": "npx @modelcontextprotocol/server-filesystem ${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}"
+  },
+  "memory": {
+    "status": "FAILED",
+    "exitCode": null,
+    "output": "",
+    "error": "",
+    "command": "npx @danielsimonjr/memory-mcp"
+  },
+  "sequential-thinking": {
+    "status": "FAILED",
+    "exitCode": null,
+    "output": "",
+    "error": "",
+    "command": "npx @modelcontextprotocol/server-sequential-thinking"
+  },
+  "ollama": {
+    "status": "FAILED",
+    "exitCode": null,
+    "output": "",
+    "error": "",
+    "command": "npx ollama-mcp"
+  },
+  "brave-search": {
+    "status": "TIMEOUT",
+    "command": "npx brave-search"
+  },
+  "task-master": {
+    "status": "FAILED",
+    "exitCode": null,
+    "output": "",
+    "error": "",
+    "command": "npx @gofman3/task-master-mcp"
+  },
+  "github": {
+    "status": "FAILED",
+    "exitCode": null,
+    "output": "",
+    "error": "",
+    "command": "npx @ama-mcp/github"
+  },
+  "redis": {
+    "status": "TIMEOUT",
+    "command": "npx redis-mcp"
+  },
+  "qdrant": {
+    "status": "TIMEOUT",
+    "command": "npx qdrant-api-mcp"
+  },
+  "neo4j": {
+    "status": "FAILED",
+    "exitCode": null,
+    "output": "",
+    "error": "",
+    "command": "npx @henrychong-ai/mcp-neo4j-knowledge-graph"
+  },
+  "postgres": {
+    "status": "FAILED",
+    "exitCode": null,
+    "output": "",
+    "error": "",
+    "command": "npx @modelcontextprotocol/server-postgres"
+  },
+  "tavily": {
+    "status": "TIMEOUT",
+    "command": "npx tavily-mcp"
+  },
+  "exa": {
+    "status": "TIMEOUT",
+    "command": "npx exa-mcp-server"
+  },
+  "deepwiki": {
+    "status": "TIMEOUT",
+    "command": "npx mcp-deepwiki"
+  },
+  "playwright": {
+    "status": "TIMEOUT",
+    "command": "npx @playwright/mcp"
+  }
+}

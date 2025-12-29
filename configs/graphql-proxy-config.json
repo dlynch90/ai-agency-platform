@@ -1,0 +1,27 @@
+{
+  "endpoints": {
+    "local": {
+      "url": "http://localhost:4000/graphql",
+      "schema_path": "./graphql/schema.graphql"
+    },
+    "staging": {
+      "url": "https://api-staging.example.com/graphql",
+      "schema_path": "./graphql/staging-schema.graphql"
+    },
+    "production": {
+      "url": "https://api.example.com/graphql",
+      "schema_path": "./graphql/prod-schema.graphql"
+    }
+  },
+  "testing": {
+    "introspection": true,
+    "query_validation": true,
+    "performance_monitoring": true
+  },
+  "proxy": {
+    "enabled": true,
+    "port": 4001,
+    "intercept_mutations": true,
+    "log_queries": true
+  }
+}

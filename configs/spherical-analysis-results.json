@@ -1,0 +1,37 @@
+{
+  "total_elements": 125178,
+  "spherical_distribution": {
+    "radius_stats": {
+      "mean": 8.433430794548563,
+      "std": 2.3306039822668305,
+      "min": 0,
+      "max": 23
+    },
+    "angular_distribution": {
+      "theta_clusters": 8,
+      "phi_uniformity": 0.006173795336723054
+    }
+  },
+  "boundary_conditions": {
+    "has_imports_False": 85802,
+    "has_exports_False": 101246,
+    "has_error_handling_True": 28956,
+    "has_logging_True": 16937,
+    "has_tests_True": 42094,
+    "has_error_handling_False": 95128,
+    "has_exports_True": 22838,
+    "has_imports_True": 38282,
+    "has_logging_False": 107147,
+    "has_tests_False": 81990
+  },
+  "edge_conditions": {
+    "circular_dependencies_False": 124084,
+    "missing_dependencies_False": 124084,
+    "performance_bottlenecks_False": 122593,
+    "memory_leaks_False": 92722,
+    "race_conditions_False": 122058,
+    "memory_leaks_True": 31362,
+    "race_conditions_True": 2026,
+    "performance_bottlenecks_True": 1491
+  },
+  "markov_transitions": {

@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "eventBus": {
+    "type": "kafka",
+    "brokers": ["localhost:9092"],
+    "topics": {
+      "code-generation": "code-gen-events",
+      "context-management": "context-events",
+      "infrastructure": "infra-events",
+      "testing": "test-events",
+      "monitoring": "monitor-events"
+    }
+  },
+  "mcpServers": {
+    "cipher": {
+      "endpoint": "http://localhost:3001",
+      "capabilities": ["memory", "context", "search"]
+    },
+    "gibson": {
+      "endpoint": "http://localhost:8000",
+      "capabilities": ["code-generation", "database"]
+    }
+  },
+  "cliTools": {
+    "byterover": {
+      "command": "npx byterover-cli",
+      "capabilities": ["context-curation", "knowledge-management"]
+    },
+    "gibson-cli": {
+      "command": "gibson",
+      "capabilities": ["code-generation", "entity-management"]
+    }
+  },
+  "routes": [
+    {
+      "eventType": "code-request",
+      "handlers": ["gibson", "cipher-memory"],
+      "priority": "high"
+    },
+    {
+      "eventType": "context-update",
+      "handlers": ["byterover", "cipher-storage"],
+      "priority": "medium"
+    },
+    {
+      "eventType": "infrastructure-change",
+      "handlers": ["terraform", "kubectl", "docker"],
+      "priority": "high"
+    }
+  ],
+  "monitoring": {
+    "enabled": true,
+    "metrics": ["throughput", "latency", "error-rate"],
+    "alerts": ["service-down", "high-latency", "queue-depth"]
+  }
+}

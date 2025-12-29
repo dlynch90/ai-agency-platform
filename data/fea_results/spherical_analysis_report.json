@@ -1,0 +1,44 @@
+{
+  "spherical_analysis": {
+    "total_nodes": 46383,
+    "layers": {
+      "4": 44892,
+      "2": 355,
+      "3": 1027,
+      "5": 102,
+      "0": 7
+    },
+    "surface_nodes": 355,
+    "edge_conditions": {
+      "high_connectivity": 91
+    },
+    "layer_mapping": {
+      "architecture": 0,
+      "shared-kernel": 1,
+      "api": 2,
+      "graphql": 2,
+      "federation": 2,
+      "auth": 3,
+      "data": 3,
+      "database": 3,
+      "docs": 4,
+      "testing": 4,
+      "scripts": 4,
+      "configs": 4,
+      "logs": 5,
+      "temp": 5,
+      "infrastructure": 5
+    }
+  },
+  "complexity_analysis": {
+    "avg_complexity": 7.918462234544025,
+    "max_complexity": 20.312218011932966,
+    "min_complexity": 0.0
+  },
+  "recommendations": [
+    "Layer 4 has 44892 nodes - consider modularization",
+    "Layer 2 has 355 nodes - consider modularization",
+    "Layer 3 has 1027 nodes - consider modularization",
+    "Layer 5 has 102 nodes - consider modularization"
+  ]
+}

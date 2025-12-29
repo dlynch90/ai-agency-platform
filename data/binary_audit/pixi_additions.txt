@@ -1,0 +1,12002 @@
+# ._mocha-MOmZBe5m
+conda-forge::._mocha-MOmZBe5m = "*"
+
+# .adonis-0e6isoO3
+conda-forge::.adonis-0e6isoO3 = "*"
+
+# .artillery-L0NdL22Y
+conda-forge::.artillery-L0NdL22Y = "*"
+
+# .asar-QxtZZegg
+conda-forge::.asar-QxtZZegg = "*"
+
+# .autocannon-JGZymYG2
+conda-forge::.autocannon-JGZymYG2 = "*"
+
+# .ava-b4q0pExr
+conda-forge::.ava-b4q0pExr = "*"
+
+# .biome-ya4TcCpm
+conda-forge::.biome-ya4TcCpm = "*"
+
+# .byterover-mcp-3Y041H3E
+conda-forge::.byterover-mcp-3Y041H3E = "*"
+
+# .cdk-HPi1saYF
+conda-forge::.cdk-HPi1saYF = "*"
+
+# .clerk-cbIx7qoY
+conda-forge::.clerk-cbIx7qoY = "*"
+
+# .cline-2IzkzPzP
+conda-forge::.cline-2IzkzPzP = "*"
+
+# .cline-host-YCRiy6WJ
+conda-forge::.cline-host-YCRiy6WJ = "*"
+
+# .clipboard-MPnOQO3Q
+conda-forge::.clipboard-MPnOQO3Q = "*"
+
+# .conc-w2JrFTgI
+conda-forge::.conc-w2JrFTgI = "*"
+
+# .concurrently-xqrzJl2C
+conda-forge::.concurrently-xqrzJl2C = "*"
+
+# .create-next-app-IhbWDq5S
+conda-forge::.create-next-app-IhbWDq5S = "*"
+
+# .create-nuxt-app-XdNmk2vL
+conda-forge::.create-nuxt-app-XdNmk2vL = "*"
+
+# .desktop-commander-eqasbV9x
+conda-forge::.desktop-commander-eqasbV9x = "*"
+
+# .dotenv-hvE4kDcA
+conda-forge::.dotenv-hvE4kDcA = "*"
+
+# .drizzle-kit-CbRBwuHR
+conda-forge::.drizzle-kit-CbRBwuHR = "*"
+
+# .esbuild-rNOoUVCk
+conda-forge::.esbuild-rNOoUVCk = "*"
+
+# .exa-mcp-O5hVgooe
+conda-forge::.exa-mcp-O5hVgooe = "*"
+
+# .gh-home-jz401I1f
+conda-forge::.gh-home-jz401I1f = "*"
+
+# .git-home-gebBYrFp
+conda-forge::.git-home-gebBYrFp = "*"
+
+# .git-open-ihw0nelT
+conda-forge::.git-open-ihw0nelT = "*"
+
+# .glob-all-mqfZxpQe
+conda-forge::.glob-all-mqfZxpQe = "*"
+
+# .ipd-3Hi20kok
+conda-forge::.ipd-3Hi20kok = "*"
+
+# .ipfs-deploy-I6e0BfDA
+conda-forge::.ipfs-deploy-I6e0BfDA = "*"
+
+# .jest-ZenRtXHn
+conda-forge::.jest-ZenRtXHn = "*"
+
+# .jhipster-qe9Uqi0y
+conda-forge::.jhipster-qe9Uqi0y = "*"
+
+# .jscpd-HER8oBF1
+conda-forge::.jscpd-HER8oBF1 = "*"
+
+# .markdownlint-cli2-7dF7VoWd
+conda-forge::.markdownlint-cli2-7dF7VoWd = "*"
+
+# .mcp-instruct-6h1Hq4SC
+conda-forge::.mcp-instruct-6h1Hq4SC = "*"
+
+# .mcp-neo4j-knowledge-graph-BDVx1WuE
+conda-forge::.mcp-neo4j-knowledge-graph-BDVx1WuE = "*"
+
+# .mcp-server-everything-ztz9nFJP
+conda-forge::.mcp-server-everything-ztz9nFJP = "*"
+
+# .mcp-server-postgres-3FDK5Va4
+conda-forge::.mcp-server-postgres-3FDK5Va4 = "*"
+
+# .mcp-server-puppeteer-UpHRzSxn
+conda-forge::.mcp-server-puppeteer-UpHRzSxn = "*"
+
+# .mcp-starter-vG9cI0pz
+conda-forge::.mcp-starter-vG9cI0pz = "*"
+
+# .mocha-bvspK7T0
+conda-forge::.mocha-bvspK7T0 = "*"
+
+# .n8n-lAaJwV2E
+conda-forge::.n8n-lAaJwV2E = "*"
+
+# .next-Tm6asXcS
+conda-forge::.next-Tm6asXcS = "*"
+
+# .nh-uDWpNYs3
+conda-forge::.nh-uDWpNYs3 = "*"
+
+# .np-Hmaf3NLz
+conda-forge::.np-Hmaf3NLz = "*"
+
+# .npm-home-bagxaSb5
+conda-forge::.npm-home-bagxaSb5 = "*"
+
+# .parcel-etMz9ETU
+conda-forge::.parcel-etMz9ETU = "*"
+
+# .peerflix-J5d5zcG5
+conda-forge::.peerflix-J5d5zcG5 = "*"
+
+# .pino-1MtfGnhQ
+conda-forge::.pino-1MtfGnhQ = "*"
+
+# .pnpm-LvZxclQt
+conda-forge::.pnpm-LvZxclQt = "*"
+
+# .pnpx-ntv5F8cJ
+conda-forge::.pnpx-ntv5F8cJ = "*"
+
+# .qdrant-api-mcp-a4bov5Fx
+conda-forge::.qdrant-api-mcp-a4bov5Fx = "*"
+
+# .ref-tools-mcp-Ay7oxeKV
+conda-forge::.ref-tools-mcp-Ay7oxeKV = "*"
+
+# .remove-qivkGm4R
+conda-forge::.remove-qivkGm4R = "*"
+
+# .rimraf-zSMfvm1a
+conda-forge::.rimraf-zSMfvm1a = "*"
+
+# .rollup-mtdZjsZh
+conda-forge::.rollup-mtdZjsZh = "*"
+
+# .setup-TXoB3fnV
+conda-forge::.setup-TXoB3fnV = "*"
+
+# .spack-xGdGKUnn
+conda-forge::.spack-xGdGKUnn = "*"
+
+# .speed-test-XsRSB6H0
+conda-forge::.speed-test-XsRSB6H0 = "*"
+
+# .swc-pgCAKLBx
+conda-forge::.swc-pgCAKLBx = "*"
+
+# .swcx-SvHp2sT9
+conda-forge::.swcx-SvHp2sT9 = "*"
+
+# .testcafe-gCFjFVtK
+conda-forge::.testcafe-gCFjFVtK = "*"
+
+# .tfjs-custom-module-egA4X3v8
+conda-forge::.tfjs-custom-module-egA4X3v8 = "*"
+
+# .toml-Tw98ww89
+conda-forge::.toml-Tw98ww89 = "*"
+
+# .turbo-FIb6Yvb7
+conda-forge::.turbo-FIb6Yvb7 = "*"
+
+# .universal-rag-mcp-S6UzuITA
+conda-forge::.universal-rag-mcp-S6UzuITA = "*"
+
+# .webpack-YgJo7tyB
+conda-forge::.webpack-YgJo7tyB = "*"
+
+# .yarn-1H7RAlVn
+conda-forge::.yarn-1H7RAlVn = "*"
+
+# .yarnpkg-RetKrqZr
+conda-forge::.yarnpkg-RetKrqZr = "*"
+
+# 2to3-3.11
+conda-forge::2to3-3.11 = "*"
+
+# 2to3-3.12
+conda-forge::2to3-3.12 = "*"
+
+# 411toppm
+conda-forge::411toppm = "*"
+
+# 4channels
+conda-forge::4channels = "*"
+
+# 7z
+conda-forge::7z = "*"
+
+# 7za
+conda-forge::7za = "*"
+
+# 7zr
+conda-forge::7zr = "*"
+
+# 7zz
+conda-forge::7zz = "*"
+
+# AssetCacheLocatorUtil
+conda-forge::AssetCacheLocatorUtil = "*"
+
+# AssetCacheManagerUtil
+conda-forge::AssetCacheManagerUtil = "*"
+
+# AssetCacheTetheratorUtil
+conda-forge::AssetCacheTetheratorUtil = "*"
+
+# Assistant
+conda-forge::Assistant = "*"
+
+# BTLEServer
+conda-forge::BTLEServer = "*"
+
+# BTLEServerAgent
+conda-forge::BTLEServerAgent = "*"
+
+# BlueTool
+conda-forge::BlueTool = "*"
+
+# BootCacheControl
+conda-forge::BootCacheControl = "*"
+
+# DeRez
+conda-forge::DeRez = "*"
+
+# Designer
+conda-forge::Designer = "*"
+
+# DevToolsSecurity
+conda-forge::DevToolsSecurity = "*"
+
+# DirectoryService
+conda-forge::DirectoryService = "*"
+
+# GetFileInfo
+conda-forge::GetFileInfo = "*"
+
+# GraphicsMagick++-config
+conda-forge::GraphicsMagick++-config = "*"
+
+# GraphicsMagick-config
+conda-forge::GraphicsMagick-config = "*"
+
+# GraphicsMagickWand-config
+conda-forge::GraphicsMagickWand-config = "*"
+
+# IOAccelMemory
+conda-forge::IOAccelMemory = "*"
+
+# IOMFB_FDR_Loader
+conda-forge::IOMFB_FDR_Loader = "*"
+
+# IOSDebug
+conda-forge::IOSDebug = "*"
+
+# KernelEventAgent
+conda-forge::KernelEventAgent = "*"
+
+# Linguist
+conda-forge::Linguist = "*"
+
+# LocateMe
+conda-forge::LocateMe = "*"
+
+# Magick++-config
+conda-forge::Magick++-config = "*"
+
+# MagickCore-config
+conda-forge::MagickCore-config = "*"
+
+# MagickWand-config
+conda-forge::MagickWand-config = "*"
+
+# PasswordService
+conda-forge::PasswordService = "*"
+
+# R
+conda-forge::R = "*"
+
+# ResMerger
+conda-forge::ResMerger = "*"
+
+# Rez
+conda-forge::Rez = "*"
+
+# Rscript
+conda-forge::Rscript = "*"
+
+# SafeEjectGPU
+conda-forge::SafeEjectGPU = "*"
+
+# SetFile
+conda-forge::SetFile = "*"
+
+# SplitForks
+conda-forge::SplitForks = "*"
+
+# SvtAv1EncApp
+conda-forge::SvtAv1EncApp = "*"
+
+# WirelessRadioManagerd
+conda-forge::WirelessRadioManagerd = "*"
+
+# [
+conda-forge::[ = "*"
+
+# _adr_add_link
+conda-forge::_adr_add_link = "*"
+
+# _adr_autocomplete
+conda-forge::_adr_autocomplete = "*"
+
+# _adr_commands
+conda-forge::_adr_commands = "*"
+
+# _adr_dir
+conda-forge::_adr_dir = "*"
+
+# _adr_file
+conda-forge::_adr_file = "*"
+
+# _adr_generate_graph
+conda-forge::_adr_generate_graph = "*"
+
+# _adr_generate_toc
+conda-forge::_adr_generate_toc = "*"
+
+# _adr_help
+conda-forge::_adr_help = "*"
+
+# _adr_help_new
+conda-forge::_adr_help_new = "*"
+
+# _adr_links
+conda-forge::_adr_links = "*"
+
+# _adr_remove_status
+conda-forge::_adr_remove_status = "*"
+
+# _adr_status
+conda-forge::_adr_status = "*"
+
+# _adr_title
+conda-forge::_adr_title = "*"
+
+# aa
+conda-forge::aa = "*"
+
+# aarch64-apple-darwin25-c++-15
+conda-forge::aarch64-apple-darwin25-c++-15 = "*"
+
+# aarch64-apple-darwin25-g++-15
+conda-forge::aarch64-apple-darwin25-g++-15 = "*"
+
+# aarch64-apple-darwin25-gcc-15
+conda-forge::aarch64-apple-darwin25-gcc-15 = "*"
+
+# aarch64-apple-darwin25-gcc-ar-15
+conda-forge::aarch64-apple-darwin25-gcc-ar-15 = "*"
+
+# aarch64-apple-darwin25-gcc-nm-15
+conda-forge::aarch64-apple-darwin25-gcc-nm-15 = "*"
+
+# aarch64-apple-darwin25-gcc-ranlib-15
+conda-forge::aarch64-apple-darwin25-gcc-ranlib-15 = "*"
+
+# aarch64-apple-darwin25-gfortran-15
+conda-forge::aarch64-apple-darwin25-gfortran-15 = "*"
+
+# ab
+conda-forge::ab = "*"
+
+# abctl
+conda-forge::abctl = "*"
+
+# ac
+conda-forge::ac = "*"
+
+# accelerate
+accelerate = "*"
+
+# accelerate-config
+conda-forge::accelerate-config = "*"
+
+# accelerate-estimate-memory
+conda-forge::accelerate-estimate-memory = "*"
+
+# accelerate-launch
+conda-forge::accelerate-launch = "*"
+
+# accelerate-merge-weights
+conda-forge::accelerate-merge-weights = "*"
+
+# accton
+conda-forge::accton = "*"
+
+# ack
+conda-forge::ack = "*"
+
+# aclocal
+conda-forge::aclocal = "*"
+
+# aclocal-1.18
+conda-forge::aclocal-1.18 = "*"
+
+# act
+conda-forge::act = "*"
+
+# actionlint
+conda-forge::actionlint = "*"
+
+# actool
+conda-forge::actool = "*"
+
+# adig
+conda-forge::adig = "*"
+
+# adr
+conda-forge::adr = "*"
+
+# adr-config
+conda-forge::adr-config = "*"
+
+# adr-generate
+conda-forge::adr-generate = "*"
+
+# adr-help
+conda-forge::adr-help = "*"
+
+# adr-init
+conda-forge::adr-init = "*"
+
+# adr-link
+conda-forge::adr-link = "*"
+
+# adr-list
+conda-forge::adr-list = "*"
+
+# adr-new
+conda-forge::adr-new = "*"
+
+# adr-tools
+conda-forge::adr-tools = "*"
+
+# adr-upgrade-repository
+conda-forge::adr-upgrade-repository = "*"
+
+# aea
+conda-forge::aea = "*"
+
+# afclip
+conda-forge::afclip = "*"
+
+# afconvert
+conda-forge::afconvert = "*"
+
+# afhash
+conda-forge::afhash = "*"
+
+# afida
+conda-forge::afida = "*"
+
+# afinfo
+conda-forge::afinfo = "*"
+
+# afktool
+conda-forge::afktool = "*"
+
+# afplay
+conda-forge::afplay = "*"
+
+# afscexpand
+conda-forge::afscexpand = "*"
+
+# ag
+conda-forge::ag = "*"
+
+# age
+conda-forge::age = "*"
+
+# age-keygen
+conda-forge::age-keygen = "*"
+
+# agentxtrap
+conda-forge::agentxtrap = "*"
+
+# agrep
+conda-forge::agrep = "*"
+
+# agvtool
+conda-forge::agvtool = "*"
+
+# ahost
+conda-forge::ahost = "*"
+
+# alias
+conda-forge::alias = "*"
+
+# ambiguous_words
+conda-forge::ambiguous_words = "*"
+
+# amt
+conda-forge::amt = "*"
+
+# androiddeployqt
+conda-forge::androiddeployqt = "*"
+
+# androiddeployqt6
+conda-forge::androiddeployqt6 = "*"
+
+# androidtestrunner
+conda-forge::androidtestrunner = "*"
+
+# animate
+conda-forge::animate = "*"
+
+# annotate
+conda-forge::annotate = "*"
+
+# ansible
+conda-forge::ansible = "*"
+
+# ansible-community
+conda-forge::ansible-community = "*"
+
+# ansible-config
+conda-forge::ansible-config = "*"
+
+# ansible-console
+conda-forge::ansible-console = "*"
+
+# ansible-doc
+conda-forge::ansible-doc = "*"
+
+# ansible-galaxy
+conda-forge::ansible-galaxy = "*"
+
+# ansible-inventory
+conda-forge::ansible-inventory = "*"
+
+# ansible-lint
+conda-forge::ansible-lint = "*"
+
+# ansible-playbook
+conda-forge::ansible-playbook = "*"
+
+# ansible-pull
+conda-forge::ansible-pull = "*"
+
+# ansible-test
+conda-forge::ansible-test = "*"
+
+# ansible-vault
+conda-forge::ansible-vault = "*"
+
+# ant
+conda-forge::ant = "*"
+
+# antRun
+conda-forge::antRun = "*"
+
+# antRun.pl
+conda-forge::antRun.pl = "*"
+
+# anytopnm
+conda-forge::anytopnm = "*"
+
+# aomdec
+conda-forge::aomdec = "*"
+
+# aomenc
+conda-forge::aomenc = "*"
+
+# apachectl
+conda-forge::apachectl = "*"
+
+# apfs_hfs_convert
+conda-forge::apfs_hfs_convert = "*"
+
+# apfs_unlockfv
+conda-forge::apfs_unlockfv = "*"
+
+# apollo
+conda-forge::apollo = "*"
+
+# app-sso
+conda-forge::app-sso = "*"
+
+# appleh13camerad
+conda-forge::appleh13camerad = "*"
+
+# appleh16camerad
+conda-forge::appleh16camerad = "*"
+
+# applesingle
+conda-forge::applesingle = "*"
+
+# apply
+conda-forge::apply = "*"
+
+# appsleepd
+conda-forge::appsleepd = "*"
+
+# apptainer.lima
+conda-forge::apptainer.lima = "*"
+
+# apropos
+conda-forge::apropos = "*"
+
+# ar
+conda-forge::ar = "*"
+
+# arch
+conda-forge::arch = "*"
+
+# argocd
+conda-forge::argocd = "*"
+
+# argon2
+conda-forge::argon2 = "*"
+
+# aria2c
+conda-forge::aria2c = "*"
+
+# arp
+conda-forge::arp = "*"
+
+# as
+conda-forge::as = "*"
+
+# asa
+conda-forge::asa = "*"
+
+# asciidoctor
+conda-forge::asciidoctor = "*"
+
+# asciidoctor-pdf
+conda-forge::asciidoctor-pdf = "*"
+
+# asciitopgm
+conda-forge::asciitopgm = "*"
+
+# asdf
+conda-forge::asdf = "*"
+
+# aslmanager
+conda-forge::aslmanager = "*"
+
+# asn1Coding
+conda-forge::asn1Coding = "*"
+
+# asn1Decoding
+conda-forge::asn1Decoding = "*"
+
+# asn1Parser
+conda-forge::asn1Parser = "*"
+
+# asr
+conda-forge::asr = "*"
+
+# assetutil
+conda-forge::assetutil = "*"
+
+# ast-grep
+ast-grep = "*"
+
+# at
+conda-forge::at = "*"
+
+# atktopbm
+conda-forge::atktopbm = "*"
+
+# atlas
+conda-forge::atlas = "*"
+
+# atos
+conda-forge::atos = "*"
+
+# atq
+conda-forge::atq = "*"
+
+# atrm
+conda-forge::atrm = "*"
+
+# atsutil
+conda-forge::atsutil = "*"
+
+# atuin
+conda-forge::atuin = "*"
+
+# audit
+conda-forge::audit = "*"
+
+# auditd
+conda-forge::auditd = "*"
+
+# auditreduce
+conda-forge::auditreduce = "*"
+
+# autoconf
+conda-forge::autoconf = "*"
+
+# autoheader
+conda-forge::autoheader = "*"
+
+# autom4te
+conda-forge::autom4te = "*"
+
+# automake
+conda-forge::automake = "*"
+
+# automake-1.18
+conda-forge::automake-1.18 = "*"
+
+# automationmodetool
+conda-forge::automationmodetool = "*"
+
+# automator
+conda-forge::automator = "*"
+
+# automount
+conda-forge::automount = "*"
+
+# autopoint
+conda-forge::autopoint = "*"
+
+# autoreconf
+conda-forge::autoreconf = "*"
+
+# autoscan
+conda-forge::autoscan = "*"
+
+# autoupdate
+conda-forge::autoupdate = "*"
+
+# auval
+conda-forge::auval = "*"
+
+# auvaltool
+conda-forge::auvaltool = "*"
+
+# avbanalyse
+conda-forge::avbanalyse = "*"
+
+# avbcapture
+conda-forge::avbcapture = "*"
+
+# avbdeviced
+conda-forge::avbdeviced = "*"
+
+# avbdiagnose
+conda-forge::avbdiagnose = "*"
+
+# avbutil
+conda-forge::avbutil = "*"
+
+# avconvert
+conda-forge::avconvert = "*"
+
+# avifdec
+conda-forge::avifdec = "*"
+
+# avifenc
+conda-forge::avifenc = "*"
+
+# avifgainmaputil
+conda-forge::avifgainmaputil = "*"
+
+# aviocat
+conda-forge::aviocat = "*"
+
+# avmediainfo
+conda-forge::avmediainfo = "*"
+
+# avmetareadwrite
+conda-forge::avmetareadwrite = "*"
+
+# avroappend
+conda-forge::avroappend = "*"
+
+# avrocat
+conda-forge::avrocat = "*"
+
+# avromod
+conda-forge::avromod = "*"
+
+# avropipe
+conda-forge::avropipe = "*"
+
+# avstopam
+conda-forge::avstopam = "*"
+
+# awk
+conda-forge::awk = "*"
+
+# aws
+conda-forge::aws = "*"
+
+# aws_completer
+conda-forge::aws_completer = "*"
+
+# az
+conda-forge::az = "*"
+
+# azd
+conda-forge::azd = "*"
+
+# b2sum
+conda-forge::b2sum = "*"
+
+# b64decode
+conda-forge::b64decode = "*"
+
+# b64encode
+conda-forge::b64encode = "*"
+
+# bandwhich
+conda-forge::bandwhich = "*"
+
+# banner
+conda-forge::banner = "*"
+
+# base32
+conda-forge::base32 = "*"
+
+# base64
+conda-forge::base64 = "*"
+
+# basename
+conda-forge::basename = "*"
+
+# basenc
+conda-forge::basenc = "*"
+
+# bash
+conda-forge::bash = "*"
+
+# bashbug
+conda-forge::bashbug = "*"
+
+# bat
+bat = "*"
+
+# batch
+conda-forge::batch = "*"
+
+# bats
+conda-forge::bats = "*"
+
+# bc
+conda-forge::bc = "*"
+
+# bd_info
+conda-forge::bd_info = "*"
+
+# bd_list_titles
+conda-forge::bd_list_titles = "*"
+
+# bd_splice
+conda-forge::bd_splice = "*"
+
+# bdftogd
+conda-forge::bdftogd = "*"
+
+# bearclaude
+conda-forge::bearclaude = "*"
+
+# bench
+conda-forge::bench = "*"
+
+# benchmark_xl
+conda-forge::benchmark_xl = "*"
+
+# bfs
+conda-forge::bfs = "*"
+
+# bg
+conda-forge::bg = "*"
+
+# binhex
+conda-forge::binhex = "*"
+
+# binhex.pl
+conda-forge::binhex.pl = "*"
+
+# binhex5.34.pl
+conda-forge::binhex5.34.pl = "*"
+
+# bintrans
+conda-forge::bintrans = "*"
+
+# biome
+conda-forge::biome = "*"
+
+# bioradtopgm
+conda-forge::bioradtopgm = "*"
+
+# bioutil
+conda-forge::bioutil = "*"
+
+# bisect-create
+conda-forge::bisect-create = "*"
+
+# bison
+conda-forge::bison = "*"
+
+# bitesize.d
+conda-forge::bitesize.d = "*"
+
+# bjoentegaard
+conda-forge::bjoentegaard = "*"
+
+# black
+black = "*"
+
+# blackd
+conda-forge::blackd = "*"
+
+# bless
+conda-forge::bless = "*"
+
+# bluetoothaudiod
+conda-forge::bluetoothaudiod = "*"
+
+# bluetoothd
+conda-forge::bluetoothd = "*"
+
+# bm4
+conda-forge::bm4 = "*"
+
+# bmptopnm
+conda-forge::bmptopnm = "*"
+
+# bmptoppm
+conda-forge::bmptoppm = "*"
+
+# bombardier
+conda-forge::bombardier = "*"
+
+# bombardment
+conda-forge::bombardment = "*"
+
+# bomtool
+conda-forge::bomtool = "*"
+
+# boundary
+conda-forge::boundary = "*"
+
+# bputil
+conda-forge::bputil = "*"
+
+# bq
+conda-forge::bq = "*"
+
+# brave-search-mcp-server
+conda-forge::brave-search-mcp-server = "*"
+
+# brctl
+conda-forge::brctl = "*"
+
+# brew
+conda-forge::brew = "*"
+
+# broot
+conda-forge::broot = "*"
+
+# brotli
+conda-forge::brotli = "*"
+
+# brushtopbm
+conda-forge::brushtopbm = "*"
+
+# bsdtar
+conda-forge::bsdtar = "*"
+
+# bspatch
+conda-forge::bspatch = "*"
+
+# bsqldb
+conda-forge::bsqldb = "*"
+
+# bsqlodbc
+conda-forge::bsqlodbc = "*"
+
+# btm
+conda-forge::btm = "*"
+
+# btop
+conda-forge::btop = "*"
+
+# bun
+conda-forge::bun = "*"
+
+# bundle
+conda-forge::bundle = "*"
+
+# bundler
+conda-forge::bundler = "*"
+
+# bunx
+conda-forge::bunx = "*"
+
+# bunzip2
+conda-forge::bunzip2 = "*"
+
+# butteraugli_main
+conda-forge::butteraugli_main = "*"
+
+# bzcat
+conda-forge::bzcat = "*"
+
+# bzcmp
+conda-forge::bzcmp = "*"
+
+# bzdiff
+conda-forge::bzdiff = "*"
+
+# bzegrep
+conda-forge::bzegrep = "*"
+
+# bzfgrep
+conda-forge::bzfgrep = "*"
+
+# bzgrep
+conda-forge::bzgrep = "*"
+
+# bzip2
+conda-forge::bzip2 = "*"
+
+# bzip2recover
+conda-forge::bzip2recover = "*"
+
+# bzless
+conda-forge::bzless = "*"
+
+# bzmore
+conda-forge::bzmore = "*"
+
+# c++
+conda-forge::c++ = "*"
+
+# c++-15
+conda-forge::c++-15 = "*"
+
+# c++filt
+conda-forge::c++filt = "*"
+
+# c89
+conda-forge::c89 = "*"
+
+# c99
+conda-forge::c99 = "*"
+
+# c_rehash
+conda-forge::c_rehash = "*"
+
+# caffeinate
+conda-forge::caffeinate = "*"
+
+# cagent
+conda-forge::cagent = "*"
+
+# cairo-trace
+conda-forge::cairo-trace = "*"
+
+# cal
+conda-forge::cal = "*"
+
+# calendar
+conda-forge::calendar = "*"
+
+# cameratopam
+conda-forge::cameratopam = "*"
+
+# cancel
+conda-forge::cancel = "*"
+
+# cap_mkdb
+conda-forge::cap_mkdb = "*"
+
+# captoinfo
+conda-forge::captoinfo = "*"
+
+# carapace
+conda-forge::carapace = "*"
+
+# cargo
+conda-forge::cargo = "*"
+
+# cargo-add
+conda-forge::cargo-add = "*"
+
+# cargo-audit
+conda-forge::cargo-audit = "*"
+
+# cargo-clippy
+conda-forge::cargo-clippy = "*"
+
+# cargo-deny
+conda-forge::cargo-deny = "*"
+
+# cargo-fmt
+conda-forge::cargo-fmt = "*"
+
+# cargo-nextest
+conda-forge::cargo-nextest = "*"
+
+# cargo-rm
+conda-forge::cargo-rm = "*"
+
+# cargo-set-version
+conda-forge::cargo-set-version = "*"
+
+# cargo-upgrade
+conda-forge::cargo-upgrade = "*"
+
+# cargo-watch
+conda-forge::cargo-watch = "*"
+
+# cat
+conda-forge::cat = "*"
+
+# cc
+conda-forge::cc = "*"
+
+# ccache
+conda-forge::ccache = "*"
+
+# ccmake
+conda-forge::ccmake = "*"
+
+# cd
+conda-forge::cd = "*"
+
+# cdk8s
+conda-forge::cdk8s = "*"
+
+# certtool
+conda-forge::certtool = "*"
+
+# cfprefsd
+conda-forge::cfprefsd = "*"
+
+# chat
+conda-forge::chat = "*"
+
+# cheat
+conda-forge::cheat = "*"
+
+# checkgid
+conda-forge::checkgid = "*"
+
+# checkov
+conda-forge::checkov = "*"
+
+# checkov.cmd
+conda-forge::checkov.cmd = "*"
+
+# checkstyle
+conda-forge::checkstyle = "*"
+
+# chezmoi
+conda-forge::chezmoi = "*"
+
+# chflags
+conda-forge::chflags = "*"
+
+# chfn
+conda-forge::chfn = "*"
+
+# chgrp
+conda-forge::chgrp = "*"
+
+# chkstow
+conda-forge::chkstow = "*"
+
+# chmod
+conda-forge::chmod = "*"
+
+# choose
+conda-forge::choose = "*"
+
+# chown
+conda-forge::chown = "*"
+
+# chpass
+conda-forge::chpass = "*"
+
+# chroma
+conda-forge::chroma = "*"
+
+# chroot
+conda-forge::chroot = "*"
+
+# chsh
+conda-forge::chsh = "*"
+
+# cilium
+conda-forge::cilium = "*"
+
+# cistopbm
+conda-forge::cistopbm = "*"
+
+# cjpeg
+conda-forge::cjpeg = "*"
+
+# cjxl
+conda-forge::cjxl = "*"
+
+# ckksctl
+conda-forge::ckksctl = "*"
+
+# cksum
+conda-forge::cksum = "*"
+
+# clang
+conda-forge::clang = "*"
+
+# clang++
+conda-forge::clang++ = "*"
+
+# clangd
+conda-forge::clangd = "*"
+
+# classifier_tester
+conda-forge::classifier_tester = "*"
+
+# clean-diff
+conda-forge::clean-diff = "*"
+
+# clear
+conda-forge::clear = "*"
+
+# clickhouse
+conda-forge::clickhouse = "*"
+
+# clinic
+conda-forge::clinic = "*"
+
+# clippy-driver
+conda-forge::clippy-driver = "*"
+
+# clisp
+conda-forge::clisp = "*"
+
+# clisp-link
+conda-forge::clisp-link = "*"
+
+# clj
+conda-forge::clj = "*"
+
+# cloc
+conda-forge::cloc = "*"
+
+# clojure
+conda-forge::clojure = "*"
+
+# clusterdb
+conda-forge::clusterdb = "*"
+
+# clusterdb-17
+conda-forge::clusterdb-17 = "*"
+
+# cmake
+conda-forge::cmake = "*"
+
+# cmp
+conda-forge::cmp = "*"
+
+# cmpdylib
+conda-forge::cmpdylib = "*"
+
+# cmuwmtopbm
+conda-forge::cmuwmtopbm = "*"
+
+# cntraining
+conda-forge::cntraining = "*"
+
+# codecctl
+conda-forge::codecctl = "*"
+
+# codesign
+conda-forge::codesign = "*"
+
+# codesign_allocate
+conda-forge::codesign_allocate = "*"
+
+# col
+conda-forge::col = "*"
+
+# colima
+conda-forge::colima = "*"
+
+# colrm
+conda-forge::colrm = "*"
+
+# column
+conda-forge::column = "*"
+
+# combine_lang_model
+conda-forge::combine_lang_model = "*"
+
+# combine_tessdata
+conda-forge::combine_tessdata = "*"
+
+# comby
+conda-forge::comby = "*"
+
+# comm
+conda-forge::comm = "*"
+
+# command
+conda-forge::command = "*"
+
+# comp_err
+conda-forge::comp_err = "*"
+
+# compare
+conda-forge::compare = "*"
+
+# compare-cvelists.sh
+conda-forge::compare-cvelists.sh = "*"
+
+# complete-ant-cmd.pl
+conda-forge::complete-ant-cmd.pl = "*"
+
+# composer
+conda-forge::composer = "*"
+
+# composite
+conda-forge::composite = "*"
+
+# compress
+conda-forge::compress = "*"
+
+# compression_tool
+conda-forge::compression_tool = "*"
+
+# conda
+conda-forge::conda = "*"
+
+# config_data
+conda-forge::config_data = "*"
+
+# config_data5.34
+conda-forge::config_data5.34 = "*"
+
+# confluent
+conda-forge::confluent = "*"
+
+# conftest
+conda-forge::conftest = "*"
+
+# conjure
+conda-forge::conjure = "*"
+
+# connect-distributed
+conda-forge::connect-distributed = "*"
+
+# connect-mirror-maker
+conda-forge::connect-mirror-maker = "*"
+
+# connect-plugin-path
+conda-forge::connect-plugin-path = "*"
+
+# connect-standalone
+conda-forge::connect-standalone = "*"
+
+# consul
+conda-forge::consul = "*"
+
+# context7-mcp
+conda-forge::context7-mcp = "*"
+
+# convert
+conda-forge::convert = "*"
+
+# convert-dtsv0
+conda-forge::convert-dtsv0 = "*"
+
+# convertfilestopdf
+conda-forge::convertfilestopdf = "*"
+
+# convertfilestops
+conda-forge::convertfilestops = "*"
+
+# convertformat
+conda-forge::convertformat = "*"
+
+# convertsegfilestopdf
+conda-forge::convertsegfilestopdf = "*"
+
+# convertsegfilestops
+conda-forge::convertsegfilestops = "*"
+
+# converttopdf
+conda-forge::converttopdf = "*"
+
+# converttops
+conda-forge::converttops = "*"
+
+# coreaudiod
+conda-forge::coreaudiod = "*"
+
+# corelist
+conda-forge::corelist = "*"
+
+# corelist5.34
+conda-forge::corelist5.34 = "*"
+
+# corepack
+conda-forge::corepack = "*"
+
+# cp
+conda-forge::cp = "*"
+
+# cpack
+conda-forge::cpack = "*"
+
+# cpan
+conda-forge::cpan = "*"
+
+# cpan5.34
+conda-forge::cpan5.34 = "*"
+
+# cpio
+conda-forge::cpio = "*"
+
+# cpp
+conda-forge::cpp = "*"
+
+# cpp-15
+conda-forge::cpp-15 = "*"
+
+# cpu_profiler.d
+conda-forge::cpu_profiler.d = "*"
+
+# cpuctl
+conda-forge::cpuctl = "*"
+
+# cpuwalk.d
+conda-forge::cpuwalk.d = "*"
+
+# crane
+conda-forge::crane = "*"
+
+# crc32
+conda-forge::crc32 = "*"
+
+# crc325.34
+conda-forge::crc325.34 = "*"
+
+# creatbyproc.d
+conda-forge::creatbyproc.d = "*"
+
+# createdb
+conda-forge::createdb = "*"
+
+# createdb-17
+conda-forge::createdb-17 = "*"
+
+# createhomedir
+conda-forge::createhomedir = "*"
+
+# createuser
+conda-forge::createuser = "*"
+
+# createuser-17
+conda-forge::createuser-17 = "*"
+
+# critcl
+conda-forge::critcl = "*"
+
+# crlrefresh
+conda-forge::crlrefresh = "*"
+
+# cron
+conda-forge::cron = "*"
+
+# crontab
+conda-forge::crontab = "*"
+
+# crossplane
+conda-forge::crossplane = "*"
+
+# crypto_bench
+conda-forge::crypto_bench = "*"
+
+# csfdiagnose
+conda-forge::csfdiagnose = "*"
+
+# csh
+conda-forge::csh = "*"
+
+# csplit
+conda-forge::csplit = "*"
+
+# csreq
+conda-forge::csreq = "*"
+
+# csrutil
+conda-forge::csrutil = "*"
+
+# cstool
+conda-forge::cstool = "*"
+
+# csysdig
+conda-forge::csysdig = "*"
+
+# ct_run
+conda-forge::ct_run = "*"
+
+# ctags
+conda-forge::ctags = "*"
+
+# ctest
+conda-forge::ctest = "*"
+
+# ctf_insert
+conda-forge::ctf_insert = "*"
+
+# ctop
+conda-forge::ctop = "*"
+
+# cu
+conda-forge::cu = "*"
+
+# cue
+conda-forge::cue = "*"
+
+# cups-config
+conda-forge::cups-config = "*"
+
+# cupsaccept
+conda-forge::cupsaccept = "*"
+
+# cupsctl
+conda-forge::cupsctl = "*"
+
+# cupsdisable
+conda-forge::cupsdisable = "*"
+
+# cupsenable
+conda-forge::cupsenable = "*"
+
+# cupsfilter
+conda-forge::cupsfilter = "*"
+
+# cupsreject
+conda-forge::cupsreject = "*"
+
+# cupstestppd
+conda-forge::cupstestppd = "*"
+
+# curl
+conda-forge::curl = "*"
+
+# curl-config
+conda-forge::curl-config = "*"
+
+# curlie
+conda-forge::curlie = "*"
+
+# cursor
+conda-forge::cursor = "*"
+
+# curve_keygen
+conda-forge::curve_keygen = "*"
+
+# cut
+conda-forge::cut = "*"
+
+# cvadmin
+conda-forge::cvadmin = "*"
+
+# cvaffinity
+conda-forge::cvaffinity = "*"
+
+# cvcp
+conda-forge::cvcp = "*"
+
+# cvdb
+conda-forge::cvdb = "*"
+
+# cvdbset
+conda-forge::cvdbset = "*"
+
+# cvfsck
+conda-forge::cvfsck = "*"
+
+# cvfsdb
+conda-forge::cvfsdb = "*"
+
+# cvfsid
+conda-forge::cvfsid = "*"
+
+# cvgather
+conda-forge::cvgather = "*"
+
+# cvlabel
+conda-forge::cvlabel = "*"
+
+# cvmkdir
+conda-forge::cvmkdir = "*"
+
+# cvmkfile
+conda-forge::cvmkfile = "*"
+
+# cvmkfs
+conda-forge::cvmkfs = "*"
+
+# cvupdatefs
+conda-forge::cvupdatefs = "*"
+
+# cvversions
+conda-forge::cvversions = "*"
+
+# cwebp
+conda-forge::cwebp = "*"
+
+# cws2fws
+conda-forge::cws2fws = "*"
+
+# cypher-shell
+conda-forge::cypher-shell = "*"
+
+# cypress
+conda-forge::cypress = "*"
+
+# cz
+conda-forge::cz = "*"
+
+# czg
+conda-forge::czg = "*"
+
+# dagger
+conda-forge::dagger = "*"
+
+# danetool
+conda-forge::danetool = "*"
+
+# dappprof
+conda-forge::dappprof = "*"
+
+# dapptrace
+conda-forge::dapptrace = "*"
+
+# dasel
+conda-forge::dasel = "*"
+
+# dash
+conda-forge::dash = "*"
+
+# datacopy
+conda-forge::datacopy = "*"
+
+# datasets-cli
+conda-forge::datasets-cli = "*"
+
+# date
+conda-forge::date = "*"
+
+# dav1d
+conda-forge::dav1d = "*"
+
+# dawg2wordlist
+conda-forge::dawg2wordlist = "*"
+
+# db_archive
+conda-forge::db_archive = "*"
+
+# db_checkpoint
+conda-forge::db_checkpoint = "*"
+
+# db_codegen
+conda-forge::db_codegen = "*"
+
+# db_deadlock
+conda-forge::db_deadlock = "*"
+
+# db_dump
+conda-forge::db_dump = "*"
+
+# db_hotbackup
+conda-forge::db_hotbackup = "*"
+
+# db_load
+conda-forge::db_load = "*"
+
+# db_printlog
+conda-forge::db_printlog = "*"
+
+# db_recover
+conda-forge::db_recover = "*"
+
+# db_stat
+conda-forge::db_stat = "*"
+
+# db_upgrade
+conda-forge::db_upgrade = "*"
+
+# db_verify
+conda-forge::db_verify = "*"
+
+# dbicadmin
+conda-forge::dbicadmin = "*"
+
+# dbicadmin5.34
+conda-forge::dbicadmin5.34 = "*"
+
+# dbilogstrip
+conda-forge::dbilogstrip = "*"
+
+# dbilogstrip5.34
+conda-forge::dbilogstrip5.34 = "*"
+
+# dbiprof
+conda-forge::dbiprof = "*"
+
+# dbiprof5.34
+conda-forge::dbiprof5.34 = "*"
+
+# dbiproxy
+conda-forge::dbiproxy = "*"
+
+# dbiproxy5.34
+conda-forge::dbiproxy5.34 = "*"
+
+# dbmmanage
+conda-forge::dbmmanage = "*"
+
+# dbus-cleanup-sockets
+conda-forge::dbus-cleanup-sockets = "*"
+
+# dbus-daemon
+conda-forge::dbus-daemon = "*"
+
+# dbus-launch
+conda-forge::dbus-launch = "*"
+
+# dbus-monitor
+conda-forge::dbus-monitor = "*"
+
+# dbus-run-session
+conda-forge::dbus-run-session = "*"
+
+# dbus-send
+conda-forge::dbus-send = "*"
+
+# dbus-test-tool
+conda-forge::dbus-test-tool = "*"
+
+# dbus-update-activation-environment
+conda-forge::dbus-update-activation-environment = "*"
+
+# dbus-uuidgen
+conda-forge::dbus-uuidgen = "*"
+
+# dc
+conda-forge::dc = "*"
+
+# dcraw_emu
+conda-forge::dcraw_emu = "*"
+
+# dcraw_half
+conda-forge::dcraw_half = "*"
+
+# dd
+conda-forge::dd = "*"
+
+# ddbugtopbm
+conda-forge::ddbugtopbm = "*"
+
+# dddiagnose
+conda-forge::dddiagnose = "*"
+
+# ddev
+conda-forge::ddev = "*"
+
+# ddev-hostname
+conda-forge::ddev-hostname = "*"
+
+# ddns-confgen
+conda-forge::ddns-confgen = "*"
+
+# debinhex.pl
+conda-forge::debinhex.pl = "*"
+
+# debinhex5.34.pl
+conda-forge::debinhex5.34.pl = "*"
+
+# defaults
+conda-forge::defaults = "*"
+
+# defncopy
+conda-forge::defncopy = "*"
+
+# delta
+conda-forge::delta = "*"
+
+# delv
+conda-forge::delv = "*"
+
+# demandoc
+conda-forge::demandoc = "*"
+
+# deno
+conda-forge::deno = "*"
+
+# depcheck
+conda-forge::depcheck = "*"
+
+# dependency-check
+conda-forge::dependency-check = "*"
+
+# derq
+conda-forge::derq = "*"
+
+# desdp
+conda-forge::desdp = "*"
+
+# dev_mkdb
+conda-forge::dev_mkdb = "*"
+
+# devicectl
+conda-forge::devicectl = "*"
+
+# devmodectl
+conda-forge::devmodectl = "*"
+
+# df
+conda-forge::df = "*"
+
+# diagnose-fu
+conda-forge::diagnose-fu = "*"
+
+# dialyzer
+conda-forge::dialyzer = "*"
+
+# diff
+conda-forge::diff = "*"
+
+# diff-so-fancy
+conda-forge::diff-so-fancy = "*"
+
+# diff3
+conda-forge::diff3 = "*"
+
+# diffstat
+conda-forge::diffstat = "*"
+
+# difft
+conda-forge::difft = "*"
+
+# diffusers-cli
+conda-forge::diffusers-cli = "*"
+
+# dig
+conda-forge::dig = "*"
+
+# direnv
+conda-forge::direnv = "*"
+
+# dirmngr
+conda-forge::dirmngr = "*"
+
+# dirmngr-client
+conda-forge::dirmngr-client = "*"
+
+# dirname
+conda-forge::dirname = "*"
+
+# disklabel
+conda-forge::disklabel = "*"
+
+# diskutil
+conda-forge::diskutil = "*"
+
+# display
+conda-forge::display = "*"
+
+# display_to_hlg
+conda-forge::display_to_hlg = "*"
+
+# displayline
+conda-forge::displayline = "*"
+
+# dispqlen.d
+conda-forge::dispqlen.d = "*"
+
+# dist_package_tool
+conda-forge::dist_package_tool = "*"
+
+# distnoted
+conda-forge::distnoted = "*"
+
+# distro
+conda-forge::distro = "*"
+
+# ditto
+conda-forge::ditto = "*"
+
+# dive
+conda-forge::dive = "*"
+
+# djpeg
+conda-forge::djpeg = "*"
+
+# djxl
+conda-forge::djxl = "*"
+
+# djxl_fuzzer_corpus
+conda-forge::djxl_fuzzer_corpus = "*"
+
+# dltest
+conda-forge::dltest = "*"
+
+# dmc
+conda-forge::dmc = "*"
+
+# dmesg
+conda-forge::dmesg = "*"
+
+# dmypy
+conda-forge::dmypy = "*"
+
+# dnctl
+conda-forge::dnctl = "*"
+
+# dns-sd
+conda-forge::dns-sd = "*"
+
+# docker
+conda-forge::docker = "*"
+
+# docker-buildx
+conda-forge::docker-buildx = "*"
+
+# docker-compose
+conda-forge::docker-compose = "*"
+
+# docker-credential-ecr-login
+conda-forge::docker-credential-ecr-login = "*"
+
+# docker-credential-gcloud
+conda-forge::docker-credential-gcloud = "*"
+
+# docker-image-tool.sh
+conda-forge::docker-image-tool.sh = "*"
+
+# docker-langserver
+conda-forge::docker-langserver = "*"
+
+# docker-mcp-server
+conda-forge::docker-mcp-server = "*"
+
+# docker.lima
+conda-forge::docker.lima = "*"
+
+# doctl
+conda-forge::doctl = "*"
+
+# dot_clean
+conda-forge::dot_clean = "*"
+
+# dotenv
+conda-forge::dotenv = "*"
+
+# dotnet
+conda-forge::dotnet = "*"
+
+# double
+conda-forge::double = "*"
+
+# dpipe
+conda-forge::dpipe = "*"
+
+# dprint
+conda-forge::dprint = "*"
+
+# dropdb
+conda-forge::dropdb = "*"
+
+# dropdb-17
+conda-forge::dropdb-17 = "*"
+
+# dropuser
+conda-forge::dropuser = "*"
+
+# dropuser-17
+conda-forge::dropuser-17 = "*"
+
+# drutil
+conda-forge::drutil = "*"
+
+# dscacheutil
+conda-forge::dscacheutil = "*"
+
+# dscl
+conda-forge::dscl = "*"
+
+# dsconfigad
+conda-forge::dsconfigad = "*"
+
+# dsconfigldap
+conda-forge::dsconfigldap = "*"
+
+# dseditgroup
+conda-forge::dseditgroup = "*"
+
+# dsenableroot
+conda-forge::dsenableroot = "*"
+
+# dserr
+conda-forge::dserr = "*"
+
+# dsexport
+conda-forge::dsexport = "*"
+
+# dsimport
+conda-forge::dsimport = "*"
+
+# dsmemberutil
+conda-forge::dsmemberutil = "*"
+
+# dsymutil
+conda-forge::dsymutil = "*"
+
+# dtc
+conda-forge::dtc = "*"
+
+# dtdiff
+conda-forge::dtdiff = "*"
+
+# dtplite
+conda-forge::dtplite = "*"
+
+# dtrace
+conda-forge::dtrace = "*"
+
+# dtruss
+conda-forge::dtruss = "*"
+
+# du
+conda-forge::du = "*"
+
+# dua
+conda-forge::dua = "*"
+
+# duf
+conda-forge::duf = "*"
+
+# dumpsexp
+conda-forge::dumpsexp = "*"
+
+# dust
+conda-forge::dust = "*"
+
+# dvd2concat
+conda-forge::dvd2concat = "*"
+
+# dvipdf
+conda-forge::dvipdf = "*"
+
+# dwarfdump
+conda-forge::dwarfdump = "*"
+
+# dwebp
+conda-forge::dwebp = "*"
+
+# dyld_info
+conda-forge::dyld_info = "*"
+
+# dyld_usage
+conda-forge::dyld_usage = "*"
+
+# dynamic_pager
+conda-forge::dynamic_pager = "*"
+
+# ebrowse
+conda-forge::ebrowse = "*"
+
+# echo
+conda-forge::echo = "*"
+
+# ecpg
+conda-forge::ecpg = "*"
+
+# ecpg-17
+conda-forge::ecpg-17 = "*"
+
+# ed
+conda-forge::ed = "*"
+
+# edquota
+conda-forge::edquota = "*"
+
+# egrep
+conda-forge::egrep = "*"
+
+# eksctl
+conda-forge::eksctl = "*"
+
+# elf2dmp
+conda-forge::elf2dmp = "*"
+
+# elixir
+conda-forge::elixir = "*"
+
+# elixirc
+conda-forge::elixirc = "*"
+
+# emacs
+conda-forge::emacs = "*"
+
+# emacs-30.2
+conda-forge::emacs-30.2 = "*"
+
+# emacsclient
+conda-forge::emacsclient = "*"
+
+# enc2xs
+conda-forge::enc2xs = "*"
+
+# enc2xs5.34
+conda-forge::enc2xs5.34 = "*"
+
+# enc_recon_frame_test
+conda-forge::enc_recon_frame_test = "*"
+
+# encguess
+conda-forge::encguess = "*"
+
+# encguess5.34
+conda-forge::encguess5.34 = "*"
+
+# encode_keychange
+conda-forge::encode_keychange = "*"
+
+# entr
+conda-forge::entr = "*"
+
+# enum_options
+conda-forge::enum_options = "*"
+
+# env
+conda-forge::env = "*"
+
+# env_parallel
+conda-forge::env_parallel = "*"
+
+# env_parallel.ash
+conda-forge::env_parallel.ash = "*"
+
+# env_parallel.bash
+conda-forge::env_parallel.bash = "*"
+
+# env_parallel.csh
+conda-forge::env_parallel.csh = "*"
+
+# env_parallel.dash
+conda-forge::env_parallel.dash = "*"
+
+# env_parallel.fish
+conda-forge::env_parallel.fish = "*"
+
+# env_parallel.ksh
+conda-forge::env_parallel.ksh = "*"
+
+# env_parallel.mksh
+conda-forge::env_parallel.mksh = "*"
+
+# env_parallel.pdksh
+conda-forge::env_parallel.pdksh = "*"
+
+# env_parallel.sh
+conda-forge::env_parallel.sh = "*"
+
+# env_parallel.tcsh
+conda-forge::env_parallel.tcsh = "*"
+
+# env_parallel.zsh
+conda-forge::env_parallel.zsh = "*"
+
+# envsubst
+conda-forge::envsubst = "*"
+
+# epmd
+conda-forge::epmd = "*"
+
+# eps2eps
+conda-forge::eps2eps = "*"
+
+# epstool
+conda-forge::epstool = "*"
+
+# erb
+conda-forge::erb = "*"
+
+# erl
+conda-forge::erl = "*"
+
+# erlc
+conda-forge::erlc = "*"
+
+# errinfo
+conda-forge::errinfo = "*"
+
+# escp2topbm
+conda-forge::escp2topbm = "*"
+
+# escript
+conda-forge::escript = "*"
+
+# eslint
+eslint = "*"
+
+# eslogger
+conda-forge::eslogger = "*"
+
+# etags
+conda-forge::etags = "*"
+
+# etcd
+conda-forge::etcd = "*"
+
+# etcdctl
+conda-forge::etcdctl = "*"
+
+# etcdutl
+conda-forge::etcdutl = "*"
+
+# event_rpcgen.py
+conda-forge::event_rpcgen.py = "*"
+
+# ex
+conda-forge::ex = "*"
+
+# exa-mcp-server
+conda-forge::exa-mcp-server = "*"
+
+# execsnoop
+conda-forge::execsnoop = "*"
+
+# expand
+conda-forge::expand = "*"
+
+# expect
+conda-forge::expect = "*"
+
+# expr
+conda-forge::expr = "*"
+
+# exr2aces
+conda-forge::exr2aces = "*"
+
+# exr_to_pq
+conda-forge::exr_to_pq = "*"
+
+# exrenvmap
+conda-forge::exrenvmap = "*"
+
+# exrheader
+conda-forge::exrheader = "*"
+
+# exrinfo
+conda-forge::exrinfo = "*"
+
+# exrmakepreview
+conda-forge::exrmakepreview = "*"
+
+# exrmaketiled
+conda-forge::exrmaketiled = "*"
+
+# exrmanifest
+conda-forge::exrmanifest = "*"
+
+# exrmetrics
+conda-forge::exrmetrics = "*"
+
+# exrmultipart
+conda-forge::exrmultipart = "*"
+
+# exrmultiview
+conda-forge::exrmultiview = "*"
+
+# exrstdattr
+conda-forge::exrstdattr = "*"
+
+# eyapp
+conda-forge::eyapp = "*"
+
+# eyapp5.34
+conda-forge::eyapp5.34 = "*"
+
+# eyuvtoppm
+conda-forge::eyuvtoppm = "*"
+
+# eza
+conda-forge::eza = "*"
+
+# f2py
+conda-forge::f2py = "*"
+
+# fabric
+conda-forge::fabric = "*"
+
+# factor
+conda-forge::factor = "*"
+
+# false
+conda-forge::false = "*"
+
+# fastapi
+conda-forge::fastapi = "*"
+
+# fastfetch
+conda-forge::fastfetch = "*"
+
+# fax2ps
+conda-forge::fax2ps = "*"
+
+# fax2tiff
+conda-forge::fax2tiff = "*"
+
+# fc
+conda-forge::fc = "*"
+
+# fc-cache
+conda-forge::fc-cache = "*"
+
+# fc-cat
+conda-forge::fc-cat = "*"
+
+# fc-conflist
+conda-forge::fc-conflist = "*"
+
+# fc-list
+conda-forge::fc-list = "*"
+
+# fc-match
+conda-forge::fc-match = "*"
+
+# fc-pattern
+conda-forge::fc-pattern = "*"
+
+# fc-query
+conda-forge::fc-query = "*"
+
+# fc-scan
+conda-forge::fc-scan = "*"
+
+# fc-validate
+conda-forge::fc-validate = "*"
+
+# fcgistarter
+conda-forge::fcgistarter = "*"
+
+# fclones
+conda-forge::fclones = "*"
+
+# fd
+fd_find = "*"
+
+# fddist
+conda-forge::fddist = "*"
+
+# fdesetup
+conda-forge::fdesetup = "*"
+
+# fdisk
+conda-forge::fdisk = "*"
+
+# fdtdump
+conda-forge::fdtdump = "*"
+
+# fdtget
+conda-forge::fdtget = "*"
+
+# fdtoverlay
+conda-forge::fdtoverlay = "*"
+
+# fdtput
+conda-forge::fdtput = "*"
+
+# fdupes
+conda-forge::fdupes = "*"
+
+# ffescape
+conda-forge::ffescape = "*"
+
+# ffeval
+conda-forge::ffeval = "*"
+
+# ffhash
+conda-forge::ffhash = "*"
+
+# ffmpeg
+conda-forge::ffmpeg = "*"
+
+# ffplay
+conda-forge::ffplay = "*"
+
+# ffprobe
+conda-forge::ffprobe = "*"
+
+# fftw-wisdom
+conda-forge::fftw-wisdom = "*"
+
+# fftw-wisdom-to-conf
+conda-forge::fftw-wisdom-to-conf = "*"
+
+# fftwf-wisdom
+conda-forge::fftwf-wisdom = "*"
+
+# fftwl-wisdom
+conda-forge::fftwl-wisdom = "*"
+
+# fg
+conda-forge::fg = "*"
+
+# fgrep
+conda-forge::fgrep = "*"
+
+# fiascotopnm
+conda-forge::fiascotopnm = "*"
+
+# fibreconfig
+conda-forge::fibreconfig = "*"
+
+# fig2dev
+conda-forge::fig2dev = "*"
+
+# fig2ps2tex
+conda-forge::fig2ps2tex = "*"
+
+# file
+conda-forge::file = "*"
+
+# filebyproc.d
+conda-forge::filebyproc.d = "*"
+
+# filecoordinationd
+conda-forge::filecoordinationd = "*"
+
+# fileinfo
+conda-forge::fileinfo = "*"
+
+# fileproviderctl
+conda-forge::fileproviderctl = "*"
+
+# filtercalltree
+conda-forge::filtercalltree = "*"
+
+# find
+conda-forge::find = "*"
+
+# find-spark-home
+conda-forge::find-spark-home = "*"
+
+# findrule
+conda-forge::findrule = "*"
+
+# findrule5.34
+conda-forge::findrule5.34 = "*"
+
+# finger
+conda-forge::finger = "*"
+
+# firebase
+conda-forge::firebase = "*"
+
+# firecrawl-mcp
+conda-forge::firecrawl-mcp = "*"
+
+# firmwarepasswd
+conda-forge::firmwarepasswd = "*"
+
+# fish
+conda-forge::fish = "*"
+
+# fish_indent
+conda-forge::fish_indent = "*"
+
+# fish_key_reader
+conda-forge::fish_key_reader = "*"
+
+# fisql
+conda-forge::fisql = "*"
+
+# fitstopnm
+conda-forge::fitstopnm = "*"
+
+# fixproc
+conda-forge::fixproc = "*"
+
+# fizz
+conda-forge::fizz = "*"
+
+# fizz-bogoshim
+conda-forge::fizz-bogoshim = "*"
+
+# fizz-encryptedrecordbench
+conda-forge::fizz-encryptedrecordbench = "*"
+
+# flac
+conda-forge::flac = "*"
+
+# flex
+conda-forge::flex = "*"
+
+# flex++
+conda-forge::flex++ = "*"
+
+# fltk-config
+conda-forge::fltk-config = "*"
+
+# fltk-options
+conda-forge::fltk-options = "*"
+
+# fluent-bit
+conda-forge::fluent-bit = "*"
+
+# fluid
+conda-forge::fluid = "*"
+
+# flux
+conda-forge::flux = "*"
+
+# flyway
+conda-forge::flyway = "*"
+
+# fmt
+conda-forge::fmt = "*"
+
+# fnm
+conda-forge::fnm = "*"
+
+# fold
+conda-forge::fold = "*"
+
+# fontrestore
+conda-forge::fontrestore = "*"
+
+# fonttools
+conda-forge::fonttools = "*"
+
+# footprint
+conda-forge::footprint = "*"
+
+# fortio
+conda-forge::fortio = "*"
+
+# fourcc2pixfmt
+conda-forge::fourcc2pixfmt = "*"
+
+# fping
+conda-forge::fping = "*"
+
+# freebcp
+conda-forge::freebcp = "*"
+
+# freetype-config
+conda-forge::freetype-config = "*"
+
+# fribidi
+conda-forge::fribidi = "*"
+
+# fs_usage
+conda-forge::fs_usage = "*"
+
+# fsck
+conda-forge::fsck = "*"
+
+# fsck_apfs
+conda-forge::fsck_apfs = "*"
+
+# fsck_cs
+conda-forge::fsck_cs = "*"
+
+# fsck_exfat
+conda-forge::fsck_exfat = "*"
+
+# fsck_fskit
+conda-forge::fsck_fskit = "*"
+
+# fsck_hfs
+conda-forge::fsck_hfs = "*"
+
+# fsck_msdos
+conda-forge::fsck_msdos = "*"
+
+# fsck_udf
+conda-forge::fsck_udf = "*"
+
+# fselect
+conda-forge::fselect = "*"
+
+# fstopgm
+conda-forge::fstopgm = "*"
+
+# fstyp
+conda-forge::fstyp = "*"
+
+# fstyp_hfs
+conda-forge::fstyp_hfs = "*"
+
+# fstyp_msdos
+conda-forge::fstyp_msdos = "*"
+
+# fstyp_ntfs
+conda-forge::fstyp_ntfs = "*"
+
+# fstyp_udf
+conda-forge::fstyp_udf = "*"
+
+# fswatch
+conda-forge::fswatch = "*"
+
+# funzip
+conda-forge::funzip = "*"
+
+# fuser
+conda-forge::fuser = "*"
+
+# fx
+conda-forge::fx = "*"
+
+# fzf
+fzf = "*"
+
+# fzf-preview.sh
+conda-forge::fzf-preview.sh = "*"
+
+# fzf-tmux
+conda-forge::fzf-tmux = "*"
+
+# g++
+conda-forge::g++ = "*"
+
+# g++-15
+conda-forge::g++-15 = "*"
+
+# g3topbm
+conda-forge::g3topbm = "*"
+
+# g[
+conda-forge::g[ = "*"
+
+# gatherheaderdoc
+conda-forge::gatherheaderdoc = "*"
+
+# gawk
+conda-forge::gawk = "*"
+
+# gawk-5.3.1
+conda-forge::gawk-5.3.1 = "*"
+
+# gawkbug
+conda-forge::gawkbug = "*"
+
+# gb2sum
+conda-forge::gb2sum = "*"
+
+# gbase32
+conda-forge::gbase32 = "*"
+
+# gbase64
+conda-forge::gbase64 = "*"
+
+# gbasename
+conda-forge::gbasename = "*"
+
+# gbasenc
+conda-forge::gbasenc = "*"
+
+# gcat
+conda-forge::gcat = "*"
+
+# gcc
+conda-forge::gcc = "*"
+
+# gcc-15
+conda-forge::gcc-15 = "*"
+
+# gcc-ar-15
+conda-forge::gcc-ar-15 = "*"
+
+# gcc-nm-15
+conda-forge::gcc-nm-15 = "*"
+
+# gcc-ranlib-15
+conda-forge::gcc-ranlib-15 = "*"
+
+# gchgrp
+conda-forge::gchgrp = "*"
+
+# gchmod
+conda-forge::gchmod = "*"
+
+# gchown
+conda-forge::gchown = "*"
+
+# gchroot
+conda-forge::gchroot = "*"
+
+# gcksum
+conda-forge::gcksum = "*"
+
+# gcloud
+conda-forge::gcloud = "*"
+
+# gcomm
+conda-forge::gcomm = "*"
+
+# gcore
+conda-forge::gcore = "*"
+
+# gcov
+conda-forge::gcov = "*"
+
+# gcov-15
+conda-forge::gcov-15 = "*"
+
+# gcov-dump-15
+conda-forge::gcov-dump-15 = "*"
+
+# gcov-tool-15
+conda-forge::gcov-tool-15 = "*"
+
+# gcp
+conda-forge::gcp = "*"
+
+# gcsplit
+conda-forge::gcsplit = "*"
+
+# gcut
+conda-forge::gcut = "*"
+
+# gd2copypal
+conda-forge::gd2copypal = "*"
+
+# gd2togif
+conda-forge::gd2togif = "*"
+
+# gd2topng
+conda-forge::gd2topng = "*"
+
+# gdate
+conda-forge::gdate = "*"
+
+# gdb
+conda-forge::gdb = "*"
+
+# gdb-add-index
+conda-forge::gdb-add-index = "*"
+
+# gdbus
+conda-forge::gdbus = "*"
+
+# gdcmpgif
+conda-forge::gdcmpgif = "*"
+
+# gdd
+conda-forge::gdd = "*"
+
+# gdf
+conda-forge::gdf = "*"
+
+# gdir
+conda-forge::gdir = "*"
+
+# gdircolors
+conda-forge::gdircolors = "*"
+
+# gdirname
+conda-forge::gdirname = "*"
+
+# gdk-pixbuf-csource
+conda-forge::gdk-pixbuf-csource = "*"
+
+# gdk-pixbuf-pixdata
+conda-forge::gdk-pixbuf-pixdata = "*"
+
+# gdk-pixbuf-query-loaders
+conda-forge::gdk-pixbuf-query-loaders = "*"
+
+# gdk-pixbuf-thumbnailer
+conda-forge::gdk-pixbuf-thumbnailer = "*"
+
+# gdparttopng
+conda-forge::gdparttopng = "*"
+
+# gdtopng
+conda-forge::gdtopng = "*"
+
+# gdu
+conda-forge::gdu = "*"
+
+# gecho
+conda-forge::gecho = "*"
+
+# gegrep
+conda-forge::gegrep = "*"
+
+# gem
+conda-forge::gem = "*"
+
+# gemtopbm
+conda-forge::gemtopbm = "*"
+
+# gemtopnm
+conda-forge::gemtopnm = "*"
+
+# gen-enc-table
+conda-forge::gen-enc-table = "*"
+
+# gen-rc
+conda-forge::gen-rc = "*"
+
+# gen_bridge_metadata
+conda-forge::gen_bridge_metadata = "*"
+
+# gencat
+conda-forge::gencat = "*"
+
+# general_assembly.pl
+conda-forge::general_assembly.pl = "*"
+
+# generate_lut_template
+conda-forge::generate_lut_template = "*"
+
+# genstrings
+conda-forge::genstrings = "*"
+
+# genv
+conda-forge::genv = "*"
+
+# get_gprof
+conda-forge::get_gprof = "*"
+
+# get_objgraph
+conda-forge::get_objgraph = "*"
+
+# getconf
+conda-forge::getconf = "*"
+
+# getopt
+conda-forge::getopt = "*"
+
+# getopts
+conda-forge::getopts = "*"
+
+# gettext
+conda-forge::gettext = "*"
+
+# gettext.sh
+conda-forge::gettext.sh = "*"
+
+# gettextize
+conda-forge::gettextize = "*"
+
+# gexpand
+conda-forge::gexpand = "*"
+
+# gexpr
+conda-forge::gexpr = "*"
+
+# gfactor
+conda-forge::gfactor = "*"
+
+# gfalse
+conda-forge::gfalse = "*"
+
+# gfgrep
+conda-forge::gfgrep = "*"
+
+# gfind
+conda-forge::gfind = "*"
+
+# gflags_completions.sh
+conda-forge::gflags_completions.sh = "*"
+
+# gfmt
+conda-forge::gfmt = "*"
+
+# gfold
+conda-forge::gfold = "*"
+
+# gfortran
+conda-forge::gfortran = "*"
+
+# gfortran-15
+conda-forge::gfortran-15 = "*"
+
+# ggrep
+conda-forge::ggrep = "*"
+
+# ggroups
+conda-forge::ggroups = "*"
+
+# gh
+conda-forge::gh = "*"
+
+# ghead
+conda-forge::ghead = "*"
+
+# ghostid
+conda-forge::ghostid = "*"
+
+# gi-compile-repository
+conda-forge::gi-compile-repository = "*"
+
+# gi-decompile-typelib
+conda-forge::gi-decompile-typelib = "*"
+
+# gi-inspect-typelib
+conda-forge::gi-inspect-typelib = "*"
+
+# gibo
+conda-forge::gibo = "*"
+
+# gid
+conda-forge::gid = "*"
+
+# gif2rgb
+conda-forge::gif2rgb = "*"
+
+# gif2webp
+conda-forge::gif2webp = "*"
+
+# gifbuild
+conda-forge::gifbuild = "*"
+
+# gifclrmp
+conda-forge::gifclrmp = "*"
+
+# giffix
+conda-forge::giffix = "*"
+
+# giftext
+conda-forge::giftext = "*"
+
+# giftogd2
+conda-forge::giftogd2 = "*"
+
+# giftool
+conda-forge::giftool = "*"
+
+# giftopnm
+conda-forge::giftopnm = "*"
+
+# ginstall
+conda-forge::ginstall = "*"
+
+# gio
+conda-forge::gio = "*"
+
+# gio-querymodules
+conda-forge::gio-querymodules = "*"
+
+# git
+conda-forge::git = "*"
+
+# git-absorb
+conda-forge::git-absorb = "*"
+
+# git-credential-gcloud
+conda-forge::git-credential-gcloud = "*"
+
+# git-crypt
+conda-forge::git-crypt = "*"
+
+# git-cvsserver
+conda-forge::git-cvsserver = "*"
+
+# git-cz
+conda-forge::git-cz = "*"
+
+# git-czg
+conda-forge::git-czg = "*"
+
+# git-filter-repo
+conda-forge::git-filter-repo = "*"
+
+# git-lfs
+conda-forge::git-lfs = "*"
+
+# git-receive-pack
+conda-forge::git-receive-pack = "*"
+
+# git-secrets
+conda-forge::git-secrets = "*"
+
+# git-shell
+conda-forge::git-shell = "*"
+
+# git-sizer
+conda-forge::git-sizer = "*"
+
+# git-upload-archive
+conda-forge::git-upload-archive = "*"
+
+# git-upload-pack
+conda-forge::git-upload-pack = "*"
+
+# git2
+conda-forge::git2 = "*"
+
+# github-mcp-server
+conda-forge::github-mcp-server = "*"
+
+# gitleaks
+conda-forge::gitleaks = "*"
+
+# gjoin
+conda-forge::gjoin = "*"
+
+# gkill
+conda-forge::gkill = "*"
+
+# gktool
+conda-forge::gktool = "*"
+
+# glab
+conda-forge::glab = "*"
+
+# glances
+conda-forge::glances = "*"
+
+# glib-compile-resources
+conda-forge::glib-compile-resources = "*"
+
+# glib-compile-schemas
+conda-forge::glib-compile-schemas = "*"
+
+# glib-genmarshal
+conda-forge::glib-genmarshal = "*"
+
+# glib-gettextize
+conda-forge::glib-gettextize = "*"
+
+# glib-mkenums
+conda-forge::glib-mkenums = "*"
+
+# glibtool
+conda-forge::glibtool = "*"
+
+# glibtoolize
+conda-forge::glibtoolize = "*"
+
+# glink
+conda-forge::glink = "*"
+
+# gln
+conda-forge::gln = "*"
+
+# glocate
+conda-forge::glocate = "*"
+
+# glogname
+conda-forge::glogname = "*"
+
+# glow
+conda-forge::glow = "*"
+
+# glpsol
+conda-forge::glpsol = "*"
+
+# gls
+conda-forge::gls = "*"
+
+# gm
+conda-forge::gm = "*"
+
+# gm4
+conda-forge::gm4 = "*"
+
+# gmake
+conda-forge::gmake = "*"
+
+# gmd5sum
+conda-forge::gmd5sum = "*"
+
+# gmkdir
+conda-forge::gmkdir = "*"
+
+# gmkfifo
+conda-forge::gmkfifo = "*"
+
+# gmknod
+conda-forge::gmknod = "*"
+
+# gmktemp
+conda-forge::gmktemp = "*"
+
+# gmv
+conda-forge::gmv = "*"
+
+# gnice
+conda-forge::gnice = "*"
+
+# gnl
+conda-forge::gnl = "*"
+
+# gnohup
+conda-forge::gnohup = "*"
+
+# gnproc
+conda-forge::gnproc = "*"
+
+# gnumake
+conda-forge::gnumake = "*"
+
+# gnumfmt
+conda-forge::gnumfmt = "*"
+
+# gnuplot
+conda-forge::gnuplot = "*"
+
+# gnutls-certtool
+conda-forge::gnutls-certtool = "*"
+
+# gnutls-cli
+conda-forge::gnutls-cli = "*"
+
+# gnutls-cli-debug
+conda-forge::gnutls-cli-debug = "*"
+
+# gnutls-serv
+conda-forge::gnutls-serv = "*"
+
+# go
+conda-forge::go = "*"
+
+# go-build
+conda-forge::go-build = "*"
+
+# gobject-query
+conda-forge::gobject-query = "*"
+
+# god
+conda-forge::god = "*"
+
+# goenv
+conda-forge::goenv = "*"
+
+# goenv-install
+conda-forge::goenv-install = "*"
+
+# goenv-uninstall
+conda-forge::goenv-uninstall = "*"
+
+# gofmt
+conda-forge::gofmt = "*"
+
+# golangci-lint
+conda-forge::golangci-lint = "*"
+
+# gouldtoppm
+conda-forge::gouldtoppm = "*"
+
+# gpaste
+conda-forge::gpaste = "*"
+
+# gpathchk
+conda-forge::gpathchk = "*"
+
+# gpcl6
+conda-forge::gpcl6 = "*"
+
+# gpcl6c
+conda-forge::gpcl6c = "*"
+
+# gpdlc
+conda-forge::gpdlc = "*"
+
+# gperf
+conda-forge::gperf = "*"
+
+# gpg
+conda-forge::gpg = "*"
+
+# gpg-agent
+conda-forge::gpg-agent = "*"
+
+# gpg-card
+conda-forge::gpg-card = "*"
+
+# gpg-connect-agent
+conda-forge::gpg-connect-agent = "*"
+
+# gpg-error
+conda-forge::gpg-error = "*"
+
+# gpg-error-config
+conda-forge::gpg-error-config = "*"
+
+# gpg-mail-tube
+conda-forge::gpg-mail-tube = "*"
+
+# gpg-wks-client
+conda-forge::gpg-wks-client = "*"
+
+# gpg-wks-server
+conda-forge::gpg-wks-server = "*"
+
+# gpgconf
+conda-forge::gpgconf = "*"
+
+# gpgparsemail
+conda-forge::gpgparsemail = "*"
+
+# gpgrt-config
+conda-forge::gpgrt-config = "*"
+
+# gpgscm
+conda-forge::gpgscm = "*"
+
+# gpgsm
+conda-forge::gpgsm = "*"
+
+# gpgsplit
+conda-forge::gpgsplit = "*"
+
+# gpgtar
+conda-forge::gpgtar = "*"
+
+# gpgv
+conda-forge::gpgv = "*"
+
+# gping
+conda-forge::gping = "*"
+
+# gpinky
+conda-forge::gpinky = "*"
+
+# gpr
+conda-forge::gpr = "*"
+
+# gprintenv
+conda-forge::gprintenv = "*"
+
+# gprintf
+conda-forge::gprintf = "*"
+
+# gpt
+conda-forge::gpt = "*"
+
+# gptx
+conda-forge::gptx = "*"
+
+# gpwd
+conda-forge::gpwd = "*"
+
+# gr2fonttest
+conda-forge::gr2fonttest = "*"
+
+# gradio
+conda-forge::gradio = "*"
+
+# gradle
+conda-forge::gradle = "*"
+
+# grafana
+conda-forge::grafana = "*"
+
+# grafana-cli
+conda-forge::grafana-cli = "*"
+
+# grafana-server
+conda-forge::grafana-server = "*"
+
+# grape
+conda-forge::grape = "*"
+
+# grape_completion
+conda-forge::grape_completion = "*"
+
+# graph
+conda-forge::graph = "*"
+
+# graph2dot
+conda-forge::graph2dot = "*"
+
+# graphicssession
+conda-forge::graphicssession = "*"
+
+# graphql
+conda-forge::graphql = "*"
+
+# greadlink
+conda-forge::greadlink = "*"
+
+# grealpath
+conda-forge::grealpath = "*"
+
+# grep
+conda-forge::grep = "*"
+
+# gresource
+conda-forge::gresource = "*"
+
+# grex
+conda-forge::grex = "*"
+
+# grm
+conda-forge::grm = "*"
+
+# grmdir
+conda-forge::grmdir = "*"
+
+# gron
+conda-forge::gron = "*"
+
+# groovy
+conda-forge::groovy = "*"
+
+# groovyConsole
+conda-forge::groovyConsole = "*"
+
+# groovyConsole_completion
+conda-forge::groovyConsole_completion = "*"
+
+# groovy_completion
+conda-forge::groovy_completion = "*"
+
+# groovyc
+conda-forge::groovyc = "*"
+
+# groovyc_completion
+conda-forge::groovyc_completion = "*"
+
+# groovydoc
+conda-forge::groovydoc = "*"
+
+# groovydoc_completion
+conda-forge::groovydoc_completion = "*"
+
+# groovysh
+conda-forge::groovysh = "*"
+
+# groovysh_completion
+conda-forge::groovysh_completion = "*"
+
+# groups
+conda-forge::groups = "*"
+
+# gs
+conda-forge::gs = "*"
+
+# gsbj
+conda-forge::gsbj = "*"
+
+# gsc
+conda-forge::gsc = "*"
+
+# gsdj
+conda-forge::gsdj = "*"
+
+# gsdj500
+conda-forge::gsdj500 = "*"
+
+# gsed
+conda-forge::gsed = "*"
+
+# gseq
+conda-forge::gseq = "*"
+
+# gsettings
+conda-forge::gsettings = "*"
+
+# gsha1sum
+conda-forge::gsha1sum = "*"
+
+# gsha224sum
+conda-forge::gsha224sum = "*"
+
+# gsha256sum
+conda-forge::gsha256sum = "*"
+
+# gsha384sum
+conda-forge::gsha384sum = "*"
+
+# gsha512sum
+conda-forge::gsha512sum = "*"
+
+# gshred
+conda-forge::gshred = "*"
+
+# gshuf
+conda-forge::gshuf = "*"
+
+# gsleep
+conda-forge::gsleep = "*"
+
+# gslj
+conda-forge::gslj = "*"
+
+# gslp
+conda-forge::gslp = "*"
+
+# gsnd
+conda-forge::gsnd = "*"
+
+# gsort
+conda-forge::gsort = "*"
+
+# gsplit
+conda-forge::gsplit = "*"
+
+# gssd
+conda-forge::gssd = "*"
+
+# gstack
+conda-forge::gstack = "*"
+
+# gstat
+conda-forge::gstat = "*"
+
+# gstdbuf
+conda-forge::gstdbuf = "*"
+
+# gstty
+conda-forge::gstty = "*"
+
+# gsum
+conda-forge::gsum = "*"
+
+# gsutil
+conda-forge::gsutil = "*"
+
+# gsx
+conda-forge::gsx = "*"
+
+# gsync
+conda-forge::gsync = "*"
+
+# gtac
+conda-forge::gtac = "*"
+
+# gtail
+conda-forge::gtail = "*"
+
+# gtar
+conda-forge::gtar = "*"
+
+# gtee
+conda-forge::gtee = "*"
+
+# gtest
+conda-forge::gtest = "*"
+
+# gtester
+conda-forge::gtester = "*"
+
+# gtester-report
+conda-forge::gtester-report = "*"
+
+# gtimeout
+conda-forge::gtimeout = "*"
+
+# gtouch
+conda-forge::gtouch = "*"
+
+# gtr
+conda-forge::gtr = "*"
+
+# gtrue
+conda-forge::gtrue = "*"
+
+# gtruncate
+conda-forge::gtruncate = "*"
+
+# gtsort
+conda-forge::gtsort = "*"
+
+# gtty
+conda-forge::gtty = "*"
+
+# gum
+conda-forge::gum = "*"
+
+# guname
+conda-forge::guname = "*"
+
+# gunexpand
+conda-forge::gunexpand = "*"
+
+# guniq
+conda-forge::guniq = "*"
+
+# gunlink
+conda-forge::gunlink = "*"
+
+# gunzip
+conda-forge::gunzip = "*"
+
+# gupdatedb
+conda-forge::gupdatedb = "*"
+
+# guptime
+conda-forge::guptime = "*"
+
+# gusers
+conda-forge::gusers = "*"
+
+# gvdir
+conda-forge::gvdir = "*"
+
+# gwc
+conda-forge::gwc = "*"
+
+# gwho
+conda-forge::gwho = "*"
+
+# gwhoami
+conda-forge::gwhoami = "*"
+
+# gxargs
+conda-forge::gxargs = "*"
+
+# gxps
+conda-forge::gxps = "*"
+
+# gxpsc
+conda-forge::gxpsc = "*"
+
+# gyes
+conda-forge::gyes = "*"
+
+# gzcat
+conda-forge::gzcat = "*"
+
+# gzexe
+conda-forge::gzexe = "*"
+
+# gzip
+conda-forge::gzip = "*"
+
+# h2ph
+conda-forge::h2ph = "*"
+
+# h2ph5.34
+conda-forge::h2ph5.34 = "*"
+
+# h2xs
+conda-forge::h2xs = "*"
+
+# h2xs5.34
+conda-forge::h2xs5.34 = "*"
+
+# h5c++
+conda-forge::h5c++ = "*"
+
+# h5cc
+conda-forge::h5cc = "*"
+
+# h5clear
+conda-forge::h5clear = "*"
+
+# h5copy
+conda-forge::h5copy = "*"
+
+# h5debug
+conda-forge::h5debug = "*"
+
+# h5delete
+conda-forge::h5delete = "*"
+
+# h5diff
+conda-forge::h5diff = "*"
+
+# h5dump
+conda-forge::h5dump = "*"
+
+# h5fc
+conda-forge::h5fc = "*"
+
+# h5format_convert
+conda-forge::h5format_convert = "*"
+
+# h5fuse
+conda-forge::h5fuse = "*"
+
+# h5hlc++
+conda-forge::h5hlc++ = "*"
+
+# h5hlcc
+conda-forge::h5hlcc = "*"
+
+# h5hlfc
+conda-forge::h5hlfc = "*"
+
+# h5import
+conda-forge::h5import = "*"
+
+# h5jam
+conda-forge::h5jam = "*"
+
+# h5ls
+conda-forge::h5ls = "*"
+
+# h5mkgrp
+conda-forge::h5mkgrp = "*"
+
+# h5perf_serial
+conda-forge::h5perf_serial = "*"
+
+# h5repack
+conda-forge::h5repack = "*"
+
+# h5repart
+conda-forge::h5repart = "*"
+
+# h5stat
+conda-forge::h5stat = "*"
+
+# h5unjam
+conda-forge::h5unjam = "*"
+
+# h5watch
+conda-forge::h5watch = "*"
+
+# hadolint
+conda-forge::hadolint = "*"
+
+# half_mt
+conda-forge::half_mt = "*"
+
+# halt
+conda-forge::halt = "*"
+
+# hash
+conda-forge::hash = "*"
+
+# hb-info
+conda-forge::hb-info = "*"
+
+# hb-shape
+conda-forge::hb-shape = "*"
+
+# hb-subset
+conda-forge::hb-subset = "*"
+
+# hb-view
+conda-forge::hb-view = "*"
+
+# hcloud
+conda-forge::hcloud = "*"
+
+# hdid
+conda-forge::hdid = "*"
+
+# hdifftopam
+conda-forge::hdifftopam = "*"
+
+# hdik
+conda-forge::hdik = "*"
+
+# hdiutil
+conda-forge::hdiutil = "*"
+
+# hdxml2manxml
+conda-forge::hdxml2manxml = "*"
+
+# head
+conda-forge::head = "*"
+
+# headerdoc2html
+conda-forge::headerdoc2html = "*"
+
+# heap
+conda-forge::heap = "*"
+
+# heif-convert
+conda-forge::heif-convert = "*"
+
+# heif-dec
+conda-forge::heif-dec = "*"
+
+# heif-enc
+conda-forge::heif-enc = "*"
+
+# heif-info
+conda-forge::heif-info = "*"
+
+# heif-thumbnailer
+conda-forge::heif-thumbnailer = "*"
+
+# helm
+conda-forge::helm = "*"
+
+# heroku
+conda-forge::heroku = "*"
+
+# hersheydemo
+conda-forge::hersheydemo = "*"
+
+# hexdump
+conda-forge::hexdump = "*"
+
+# hf
+conda-forge::hf = "*"
+
+# hidutil
+conda-forge::hidutil = "*"
+
+# hipstopgm
+conda-forge::hipstopgm = "*"
+
+# hiutil
+conda-forge::hiutil = "*"
+
+# hmac256
+conda-forge::hmac256 = "*"
+
+# host
+conda-forge::host = "*"
+
+# hostid
+conda-forge::hostid = "*"
+
+# hostinfo
+conda-forge::hostinfo = "*"
+
+# hostname
+conda-forge::hostname = "*"
+
+# hotspot.d
+conda-forge::hotspot.d = "*"
+
+# hpcdtoppm
+conda-forge::hpcdtoppm = "*"
+
+# hpmdiagnose
+conda-forge::hpmdiagnose = "*"
+
+# hs
+conda-forge::hs = "*"
+
+# htcacheclean
+conda-forge::htcacheclean = "*"
+
+# htdbm
+conda-forge::htdbm = "*"
+
+# htdigest
+conda-forge::htdigest = "*"
+
+# htmltree
+conda-forge::htmltree = "*"
+
+# htmltree5.34
+conda-forge::htmltree5.34 = "*"
+
+# htop
+htop = "*"
+
+# htpasswd
+conda-forge::htpasswd = "*"
+
+# http
+conda-forge::http = "*"
+
+# httpd
+conda-forge::httpd = "*"
+
+# httpd-wrapper
+conda-forge::httpd-wrapper = "*"
+
+# httpie
+conda-forge::httpie = "*"
+
+# https
+conda-forge::https = "*"
+
+# httpx
+conda-forge::httpx = "*"
+
+# httxt2dbm
+conda-forge::httxt2dbm = "*"
+
+# hub
+conda-forge::hub = "*"
+
+# hwloc-annotate
+conda-forge::hwloc-annotate = "*"
+
+# hwloc-bind
+conda-forge::hwloc-bind = "*"
+
+# hwloc-calc
+conda-forge::hwloc-calc = "*"
+
+# hwloc-compress-dir
+conda-forge::hwloc-compress-dir = "*"
+
+# hwloc-diff
+conda-forge::hwloc-diff = "*"
+
+# hwloc-distrib
+conda-forge::hwloc-distrib = "*"
+
+# hwloc-info
+conda-forge::hwloc-info = "*"
+
+# hwloc-ls
+conda-forge::hwloc-ls = "*"
+
+# hwloc-patch
+conda-forge::hwloc-patch = "*"
+
+# hwloc-ps
+conda-forge::hwloc-ps = "*"
+
+# hx
+conda-forge::hx = "*"
+
+# hyperfine
+conda-forge::hyperfine = "*"
+
+# ibd2sdi
+conda-forge::ibd2sdi = "*"
+
+# ibtool
+conda-forge::ibtool = "*"
+
+# ibv_devices
+conda-forge::ibv_devices = "*"
+
+# ibv_devinfo
+conda-forge::ibv_devinfo = "*"
+
+# ibv_uc_pingpong
+conda-forge::ibv_uc_pingpong = "*"
+
+# icc_simplify
+conda-forge::icc_simplify = "*"
+
+# icontopbm
+conda-forge::icontopbm = "*"
+
+# iconutil
+conda-forge::iconutil = "*"
+
+# iconv
+conda-forge::iconv = "*"
+
+# ictool
+conda-forge::ictool = "*"
+
+# id
+conda-forge::id = "*"
+
+# idea
+conda-forge::idea = "*"
+
+# identify
+conda-forge::identify = "*"
+
+# idle3
+conda-forge::idle3 = "*"
+
+# idle3.11
+conda-forge::idle3.11 = "*"
+
+# idle3.12
+conda-forge::idle3.12 = "*"
+
+# idle3.13
+conda-forge::idle3.13 = "*"
+
+# idle3.14
+conda-forge::idle3.14 = "*"
+
+# idn
+conda-forge::idn = "*"
+
+# idn2
+conda-forge::idn2 = "*"
+
+# iex
+conda-forge::iex = "*"
+
+# ifconfig
+conda-forge::ifconfig = "*"
+
+# ifnames
+conda-forge::ifnames = "*"
+
+# ilbmtoppm
+conda-forge::ilbmtoppm = "*"
+
+# imagetops
+conda-forge::imagetops = "*"
+
+# img2webp
+conda-forge::img2webp = "*"
+
+# imgcmp
+conda-forge::imgcmp = "*"
+
+# imginfo
+conda-forge::imginfo = "*"
+
+# imgtoppm
+conda-forge::imgtoppm = "*"
+
+# import
+conda-forge::import = "*"
+
+# imptrace
+conda-forge::imptrace = "*"
+
+# indent
+conda-forge::indent = "*"
+
+# influxdb3
+conda-forge::influxdb3 = "*"
+
+# info
+conda-forge::info = "*"
+
+# infocmp
+conda-forge::infocmp = "*"
+
+# infotocap
+conda-forge::infotocap = "*"
+
+# infotopam
+conda-forge::infotopam = "*"
+
+# initdb
+conda-forge::initdb = "*"
+
+# initdb-17
+conda-forge::initdb-17 = "*"
+
+# innochecksum
+conda-forge::innochecksum = "*"
+
+# install
+conda-forge::install = "*"
+
+# install-info
+conda-forge::install-info = "*"
+
+# install_name_tool
+conda-forge::install_name_tool = "*"
+
+# installer
+conda-forge::installer = "*"
+
+# instmodsh
+conda-forge::instmodsh = "*"
+
+# instmodsh5.34
+conda-forge::instmodsh5.34 = "*"
+
+# ioalloccount
+conda-forge::ioalloccount = "*"
+
+# ioclasscount
+conda-forge::ioclasscount = "*"
+
+# iofile.d
+conda-forge::iofile.d = "*"
+
+# iofileb.d
+conda-forge::iofileb.d = "*"
+
+# iopattern
+conda-forge::iopattern = "*"
+
+# iopending
+conda-forge::iopending = "*"
+
+# ioreg
+conda-forge::ioreg = "*"
+
+# iosnoop
+conda-forge::iosnoop = "*"
+
+# iostat
+conda-forge::iostat = "*"
+
+# iotop
+conda-forge::iotop = "*"
+
+# ip2cc
+conda-forge::ip2cc = "*"
+
+# ip2cc5.34
+conda-forge::ip2cc5.34 = "*"
+
+# ipconfig
+conda-forge::ipconfig = "*"
+
+# ipcount
+conda-forge::ipcount = "*"
+
+# ipcount5.34
+conda-forge::ipcount5.34 = "*"
+
+# ipcrm
+conda-forge::ipcrm = "*"
+
+# ipcs
+conda-forge::ipcs = "*"
+
+# iperf3-darwin
+conda-forge::iperf3-darwin = "*"
+
+# ippeveprinter
+conda-forge::ippeveprinter = "*"
+
+# ippfind
+conda-forge::ippfind = "*"
+
+# ipptool
+conda-forge::ipptool = "*"
+
+# iptab
+conda-forge::iptab = "*"
+
+# iptab5.34
+conda-forge::iptab5.34 = "*"
+
+# irb
+conda-forge::irb = "*"
+
+# ismindex
+conda-forge::ismindex = "*"
+
+# isort
+conda-forge::isort = "*"
+
+# isort-identify-imports
+conda-forge::isort-identify-imports = "*"
+
+# isql
+conda-forge::isql = "*"
+
+# istioctl
+conda-forge::istioctl = "*"
+
+# isympy
+conda-forge::isympy = "*"
+
+# iusql
+conda-forge::iusql = "*"
+
+# jar
+conda-forge::jar = "*"
+
+# jarsigner
+conda-forge::jarsigner = "*"
+
+# jasper
+conda-forge::jasper = "*"
+
+# java
+conda-forge::java = "*"
+
+# java2groovy
+conda-forge::java2groovy = "*"
+
+# javac
+conda-forge::javac = "*"
+
+# javadoc
+conda-forge::javadoc = "*"
+
+# javap
+conda-forge::javap = "*"
+
+# javaws
+conda-forge::javaws = "*"
+
+# jbig2dec
+conda-forge::jbig2dec = "*"
+
+# jbigtopnm
+conda-forge::jbigtopnm = "*"
+
+# jcmd
+conda-forge::jcmd = "*"
+
+# jconsole
+conda-forge::jconsole = "*"
+
+# jcontrol
+conda-forge::jcontrol = "*"
+
+# jdb
+conda-forge::jdb = "*"
+
+# jdeps
+conda-forge::jdeps = "*"
+
+# jdupes
+conda-forge::jdupes = "*"
+
+# jenv
+conda-forge::jenv = "*"
+
+# jhsdb
+conda-forge::jhsdb = "*"
+
+# jimage
+conda-forge::jimage = "*"
+
+# jinfo
+conda-forge::jinfo = "*"
+
+# jiv
+conda-forge::jiv = "*"
+
+# jjs
+conda-forge::jjs = "*"
+
+# jlink
+conda-forge::jlink = "*"
+
+# jmap
+conda-forge::jmap = "*"
+
+# jobs
+conda-forge::jobs = "*"
+
+# join
+conda-forge::join = "*"
+
+# jot
+conda-forge::jot = "*"
+
+# jpackage
+conda-forge::jpackage = "*"
+
+# jpeg2ktopam
+conda-forge::jpeg2ktopam = "*"
+
+# jpegtopnm
+conda-forge::jpegtopnm = "*"
+
+# jpegtran
+conda-forge::jpegtran = "*"
+
+# jpgicc
+conda-forge::jpgicc = "*"
+
+# jps
+conda-forge::jps = "*"
+
+# jq
+jq = "*"
+
+# jrunscript
+conda-forge::jrunscript = "*"
+
+# jshell
+conda-forge::jshell = "*"
+
+# json-glib-format
+conda-forge::json-glib-format = "*"
+
+# json-glib-validate
+conda-forge::json-glib-validate = "*"
+
+# json_pp
+conda-forge::json_pp = "*"
+
+# json_pp5.34
+conda-forge::json_pp5.34 = "*"
+
+# json_reformat
+conda-forge::json_reformat = "*"
+
+# json_verify
+conda-forge::json_verify = "*"
+
+# json_xs
+conda-forge::json_xs = "*"
+
+# json_xs5.34
+conda-forge::json_xs5.34 = "*"
+
+# jsondiff
+conda-forge::jsondiff = "*"
+
+# jsonlint
+conda-forge::jsonlint = "*"
+
+# jsonnet
+conda-forge::jsonnet = "*"
+
+# jsonnetfmt
+conda-forge::jsonnetfmt = "*"
+
+# jsonpatch
+conda-forge::jsonpatch = "*"
+
+# jsonpointer
+conda-forge::jsonpointer = "*"
+
+# jstack
+conda-forge::jstack = "*"
+
+# jstat
+conda-forge::jstat = "*"
+
+# jstatd
+conda-forge::jstatd = "*"
+
+# julia
+conda-forge::julia = "*"
+
+# just
+conda-forge::just = "*"
+
+# jxl_from_tree
+conda-forge::jxl_from_tree = "*"
+
+# jxlinfo
+conda-forge::jxlinfo = "*"
+
+# k3d
+conda-forge::k3d = "*"
+
+# k6
+conda-forge::k6 = "*"
+
+# k9s
+conda-forge::k9s = "*"
+
+# kadmin
+conda-forge::kadmin = "*"
+
+# kadmin.local
+conda-forge::kadmin.local = "*"
+
+# kafka-acls
+conda-forge::kafka-acls = "*"
+
+# kafka-broker-api-versions
+conda-forge::kafka-broker-api-versions = "*"
+
+# kafka-client-metrics
+conda-forge::kafka-client-metrics = "*"
+
+# kafka-cluster
+conda-forge::kafka-cluster = "*"
+
+# kafka-configs
+conda-forge::kafka-configs = "*"
+
+# kafka-console-consumer
+conda-forge::kafka-console-consumer = "*"
+
+# kafka-console-producer
+conda-forge::kafka-console-producer = "*"
+
+# kafka-console-share-consumer
+conda-forge::kafka-console-share-consumer = "*"
+
+# kafka-consumer-groups
+conda-forge::kafka-consumer-groups = "*"
+
+# kafka-consumer-perf-test
+conda-forge::kafka-consumer-perf-test = "*"
+
+# kafka-delegation-tokens
+conda-forge::kafka-delegation-tokens = "*"
+
+# kafka-delete-records
+conda-forge::kafka-delete-records = "*"
+
+# kafka-dump-log
+conda-forge::kafka-dump-log = "*"
+
+# kafka-e2e-latency
+conda-forge::kafka-e2e-latency = "*"
+
+# kafka-features
+conda-forge::kafka-features = "*"
+
+# kafka-get-offsets
+conda-forge::kafka-get-offsets = "*"
+
+# kafka-groups
+conda-forge::kafka-groups = "*"
+
+# kafka-jmx
+conda-forge::kafka-jmx = "*"
+
+# kafka-leader-election
+conda-forge::kafka-leader-election = "*"
+
+# kafka-log-dirs
+conda-forge::kafka-log-dirs = "*"
+
+# kafka-metadata-quorum
+conda-forge::kafka-metadata-quorum = "*"
+
+# kafka-metadata-shell
+conda-forge::kafka-metadata-shell = "*"
+
+# kafka-producer-perf-test
+conda-forge::kafka-producer-perf-test = "*"
+
+# kafka-reassign-partitions
+conda-forge::kafka-reassign-partitions = "*"
+
+# kafka-replica-verification
+conda-forge::kafka-replica-verification = "*"
+
+# kafka-run-class
+conda-forge::kafka-run-class = "*"
+
+# kafka-server-start
+conda-forge::kafka-server-start = "*"
+
+# kafka-server-stop
+conda-forge::kafka-server-stop = "*"
+
+# kafka-share-consumer-perf-test
+conda-forge::kafka-share-consumer-perf-test = "*"
+
+# kafka-share-groups
+conda-forge::kafka-share-groups = "*"
+
+# kafka-storage
+conda-forge::kafka-storage = "*"
+
+# kafka-streams-application-reset
+conda-forge::kafka-streams-application-reset = "*"
+
+# kafka-streams-groups
+conda-forge::kafka-streams-groups = "*"
+
+# kafka-topics
+conda-forge::kafka-topics = "*"
+
+# kafka-transactions
+conda-forge::kafka-transactions = "*"
+
+# kafka-verifiable-consumer
+conda-forge::kafka-verifiable-consumer = "*"
+
+# kafka-verifiable-producer
+conda-forge::kafka-verifiable-producer = "*"
+
+# kafka-verifiable-share-consumer
+conda-forge::kafka-verifiable-share-consumer = "*"
+
+# kapt
+conda-forge::kapt = "*"
+
+# kbxutil
+conda-forge::kbxutil = "*"
+
+# kcat
+conda-forge::kcat = "*"
+
+# kcc
+conda-forge::kcc = "*"
+
+# kcditto
+conda-forge::kcditto = "*"
+
+# kdcsetup
+conda-forge::kdcsetup = "*"
+
+# kdestroy
+conda-forge::kdestroy = "*"
+
+# kextcache
+conda-forge::kextcache = "*"
+
+# kextfind
+conda-forge::kextfind = "*"
+
+# kextlibs
+conda-forge::kextlibs = "*"
+
+# kextload
+conda-forge::kextload = "*"
+
+# kextstat
+conda-forge::kextstat = "*"
+
+# kextunload
+conda-forge::kextunload = "*"
+
+# kextutil
+conda-forge::kextutil = "*"
+
+# keychain-access
+conda-forge::keychain-access = "*"
+
+# keytool
+conda-forge::keytool = "*"
+
+# kgetcred
+conda-forge::kgetcred = "*"
+
+# kill
+conda-forge::kill = "*"
+
+# kill.d
+conda-forge::kill.d = "*"
+
+# killall
+conda-forge::killall = "*"
+
+# kind
+conda-forge::kind = "*"
+
+# kinit
+conda-forge::kinit = "*"
+
+# klist
+conda-forge::klist = "*"
+
+# klist_cdhashes
+conda-forge::klist_cdhashes = "*"
+
+# kmutil
+conda-forge::kmutil = "*"
+
+# knip
+conda-forge::knip = "*"
+
+# knip-bun
+conda-forge::knip-bun = "*"
+
+# kotlin
+conda-forge::kotlin = "*"
+
+# kotlin-language-server
+conda-forge::kotlin-language-server = "*"
+
+# kotlinc
+conda-forge::kotlinc = "*"
+
+# kotlinc-js
+conda-forge::kotlinc-js = "*"
+
+# kotlinc-jvm
+conda-forge::kotlinc-jvm = "*"
+
+# kpasswd
+conda-forge::kpasswd = "*"
+
+# krb5-config
+conda-forge::krb5-config = "*"
+
+# krbservicesetup
+conda-forge::krbservicesetup = "*"
+
+# ksba-config
+conda-forge::ksba-config = "*"
+
+# ksh
+conda-forge::ksh = "*"
+
+# kswitch
+conda-forge::kswitch = "*"
+
+# ktrace
+conda-forge::ktrace = "*"
+
+# ktutil
+conda-forge::ktutil = "*"
+
+# kubectl
+conda-forge::kubectl = "*"
+
+# kubectl-ctx
+conda-forge::kubectl-ctx = "*"
+
+# kubectl-ns
+conda-forge::kubectl-ns = "*"
+
+# kubectl.lima
+conda-forge::kubectl.lima = "*"
+
+# kubectx
+conda-forge::kubectx = "*"
+
+# kubens
+conda-forge::kubens = "*"
+
+# kubernetes-mcp-server
+conda-forge::kubernetes-mcp-server = "*"
+
+# kustomize
+conda-forge::kustomize = "*"
+
+# lam
+conda-forge::lam = "*"
+
+# lame
+conda-forge::lame = "*"
+
+# languagesetup
+conda-forge::languagesetup = "*"
+
+# last
+conda-forge::last = "*"
+
+# lastcomm
+conda-forge::lastcomm = "*"
+
+# lastwords
+conda-forge::lastwords = "*"
+
+# latency
+conda-forge::latency = "*"
+
+# launchctl
+conda-forge::launchctl = "*"
+
+# launchd
+conda-forge::launchd = "*"
+
+# layerutil
+conda-forge::layerutil = "*"
+
+# lazydocker
+conda-forge::lazydocker = "*"
+
+# lazygit
+conda-forge::lazygit = "*"
+
+# lconvert
+conda-forge::lconvert = "*"
+
+# ld
+conda-forge::ld = "*"
+
+# ldapadd
+conda-forge::ldapadd = "*"
+
+# ldapcompare
+conda-forge::ldapcompare = "*"
+
+# ldapdelete
+conda-forge::ldapdelete = "*"
+
+# ldapexop
+conda-forge::ldapexop = "*"
+
+# ldapmodify
+conda-forge::ldapmodify = "*"
+
+# ldapmodrdn
+conda-forge::ldapmodrdn = "*"
+
+# ldappasswd
+conda-forge::ldappasswd = "*"
+
+# ldapsearch
+conda-forge::ldapsearch = "*"
+
+# ldapurl
+conda-forge::ldapurl = "*"
+
+# ldapwhoami
+conda-forge::ldapwhoami = "*"
+
+# leaftoppm
+conda-forge::leaftoppm = "*"
+
+# leaks
+conda-forge::leaks = "*"
+
+# leave
+conda-forge::leave = "*"
+
+# lefthook
+conda-forge::lefthook = "*"
+
+# less
+conda-forge::less = "*"
+
+# lessecho
+conda-forge::lessecho = "*"
+
+# lesskey
+conda-forge::lesskey = "*"
+
+# lex
+conda-forge::lex = "*"
+
+# lf
+conda-forge::lf = "*"
+
+# libassuan-config
+conda-forge::libassuan-config = "*"
+
+# libdeflate-gunzip
+conda-forge::libdeflate-gunzip = "*"
+
+# libdeflate-gzip
+conda-forge::libdeflate-gzip = "*"
+
+# libgcrypt-config
+conda-forge::libgcrypt-config = "*"
+
+# libnetcfg
+conda-forge::libnetcfg = "*"
+
+# libnetcfg5.34
+conda-forge::libnetcfg5.34 = "*"
+
+# libpng-config
+conda-forge::libpng-config = "*"
+
+# libpng16-config
+conda-forge::libpng16-config = "*"
+
+# libtool
+conda-forge::libtool = "*"
+
+# license_finder
+conda-forge::license_finder = "*"
+
+# lima
+conda-forge::lima = "*"
+
+# limactl
+conda-forge::limactl = "*"
+
+# link
+conda-forge::link = "*"
+
+# linkerd
+conda-forge::linkerd = "*"
+
+# linkicc
+conda-forge::linkicc = "*"
+
+# lipo
+conda-forge::lipo = "*"
+
+# liquibase
+conda-forge::liquibase = "*"
+
+# lispmtopgm
+conda-forge::lispmtopgm = "*"
+
+# lldb
+conda-forge::lldb = "*"
+
+# llvm-g++
+conda-forge::llvm-g++ = "*"
+
+# llvm-gcc
+conda-forge::llvm-gcc = "*"
+
+# ln
+conda-forge::ln = "*"
+
+# load-spark-env.sh
+conda-forge::load-spark-env.sh = "*"
+
+# loads.d
+conda-forge::loads.d = "*"
+
+# loc
+conda-forge::loc = "*"
+
+# local_tone_map
+conda-forge::local_tone_map = "*"
+
+# locale
+conda-forge::locale = "*"
+
+# localedef
+conda-forge::localedef = "*"
+
+# localemanager
+conda-forge::localemanager = "*"
+
+# locate
+conda-forge::locate = "*"
+
+# lockf
+conda-forge::lockf = "*"
+
+# lockstat
+conda-forge::lockstat = "*"
+
+# log
+conda-forge::log = "*"
+
+# log4brains
+conda-forge::log4brains = "*"
+
+# logger
+conda-forge::logger = "*"
+
+# login
+conda-forge::login = "*"
+
+# logname
+conda-forge::logname = "*"
+
+# logresolve
+conda-forge::logresolve = "*"
+
+# look
+conda-forge::look = "*"
+
+# lorder
+conda-forge::lorder = "*"
+
+# loudnorm.rb
+conda-forge::loudnorm.rb = "*"
+
+# lp
+conda-forge::lp = "*"
+
+# lpadmin
+conda-forge::lpadmin = "*"
+
+# lpc
+conda-forge::lpc = "*"
+
+# lpinfo
+conda-forge::lpinfo = "*"
+
+# lpmove
+conda-forge::lpmove = "*"
+
+# lpoptions
+conda-forge::lpoptions = "*"
+
+# lpq
+conda-forge::lpq = "*"
+
+# lpr
+conda-forge::lpr = "*"
+
+# lprm
+conda-forge::lprm = "*"
+
+# lprsetup.sh
+conda-forge::lprsetup.sh = "*"
+
+# lpstat
+conda-forge::lpstat = "*"
+
+# lrelease
+conda-forge::lrelease = "*"
+
+# ls
+conda-forge::ls = "*"
+
+# lsappinfo
+conda-forge::lsappinfo = "*"
+
+# lsbom
+conda-forge::lsbom = "*"
+
+# lskq
+conda-forge::lskq = "*"
+
+# lsm
+conda-forge::lsm = "*"
+
+# lsmp
+conda-forge::lsmp = "*"
+
+# lsof
+conda-forge::lsof = "*"
+
+# lsrc
+conda-forge::lsrc = "*"
+
+# lstmeval
+conda-forge::lstmeval = "*"
+
+# lstmtraining
+conda-forge::lstmtraining = "*"
+
+# lstopo
+conda-forge::lstopo = "*"
+
+# lstopo-no-graphics
+conda-forge::lstopo-no-graphics = "*"
+
+# lsvfs
+conda-forge::lsvfs = "*"
+
+# lto-dump-15
+conda-forge::lto-dump-15 = "*"
+
+# lua
+conda-forge::lua = "*"
+
+# lua-5.4
+conda-forge::lua-5.4 = "*"
+
+# lua-language-server
+conda-forge::lua-language-server = "*"
+
+# lua5.4
+conda-forge::lua5.4 = "*"
+
+# luac
+conda-forge::luac = "*"
+
+# luac-5.4
+conda-forge::luac-5.4 = "*"
+
+# luac5.4
+conda-forge::luac5.4 = "*"
+
+# luajit
+conda-forge::luajit = "*"
+
+# luajit-2.1.1765228720
+conda-forge::luajit-2.1.1765228720 = "*"
+
+# luarocks
+conda-forge::luarocks = "*"
+
+# luarocks-admin
+conda-forge::luarocks-admin = "*"
+
+# lupdate
+conda-forge::lupdate = "*"
+
+# lwp-download
+conda-forge::lwp-download = "*"
+
+# lwp-download5.34
+conda-forge::lwp-download5.34 = "*"
+
+# lwp-dump
+conda-forge::lwp-dump = "*"
+
+# lwp-dump5.34
+conda-forge::lwp-dump5.34 = "*"
+
+# lwp-mirror
+conda-forge::lwp-mirror = "*"
+
+# lwp-mirror5.34
+conda-forge::lwp-mirror5.34 = "*"
+
+# lwp-request
+conda-forge::lwp-request = "*"
+
+# lwp-request5.34
+conda-forge::lwp-request5.34 = "*"
+
+# lychee
+conda-forge::lychee = "*"
+
+# lz4
+conda-forge::lz4 = "*"
+
+# lz4c
+conda-forge::lz4c = "*"
+
+# lz4cat
+conda-forge::lz4cat = "*"
+
+# lzcat
+conda-forge::lzcat = "*"
+
+# lzcmp
+conda-forge::lzcmp = "*"
+
+# lzdiff
+conda-forge::lzdiff = "*"
+
+# lzegrep
+conda-forge::lzegrep = "*"
+
+# lzfgrep
+conda-forge::lzfgrep = "*"
+
+# lzgrep
+conda-forge::lzgrep = "*"
+
+# lzless
+conda-forge::lzless = "*"
+
+# lzma
+conda-forge::lzma = "*"
+
+# lzmadec
+conda-forge::lzmadec = "*"
+
+# lzmainfo
+conda-forge::lzmainfo = "*"
+
+# lzmore
+conda-forge::lzmore = "*"
+
+# lzop
+conda-forge::lzop = "*"
+
+# m4
+conda-forge::m4 = "*"
+
+# mDNSResponder
+conda-forge::mDNSResponder = "*"
+
+# mDNSResponderHelper
+conda-forge::mDNSResponderHelper = "*"
+
+# macbinary
+conda-forge::macbinary = "*"
+
+# macdeployqt
+conda-forge::macdeployqt = "*"
+
+# macdeployqt6
+conda-forge::macdeployqt6 = "*"
+
+# macerror
+conda-forge::macerror = "*"
+
+# macerror5.34
+conda-forge::macerror5.34 = "*"
+
+# machine
+conda-forge::machine = "*"
+
+# mackup
+conda-forge::mackup = "*"
+
+# macoserror
+conda-forge::macoserror = "*"
+
+# macptopbm
+conda-forge::macptopbm = "*"
+
+# magick
+conda-forge::magick = "*"
+
+# magick-script
+conda-forge::magick-script = "*"
+
+# mail
+conda-forge::mail = "*"
+
+# mailq
+conda-forge::mailq = "*"
+
+# mailx
+conda-forge::mailx = "*"
+
+# make
+conda-forge::make = "*"
+
+# make_chlayout_test
+conda-forge::make_chlayout_test = "*"
+
+# makeinfo
+conda-forge::makeinfo = "*"
+
+# malloc_history
+conda-forge::malloc_history = "*"
+
+# man
+conda-forge::man = "*"
+
+# mandoc
+conda-forge::mandoc = "*"
+
+# mandoc_soelim
+conda-forge::mandoc_soelim = "*"
+
+# manpath
+conda-forge::manpath = "*"
+
+# manweb
+conda-forge::manweb = "*"
+
+# markdown-it
+conda-forge::markdown-it = "*"
+
+# markdown-oxide
+conda-forge::markdown-oxide = "*"
+
+# markdown_py
+conda-forge::markdown_py = "*"
+
+# marksman
+conda-forge::marksman = "*"
+
+# mas
+conda-forge::mas = "*"
+
+# mc
+conda-forge::mc = "*"
+
+# mcdiff
+conda-forge::mcdiff = "*"
+
+# mcedit
+conda-forge::mcedit = "*"
+
+# mcp-code-graph
+conda-forge::mcp-code-graph = "*"
+
+# mcp-server-code-runner
+conda-forge::mcp-server-code-runner = "*"
+
+# mcp-server-filesystem
+conda-forge::mcp-server-filesystem = "*"
+
+# mcp-server-playwright
+conda-forge::mcp-server-playwright = "*"
+
+# mcp-server-sequential-thinking
+conda-forge::mcp-server-sequential-thinking = "*"
+
+# mcp-server-sqlite
+conda-forge::mcp-server-sqlite = "*"
+
+# mcview
+conda-forge::mcview = "*"
+
+# mcxquery
+conda-forge::mcxquery = "*"
+
+# mcxrefresh
+conda-forge::mcxrefresh = "*"
+
+# md2html
+conda-forge::md2html = "*"
+
+# md5
+conda-forge::md5 = "*"
+
+# md5sum
+conda-forge::md5sum = "*"
+
+# mdatopbm
+conda-forge::mdatopbm = "*"
+
+# mddiagnose
+conda-forge::mddiagnose = "*"
+
+# mdfind
+conda-forge::mdfind = "*"
+
+# mdimport
+conda-forge::mdimport = "*"
+
+# mdls
+conda-forge::mdls = "*"
+
+# mdutil
+conda-forge::mdutil = "*"
+
+# mem_image
+conda-forge::mem_image = "*"
+
+# memacct
+conda-forge::memacct = "*"
+
+# memcached
+conda-forge::memcached = "*"
+
+# memory_pressure
+conda-forge::memory_pressure = "*"
+
+# merge-all-source-plugins
+conda-forge::merge-all-source-plugins = "*"
+
+# merge_unicharsets
+conda-forge::merge_unicharsets = "*"
+
+# mesg
+conda-forge::mesg = "*"
+
+# meson
+conda-forge::meson = "*"
+
+# metaflac
+conda-forge::metaflac = "*"
+
+# mftraining
+conda-forge::mftraining = "*"
+
+# mg
+conda-forge::mg = "*"
+
+# mgrtopbm
+conda-forge::mgrtopbm = "*"
+
+# mib2c
+conda-forge::mib2c = "*"
+
+# mib2c-update
+conda-forge::mib2c-update = "*"
+
+# mig
+conda-forge::mig = "*"
+
+# minikube
+conda-forge::minikube = "*"
+
+# minio
+conda-forge::minio = "*"
+
+# mirror_server
+conda-forge::mirror_server = "*"
+
+# mirror_server_stop
+conda-forge::mirror_server_stop = "*"
+
+# mise
+conda-forge::mise = "*"
+
+# missing_codec_desc
+conda-forge::missing_codec_desc = "*"
+
+# mitmdump
+conda-forge::mitmdump = "*"
+
+# mitmproxy
+conda-forge::mitmproxy = "*"
+
+# mitmweb
+conda-forge::mitmweb = "*"
+
+# mix
+conda-forge::mix = "*"
+
+# mkbom
+conda-forge::mkbom = "*"
+
+# mkcert
+conda-forge::mkcert = "*"
+
+# mkdir
+conda-forge::mkdir = "*"
+
+# mkdoc
+conda-forge::mkdoc = "*"
+
+# mkextunpack
+conda-forge::mkextunpack = "*"
+
+# mkfifo
+conda-forge::mkfifo = "*"
+
+# mkfile
+conda-forge::mkfile = "*"
+
+# mknod
+conda-forge::mknod = "*"
+
+# mkoctfile
+conda-forge::mkoctfile = "*"
+
+# mkoctfile-10.3.0
+conda-forge::mkoctfile-10.3.0 = "*"
+
+# mkpassdb
+conda-forge::mkpassdb = "*"
+
+# mkrc
+conda-forge::mkrc = "*"
+
+# mktemp
+conda-forge::mktemp = "*"
+
+# mlx.distributed_config
+conda-forge::mlx.distributed_config = "*"
+
+# mlx.launch
+conda-forge::mlx.launch = "*"
+
+# mlx_lm.awq
+conda-forge::mlx_lm.awq = "*"
+
+# mlx_lm.benchmark
+conda-forge::mlx_lm.benchmark = "*"
+
+# mlx_lm.cache_prompt
+conda-forge::mlx_lm.cache_prompt = "*"
+
+# mlx_lm.chat
+conda-forge::mlx_lm.chat = "*"
+
+# mlx_lm.convert
+conda-forge::mlx_lm.convert = "*"
+
+# mlx_lm.dwq
+conda-forge::mlx_lm.dwq = "*"
+
+# mlx_lm.dynamic_quant
+conda-forge::mlx_lm.dynamic_quant = "*"
+
+# mlx_lm.evaluate
+conda-forge::mlx_lm.evaluate = "*"
+
+# mlx_lm.fuse
+conda-forge::mlx_lm.fuse = "*"
+
+# mlx_lm.generate
+conda-forge::mlx_lm.generate = "*"
+
+# mlx_lm.gptq
+conda-forge::mlx_lm.gptq = "*"
+
+# mlx_lm.lora
+conda-forge::mlx_lm.lora = "*"
+
+# mlx_lm.manage
+conda-forge::mlx_lm.manage = "*"
+
+# mlx_lm.perplexity
+conda-forge::mlx_lm.perplexity = "*"
+
+# mlx_lm.server
+conda-forge::mlx_lm.server = "*"
+
+# mlx_lm.upload
+conda-forge::mlx_lm.upload = "*"
+
+# mnthome
+conda-forge::mnthome = "*"
+
+# modelcatalogdump
+conda-forge::modelcatalogdump = "*"
+
+# modelmanagerdump
+conda-forge::modelmanagerdump = "*"
+
+# mogrify
+conda-forge::mogrify = "*"
+
+# mongosh
+conda-forge::mongosh = "*"
+
+# monit
+conda-forge::monit = "*"
+
+# montage
+conda-forge::montage = "*"
+
+# moose-outdated
+conda-forge::moose-outdated = "*"
+
+# moose-outdated5.34
+conda-forge::moose-outdated5.34 = "*"
+
+# more
+conda-forge::more = "*"
+
+# mount
+conda-forge::mount = "*"
+
+# mount_9p
+conda-forge::mount_9p = "*"
+
+# mount_acfs
+conda-forge::mount_acfs = "*"
+
+# mount_afp
+conda-forge::mount_afp = "*"
+
+# mount_apfs
+conda-forge::mount_apfs = "*"
+
+# mount_cd9660
+conda-forge::mount_cd9660 = "*"
+
+# mount_cddafs
+conda-forge::mount_cddafs = "*"
+
+# mount_devfs
+conda-forge::mount_devfs = "*"
+
+# mount_exfat
+conda-forge::mount_exfat = "*"
+
+# mount_fdesc
+conda-forge::mount_fdesc = "*"
+
+# mount_ftp
+conda-forge::mount_ftp = "*"
+
+# mount_hfs
+conda-forge::mount_hfs = "*"
+
+# mount_msdos
+conda-forge::mount_msdos = "*"
+
+# mount_nfs
+conda-forge::mount_nfs = "*"
+
+# mount_smbfs
+conda-forge::mount_smbfs = "*"
+
+# mount_tmpfs
+conda-forge::mount_tmpfs = "*"
+
+# mount_udf
+conda-forge::mount_udf = "*"
+
+# mount_virtiofs
+conda-forge::mount_virtiofs = "*"
+
+# mount_webdav
+conda-forge::mount_webdav = "*"
+
+# mp2bug
+conda-forge::mp2bug = "*"
+
+# mpg123
+conda-forge::mpg123 = "*"
+
+# mpg123-id3dump
+conda-forge::mpg123-id3dump = "*"
+
+# mpg123-strip
+conda-forge::mpg123-strip = "*"
+
+# mpic++
+conda-forge::mpic++ = "*"
+
+# mpicalc
+conda-forge::mpicalc = "*"
+
+# mpicc
+conda-forge::mpicc = "*"
+
+# mpicxx
+conda-forge::mpicxx = "*"
+
+# mpiexec
+conda-forge::mpiexec = "*"
+
+# mpif77
+conda-forge::mpif77 = "*"
+
+# mpif90
+conda-forge::mpif90 = "*"
+
+# mpifort
+conda-forge::mpifort = "*"
+
+# mpioutil
+conda-forge::mpioutil = "*"
+
+# mpirun
+conda-forge::mpirun = "*"
+
+# mpsgraphtool
+conda-forge::mpsgraphtool = "*"
+
+# mrftopbm
+conda-forge::mrftopbm = "*"
+
+# msgattrib
+conda-forge::msgattrib = "*"
+
+# msgcat
+conda-forge::msgcat = "*"
+
+# msgcmp
+conda-forge::msgcmp = "*"
+
+# msgcomm
+conda-forge::msgcomm = "*"
+
+# msgconv
+conda-forge::msgconv = "*"
+
+# msgen
+conda-forge::msgen = "*"
+
+# msgexec
+conda-forge::msgexec = "*"
+
+# msgfilter
+conda-forge::msgfilter = "*"
+
+# msgfmt
+conda-forge::msgfmt = "*"
+
+# msggrep
+conda-forge::msggrep = "*"
+
+# msginit
+conda-forge::msginit = "*"
+
+# msgmerge
+conda-forge::msgmerge = "*"
+
+# msgunfmt
+conda-forge::msgunfmt = "*"
+
+# msguniq
+conda-forge::msguniq = "*"
+
+# mtree
+conda-forge::mtree = "*"
+
+# mtvtoppm
+conda-forge::mtvtoppm = "*"
+
+# multirender_test
+conda-forge::multirender_test = "*"
+
+# murge
+conda-forge::murge = "*"
+
+# mv
+conda-forge::mv = "*"
+
+# mvn
+conda-forge::mvn = "*"
+
+# mvnDebug
+conda-forge::mvnDebug = "*"
+
+# mvnyjp
+conda-forge::mvnyjp = "*"
+
+# my_print_defaults
+conda-forge::my_print_defaults = "*"
+
+# myisam_ftdump
+conda-forge::myisam_ftdump = "*"
+
+# myisamchk
+conda-forge::myisamchk = "*"
+
+# myisamlog
+conda-forge::myisamlog = "*"
+
+# myisampack
+conda-forge::myisampack = "*"
+
+# mypy
+mypy = "*"
+
+# mypyc
+conda-forge::mypyc = "*"
+
+# mysql
+conda-forge::mysql = "*"
+
+# mysql.server
+conda-forge::mysql.server = "*"
+
+# mysql_client_test
+conda-forge::mysql_client_test = "*"
+
+# mysql_config
+conda-forge::mysql_config = "*"
+
+# mysql_config_editor
+conda-forge::mysql_config_editor = "*"
+
+# mysql_keyring_encryption_test
+conda-forge::mysql_keyring_encryption_test = "*"
+
+# mysql_migrate_keyring
+conda-forge::mysql_migrate_keyring = "*"
+
+# mysql_secure_installation
+conda-forge::mysql_secure_installation = "*"
+
+# mysql_test_event_tracking
+conda-forge::mysql_test_event_tracking = "*"
+
+# mysql_tzinfo_to_sql
+conda-forge::mysql_tzinfo_to_sql = "*"
+
+# mysqladmin
+conda-forge::mysqladmin = "*"
+
+# mysqlbinlog
+conda-forge::mysqlbinlog = "*"
+
+# mysqlcheck
+conda-forge::mysqlcheck = "*"
+
+# mysqld
+conda-forge::mysqld = "*"
+
+# mysqld_multi
+conda-forge::mysqld_multi = "*"
+
+# mysqld_safe
+conda-forge::mysqld_safe = "*"
+
+# mysqldump
+conda-forge::mysqldump = "*"
+
+# mysqldumpslow
+conda-forge::mysqldumpslow = "*"
+
+# mysqlimport
+conda-forge::mysqlimport = "*"
+
+# mysqlrouter
+conda-forge::mysqlrouter = "*"
+
+# mysqlrouter_bootstrap
+conda-forge::mysqlrouter_bootstrap = "*"
+
+# mysqlrouter_keyring
+conda-forge::mysqlrouter_keyring = "*"
+
+# mysqlrouter_mrs_client
+conda-forge::mysqlrouter_mrs_client = "*"
+
+# mysqlrouter_passwd
+conda-forge::mysqlrouter_passwd = "*"
+
+# mysqlrouter_plugin_info
+conda-forge::mysqlrouter_plugin_info = "*"
+
+# mysqlshow
+conda-forge::mysqlshow = "*"
+
+# mysqlslap
+conda-forge::mysqlslap = "*"
+
+# mysqltest
+conda-forge::mysqltest = "*"
+
+# mysqltest_safe_process
+conda-forge::mysqltest_safe_process = "*"
+
+# mysqlxtest
+conda-forge::mysqlxtest = "*"
+
+# na
+conda-forge::na = "*"
+
+# nano
+conda-forge::nano = "*"
+
+# nats
+conda-forge::nats = "*"
+
+# nats-server
+conda-forge::nats-server = "*"
+
+# navi
+conda-forge::navi = "*"
+
+# nbdst
+conda-forge::nbdst = "*"
+
+# nc
+conda-forge::nc = "*"
+
+# ncal
+conda-forge::ncal = "*"
+
+# ncat
+conda-forge::ncat = "*"
+
+# ncctl
+conda-forge::ncctl = "*"
+
+# ncdestroy
+conda-forge::ncdestroy = "*"
+
+# ncdu
+conda-forge::ncdu = "*"
+
+# nci
+conda-forge::nci = "*"
+
+# ncinit
+conda-forge::ncinit = "*"
+
+# nclist
+conda-forge::nclist = "*"
+
+# ncu
+conda-forge::ncu = "*"
+
+# ncurses5.4-config
+conda-forge::ncurses5.4-config = "*"
+
+# nd
+conda-forge::nd = "*"
+
+# ndiff
+conda-forge::ndiff = "*"
+
+# ndp
+conda-forge::ndp = "*"
+
+# neo4j
+neo4j = "*"
+
+# neo4j-admin
+conda-forge::neo4j-admin = "*"
+
+# neo4j-mcp
+conda-forge::neo4j-mcp = "*"
+
+# neofetch
+conda-forge::neofetch = "*"
+
+# neotoppm
+conda-forge::neotoppm = "*"
+
+# nerdctl.lima
+conda-forge::nerdctl.lima = "*"
+
+# net-server
+conda-forge::net-server = "*"
+
+# net-server5.34
+conda-forge::net-server5.34 = "*"
+
+# net-snmp-cert
+conda-forge::net-snmp-cert = "*"
+
+# net-snmp-config
+conda-forge::net-snmp-config = "*"
+
+# net-snmp-create-v3-user
+conda-forge::net-snmp-create-v3-user = "*"
+
+# netbiosd
+conda-forge::netbiosd = "*"
+
+# netlify
+conda-forge::netlify = "*"
+
+# netstat
+conda-forge::netstat = "*"
+
+# nettle-hash
+conda-forge::nettle-hash = "*"
+
+# nettle-lfib-stream
+conda-forge::nettle-lfib-stream = "*"
+
+# nettle-pbkdf2
+conda-forge::nettle-pbkdf2 = "*"
+
+# nettop
+conda-forge::nettop = "*"
+
+# networkQuality
+conda-forge::networkQuality = "*"
+
+# networksetup
+conda-forge::networksetup = "*"
+
+# newaliases
+conda-forge::newaliases = "*"
+
+# newfs_apfs
+conda-forge::newfs_apfs = "*"
+
+# newfs_exfat
+conda-forge::newfs_exfat = "*"
+
+# newfs_fskit
+conda-forge::newfs_fskit = "*"
+
+# newfs_hfs
+conda-forge::newfs_hfs = "*"
+
+# newfs_msdos
+conda-forge::newfs_msdos = "*"
+
+# newfs_udf
+conda-forge::newfs_udf = "*"
+
+# newgrp
+conda-forge::newgrp = "*"
+
+# newman
+conda-forge::newman = "*"
+
+# newproc.d
+conda-forge::newproc.d = "*"
+
+# newrelic
+conda-forge::newrelic = "*"
+
+# newsyslog
+conda-forge::newsyslog = "*"
+
+# next
+conda-forge::next = "*"
+
+# nfs4mapid
+conda-forge::nfs4mapid = "*"
+
+# nfsd
+conda-forge::nfsd = "*"
+
+# nfsiod
+conda-forge::nfsiod = "*"
+
+# nfsstat
+conda-forge::nfsstat = "*"
+
+# ngettext
+conda-forge::ngettext = "*"
+
+# ngrok
+conda-forge::ngrok = "*"
+
+# ni
+conda-forge::ni = "*"
+
+# nice
+conda-forge::nice = "*"
+
+# niceload
+conda-forge::niceload = "*"
+
+# ninja
+conda-forge::ninja = "*"
+
+# nl
+conda-forge::nl = "*"
+
+# nlcontrol
+conda-forge::nlcontrol = "*"
+
+# nlx
+conda-forge::nlx = "*"
+
+# nm
+conda-forge::nm = "*"
+
+# nmap
+conda-forge::nmap = "*"
+
+# nmedit
+conda-forge::nmedit = "*"
+
+# nns
+conda-forge::nns = "*"
+
+# nnsd
+conda-forge::nnsd = "*"
+
+# nnslog
+conda-forge::nnslog = "*"
+
+# node
+conda-forge::node = "*"
+
+# node_exporter
+conda-forge::node_exporter = "*"
+
+# node_exporter_brew_services
+conda-forge::node_exporter_brew_services = "*"
+
+# nodeenv
+conda-forge::nodeenv = "*"
+
+# nohup
+conda-forge::nohup = "*"
+
+# nologin
+conda-forge::nologin = "*"
+
+# nomad
+conda-forge::nomad = "*"
+
+# normalize.py
+conda-forge::normalize.py = "*"
+
+# normalizer
+conda-forge::normalizer = "*"
+
+# notifyd
+conda-forge::notifyd = "*"
+
+# notifyutil
+conda-forge::notifyutil = "*"
+
+# notion-mcp-server
+conda-forge::notion-mcp-server = "*"
+
+# nping
+conda-forge::nping = "*"
+
+# npm
+conda-forge::npm = "*"
+
+# npm-check-updates
+conda-forge::npm-check-updates = "*"
+
+# nproc
+conda-forge::nproc = "*"
+
+# npx
+conda-forge::npx = "*"
+
+# nr
+conda-forge::nr = "*"
+
+# nscurl
+conda-forge::nscurl = "*"
+
+# nslookup
+conda-forge::nslookup = "*"
+
+# nsupdate
+conda-forge::nsupdate = "*"
+
+# ntl
+conda-forge::ntl = "*"
+
+# numfmt
+conda-forge::numfmt = "*"
+
+# numpy-config
+conda-forge::numpy-config = "*"
+
+# nun
+conda-forge::nun = "*"
+
+# nup
+conda-forge::nup = "*"
+
+# nvim
+conda-forge::nvim = "*"
+
+# nvram
+conda-forge::nvram = "*"
+
+# objdump
+conda-forge::objdump = "*"
+
+# ocspcheck
+conda-forge::ocspcheck = "*"
+
+# ocspd
+conda-forge::ocspd = "*"
+
+# ocsptool
+conda-forge::ocsptool = "*"
+
+# octave
+conda-forge::octave = "*"
+
+# octave-10.3.0
+conda-forge::octave-10.3.0 = "*"
+
+# octave-cli
+conda-forge::octave-cli = "*"
+
+# octave-cli-10.3.0
+conda-forge::octave-cli-10.3.0 = "*"
+
+# octave-config
+conda-forge::octave-config = "*"
+
+# octave-config-10.3.0
+conda-forge::octave-config-10.3.0 = "*"
+
+# od
+conda-forge::od = "*"
+
+# odbc_config
+conda-forge::odbc_config = "*"
+
+# odbcinst
+conda-forge::odbcinst = "*"
+
+# ode
+conda-forge::ode = "*"
+
+# odutil
+conda-forge::odutil = "*"
+
+# oid2name
+conda-forge::oid2name = "*"
+
+# oid2name-17
+conda-forge::oid2name-17 = "*"
+
+# ojph_compress
+conda-forge::ojph_compress = "*"
+
+# ojph_expand
+conda-forge::ojph_expand = "*"
+
+# ollama
+ollama = "*"
+
+# ollama-mcp
+conda-forge::ollama-mcp = "*"
+
+# ompi_info
+conda-forge::ompi_info = "*"
+
+# onefetch
+conda-forge::onefetch = "*"
+
+# onig-config
+conda-forge::onig-config = "*"
+
+# op
+conda-forge::op = "*"
+
+# opal_wrapper
+conda-forge::opal_wrapper = "*"
+
+# open
+conda-forge::open = "*"
+
+# openai
+conda-forge::openai = "*"
+
+# opencode
+conda-forge::opencode = "*"
+
+# opendiff
+conda-forge::opendiff = "*"
+
+# opensearch
+conda-forge::opensearch = "*"
+
+# opensearch-keystore
+conda-forge::opensearch-keystore = "*"
+
+# opensearch-plugin
+conda-forge::opensearch-plugin = "*"
+
+# opensearch-shard
+conda-forge::opensearch-shard = "*"
+
+# opensnoop
+conda-forge::opensnoop = "*"
+
+# openssl
+conda-forge::openssl = "*"
+
+# opj_compress
+conda-forge::opj_compress = "*"
+
+# opj_decompress
+conda-forge::opj_decompress = "*"
+
+# opj_dump
+conda-forge::opj_dump = "*"
+
+# orb
+conda-forge::orb = "*"
+
+# orbctl
+conda-forge::orbctl = "*"
+
+# orbd
+conda-forge::orbd = "*"
+
+# organize
+conda-forge::organize = "*"
+
+# osacompile
+conda-forge::osacompile = "*"
+
+# osadecompile
+conda-forge::osadecompile = "*"
+
+# osalang
+conda-forge::osalang = "*"
+
+# osascript
+conda-forge::osascript = "*"
+
+# oshrun
+conda-forge::oshrun = "*"
+
+# osql
+conda-forge::osql = "*"
+
+# otctl
+conda-forge::otctl = "*"
+
+# otool
+conda-forge::otool = "*"
+
+# out123
+conda-forge::out123 = "*"
+
+# oxc_language_server
+conda-forge::oxc_language_server = "*"
+
+# oxlint
+conda-forge::oxlint = "*"
+
+# p11-kit
+conda-forge::p11-kit = "*"
+
+# p11tool
+conda-forge::p11tool = "*"
+
+# pack200
+conda-forge::pack200 = "*"
+
+# package-stash-conflicts
+conda-forge::package-stash-conflicts = "*"
+
+# package-stash-conflicts5.34
+conda-forge::package-stash-conflicts5.34 = "*"
+
+# packer
+conda-forge::packer = "*"
+
+# page
+conda-forge::page = "*"
+
+# pagesize
+conda-forge::pagesize = "*"
+
+# pagestuff
+conda-forge::pagestuff = "*"
+
+# pal2rgb
+conda-forge::pal2rgb = "*"
+
+# palloc
+conda-forge::palloc = "*"
+
+# palmtopnm
+conda-forge::palmtopnm = "*"
+
+# pamaddnoise
+conda-forge::pamaddnoise = "*"
+
+# pamaltsat
+conda-forge::pamaltsat = "*"
+
+# pamarith
+conda-forge::pamarith = "*"
+
+# pambackground
+conda-forge::pambackground = "*"
+
+# pambayer
+conda-forge::pambayer = "*"
+
+# pambrighten
+conda-forge::pambrighten = "*"
+
+# pamcat
+conda-forge::pamcat = "*"
+
+# pamchannel
+conda-forge::pamchannel = "*"
+
+# pamcomp
+conda-forge::pamcomp = "*"
+
+# pamcrater
+conda-forge::pamcrater = "*"
+
+# pamcut
+conda-forge::pamcut = "*"
+
+# pamdeinterlace
+conda-forge::pamdeinterlace = "*"
+
+# pamdepth
+conda-forge::pamdepth = "*"
+
+# pamdice
+conda-forge::pamdice = "*"
+
+# pamditherbw
+conda-forge::pamditherbw = "*"
+
+# pamedge
+conda-forge::pamedge = "*"
+
+# pamendian
+conda-forge::pamendian = "*"
+
+# pamenlarge
+conda-forge::pamenlarge = "*"
+
+# pamexec
+conda-forge::pamexec = "*"
+
+# pamfile
+conda-forge::pamfile = "*"
+
+# pamfind
+conda-forge::pamfind = "*"
+
+# pamfix
+conda-forge::pamfix = "*"
+
+# pamfixtrunc
+conda-forge::pamfixtrunc = "*"
+
+# pamflip
+conda-forge::pamflip = "*"
+
+# pamfunc
+conda-forge::pamfunc = "*"
+
+# pamgauss
+conda-forge::pamgauss = "*"
+
+# pamgetcolor
+conda-forge::pamgetcolor = "*"
+
+# pamgradient
+conda-forge::pamgradient = "*"
+
+# pamhomography
+conda-forge::pamhomography = "*"
+
+# pamhue
+conda-forge::pamhue = "*"
+
+# pamlevels
+conda-forge::pamlevels = "*"
+
+# pamlookup
+conda-forge::pamlookup = "*"
+
+# pammasksharpen
+conda-forge::pammasksharpen = "*"
+
+# pammixinterlace
+conda-forge::pammixinterlace = "*"
+
+# pammixmulti
+conda-forge::pammixmulti = "*"
+
+# pammosaicknit
+conda-forge::pammosaicknit = "*"
+
+# pamoil
+conda-forge::pamoil = "*"
+
+# pampaintspill
+conda-forge::pampaintspill = "*"
+
+# pamperspective
+conda-forge::pamperspective = "*"
+
+# pampick
+conda-forge::pampick = "*"
+
+# pampop9
+conda-forge::pampop9 = "*"
+
+# pamrecolor
+conda-forge::pamrecolor = "*"
+
+# pamrestack
+conda-forge::pamrestack = "*"
+
+# pamrgbatopng
+conda-forge::pamrgbatopng = "*"
+
+# pamrubber
+conda-forge::pamrubber = "*"
+
+# pamscale
+conda-forge::pamscale = "*"
+
+# pamseq
+conda-forge::pamseq = "*"
+
+# pamshadedrelief
+conda-forge::pamshadedrelief = "*"
+
+# pamsharpmap
+conda-forge::pamsharpmap = "*"
+
+# pamsharpness
+conda-forge::pamsharpness = "*"
+
+# pamshuffle
+conda-forge::pamshuffle = "*"
+
+# pamsistoaglyph
+conda-forge::pamsistoaglyph = "*"
+
+# pamslice
+conda-forge::pamslice = "*"
+
+# pamsplit
+conda-forge::pamsplit = "*"
+
+# pamstack
+conda-forge::pamstack = "*"
+
+# pamstereogram
+conda-forge::pamstereogram = "*"
+
+# pamstretch
+conda-forge::pamstretch = "*"
+
+# pamstretch-gen
+conda-forge::pamstretch-gen = "*"
+
+# pamsumm
+conda-forge::pamsumm = "*"
+
+# pamsummcol
+conda-forge::pamsummcol = "*"
+
+# pamtable
+conda-forge::pamtable = "*"
+
+# pamthreshold
+conda-forge::pamthreshold = "*"
+
+# pamtilt
+conda-forge::pamtilt = "*"
+
+# pamtoavs
+conda-forge::pamtoavs = "*"
+
+# pamtodjvurle
+conda-forge::pamtodjvurle = "*"
+
+# pamtofits
+conda-forge::pamtofits = "*"
+
+# pamtogif
+conda-forge::pamtogif = "*"
+
+# pamtohdiff
+conda-forge::pamtohdiff = "*"
+
+# pamtohtmltbl
+conda-forge::pamtohtmltbl = "*"
+
+# pamtojpeg2k
+conda-forge::pamtojpeg2k = "*"
+
+# pamtompfont
+conda-forge::pamtompfont = "*"
+
+# pamtooctaveimg
+conda-forge::pamtooctaveimg = "*"
+
+# pamtopam
+conda-forge::pamtopam = "*"
+
+# pamtopdbimg
+conda-forge::pamtopdbimg = "*"
+
+# pamtopfm
+conda-forge::pamtopfm = "*"
+
+# pamtopng
+conda-forge::pamtopng = "*"
+
+# pamtopnm
+conda-forge::pamtopnm = "*"
+
+# pamtoqoi
+conda-forge::pamtoqoi = "*"
+
+# pamtosrf
+conda-forge::pamtosrf = "*"
+
+# pamtosvg
+conda-forge::pamtosvg = "*"
+
+# pamtotga
+conda-forge::pamtotga = "*"
+
+# pamtotiff
+conda-forge::pamtotiff = "*"
+
+# pamtouil
+conda-forge::pamtouil = "*"
+
+# pamtowinicon
+conda-forge::pamtowinicon = "*"
+
+# pamtoxvmini
+conda-forge::pamtoxvmini = "*"
+
+# pamtris
+conda-forge::pamtris = "*"
+
+# pamundice
+conda-forge::pamundice = "*"
+
+# pamunlookup
+conda-forge::pamunlookup = "*"
+
+# pamvalidate
+conda-forge::pamvalidate = "*"
+
+# pamwipeout
+conda-forge::pamwipeout = "*"
+
+# pandoc
+conda-forge::pandoc = "*"
+
+# pango-list
+conda-forge::pango-list = "*"
+
+# pango-segmentation
+conda-forge::pango-segmentation = "*"
+
+# pango-view
+conda-forge::pango-view = "*"
+
+# par.pl
+conda-forge::par.pl = "*"
+
+# par5.34.pl
+conda-forge::par5.34.pl = "*"
+
+# parallel
+conda-forge::parallel = "*"
+
+# parcat
+conda-forge::parcat = "*"
+
+# parl
+conda-forge::parl = "*"
+
+# parl5.34
+conda-forge::parl5.34 = "*"
+
+# parldyn
+conda-forge::parldyn = "*"
+
+# parldyn5.34
+conda-forge::parldyn5.34 = "*"
+
+# parset
+conda-forge::parset = "*"
+
+# parsort
+conda-forge::parsort = "*"
+
+# pass
+conda-forge::pass = "*"
+
+# passwd
+conda-forge::passwd = "*"
+
+# paste
+conda-forge::paste = "*"
+
+# patch
+conda-forge::patch = "*"
+
+# patcheck
+conda-forge::patcheck = "*"
+
+# pathchk
+conda-forge::pathchk = "*"
+
+# pathopens.d
+conda-forge::pathopens.d = "*"
+
+# pattrs
+conda-forge::pattrs = "*"
+
+# pax
+conda-forge::pax = "*"
+
+# pbcopy
+conda-forge::pbcopy = "*"
+
+# pbmclean
+conda-forge::pbmclean = "*"
+
+# pbmlife
+conda-forge::pbmlife = "*"
+
+# pbmmake
+conda-forge::pbmmake = "*"
+
+# pbmmask
+conda-forge::pbmmask = "*"
+
+# pbmminkowski
+conda-forge::pbmminkowski = "*"
+
+# pbmnoise
+conda-forge::pbmnoise = "*"
+
+# pbmpage
+conda-forge::pbmpage = "*"
+
+# pbmpscale
+conda-forge::pbmpscale = "*"
+
+# pbmreduce
+conda-forge::pbmreduce = "*"
+
+# pbmtext
+conda-forge::pbmtext = "*"
+
+# pbmtextps
+conda-forge::pbmtextps = "*"
+
+# pbmto10x
+conda-forge::pbmto10x = "*"
+
+# pbmto4425
+conda-forge::pbmto4425 = "*"
+
+# pbmtoascii
+conda-forge::pbmtoascii = "*"
+
+# pbmtoatk
+conda-forge::pbmtoatk = "*"
+
+# pbmtobbnbg
+conda-forge::pbmtobbnbg = "*"
+
+# pbmtocis
+conda-forge::pbmtocis = "*"
+
+# pbmtocmuwm
+conda-forge::pbmtocmuwm = "*"
+
+# pbmtodjvurle
+conda-forge::pbmtodjvurle = "*"
+
+# pbmtoepsi
+conda-forge::pbmtoepsi = "*"
+
+# pbmtoepson
+conda-forge::pbmtoepson = "*"
+
+# pbmtoescp2
+conda-forge::pbmtoescp2 = "*"
+
+# pbmtog3
+conda-forge::pbmtog3 = "*"
+
+# pbmtogem
+conda-forge::pbmtogem = "*"
+
+# pbmtogo
+conda-forge::pbmtogo = "*"
+
+# pbmtoibm23xx
+conda-forge::pbmtoibm23xx = "*"
+
+# pbmtoicon
+conda-forge::pbmtoicon = "*"
+
+# pbmtolj
+conda-forge::pbmtolj = "*"
+
+# pbmtoln03
+conda-forge::pbmtoln03 = "*"
+
+# pbmtolps
+conda-forge::pbmtolps = "*"
+
+# pbmtomacp
+conda-forge::pbmtomacp = "*"
+
+# pbmtomatrixorbital
+conda-forge::pbmtomatrixorbital = "*"
+
+# pbmtomda
+conda-forge::pbmtomda = "*"
+
+# pbmtomgr
+conda-forge::pbmtomgr = "*"
+
+# pbmtomrf
+conda-forge::pbmtomrf = "*"
+
+# pbmtonokia
+conda-forge::pbmtonokia = "*"
+
+# pbmtopgm
+conda-forge::pbmtopgm = "*"
+
+# pbmtopi3
+conda-forge::pbmtopi3 = "*"
+
+# pbmtopk
+conda-forge::pbmtopk = "*"
+
+# pbmtoplot
+conda-forge::pbmtoplot = "*"
+
+# pbmtoppa
+conda-forge::pbmtoppa = "*"
+
+# pbmtopsg3
+conda-forge::pbmtopsg3 = "*"
+
+# pbmtoptx
+conda-forge::pbmtoptx = "*"
+
+# pbmtosunicon
+conda-forge::pbmtosunicon = "*"
+
+# pbmtowbmp
+conda-forge::pbmtowbmp = "*"
+
+# pbmtox10bm
+conda-forge::pbmtox10bm = "*"
+
+# pbmtoxbm
+conda-forge::pbmtoxbm = "*"
+
+# pbmtoybm
+conda-forge::pbmtoybm = "*"
+
+# pbmtozinc
+conda-forge::pbmtozinc = "*"
+
+# pbmupc
+conda-forge::pbmupc = "*"
+
+# pbpaste
+conda-forge::pbpaste = "*"
+
+# pbunzip2
+conda-forge::pbunzip2 = "*"
+
+# pbzcat
+conda-forge::pbzcat = "*"
+
+# pbzip2
+conda-forge::pbzip2 = "*"
+
+# pc1toppm
+conda-forge::pc1toppm = "*"
+
+# pcap-config
+conda-forge::pcap-config = "*"
+
+# pcc
+conda-forge::pcc = "*"
+
+# pcdindex
+conda-forge::pcdindex = "*"
+
+# pcdovtoppm
+conda-forge::pcdovtoppm = "*"
+
+# pcre-config
+conda-forge::pcre-config = "*"
+
+# pcre2-config
+conda-forge::pcre2-config = "*"
+
+# pcre2grep
+conda-forge::pcre2grep = "*"
+
+# pcre2test
+conda-forge::pcre2test = "*"
+
+# pcregrep
+conda-forge::pcregrep = "*"
+
+# pcretest
+conda-forge::pcretest = "*"
+
+# pcsctest
+conda-forge::pcsctest = "*"
+
+# pctrl
+conda-forge::pctrl = "*"
+
+# pcxtoppm
+conda-forge::pcxtoppm = "*"
+
+# pdbimgtopam
+conda-forge::pdbimgtopam = "*"
+
+# pdf2dsc
+conda-forge::pdf2dsc = "*"
+
+# pdf2ps
+conda-forge::pdf2ps = "*"
+
+# pdftexi2dvi
+conda-forge::pdftexi2dvi = "*"
+
+# pdisk
+conda-forge::pdisk = "*"
+
+# pear
+conda-forge::pear = "*"
+
+# peardev
+conda-forge::peardev = "*"
+
+# pecl
+conda-forge::pecl = "*"
+
+# perl
+conda-forge::perl = "*"
+
+# perl5.34
+conda-forge::perl5.34 = "*"
+
+# perlbug
+conda-forge::perlbug = "*"
+
+# perlbug5.34
+conda-forge::perlbug5.34 = "*"
+
+# perldoc
+conda-forge::perldoc = "*"
+
+# perldoc5.34
+conda-forge::perldoc5.34 = "*"
+
+# perlivp
+conda-forge::perlivp = "*"
+
+# perlivp5.34
+conda-forge::perlivp5.34 = "*"
+
+# perlthanks
+conda-forge::perlthanks = "*"
+
+# perlthanks5.34
+conda-forge::perlthanks5.34 = "*"
+
+# perror
+conda-forge::perror = "*"
+
+# pevent
+conda-forge::pevent = "*"
+
+# pf
+conda-forge::pf = "*"
+
+# pf2afm
+conda-forge::pf2afm = "*"
+
+# pfbtopfa
+conda-forge::pfbtopfa = "*"
+
+# pfctl
+conda-forge::pfctl = "*"
+
+# pfmtopam
+conda-forge::pfmtopam = "*"
+
+# pg_amcheck
+conda-forge::pg_amcheck = "*"
+
+# pg_amcheck-17
+conda-forge::pg_amcheck-17 = "*"
+
+# pg_archivecleanup
+conda-forge::pg_archivecleanup = "*"
+
+# pg_archivecleanup-17
+conda-forge::pg_archivecleanup-17 = "*"
+
+# pg_basebackup
+conda-forge::pg_basebackup = "*"
+
+# pg_basebackup-17
+conda-forge::pg_basebackup-17 = "*"
+
+# pg_checksums
+conda-forge::pg_checksums = "*"
+
+# pg_checksums-17
+conda-forge::pg_checksums-17 = "*"
+
+# pg_combinebackup-17
+conda-forge::pg_combinebackup-17 = "*"
+
+# pg_config
+conda-forge::pg_config = "*"
+
+# pg_config-17
+conda-forge::pg_config-17 = "*"
+
+# pg_controldata
+conda-forge::pg_controldata = "*"
+
+# pg_controldata-17
+conda-forge::pg_controldata-17 = "*"
+
+# pg_createsubscriber-17
+conda-forge::pg_createsubscriber-17 = "*"
+
+# pg_ctl
+conda-forge::pg_ctl = "*"
+
+# pg_ctl-17
+conda-forge::pg_ctl-17 = "*"
+
+# pg_dump
+conda-forge::pg_dump = "*"
+
+# pg_dump-17
+conda-forge::pg_dump-17 = "*"
+
+# pg_dumpall
+conda-forge::pg_dumpall = "*"
+
+# pg_dumpall-17
+conda-forge::pg_dumpall-17 = "*"
+
+# pg_isready
+conda-forge::pg_isready = "*"
+
+# pg_isready-17
+conda-forge::pg_isready-17 = "*"
+
+# pg_receivewal
+conda-forge::pg_receivewal = "*"
+
+# pg_receivewal-17
+conda-forge::pg_receivewal-17 = "*"
+
+# pg_recvlogical
+conda-forge::pg_recvlogical = "*"
+
+# pg_recvlogical-17
+conda-forge::pg_recvlogical-17 = "*"
+
+# pg_resetwal
+conda-forge::pg_resetwal = "*"
+
+# pg_resetwal-17
+conda-forge::pg_resetwal-17 = "*"
+
+# pg_restore
+conda-forge::pg_restore = "*"
+
+# pg_restore-17
+conda-forge::pg_restore-17 = "*"
+
+# pg_rewind
+conda-forge::pg_rewind = "*"
+
+# pg_rewind-17
+conda-forge::pg_rewind-17 = "*"
+
+# pg_test_fsync
+conda-forge::pg_test_fsync = "*"
+
+# pg_test_fsync-17
+conda-forge::pg_test_fsync-17 = "*"
+
+# pg_test_timing
+conda-forge::pg_test_timing = "*"
+
+# pg_test_timing-17
+conda-forge::pg_test_timing-17 = "*"
+
+# pg_upgrade
+conda-forge::pg_upgrade = "*"
+
+# pg_upgrade-17
+conda-forge::pg_upgrade-17 = "*"
+
+# pg_verifybackup
+conda-forge::pg_verifybackup = "*"
+
+# pg_verifybackup-17
+conda-forge::pg_verifybackup-17 = "*"
+
+# pg_waldump
+conda-forge::pg_waldump = "*"
+
+# pg_waldump-17
+conda-forge::pg_waldump-17 = "*"
+
+# pg_walsummary-17
+conda-forge::pg_walsummary-17 = "*"
+
+# pgbench
+conda-forge::pgbench = "*"
+
+# pgbench-17
+conda-forge::pgbench-17 = "*"
+
+# pgmabel
+conda-forge::pgmabel = "*"
+
+# pgmbentley
+conda-forge::pgmbentley = "*"
+
+# pgmcrater
+conda-forge::pgmcrater = "*"
+
+# pgmdeshadow
+conda-forge::pgmdeshadow = "*"
+
+# pgmedge
+conda-forge::pgmedge = "*"
+
+# pgmenhance
+conda-forge::pgmenhance = "*"
+
+# pgmhist
+conda-forge::pgmhist = "*"
+
+# pgmkernel
+conda-forge::pgmkernel = "*"
+
+# pgmmake
+conda-forge::pgmmake = "*"
+
+# pgmmedian
+conda-forge::pgmmedian = "*"
+
+# pgmminkowski
+conda-forge::pgmminkowski = "*"
+
+# pgmmorphconv
+conda-forge::pgmmorphconv = "*"
+
+# pgmnoise
+conda-forge::pgmnoise = "*"
+
+# pgmnorm
+conda-forge::pgmnorm = "*"
+
+# pgmoil
+conda-forge::pgmoil = "*"
+
+# pgmramp
+conda-forge::pgmramp = "*"
+
+# pgmslice
+conda-forge::pgmslice = "*"
+
+# pgmtexture
+conda-forge::pgmtexture = "*"
+
+# pgmtofs
+conda-forge::pgmtofs = "*"
+
+# pgmtolispm
+conda-forge::pgmtolispm = "*"
+
+# pgmtopbm
+conda-forge::pgmtopbm = "*"
+
+# pgmtopgm
+conda-forge::pgmtopgm = "*"
+
+# pgmtoppm
+conda-forge::pgmtoppm = "*"
+
+# pgmtosbig
+conda-forge::pgmtosbig = "*"
+
+# pgmtost4
+conda-forge::pgmtost4 = "*"
+
+# pgrep
+conda-forge::pgrep = "*"
+
+# phar
+conda-forge::phar = "*"
+
+# phar.phar
+conda-forge::phar.phar = "*"
+
+# php
+conda-forge::php = "*"
+
+# php-cgi
+conda-forge::php-cgi = "*"
+
+# php-config
+conda-forge::php-config = "*"
+
+# phpdbg
+conda-forge::phpdbg = "*"
+
+# phpize
+conda-forge::phpize = "*"
+
+# pi1toppm
+conda-forge::pi1toppm = "*"
+
+# pi3topbm
+conda-forge::pi3topbm = "*"
+
+# piactl
+conda-forge::piactl = "*"
+
+# pic2plot
+conda-forge::pic2plot = "*"
+
+# pic2tpic
+conda-forge::pic2tpic = "*"
+
+# pico
+conda-forge::pico = "*"
+
+# piconv
+conda-forge::piconv = "*"
+
+# piconv5.34
+conda-forge::piconv5.34 = "*"
+
+# picttoppm
+conda-forge::picttoppm = "*"
+
+# pidpersec.d
+conda-forge::pidpersec.d = "*"
+
+# pigz
+conda-forge::pigz = "*"
+
+# pinentry
+conda-forge::pinentry = "*"
+
+# pinentry-curses
+conda-forge::pinentry-curses = "*"
+
+# pinentry-tty
+conda-forge::pinentry-tty = "*"
+
+# ping
+conda-forge::ping = "*"
+
+# ping6
+conda-forge::ping6 = "*"
+
+# pinky
+conda-forge::pinky = "*"
+
+# pip-compile
+conda-forge::pip-compile = "*"
+
+# pip-sync
+conda-forge::pip-sync = "*"
+
+# pip3
+conda-forge::pip3 = "*"
+
+# pip3.11
+conda-forge::pip3.11 = "*"
+
+# pip3.12
+conda-forge::pip3.12 = "*"
+
+# pip3.13
+conda-forge::pip3.13 = "*"
+
+# pip3.14
+conda-forge::pip3.14 = "*"
+
+# pipdeptree
+conda-forge::pipdeptree = "*"
+
+# pipenv
+conda-forge::pipenv = "*"
+
+# pipenv-resolver
+conda-forge::pipenv-resolver = "*"
+
+# pipx
+conda-forge::pipx = "*"
+
+# pixeltool
+conda-forge::pixeltool = "*"
+
+# pixi
+conda-forge::pixi = "*"
+
+# pixz
+conda-forge::pixz = "*"
+
+# pjtoppm
+conda-forge::pjtoppm = "*"
+
+# pkcs1-conv
+conda-forge::pkcs1-conv = "*"
+
+# pkg-config
+conda-forge::pkg-config = "*"
+
+# pkgbuild
+conda-forge::pkgbuild = "*"
+
+# pkgconf
+conda-forge::pkgconf = "*"
+
+# pkgutil
+conda-forge::pkgutil = "*"
+
+# pkill
+conda-forge::pkill = "*"
+
+# pktdumper
+conda-forge::pktdumper = "*"
+
+# pktopbm
+conda-forge::pktopbm = "*"
+
+# pl
+conda-forge::pl = "*"
+
+# pl2pm
+conda-forge::pl2pm = "*"
+
+# pl2pm5.34
+conda-forge::pl2pm5.34 = "*"
+
+# playwright
+conda-forge::playwright = "*"
+
+# plockstat
+conda-forge::plockstat = "*"
+
+# plookup
+conda-forge::plookup = "*"
+
+# plot
+conda-forge::plot = "*"
+
+# plotfont
+conda-forge::plotfont = "*"
+
+# plotframes
+conda-forge::plotframes = "*"
+
+# pluginkit
+conda-forge::pluginkit = "*"
+
+# plutil
+conda-forge::plutil = "*"
+
+# pmd
+conda-forge::pmd = "*"
+
+# pmix_info
+conda-forge::pmix_info = "*"
+
+# pmixcc
+conda-forge::pmixcc = "*"
+
+# pmset
+conda-forge::pmset = "*"
+
+# png-fix-itxt
+conda-forge::png-fix-itxt = "*"
+
+# pngfix
+conda-forge::pngfix = "*"
+
+# pngtogd
+conda-forge::pngtogd = "*"
+
+# pngtogd2
+conda-forge::pngtogd2 = "*"
+
+# pngtopam
+conda-forge::pngtopam = "*"
+
+# pngtopnm
+conda-forge::pngtopnm = "*"
+
+# pnmalias
+conda-forge::pnmalias = "*"
+
+# pnmarith
+conda-forge::pnmarith = "*"
+
+# pnmcat
+conda-forge::pnmcat = "*"
+
+# pnmcolormap
+conda-forge::pnmcolormap = "*"
+
+# pnmcomp
+conda-forge::pnmcomp = "*"
+
+# pnmconvol
+conda-forge::pnmconvol = "*"
+
+# pnmcrop
+conda-forge::pnmcrop = "*"
+
+# pnmcut
+conda-forge::pnmcut = "*"
+
+# pnmdepth
+conda-forge::pnmdepth = "*"
+
+# pnmenlarge
+conda-forge::pnmenlarge = "*"
+
+# pnmfile
+conda-forge::pnmfile = "*"
+
+# pnmflip
+conda-forge::pnmflip = "*"
+
+# pnmgamma
+conda-forge::pnmgamma = "*"
+
+# pnmhisteq
+conda-forge::pnmhisteq = "*"
+
+# pnmhistmap
+conda-forge::pnmhistmap = "*"
+
+# pnmindex
+conda-forge::pnmindex = "*"
+
+# pnminterp
+conda-forge::pnminterp = "*"
+
+# pnminterp-gen
+conda-forge::pnminterp-gen = "*"
+
+# pnminvert
+conda-forge::pnminvert = "*"
+
+# pnmmargin
+conda-forge::pnmmargin = "*"
+
+# pnmmercator
+conda-forge::pnmmercator = "*"
+
+# pnmmontage
+conda-forge::pnmmontage = "*"
+
+# pnmnlfilt
+conda-forge::pnmnlfilt = "*"
+
+# pnmnoraw
+conda-forge::pnmnoraw = "*"
+
+# pnmnorm
+conda-forge::pnmnorm = "*"
+
+# pnmpad
+conda-forge::pnmpad = "*"
+
+# pnmpaste
+conda-forge::pnmpaste = "*"
+
+# pnmpsnr
+conda-forge::pnmpsnr = "*"
+
+# pnmquant
+conda-forge::pnmquant = "*"
+
+# pnmquantall
+conda-forge::pnmquantall = "*"
+
+# pnmremap
+conda-forge::pnmremap = "*"
+
+# pnmrotate
+conda-forge::pnmrotate = "*"
+
+# pnmscale
+conda-forge::pnmscale = "*"
+
+# pnmscalefixed
+conda-forge::pnmscalefixed = "*"
+
+# pnmshear
+conda-forge::pnmshear = "*"
+
+# pnmsmooth
+conda-forge::pnmsmooth = "*"
+
+# pnmsplit
+conda-forge::pnmsplit = "*"
+
+# pnmstitch
+conda-forge::pnmstitch = "*"
+
+# pnmtile
+conda-forge::pnmtile = "*"
+
+# pnmtoddif
+conda-forge::pnmtoddif = "*"
+
+# pnmtofiasco
+conda-forge::pnmtofiasco = "*"
+
+# pnmtofits
+conda-forge::pnmtofits = "*"
+
+# pnmtojbig
+conda-forge::pnmtojbig = "*"
+
+# pnmtojpeg
+conda-forge::pnmtojpeg = "*"
+
+# pnmtopalm
+conda-forge::pnmtopalm = "*"
+
+# pnmtopclxl
+conda-forge::pnmtopclxl = "*"
+
+# pnmtoplainpnm
+conda-forge::pnmtoplainpnm = "*"
+
+# pnmtopng
+conda-forge::pnmtopng = "*"
+
+# pnmtopnm
+conda-forge::pnmtopnm = "*"
+
+# pnmtops
+conda-forge::pnmtops = "*"
+
+# pnmtorast
+conda-forge::pnmtorast = "*"
+
+# pnmtorle
+conda-forge::pnmtorle = "*"
+
+# pnmtosgi
+conda-forge::pnmtosgi = "*"
+
+# pnmtosir
+conda-forge::pnmtosir = "*"
+
+# pnmtotiff
+conda-forge::pnmtotiff = "*"
+
+# pnmtotiffcmyk
+conda-forge::pnmtotiffcmyk = "*"
+
+# pnmtoxwd
+conda-forge::pnmtoxwd = "*"
+
+# pnpm
+conda-forge::pnpm = "*"
+
+# pnpx
+conda-forge::pnpx = "*"
+
+# pod2html
+conda-forge::pod2html = "*"
+
+# pod2html5.34
+conda-forge::pod2html5.34 = "*"
+
+# pod2man
+conda-forge::pod2man = "*"
+
+# pod2man5.34
+conda-forge::pod2man5.34 = "*"
+
+# pod2readme
+conda-forge::pod2readme = "*"
+
+# pod2readme5.34
+conda-forge::pod2readme5.34 = "*"
+
+# pod2texi
+conda-forge::pod2texi = "*"
+
+# pod2text
+conda-forge::pod2text = "*"
+
+# pod2text5.34
+conda-forge::pod2text5.34 = "*"
+
+# pod2usage
+conda-forge::pod2usage = "*"
+
+# pod2usage5.34
+conda-forge::pod2usage5.34 = "*"
+
+# podchecker
+conda-forge::podchecker = "*"
+
+# podchecker5.34
+conda-forge::podchecker5.34 = "*"
+
+# podman
+conda-forge::podman = "*"
+
+# podman-mac-helper
+conda-forge::podman-mac-helper = "*"
+
+# podman-remote
+conda-forge::podman-remote = "*"
+
+# podman.lima
+conda-forge::podman.lima = "*"
+
+# poetry
+conda-forge::poetry = "*"
+
+# policytool
+conda-forge::policytool = "*"
+
+# popeye
+conda-forge::popeye = "*"
+
+# postalias
+conda-forge::postalias = "*"
+
+# postcat
+conda-forge::postcat = "*"
+
+# postconf
+conda-forge::postconf = "*"
+
+# postdrop
+conda-forge::postdrop = "*"
+
+# postfix
+conda-forge::postfix = "*"
+
+# postgres
+conda-forge::postgres = "*"
+
+# postgres-17
+conda-forge::postgres-17 = "*"
+
+# postkick
+conda-forge::postkick = "*"
+
+# postlock
+conda-forge::postlock = "*"
+
+# postlog
+conda-forge::postlog = "*"
+
+# postmap
+conda-forge::postmap = "*"
+
+# postmaster
+conda-forge::postmaster = "*"
+
+# postmulti
+conda-forge::postmulti = "*"
+
+# postprocessing_benchmark
+conda-forge::postprocessing_benchmark = "*"
+
+# postqueue
+conda-forge::postqueue = "*"
+
+# postsuper
+conda-forge::postsuper = "*"
+
+# power_report.sh
+conda-forge::power_report.sh = "*"
+
+# powermetrics
+conda-forge::powermetrics = "*"
+
+# pp
+conda-forge::pp = "*"
+
+# pp5.34
+conda-forge::pp5.34 = "*"
+
+# ppdc
+conda-forge::ppdc = "*"
+
+# ppdhtml
+conda-forge::ppdhtml = "*"
+
+# ppdi
+conda-forge::ppdi = "*"
+
+# ppdmerge
+conda-forge::ppdmerge = "*"
+
+# ppdpo
+conda-forge::ppdpo = "*"
+
+# pphs
+conda-forge::pphs = "*"
+
+# ppm2tiff
+conda-forge::ppm2tiff = "*"
+
+# ppm3d
+conda-forge::ppm3d = "*"
+
+# ppmbrighten
+conda-forge::ppmbrighten = "*"
+
+# ppmchange
+conda-forge::ppmchange = "*"
+
+# ppmcie
+conda-forge::ppmcie = "*"
+
+# ppmcolormask
+conda-forge::ppmcolormask = "*"
+
+# ppmcolors
+conda-forge::ppmcolors = "*"
+
+# ppmdcfont
+conda-forge::ppmdcfont = "*"
+
+# ppmddumpfont
+conda-forge::ppmddumpfont = "*"
+
+# ppmdim
+conda-forge::ppmdim = "*"
+
+# ppmdist
+conda-forge::ppmdist = "*"
+
+# ppmdither
+conda-forge::ppmdither = "*"
+
+# ppmdmkfont
+conda-forge::ppmdmkfont = "*"
+
+# ppmdraw
+conda-forge::ppmdraw = "*"
+
+# ppmfade
+conda-forge::ppmfade = "*"
+
+# ppmflash
+conda-forge::ppmflash = "*"
+
+# ppmforge
+conda-forge::ppmforge = "*"
+
+# ppmglobe
+conda-forge::ppmglobe = "*"
+
+# ppmhist
+conda-forge::ppmhist = "*"
+
+# ppmlabel
+conda-forge::ppmlabel = "*"
+
+# ppmmake
+conda-forge::ppmmake = "*"
+
+# ppmmix
+conda-forge::ppmmix = "*"
+
+# ppmnorm
+conda-forge::ppmnorm = "*"
+
+# ppmntsc
+conda-forge::ppmntsc = "*"
+
+# ppmpat
+conda-forge::ppmpat = "*"
+
+# ppmquant
+conda-forge::ppmquant = "*"
+
+# ppmquantall
+conda-forge::ppmquantall = "*"
+
+# ppmrainbow
+conda-forge::ppmrainbow = "*"
+
+# ppmrelief
+conda-forge::ppmrelief = "*"
+
+# ppmrough
+conda-forge::ppmrough = "*"
+
+# ppmshadow
+conda-forge::ppmshadow = "*"
+
+# ppmshift
+conda-forge::ppmshift = "*"
+
+# ppmspread
+conda-forge::ppmspread = "*"
+
+# ppmtoacad
+conda-forge::ppmtoacad = "*"
+
+# ppmtoapplevol
+conda-forge::ppmtoapplevol = "*"
+
+# ppmtoarbtxt
+conda-forge::ppmtoarbtxt = "*"
+
+# ppmtoascii
+conda-forge::ppmtoascii = "*"
+
+# ppmtobmp
+conda-forge::ppmtobmp = "*"
+
+# ppmtoeyuv
+conda-forge::ppmtoeyuv = "*"
+
+# ppmtogif
+conda-forge::ppmtogif = "*"
+
+# ppmtoicr
+conda-forge::ppmtoicr = "*"
+
+# ppmtoilbm
+conda-forge::ppmtoilbm = "*"
+
+# ppmtojpeg
+conda-forge::ppmtojpeg = "*"
+
+# ppmtoleaf
+conda-forge::ppmtoleaf = "*"
+
+# ppmtolj
+conda-forge::ppmtolj = "*"
+
+# ppmtomap
+conda-forge::ppmtomap = "*"
+
+# ppmtomitsu
+conda-forge::ppmtomitsu = "*"
+
+# ppmtompeg
+conda-forge::ppmtompeg = "*"
+
+# ppmtoneo
+conda-forge::ppmtoneo = "*"
+
+# ppmtopcx
+conda-forge::ppmtopcx = "*"
+
+# ppmtopgm
+conda-forge::ppmtopgm = "*"
+
+# ppmtopi1
+conda-forge::ppmtopi1 = "*"
+
+# ppmtopict
+conda-forge::ppmtopict = "*"
+
+# ppmtopj
+conda-forge::ppmtopj = "*"
+
+# ppmtopjxl
+conda-forge::ppmtopjxl = "*"
+
+# ppmtoppm
+conda-forge::ppmtoppm = "*"
+
+# ppmtopuzz
+conda-forge::ppmtopuzz = "*"
+
+# ppmtorgb3
+conda-forge::ppmtorgb3 = "*"
+
+# ppmtosixel
+conda-forge::ppmtosixel = "*"
+
+# ppmtospu
+conda-forge::ppmtospu = "*"
+
+# ppmtoterm
+conda-forge::ppmtoterm = "*"
+
+# ppmtotga
+conda-forge::ppmtotga = "*"
+
+# ppmtouil
+conda-forge::ppmtouil = "*"
+
+# ppmtowinicon
+conda-forge::ppmtowinicon = "*"
+
+# ppmtoxpm
+conda-forge::ppmtoxpm = "*"
+
+# ppmtoyuv
+conda-forge::ppmtoyuv = "*"
+
+# ppmtoyuvsplit
+conda-forge::ppmtoyuvsplit = "*"
+
+# ppmtv
+conda-forge::ppmtv = "*"
+
+# ppmwheel
+conda-forge::ppmwheel = "*"
+
+# pppd
+conda-forge::pppd = "*"
+
+# pps
+conda-forge::pps = "*"
+
+# pq_to_hlg
+conda-forge::pq_to_hlg = "*"
+
+# pquery
+conda-forge::pquery = "*"
+
+# pr
+conda-forge::pr = "*"
+
+# praudit
+conda-forge::praudit = "*"
+
+# pre-commit
+pre-commit = "*"
+
+# predict
+conda-forge::predict = "*"
+
+# prettier
+prettier = "*"
+
+# priclass.d
+conda-forge::priclass.d = "*"
+
+# pridist.d
+conda-forge::pridist.d = "*"
+
+# printafm
+conda-forge::printafm = "*"
+
+# printenv
+conda-forge::printenv = "*"
+
+# printf
+conda-forge::printf = "*"
+
+# printf_gettext
+conda-forge::printf_gettext = "*"
+
+# printf_ngettext
+conda-forge::printf_ngettext = "*"
+
+# prisma
+conda-forge::prisma = "*"
+
+# probetest
+conda-forge::probetest = "*"
+
+# procs
+conda-forge::procs = "*"
+
+# procsystime
+conda-forge::procsystime = "*"
+
+# productbuild
+conda-forge::productbuild = "*"
+
+# productsign
+conda-forge::productsign = "*"
+
+# profiles
+conda-forge::profiles = "*"
+
+# prometheus
+conda-forge::prometheus = "*"
+
+# prometheus_brew_services
+conda-forge::prometheus_brew_services = "*"
+
+# promptfoo
+conda-forge::promptfoo = "*"
+
+# promtool
+conda-forge::promtool = "*"
+
+# protoc
+conda-forge::protoc = "*"
+
+# protoc-33.2.0
+conda-forge::protoc-33.2.0 = "*"
+
+# protoc-gen-upb
+conda-forge::protoc-gen-upb = "*"
+
+# protoc-gen-upb-33.2.0
+conda-forge::protoc-gen-upb-33.2.0 = "*"
+
+# protoc-gen-upb_minitable
+conda-forge::protoc-gen-upb_minitable = "*"
+
+# protoc-gen-upb_minitable-33.2.0
+conda-forge::protoc-gen-upb_minitable-33.2.0 = "*"
+
+# protoc-gen-upbdefs
+conda-forge::protoc-gen-upbdefs = "*"
+
+# protoc-gen-upbdefs-33.2.0
+conda-forge::protoc-gen-upbdefs-33.2.0 = "*"
+
+# prove
+conda-forge::prove = "*"
+
+# prove5.34
+conda-forge::prove5.34 = "*"
+
+# prte
+conda-forge::prte = "*"
+
+# prte-term
+conda-forge::prte-term = "*"
+
+# prte_info
+conda-forge::prte_info = "*"
+
+# prted
+conda-forge::prted = "*"
+
+# prterun
+conda-forge::prterun = "*"
+
+# prun
+conda-forge::prun = "*"
+
+# ps
+conda-forge::ps = "*"
+
+# ps2ascii
+conda-forge::ps2ascii = "*"
+
+# ps2epsi
+conda-forge::ps2epsi = "*"
+
+# ps2pdf
+conda-forge::ps2pdf = "*"
+
+# ps2pdf12
+conda-forge::ps2pdf12 = "*"
+
+# ps2pdf13
+conda-forge::ps2pdf13 = "*"
+
+# ps2pdf14
+conda-forge::ps2pdf14 = "*"
+
+# ps2pdfwr
+conda-forge::ps2pdfwr = "*"
+
+# ps2ps
+conda-forge::ps2ps = "*"
+
+# ps2ps2
+conda-forge::ps2ps2 = "*"
+
+# psicc
+conda-forge::psicc = "*"
+
+# psidtopgm
+conda-forge::psidtopgm = "*"
+
+# psktool
+conda-forge::psktool = "*"
+
+# psm
+conda-forge::psm = "*"
+
+# psql
+conda-forge::psql = "*"
+
+# psql-17
+conda-forge::psql-17 = "*"
+
+# pstoedit
+conda-forge::pstoedit = "*"
+
+# pstopnm
+conda-forge::pstopnm = "*"
+
+# pt
+conda-forge::pt = "*"
+
+# ptar
+conda-forge::ptar = "*"
+
+# ptar5.34
+conda-forge::ptar5.34 = "*"
+
+# ptardiff
+conda-forge::ptardiff = "*"
+
+# ptardiff5.34
+conda-forge::ptardiff5.34 = "*"
+
+# ptargrep
+conda-forge::ptargrep = "*"
+
+# ptargrep5.34
+conda-forge::ptargrep5.34 = "*"
+
+# ptx
+conda-forge::ptx = "*"
+
+# pulumi
+conda-forge::pulumi = "*"
+
+# pulumi-analyzer-policy
+conda-forge::pulumi-analyzer-policy = "*"
+
+# pulumi-analyzer-policy-python
+conda-forge::pulumi-analyzer-policy-python = "*"
+
+# pulumi-language-dotnet
+conda-forge::pulumi-language-dotnet = "*"
+
+# pulumi-language-go
+conda-forge::pulumi-language-go = "*"
+
+# pulumi-language-java
+conda-forge::pulumi-language-java = "*"
+
+# pulumi-language-nodejs
+conda-forge::pulumi-language-nodejs = "*"
+
+# pulumi-language-python
+conda-forge::pulumi-language-python = "*"
+
+# pulumi-language-python-exec
+conda-forge::pulumi-language-python-exec = "*"
+
+# pulumi-language-yaml
+conda-forge::pulumi-language-yaml = "*"
+
+# pulumi-resource-pulumi-nodejs
+conda-forge::pulumi-resource-pulumi-nodejs = "*"
+
+# pulumi-resource-pulumi-python
+conda-forge::pulumi-resource-pulumi-python = "*"
+
+# pulumi-watch
+conda-forge::pulumi-watch = "*"
+
+# purge
+conda-forge::purge = "*"
+
+# pv
+conda-forge::pv = "*"
+
+# pwd
+conda-forge::pwd = "*"
+
+# pwd_mkdb
+conda-forge::pwd_mkdb = "*"
+
+# pwpolicy
+conda-forge::pwpolicy = "*"
+
+# px
+conda-forge::px = "*"
+
+# py-spy
+conda-forge::py-spy = "*"
+
+# py.test
+conda-forge::py.test = "*"
+
+# pyaml
+conda-forge::pyaml = "*"
+
+# pydoc3
+conda-forge::pydoc3 = "*"
+
+# pydoc3.11
+conda-forge::pydoc3.11 = "*"
+
+# pydoc3.12
+conda-forge::pydoc3.12 = "*"
+
+# pydoc3.13
+conda-forge::pydoc3.13 = "*"
+
+# pydoc3.14
+conda-forge::pydoc3.14 = "*"
+
+# pyenv
+conda-forge::pyenv = "*"
+
+# pyenv-install
+conda-forge::pyenv-install = "*"
+
+# pyenv-uninstall
+conda-forge::pyenv-uninstall = "*"
+
+# pyftmerge
+conda-forge::pyftmerge = "*"
+
+# pyftsubset
+conda-forge::pyftsubset = "*"
+
+# pygmentize
+conda-forge::pygmentize = "*"
+
+# pyright
+conda-forge::pyright = "*"
+
+# pyright-langserver
+conda-forge::pyright-langserver = "*"
+
+# pysemgrep
+conda-forge::pysemgrep = "*"
+
+# pyspark
+conda-forge::pyspark = "*"
+
+# pytest
+conda-forge::pytest = "*"
+
+# python
+conda-forge::python = "*"
+
+# python-build
+conda-forge::python-build = "*"
+
+# python3
+conda-forge::python3 = "*"
+
+# python3-config
+conda-forge::python3-config = "*"
+
+# python3.11
+conda-forge::python3.11 = "*"
+
+# python3.11-config
+conda-forge::python3.11-config = "*"
+
+# python3.12
+conda-forge::python3.12 = "*"
+
+# python3.12-config
+conda-forge::python3.12-config = "*"
+
+# python3.13
+conda-forge::python3.13 = "*"
+
+# python3.13-config
+conda-forge::python3.13-config = "*"
+
+# python3.14
+conda-forge::python3.14 = "*"
+
+# python3.14-config
+conda-forge::python3.14-config = "*"
+
+# pzstd
+conda-forge::pzstd = "*"
+
+# qconvex
+conda-forge::qconvex = "*"
+
+# qdbus
+conda-forge::qdbus = "*"
+
+# qdbuscpp2xml
+conda-forge::qdbuscpp2xml = "*"
+
+# qdbusviewer
+conda-forge::qdbusviewer = "*"
+
+# qdbusxml2cpp
+conda-forge::qdbusxml2cpp = "*"
+
+# qdelaunay
+conda-forge::qdelaunay = "*"
+
+# qdistancefieldgenerator
+conda-forge::qdistancefieldgenerator = "*"
+
+# qemu-edid
+conda-forge::qemu-edid = "*"
+
+# qemu-img
+conda-forge::qemu-img = "*"
+
+# qemu-io
+conda-forge::qemu-io = "*"
+
+# qemu-nbd
+conda-forge::qemu-nbd = "*"
+
+# qemu-storage-daemon
+conda-forge::qemu-storage-daemon = "*"
+
+# qemu-system-aarch64
+conda-forge::qemu-system-aarch64 = "*"
+
+# qemu-system-alpha
+conda-forge::qemu-system-alpha = "*"
+
+# qemu-system-arm
+conda-forge::qemu-system-arm = "*"
+
+# qemu-system-avr
+conda-forge::qemu-system-avr = "*"
+
+# qemu-system-hppa
+conda-forge::qemu-system-hppa = "*"
+
+# qemu-system-i386
+conda-forge::qemu-system-i386 = "*"
+
+# qemu-system-loongarch64
+conda-forge::qemu-system-loongarch64 = "*"
+
+# qemu-system-m68k
+conda-forge::qemu-system-m68k = "*"
+
+# qemu-system-microblaze
+conda-forge::qemu-system-microblaze = "*"
+
+# qemu-system-microblazeel
+conda-forge::qemu-system-microblazeel = "*"
+
+# qemu-system-mips
+conda-forge::qemu-system-mips = "*"
+
+# qemu-system-mips64
+conda-forge::qemu-system-mips64 = "*"
+
+# qemu-system-mips64el
+conda-forge::qemu-system-mips64el = "*"
+
+# qemu-system-mipsel
+conda-forge::qemu-system-mipsel = "*"
+
+# qemu-system-or1k
+conda-forge::qemu-system-or1k = "*"
+
+# qemu-system-ppc
+conda-forge::qemu-system-ppc = "*"
+
+# qemu-system-ppc64
+conda-forge::qemu-system-ppc64 = "*"
+
+# qemu-system-riscv32
+conda-forge::qemu-system-riscv32 = "*"
+
+# qemu-system-riscv64
+conda-forge::qemu-system-riscv64 = "*"
+
+# qemu-system-rx
+conda-forge::qemu-system-rx = "*"
+
+# qemu-system-s390x
+conda-forge::qemu-system-s390x = "*"
+
+# qemu-system-sh4
+conda-forge::qemu-system-sh4 = "*"
+
+# qemu-system-sh4eb
+conda-forge::qemu-system-sh4eb = "*"
+
+# qemu-system-sparc
+conda-forge::qemu-system-sparc = "*"
+
+# qemu-system-sparc64
+conda-forge::qemu-system-sparc64 = "*"
+
+# qemu-system-tricore
+conda-forge::qemu-system-tricore = "*"
+
+# qemu-system-x86_64
+conda-forge::qemu-system-x86_64 = "*"
+
+# qemu-system-xtensa
+conda-forge::qemu-system-xtensa = "*"
+
+# qemu-system-xtensaeb
+conda-forge::qemu-system-xtensaeb = "*"
+
+# qhalf
+conda-forge::qhalf = "*"
+
+# qhull
+conda-forge::qhull = "*"
+
+# qlmanage
+conda-forge::qlmanage = "*"
+
+# qmake
+conda-forge::qmake = "*"
+
+# qmake6
+conda-forge::qmake6 = "*"
+
+# qml
+conda-forge::qml = "*"
+
+# qmldom
+conda-forge::qmldom = "*"
+
+# qmleasing
+conda-forge::qmleasing = "*"
+
+# qmlformat
+conda-forge::qmlformat = "*"
+
+# qmllint
+conda-forge::qmllint = "*"
+
+# qmlls
+conda-forge::qmlls = "*"
+
+# qmlplugindump
+conda-forge::qmlplugindump = "*"
+
+# qmlpreview
+conda-forge::qmlpreview = "*"
+
+# qmlprofiler
+conda-forge::qmlprofiler = "*"
+
+# qmlscene
+conda-forge::qmlscene = "*"
+
+# qmltc
+conda-forge::qmltc = "*"
+
+# qmltestrunner
+conda-forge::qmltestrunner = "*"
+
+# qmltime
+conda-forge::qmltime = "*"
+
+# qoitopam
+conda-forge::qoitopam = "*"
+
+# qprofdiff
+conda-forge::qprofdiff = "*"
+
+# qrencode
+conda-forge::qrencode = "*"
+
+# qrttoppm
+conda-forge::qrttoppm = "*"
+
+# qsb
+conda-forge::qsb = "*"
+
+# qt-cmake
+conda-forge::qt-cmake = "*"
+
+# qt-cmake-create
+conda-forge::qt-cmake-create = "*"
+
+# qt-configure-module
+conda-forge::qt-configure-module = "*"
+
+# qt-faststart
+conda-forge::qt-faststart = "*"
+
+# qtdiag
+conda-forge::qtdiag = "*"
+
+# qtdiag6
+conda-forge::qtdiag6 = "*"
+
+# qtpaths
+conda-forge::qtpaths = "*"
+
+# qtpaths6
+conda-forge::qtpaths6 = "*"
+
+# qtplugininfo
+conda-forge::qtplugininfo = "*"
+
+# quota
+conda-forge::quota = "*"
+
+# quotacheck
+conda-forge::quotacheck = "*"
+
+# quotaoff
+conda-forge::quotaoff = "*"
+
+# quotaon
+conda-forge::quotaon = "*"
+
+# qvoronoi
+conda-forge::qvoronoi = "*"
+
+# racoon
+conda-forge::racoon = "*"
+
+# rails
+conda-forge::rails = "*"
+
+# rake
+conda-forge::rake = "*"
+
+# ranger
+conda-forge::ranger = "*"
+
+# ranlib
+conda-forge::ranlib = "*"
+
+# rar
+conda-forge::rar = "*"
+
+# rarpd
+conda-forge::rarpd = "*"
+
+# rasttopnm
+conda-forge::rasttopnm = "*"
+
+# rav1e
+conda-forge::rav1e = "*"
+
+# raw-identify
+conda-forge::raw-identify = "*"
+
+# raw2tiff
+conda-forge::raw2tiff = "*"
+
+# rawtextdump
+conda-forge::rawtextdump = "*"
+
+# rawtopgm
+conda-forge::rawtopgm = "*"
+
+# rawtoppm
+conda-forge::rawtoppm = "*"
+
+# rbenv
+conda-forge::rbenv = "*"
+
+# rbenv-install
+conda-forge::rbenv-install = "*"
+
+# rbenv-uninstall
+conda-forge::rbenv-uninstall = "*"
+
+# rbox
+conda-forge::rbox = "*"
+
+# rcdn
+conda-forge::rcdn = "*"
+
+# rcup
+conda-forge::rcup = "*"
+
+# rd-curves
+conda-forge::rd-curves = "*"
+
+# rdjpgcom
+conda-forge::rdjpgcom = "*"
+
+# rdma_ctl
+conda-forge::rdma_ctl = "*"
+
+# rdoc
+conda-forge::rdoc = "*"
+
+# read
+conda-forge::read = "*"
+
+# readlink
+conda-forge::readlink = "*"
+
+# realpath
+conda-forge::realpath = "*"
+
+# reboot
+conda-forge::reboot = "*"
+
+# redis-benchmark
+conda-forge::redis-benchmark = "*"
+
+# redis-check-aof
+conda-forge::redis-check-aof = "*"
+
+# redis-check-rdb
+conda-forge::redis-check-rdb = "*"
+
+# redis-cli
+conda-forge::redis-cli = "*"
+
+# redis-sentinel
+conda-forge::redis-sentinel = "*"
+
+# redis-server
+conda-forge::redis-server = "*"
+
+# reindexdb
+conda-forge::reindexdb = "*"
+
+# reindexdb-17
+conda-forge::reindexdb-17 = "*"
+
+# render_hlg
+conda-forge::render_hlg = "*"
+
+# renice
+conda-forge::renice = "*"
+
+# repairHomePermissions
+conda-forge::repairHomePermissions = "*"
+
+# repquota
+conda-forge::repquota = "*"
+
+# reset
+conda-forge::reset = "*"
+
+# resolveLinks
+conda-forge::resolveLinks = "*"
+
+# rev
+conda-forge::rev = "*"
+
+# rg
+conda-forge::rg = "*"
+
+# rga
+conda-forge::rga = "*"
+
+# rga-fzf
+conda-forge::rga-fzf = "*"
+
+# rga-fzf-open
+conda-forge::rga-fzf-open = "*"
+
+# rga-preproc
+conda-forge::rga-preproc = "*"
+
+# rgb3toppm
+conda-forge::rgb3toppm = "*"
+
+# ri
+conda-forge::ri = "*"
+
+# rifle
+conda-forge::rifle = "*"
+
+# rist2rist
+conda-forge::rist2rist = "*"
+
+# ristreceiver
+conda-forge::ristreceiver = "*"
+
+# ristsender
+conda-forge::ristsender = "*"
+
+# ristsrppasswd
+conda-forge::ristsrppasswd = "*"
+
+# rlatopam
+conda-forge::rlatopam = "*"
+
+# rletopnm
+conda-forge::rletopnm = "*"
+
+# rlwrap
+conda-forge::rlwrap = "*"
+
+# rm
+conda-forge::rm = "*"
+
+# rmdir
+conda-forge::rmdir = "*"
+
+# rmic
+conda-forge::rmic = "*"
+
+# rmid
+conda-forge::rmid = "*"
+
+# rmiregistry
+conda-forge::rmiregistry = "*"
+
+# rmlint
+conda-forge::rmlint = "*"
+
+# rotatelogs
+conda-forge::rotatelogs = "*"
+
+# route
+conda-forge::route = "*"
+
+# rpc.lockd
+conda-forge::rpc.lockd = "*"
+
+# rpc.statd
+conda-forge::rpc.statd = "*"
+
+# rpcbind
+conda-forge::rpcbind = "*"
+
+# rpcgen
+conda-forge::rpcgen = "*"
+
+# rpcinfo
+conda-forge::rpcinfo = "*"
+
+# rs
+conda-forge::rs = "*"
+
+# rsvg-convert
+conda-forge::rsvg-convert = "*"
+
+# rsync
+conda-forge::rsync = "*"
+
+# rtadvd
+conda-forge::rtadvd = "*"
+
+# rtmpdump
+conda-forge::rtmpdump = "*"
+
+# rtmpgw
+conda-forge::rtmpgw = "*"
+
+# rtmpsrv
+conda-forge::rtmpsrv = "*"
+
+# rtmpsuck
+conda-forge::rtmpsuck = "*"
+
+# rubberband
+conda-forge::rubberband = "*"
+
+# rubberband-r3
+conda-forge::rubberband-r3 = "*"
+
+# ruby
+conda-forge::ruby = "*"
+
+# ruby-build
+conda-forge::ruby-build = "*"
+
+# ruff
+ruff = "*"
+
+# run-example
+conda-forge::run-example = "*"
+
+# run_erl
+conda-forge::run_erl = "*"
+
+# runant.pl
+conda-forge::runant.pl = "*"
+
+# runant.py
+conda-forge::runant.py = "*"
+
+# rust-analyzer
+conda-forge::rust-analyzer = "*"
+
+# rust-gdb
+conda-forge::rust-gdb = "*"
+
+# rust-gdbgui
+conda-forge::rust-gdbgui = "*"
+
+# rust-lldb
+conda-forge::rust-lldb = "*"
+
+# rustc
+conda-forge::rustc = "*"
+
+# rustdoc
+conda-forge::rustdoc = "*"
+
+# rustfmt
+conda-forge::rustfmt = "*"
+
+# rustup
+conda-forge::rustup = "*"
+
+# rustup-init
+conda-forge::rustup-init = "*"
+
+# rview
+conda-forge::rview = "*"
+
+# rvim
+conda-forge::rvim = "*"
+
+# rwbypid.d
+conda-forge::rwbypid.d = "*"
+
+# rwbytype.d
+conda-forge::rwbytype.d = "*"
+
+# rwsnoop
+conda-forge::rwsnoop = "*"
+
+# sa
+conda-forge::sa = "*"
+
+# safaridriver
+conda-forge::safaridriver = "*"
+
+# safety
+conda-forge::safety = "*"
+
+# sam
+conda-forge::sam = "*"
+
+# sample
+conda-forge::sample = "*"
+
+# sampleproc
+conda-forge::sampleproc = "*"
+
+# sandbox-exec
+conda-forge::sandbox-exec = "*"
+
+# say
+conda-forge::say = "*"
+
+# sbcl
+conda-forge::sbcl = "*"
+
+# sbigtopgm
+conda-forge::sbigtopgm = "*"
+
+# sbt
+conda-forge::sbt = "*"
+
+# sc_auth
+conda-forge::sc_auth = "*"
+
+# sc_usage
+conda-forge::sc_usage = "*"
+
+# scala
+conda-forge::scala = "*"
+
+# scala_legacy
+conda-forge::scala_legacy = "*"
+
+# scalac
+conda-forge::scalac = "*"
+
+# scaladoc
+conda-forge::scaladoc = "*"
+
+# scalar
+conda-forge::scalar = "*"
+
+# scale_slice_test
+conda-forge::scale_slice_test = "*"
+
+# scandeps.pl
+conda-forge::scandeps.pl = "*"
+
+# scandeps5.34.pl
+conda-forge::scandeps5.34.pl = "*"
+
+# scc
+conda-forge::scc = "*"
+
+# scp
+conda-forge::scp = "*"
+
+# screen
+conda-forge::screen = "*"
+
+# screencapture
+conda-forge::screencapture = "*"
+
+# screenresolution
+conda-forge::screenresolution = "*"
+
+# script
+conda-forge::script = "*"
+
+# scselect
+conda-forge::scselect = "*"
+
+# scutil
+conda-forge::scutil = "*"
+
+# sd
+conda-forge::sd = "*"
+
+# sdef
+conda-forge::sdef = "*"
+
+# sdiff
+conda-forge::sdiff = "*"
+
+# sdl2-config
+conda-forge::sdl2-config = "*"
+
+# sdp
+conda-forge::sdp = "*"
+
+# sdx
+conda-forge::sdx = "*"
+
+# security
+conda-forge::security = "*"
+
+# securityd
+conda-forge::securityd = "*"
+
+# sed
+conda-forge::sed = "*"
+
+# seek_print
+conda-forge::seek_print = "*"
+
+# seeksize.d
+conda-forge::seeksize.d = "*"
+
+# segedit
+conda-forge::segedit = "*"
+
+# sem
+conda-forge::sem = "*"
+
+# semgrep
+conda-forge::semgrep = "*"
+
+# sendmail
+conda-forge::sendmail = "*"
+
+# sentry-cli
+conda-forge::sentry-cli = "*"
+
+# seq
+conda-forge::seq = "*"
+
+# serialver
+conda-forge::serialver = "*"
+
+# serverinfo
+conda-forge::serverinfo = "*"
+
+# servertool
+conda-forge::servertool = "*"
+
+# set_unicharset_properties
+conda-forge::set_unicharset_properties = "*"
+
+# setkey
+conda-forge::setkey = "*"
+
+# setquota
+conda-forge::setquota = "*"
+
+# setregion
+conda-forge::setregion = "*"
+
+# setuids.d
+conda-forge::setuids.d = "*"
+
+# sexp-conv
+conda-forge::sexp-conv = "*"
+
+# sfltool
+conda-forge::sfltool = "*"
+
+# sftp
+conda-forge::sftp = "*"
+
+# sg
+conda-forge::sg = "*"
+
+# sgitopnm
+conda-forge::sgitopnm = "*"
+
+# sh
+conda-forge::sh = "*"
+
+# sha1
+conda-forge::sha1 = "*"
+
+# sha1sum
+conda-forge::sha1sum = "*"
+
+# sha224
+conda-forge::sha224 = "*"
+
+# sha224sum
+conda-forge::sha224sum = "*"
+
+# sha256
+conda-forge::sha256 = "*"
+
+# sha256sum
+conda-forge::sha256sum = "*"
+
+# sha384
+conda-forge::sha384 = "*"
+
+# sha384sum
+conda-forge::sha384sum = "*"
+
+# sha512
+conda-forge::sha512 = "*"
+
+# sha512sum
+conda-forge::sha512sum = "*"
+
+# shapeclustering
+conda-forge::shapeclustering = "*"
+
+# shar
+conda-forge::shar = "*"
+
+# sharing
+conda-forge::sharing = "*"
+
+# shasum
+conda-forge::shasum = "*"
+
+# shasum5.34
+conda-forge::shasum5.34 = "*"
+
+# shazam
+conda-forge::shazam = "*"
+
+# shellcheck
+conda-forge::shellcheck = "*"
+
+# shfmt
+conda-forge::shfmt = "*"
+
+# shlock
+conda-forge::shlock = "*"
+
+# shortcuts
+conda-forge::shortcuts = "*"
+
+# showmount
+conda-forge::showmount = "*"
+
+# shred
+conda-forge::shred = "*"
+
+# shuf
+conda-forge::shuf = "*"
+
+# shutdown
+conda-forge::shutdown = "*"
+
+# sidxindex
+conda-forge::sidxindex = "*"
+
+# siege
+conda-forge::siege = "*"
+
+# siege.config
+conda-forge::siege.config = "*"
+
+# siege2csv.pl
+conda-forge::siege2csv.pl = "*"
+
+# sigdist.d
+conda-forge::sigdist.d = "*"
+
+# simple_dcraw
+conda-forge::simple_dcraw = "*"
+
+# sips
+conda-forge::sips = "*"
+
+# sirtopnm
+conda-forge::sirtopnm = "*"
+
+# size
+conda-forge::size = "*"
+
+# skaffold
+conda-forge::skaffold = "*"
+
+# skimnotes
+conda-forge::skimnotes = "*"
+
+# skimpdf
+conda-forge::skimpdf = "*"
+
+# skywalkctl
+conda-forge::skywalkctl = "*"
+
+# slack-mcp-server
+conda-forge::slack-mcp-server = "*"
+
+# slapacl
+conda-forge::slapacl = "*"
+
+# slapadd
+conda-forge::slapadd = "*"
+
+# slapauth
+conda-forge::slapauth = "*"
+
+# slapcat
+conda-forge::slapcat = "*"
+
+# slapconfig
+conda-forge::slapconfig = "*"
+
+# slapdn
+conda-forge::slapdn = "*"
+
+# slapindex
+conda-forge::slapindex = "*"
+
+# slappasswd
+conda-forge::slappasswd = "*"
+
+# slapschema
+conda-forge::slapschema = "*"
+
+# slaptest
+conda-forge::slaptest = "*"
+
+# sldtoppm
+conda-forge::sldtoppm = "*"
+
+# sleep
+conda-forge::sleep = "*"
+
+# slencheck
+conda-forge::slencheck = "*"
+
+# slogin
+conda-forge::slogin = "*"
+
+# slsh
+conda-forge::slsh = "*"
+
+# smbd
+conda-forge::smbd = "*"
+
+# smbdiagnose
+conda-forge::smbdiagnose = "*"
+
+# smbutil
+conda-forge::smbutil = "*"
+
+# sndfile-cmp
+conda-forge::sndfile-cmp = "*"
+
+# sndfile-concat
+conda-forge::sndfile-concat = "*"
+
+# sndfile-convert
+conda-forge::sndfile-convert = "*"
+
+# sndfile-deinterleave
+conda-forge::sndfile-deinterleave = "*"
+
+# sndfile-info
+conda-forge::sndfile-info = "*"
+
+# sndfile-interleave
+conda-forge::sndfile-interleave = "*"
+
+# sndfile-metadata-get
+conda-forge::sndfile-metadata-get = "*"
+
+# sndfile-metadata-set
+conda-forge::sndfile-metadata-set = "*"
+
+# sndfile-play
+conda-forge::sndfile-play = "*"
+
+# sndfile-salvage
+conda-forge::sndfile-salvage = "*"
+
+# sndiskmove
+conda-forge::sndiskmove = "*"
+
+# snfsdefrag
+conda-forge::snfsdefrag = "*"
+
+# snmp-bridge-mib
+conda-forge::snmp-bridge-mib = "*"
+
+# snmpbulkget
+conda-forge::snmpbulkget = "*"
+
+# snmpbulkwalk
+conda-forge::snmpbulkwalk = "*"
+
+# snmpconf
+conda-forge::snmpconf = "*"
+
+# snmpd
+conda-forge::snmpd = "*"
+
+# snmpdelta
+conda-forge::snmpdelta = "*"
+
+# snmpdf
+conda-forge::snmpdf = "*"
+
+# snmpget
+conda-forge::snmpget = "*"
+
+# snmpgetnext
+conda-forge::snmpgetnext = "*"
+
+# snmpinform
+conda-forge::snmpinform = "*"
+
+# snmpnetstat
+conda-forge::snmpnetstat = "*"
+
+# snmpset
+conda-forge::snmpset = "*"
+
+# snmpstatus
+conda-forge::snmpstatus = "*"
+
+# snmptable
+conda-forge::snmptable = "*"
+
+# snmptest
+conda-forge::snmptest = "*"
+
+# snmptranslate
+conda-forge::snmptranslate = "*"
+
+# snmptrap
+conda-forge::snmptrap = "*"
+
+# snmptrapd
+conda-forge::snmptrapd = "*"
+
+# snmpusm
+conda-forge::snmpusm = "*"
+
+# snmpvacm
+conda-forge::snmpvacm = "*"
+
+# snmpwalk
+conda-forge::snmpwalk = "*"
+
+# snquota
+conda-forge::snquota = "*"
+
+# sntp
+conda-forge::sntp = "*"
+
+# sntpd
+conda-forge::sntpd = "*"
+
+# snyk
+conda-forge::snyk = "*"
+
+# softwareupdate
+conda-forge::softwareupdate = "*"
+
+# sonar-scanner
+conda-forge::sonar-scanner = "*"
+
+# sops
+conda-forge::sops = "*"
+
+# sort
+conda-forge::sort = "*"
+
+# source2c
+conda-forge::source2c = "*"
+
+# sourcekit-lsp
+conda-forge::sourcekit-lsp = "*"
+
+# spark-beeline
+conda-forge::spark-beeline = "*"
+
+# spark-class
+conda-forge::spark-class = "*"
+
+# spark-connect-shell
+conda-forge::spark-connect-shell = "*"
+
+# spark-pipelines
+conda-forge::spark-pipelines = "*"
+
+# spark-shell
+conda-forge::spark-shell = "*"
+
+# spark-sql
+conda-forge::spark-sql = "*"
+
+# spark-submit
+conda-forge::spark-submit = "*"
+
+# sparkR
+conda-forge::sparkR = "*"
+
+# spctl
+conda-forge::spctl = "*"
+
+# spctoppm
+conda-forge::spctoppm = "*"
+
+# speedtest
+conda-forge::speedtest = "*"
+
+# speedtest-cli
+conda-forge::speedtest-cli = "*"
+
+# speexdec
+conda-forge::speexdec = "*"
+
+# speexenc
+conda-forge::speexenc = "*"
+
+# spfd
+conda-forge::spfd = "*"
+
+# spfd5.34
+conda-forge::spfd5.34 = "*"
+
+# spfquery
+conda-forge::spfquery = "*"
+
+# spfquery5.34
+conda-forge::spfquery5.34 = "*"
+
+# spindump
+conda-forge::spindump = "*"
+
+# splain
+conda-forge::splain = "*"
+
+# splain5.34
+conda-forge::splain5.34 = "*"
+
+# spline
+conda-forge::spline = "*"
+
+# split
+conda-forge::split = "*"
+
+# spotbugs
+conda-forge::spotbugs = "*"
+
+# spottopgm
+conda-forge::spottopgm = "*"
+
+# spray
+conda-forge::spray = "*"
+
+# sputoppm
+conda-forge::sputoppm = "*"
+
+# sql
+conda-forge::sql = "*"
+
+# sqlite-mcp
+conda-forge::sqlite-mcp = "*"
+
+# sqlite3
+conda-forge::sqlite3 = "*"
+
+# sqls
+conda-forge::sqls = "*"
+
+# srftopam
+conda-forge::srftopam = "*"
+
+# srt-ffplay
+conda-forge::srt-ffplay = "*"
+
+# srt-file-transmit
+conda-forge::srt-file-transmit = "*"
+
+# srt-live-transmit
+conda-forge::srt-live-transmit = "*"
+
+# srt-tunnel
+conda-forge::srt-tunnel = "*"
+
+# ssh
+conda-forge::ssh = "*"
+
+# ssh-add
+conda-forge::ssh-add = "*"
+
+# ssh-agent
+conda-forge::ssh-agent = "*"
+
+# ssh-copy-id
+conda-forge::ssh-copy-id = "*"
+
+# ssh-keygen
+conda-forge::ssh-keygen = "*"
+
+# ssh-keyscan
+conda-forge::ssh-keyscan = "*"
+
+# sshd
+conda-forge::sshd = "*"
+
+# ssimulacra2
+conda-forge::ssimulacra2 = "*"
+
+# ssimulacra_main
+conda-forge::ssimulacra_main = "*"
+
+# sso_util
+conda-forge::sso_util = "*"
+
+# st4topgm
+conda-forge::st4topgm = "*"
+
+# stack
+conda-forge::stack = "*"
+
+# stapler
+conda-forge::stapler = "*"
+
+# starship
+conda-forge::starship = "*"
+
+# startGroovy
+conda-forge::startGroovy = "*"
+
+# stat
+conda-forge::stat = "*"
+
+# stdbuf
+conda-forge::stdbuf = "*"
+
+# steampipe
+conda-forge::steampipe = "*"
+
+# stern
+conda-forge::stern = "*"
+
+# stow
+conda-forge::stow = "*"
+
+# stream
+conda-forge::stream = "*"
+
+# streamzip
+conda-forge::streamzip = "*"
+
+# streamzip5.34
+conda-forge::streamzip5.34 = "*"
+
+# stringdups
+conda-forge::stringdups = "*"
+
+# strings
+conda-forge::strings = "*"
+
+# strip
+conda-forge::strip = "*"
+
+# stripe
+conda-forge::stripe = "*"
+
+# stty
+conda-forge::stty = "*"
+
+# stubgen
+conda-forge::stubgen = "*"
+
+# stubtest
+conda-forge::stubtest = "*"
+
+# stz
+conda-forge::stz = "*"
+
+# su
+conda-forge::su = "*"
+
+# sudo
+conda-forge::sudo = "*"
+
+# suitesparse_mongoose
+conda-forge::suitesparse_mongoose = "*"
+
+# sum
+conda-forge::sum = "*"
+
+# sunicontopnm
+conda-forge::sunicontopnm = "*"
+
+# supabase
+conda-forge::supabase = "*"
+
+# svgtopam
+conda-forge::svgtopam = "*"
+
+# svgtoqml
+conda-forge::svgtoqml = "*"
+
+# sw_vers
+conda-forge::sw_vers = "*"
+
+# swcutil
+conda-forge::swcutil = "*"
+
+# swift
+conda-forge::swift = "*"
+
+# swift-inspect
+conda-forge::swift-inspect = "*"
+
+# swiftc
+conda-forge::swiftc = "*"
+
+# symbols
+conda-forge::symbols = "*"
+
+# symbolscache
+conda-forge::symbolscache = "*"
+
+# symlinks
+conda-forge::symlinks = "*"
+
+# sync
+conda-forge::sync = "*"
+
+# sysadminctl
+conda-forge::sysadminctl = "*"
+
+# syscallbypid.d
+conda-forge::syscallbypid.d = "*"
+
+# syscallbyproc.d
+conda-forge::syscallbyproc.d = "*"
+
+# syscallbysysc.d
+conda-forge::syscallbysysc.d = "*"
+
+# sysctl
+conda-forge::sysctl = "*"
+
+# sysdiagnose
+conda-forge::sysdiagnose = "*"
+
+# sysdig
+conda-forge::sysdig = "*"
+
+# syslog
+conda-forge::syslog = "*"
+
+# syslogd
+conda-forge::syslogd = "*"
+
+# syspolicy_check
+conda-forge::syspolicy_check = "*"
+
+# system-override
+conda-forge::system-override = "*"
+
+# system_profiler
+conda-forge::system_profiler = "*"
+
+# systemextensionsctl
+conda-forge::systemextensionsctl = "*"
+
+# systemkeychain
+conda-forge::systemkeychain = "*"
+
+# systemsetup
+conda-forge::systemsetup = "*"
+
+# systemsoundserverd
+conda-forge::systemsoundserverd = "*"
+
+# systemstats
+conda-forge::systemstats = "*"
+
+# tab2space
+conda-forge::tab2space = "*"
+
+# tabs
+conda-forge::tabs = "*"
+
+# tac
+conda-forge::tac = "*"
+
+# tail
+conda-forge::tail = "*"
+
+# tailspin
+conda-forge::tailspin = "*"
+
+# talk
+conda-forge::talk = "*"
+
+# taplo
+conda-forge::taplo = "*"
+
+# tar
+conda-forge::tar = "*"
+
+# target_dec_fate.sh
+conda-forge::target_dec_fate.sh = "*"
+
+# task
+conda-forge::task = "*"
+
+# taskinfo
+conda-forge::taskinfo = "*"
+
+# taskpolicy
+conda-forge::taskpolicy = "*"
+
+# tavily-mcp
+conda-forge::tavily-mcp = "*"
+
+# tbtdiagnose
+conda-forge::tbtdiagnose = "*"
+
+# tccutil
+conda-forge::tccutil = "*"
+
+# tcldocstrip
+conda-forge::tcldocstrip = "*"
+
+# tclsh
+conda-forge::tclsh = "*"
+
+# tclsh8.5
+conda-forge::tclsh8.5 = "*"
+
+# tclsh9.0
+conda-forge::tclsh9.0 = "*"
+
+# tcpdump
+conda-forge::tcpdump = "*"
+
+# tcsh
+conda-forge::tcsh = "*"
+
+# tdspool
+conda-forge::tdspool = "*"
+
+# tee
+conda-forge::tee = "*"
+
+# tek2plot
+conda-forge::tek2plot = "*"
+
+# telegraf
+conda-forge::telegraf = "*"
+
+# temporal
+conda-forge::temporal = "*"
+
+# tensorboard
+conda-forge::tensorboard = "*"
+
+# terraform
+conda-forge::terraform = "*"
+
+# terraform-mcp-server
+conda-forge::terraform-mcp-server = "*"
+
+# terrascan
+conda-forge::terrascan = "*"
+
+# tesseract
+conda-forge::tesseract = "*"
+
+# test
+conda-forge::test = "*"
+
+# test-yaml
+conda-forge::test-yaml = "*"
+
+# test-yaml5.34
+conda-forge::test-yaml5.34 = "*"
+
+# testssl.sh
+conda-forge::testssl.sh = "*"
+
+# texi2any
+conda-forge::texi2any = "*"
+
+# texi2dvi
+conda-forge::texi2dvi = "*"
+
+# texi2pdf
+conda-forge::texi2pdf = "*"
+
+# texindex
+conda-forge::texindex = "*"
+
+# text2image
+conda-forge::text2image = "*"
+
+# texture_to_cube
+conda-forge::texture_to_cube = "*"
+
+# textutil
+conda-forge::textutil = "*"
+
+# tflint
+conda-forge::tflint = "*"
+
+# tftp
+conda-forge::tftp = "*"
+
+# tgatoppm
+conda-forge::tgatoppm = "*"
+
+# thermal
+conda-forge::thermal = "*"
+
+# thinkjettopbm
+conda-forge::thinkjettopbm = "*"
+
+# thrift1
+conda-forge::thrift1 = "*"
+
+# tic
+conda-forge::tic = "*"
+
+# tidy
+conda-forge::tidy = "*"
+
+# tidy_changelog
+conda-forge::tidy_changelog = "*"
+
+# tidy_changelog5.34
+conda-forge::tidy_changelog5.34 = "*"
+
+# tiff2bw
+conda-forge::tiff2bw = "*"
+
+# tiff2icns
+conda-forge::tiff2icns = "*"
+
+# tiff2pdf
+conda-forge::tiff2pdf = "*"
+
+# tiff2ps
+conda-forge::tiff2ps = "*"
+
+# tiff2rgba
+conda-forge::tiff2rgba = "*"
+
+# tiffcmp
+conda-forge::tiffcmp = "*"
+
+# tiffcp
+conda-forge::tiffcp = "*"
+
+# tiffcrop
+conda-forge::tiffcrop = "*"
+
+# tiffdither
+conda-forge::tiffdither = "*"
+
+# tiffdump
+conda-forge::tiffdump = "*"
+
+# tiffinfo
+conda-forge::tiffinfo = "*"
+
+# tiffmedian
+conda-forge::tiffmedian = "*"
+
+# tiffset
+conda-forge::tiffset = "*"
+
+# tiffsplit
+conda-forge::tiffsplit = "*"
+
+# tifftopnm
+conda-forge::tifftopnm = "*"
+
+# tiffutil
+conda-forge::tiffutil = "*"
+
+# tificc
+conda-forge::tificc = "*"
+
+# tig
+conda-forge::tig = "*"
+
+# tilt
+conda-forge::tilt = "*"
+
+# time
+conda-forge::time = "*"
+
+# timeout
+conda-forge::timeout = "*"
+
+# timer_analyser.d
+conda-forge::timer_analyser.d = "*"
+
+# timerfires
+conda-forge::timerfires = "*"
+
+# timesyncanalyse
+conda-forge::timesyncanalyse = "*"
+
+# tiny-agents
+conda-forge::tiny-agents = "*"
+
+# tjbench
+conda-forge::tjbench = "*"
+
+# tkcon
+conda-forge::tkcon = "*"
+
+# tkmib
+conda-forge::tkmib = "*"
+
+# tkpp
+conda-forge::tkpp = "*"
+
+# tkpp5.34
+conda-forge::tkpp5.34 = "*"
+
+# tldr
+conda-forge::tldr = "*"
+
+# tmdiagnose
+conda-forge::tmdiagnose = "*"
+
+# tmutil
+conda-forge::tmutil = "*"
+
+# tmux
+conda-forge::tmux = "*"
+
+# tnameserv
+conda-forge::tnameserv = "*"
+
+# to_erl
+conda-forge::to_erl = "*"
+
+# toe
+conda-forge::toe = "*"
+
+# tokei
+conda-forge::tokei = "*"
+
+# tombi
+conda-forge::tombi = "*"
+
+# tone_map
+conda-forge::tone_map = "*"
+
+# toolbox
+conda-forge::toolbox = "*"
+
+# top
+conda-forge::top = "*"
+
+# topgrade
+conda-forge::topgrade = "*"
+
+# tops
+conda-forge::tops = "*"
+
+# topsyscall
+conda-forge::topsyscall = "*"
+
+# topsysproc
+conda-forge::topsysproc = "*"
+
+# torchfrtrace
+conda-forge::torchfrtrace = "*"
+
+# torchrun
+conda-forge::torchrun = "*"
+
+# touch
+conda-forge::touch = "*"
+
+# tput
+conda-forge::tput = "*"
+
+# tqdm
+conda-forge::tqdm = "*"
+
+# tr
+conda-forge::tr = "*"
+
+# trace
+conda-forge::trace = "*"
+
+# traceroute
+conda-forge::traceroute = "*"
+
+# traceroute6
+conda-forge::traceroute6 = "*"
+
+# train
+conda-forge::train = "*"
+
+# transfig
+conda-forge::transfig = "*"
+
+# transformers
+transformers = "*"
+
+# transicc
+conda-forge::transicc = "*"
+
+# traptoemail
+conda-forge::traptoemail = "*"
+
+# trash
+conda-forge::trash = "*"
+
+# trasher
+conda-forge::trasher = "*"
+
+# tree
+tree = "*"
+
+# treereg
+conda-forge::treereg = "*"
+
+# treereg5.34
+conda-forge::treereg5.34 = "*"
+
+# trimforce
+conda-forge::trimforce = "*"
+
+# trivy
+conda-forge::trivy = "*"
+
+# trl
+conda-forge::trl = "*"
+
+# trogdor
+conda-forge::trogdor = "*"
+
+# true
+conda-forge::true = "*"
+
+# trufflehog
+conda-forge::trufflehog = "*"
+
+# truncate
+conda-forge::truncate = "*"
+
+# trust
+conda-forge::trust = "*"
+
+# trustcachectl
+conda-forge::trustcachectl = "*"
+
+# tsc
+conda-forge::tsc = "*"
+
+# tset
+conda-forge::tset = "*"
+
+# tsig-keygen
+conda-forge::tsig-keygen = "*"
+
+# tsort
+conda-forge::tsort = "*"
+
+# tsql
+conda-forge::tsql = "*"
+
+# tsserver
+conda-forge::tsserver = "*"
+
+# tsx
+conda-forge::tsx = "*"
+
+# ttx
+conda-forge::ttx = "*"
+
+# tty
+conda-forge::tty = "*"
+
+# type
+conda-forge::type = "*"
+
+# typer
+conda-forge::typer = "*"
+
+# typos
+conda-forge::typos = "*"
+
+# uasysdiagnose
+conda-forge::uasysdiagnose = "*"
+
+# ug
+conda-forge::ug = "*"
+
+# ug+
+conda-forge::ug+ = "*"
+
+# ugrep
+conda-forge::ugrep = "*"
+
+# ugrep+
+conda-forge::ugrep+ = "*"
+
+# ugrep-indexer
+conda-forge::ugrep-indexer = "*"
+
+# ul
+conda-forge::ul = "*"
+
+# ulimit
+conda-forge::ulimit = "*"
+
+# ultimate-mcp
+conda-forge::ultimate-mcp = "*"
+
+# ultimate-mcp-codegen
+conda-forge::ultimate-mcp-codegen = "*"
+
+# ultrahdr_app
+conda-forge::ultrahdr_app = "*"
+
+# umask
+conda-forge::umask = "*"
+
+# umount
+conda-forge::umount = "*"
+
+# umtool
+conda-forge::umtool = "*"
+
+# unalias
+conda-forge::unalias = "*"
+
+# uname
+conda-forge::uname = "*"
+
+# uncoded_frame
+conda-forge::uncoded_frame = "*"
+
+# uncompress
+conda-forge::uncompress = "*"
+
+# undill
+conda-forge::undill = "*"
+
+# unexpand
+conda-forge::unexpand = "*"
+
+# unicharset_extractor
+conda-forge::unicharset_extractor = "*"
+
+# unifdef
+conda-forge::unifdef = "*"
+
+# unifdefall
+conda-forge::unifdefall = "*"
+
+# uniq
+conda-forge::uniq = "*"
+
+# units
+conda-forge::units = "*"
+
+# universalaccessd
+conda-forge::universalaccessd = "*"
+
+# unix-lpr.sh
+conda-forge::unix-lpr.sh = "*"
+
+# unixcmd
+conda-forge::unixcmd = "*"
+
+# unlink
+conda-forge::unlink = "*"
+
+# unlz4
+conda-forge::unlz4 = "*"
+
+# unlzma
+conda-forge::unlzma = "*"
+
+# unpack200
+conda-forge::unpack200 = "*"
+
+# unpigz
+conda-forge::unpigz = "*"
+
+# unprocessed_raw
+conda-forge::unprocessed_raw = "*"
+
+# unrar
+conda-forge::unrar = "*"
+
+# unsetpassword
+conda-forge::unsetpassword = "*"
+
+# unvis
+conda-forge::unvis = "*"
+
+# unwrap-diff
+conda-forge::unwrap-diff = "*"
+
+# unxz
+conda-forge::unxz = "*"
+
+# unzip
+conda-forge::unzip = "*"
+
+# unzipsfx
+conda-forge::unzipsfx = "*"
+
+# unzstd
+conda-forge::unzstd = "*"
+
+# update-mime-database
+conda-forge::update-mime-database = "*"
+
+# update_dyld_shared_cache
+conda-forge::update_dyld_shared_cache = "*"
+
+# update_mcdp29xx
+conda-forge::update_mcdp29xx = "*"
+
+# upload_theme
+conda-forge::upload_theme = "*"
+
+# uptime
+conda-forge::uptime = "*"
+
+# usage
+conda-forge::usage = "*"
+
+# usbcfwflasher
+conda-forge::usbcfwflasher = "*"
+
+# usbdiagnose
+conda-forge::usbdiagnose = "*"
+
+# usdcat
+conda-forge::usdcat = "*"
+
+# usdchecker
+conda-forge::usdchecker = "*"
+
+# usdcrush
+conda-forge::usdcrush = "*"
+
+# usdextract
+conda-forge::usdextract = "*"
+
+# usdrecord
+conda-forge::usdrecord = "*"
+
+# usdtree
+conda-forge::usdtree = "*"
+
+# usdzip
+conda-forge::usdzip = "*"
+
+# usernoted
+conda-forge::usernoted = "*"
+
+# users
+conda-forge::users = "*"
+
+# uttype
+conda-forge::uttype = "*"
+
+# uuchk
+conda-forge::uuchk = "*"
+
+# uucico
+conda-forge::uucico = "*"
+
+# uuconv
+conda-forge::uuconv = "*"
+
+# uucp
+conda-forge::uucp = "*"
+
+# uudecode
+conda-forge::uudecode = "*"
+
+# uuencode
+conda-forge::uuencode = "*"
+
+# uuidgen
+conda-forge::uuidgen = "*"
+
+# uulog
+conda-forge::uulog = "*"
+
+# uuname
+conda-forge::uuname = "*"
+
+# uupick
+conda-forge::uupick = "*"
+
+# uusched
+conda-forge::uusched = "*"
+
+# uustat
+conda-forge::uustat = "*"
+
+# uuto
+conda-forge::uuto = "*"
+
+# uux
+conda-forge::uux = "*"
+
+# uuxqt
+conda-forge::uuxqt = "*"
+
+# uv
+conda-forge::uv = "*"
+
+# uvicorn
+conda-forge::uvicorn = "*"
+
+# uvx
+conda-forge::uvx = "*"
+
+# vacuumdb
+conda-forge::vacuumdb = "*"
+
+# vacuumdb-17
+conda-forge::vacuumdb-17 = "*"
+
+# vacuumlo
+conda-forge::vacuumlo = "*"
+
+# vacuumlo-17
+conda-forge::vacuumlo-17 = "*"
+
+# vale
+conda-forge::vale = "*"
+
+# vault
+conda-forge::vault = "*"
+
+# vc
+conda-forge::vc = "*"
+
+# vde_autolink
+conda-forge::vde_autolink = "*"
+
+# vde_over_ns
+conda-forge::vde_over_ns = "*"
+
+# vde_pcapplug
+conda-forge::vde_pcapplug = "*"
+
+# vde_plug
+conda-forge::vde_plug = "*"
+
+# vde_plug2tap
+conda-forge::vde_plug2tap = "*"
+
+# vde_router
+conda-forge::vde_router = "*"
+
+# vde_switch
+conda-forge::vde_switch = "*"
+
+# vdecmd
+conda-forge::vdecmd = "*"
+
+# vdeterm
+conda-forge::vdeterm = "*"
+
+# vegeta
+conda-forge::vegeta = "*"
+
+# venc_data_dump
+conda-forge::venc_data_dump = "*"
+
+# vercel
+conda-forge::vercel = "*"
+
+# vi
+conda-forge::vi = "*"
+
+# view
+conda-forge::view = "*"
+
+# viewdiagnostic
+conda-forge::viewdiagnostic = "*"
+
+# vifs
+conda-forge::vifs = "*"
+
+# vim
+conda-forge::vim = "*"
+
+# vimdiff
+conda-forge::vimdiff = "*"
+
+# vimtutor
+conda-forge::vimtutor = "*"
+
+# vipw
+conda-forge::vipw = "*"
+
+# vis
+conda-forge::vis = "*"
+
+# visudo
+conda-forge::visudo = "*"
+
+# vite
+conda-forge::vite = "*"
+
+# vitest
+conda-forge::vitest = "*"
+
+# vivid
+conda-forge::vivid = "*"
+
+# vm_stat
+conda-forge::vm_stat = "*"
+
+# vmaf
+conda-forge::vmaf = "*"
+
+# vmmap
+conda-forge::vmmap = "*"
+
+# vpnd
+conda-forge::vpnd = "*"
+
+# vsdbutil
+conda-forge::vsdbutil = "*"
+
+# vtool
+conda-forge::vtool = "*"
+
+# vwebp
+conda-forge::vwebp = "*"
+
+# w
+conda-forge::w = "*"
+
+# wait
+conda-forge::wait = "*"
+
+# wait4path
+conda-forge::wait4path = "*"
+
+# wall
+conda-forge::wall = "*"
+
+# wandb
+conda-forge::wandb = "*"
+
+# watch
+conda-forge::watch = "*"
+
+# watchexec
+conda-forge::watchexec = "*"
+
+# watchfiles
+conda-forge::watchfiles = "*"
+
+# watchgnupg
+conda-forge::watchgnupg = "*"
+
+# watchman
+conda-forge::watchman = "*"
+
+# watchman-diag
+conda-forge::watchman-diag = "*"
+
+# watchman-make
+conda-forge::watchman-make = "*"
+
+# watchman-replicate-subscription
+conda-forge::watchman-replicate-subscription = "*"
+
+# watchman-wait
+conda-forge::watchman-wait = "*"
+
+# watchmanctl
+conda-forge::watchmanctl = "*"
+
+# wb
+conda-forge::wb = "*"
+
+# wbmptopbm
+conda-forge::wbmptopbm = "*"
+
+# wc
+conda-forge::wc = "*"
+
+# wdutil
+conda-forge::wdutil = "*"
+
+# webpinfo
+conda-forge::webpinfo = "*"
+
+# webpmux
+conda-forge::webpmux = "*"
+
+# webpng
+conda-forge::webpng = "*"
+
+# websockets
+conda-forge::websockets = "*"
+
+# wfsctl
+conda-forge::wfsctl = "*"
+
+# wget
+conda-forge::wget = "*"
+
+# what
+conda-forge::what = "*"
+
+# whatis
+conda-forge::whatis = "*"
+
+# wheel3
+conda-forge::wheel3 = "*"
+
+# wheel3.11
+conda-forge::wheel3.11 = "*"
+
+# wheel3.12
+conda-forge::wheel3.12 = "*"
+
+# wheel3.13
+conda-forge::wheel3.13 = "*"
+
+# wheel3.14
+conda-forge::wheel3.14 = "*"
+
+# whereis
+conda-forge::whereis = "*"
+
+# which
+conda-forge::which = "*"
+
+# who
+conda-forge::who = "*"
+
+# whoami
+conda-forge::whoami = "*"
+
+# whois
+conda-forge::whois = "*"
+
+# winicontopam
+conda-forge::winicontopam = "*"
+
+# winicontoppm
+conda-forge::winicontoppm = "*"
+
+# wirefilter
+conda-forge::wirefilter = "*"
+
+# wish
+conda-forge::wish = "*"
+
+# wish8.5
+conda-forge::wish8.5 = "*"
+
+# wish9.0
+conda-forge::wish9.0 = "*"
+
+# wordlist2dawg
+conda-forge::wordlist2dawg = "*"
+
+# wrangler
+conda-forge::wrangler = "*"
+
+# wrangler2
+conda-forge::wrangler2 = "*"
+
+# write
+conda-forge::write = "*"
+
+# wrjpgcom
+conda-forge::wrjpgcom = "*"
+
+# wrk
+conda-forge::wrk = "*"
+
+# wx-config-3.2
+conda-forge::wx-config-3.2 = "*"
+
+# wxrc-3.2
+conda-forge::wxrc-3.2 = "*"
+
+# x264
+conda-forge::x264 = "*"
+
+# x265
+conda-forge::x265 = "*"
+
+# xar
+conda-forge::xar = "*"
+
+# xargs
+conda-forge::xargs = "*"
+
+# xartutil
+conda-forge::xartutil = "*"
+
+# xattr
+conda-forge::xattr = "*"
+
+# xbmtopbm
+conda-forge::xbmtopbm = "*"
+
+# xcdebug
+conda-forge::xcdebug = "*"
+
+# xcode-select
+conda-forge::xcode-select = "*"
+
+# xcodebuild
+conda-forge::xcodebuild = "*"
+
+# xcrun
+conda-forge::xcrun = "*"
+
+# xcscontrol
+conda-forge::xcscontrol = "*"
+
+# xcsdiagnose
+conda-forge::xcsdiagnose = "*"
+
+# xctrace
+conda-forge::xctrace = "*"
+
+# xed
+conda-forge::xed = "*"
+
+# xgettext
+conda-forge::xgettext = "*"
+
+# xgettext.pl
+conda-forge::xgettext.pl = "*"
+
+# xgettext5.34.pl
+conda-forge::xgettext5.34.pl = "*"
+
+# xh
+conda-forge::xh = "*"
+
+# xhs
+conda-forge::xhs = "*"
+
+# ximtoppm
+conda-forge::ximtoppm = "*"
+
+# xip
+conda-forge::xip = "*"
+
+# xml2-config
+conda-forge::xml2-config = "*"
+
+# xml2man
+conda-forge::xml2man = "*"
+
+# xmlcatalog
+conda-forge::xmlcatalog = "*"
+
+# xmllint
+conda-forge::xmllint = "*"
+
+# xpath
+conda-forge::xpath = "*"
+
+# xpath5.34
+conda-forge::xpath5.34 = "*"
+
+# xpmtoppm
+conda-forge::xpmtoppm = "*"
+
+# xprotect
+conda-forge::xprotect = "*"
+
+# xsanctl
+conda-forge::xsanctl = "*"
+
+# xscertadmin
+conda-forge::xscertadmin = "*"
+
+# xslt-config
+conda-forge::xslt-config = "*"
+
+# xsltproc
+conda-forge::xsltproc = "*"
+
+# xsubpp
+conda-forge::xsubpp = "*"
+
+# xsubpp5.34
+conda-forge::xsubpp5.34 = "*"
+
+# xtractprotos
+conda-forge::xtractprotos = "*"
+
+# xvminitoppm
+conda-forge::xvminitoppm = "*"
+
+# xwdtopnm
+conda-forge::xwdtopnm = "*"
+
+# xxd
+conda-forge::xxd = "*"
+
+# xxh128sum
+conda-forge::xxh128sum = "*"
+
+# xxh32sum
+conda-forge::xxh32sum = "*"
+
+# xxh3sum
+conda-forge::xxh3sum = "*"
+
+# xxh64sum
+conda-forge::xxh64sum = "*"
+
+# xxhsum
+conda-forge::xxhsum = "*"
+
+# xyb_range
+conda-forge::xyb_range = "*"
+
+# xz
+conda-forge::xz = "*"
+
+# xzcat
+conda-forge::xzcat = "*"
+
+# xzcmp
+conda-forge::xzcmp = "*"
+
+# xzdec
+conda-forge::xzdec = "*"
+
+# xzdiff
+conda-forge::xzdiff = "*"
+
+# xzegrep
+conda-forge::xzegrep = "*"
+
+# xzfgrep
+conda-forge::xzfgrep = "*"
+
+# xzgrep
+conda-forge::xzgrep = "*"
+
+# xzless
+conda-forge::xzless = "*"
+
+# xzmore
+conda-forge::xzmore = "*"
+
+# yaa
+conda-forge::yaa = "*"
+
+# yacc
+conda-forge::yacc = "*"
+
+# yadm
+conda-forge::yadm = "*"
+
+# yamllint
+conda-forge::yamllint = "*"
+
+# yamlpp-events
+conda-forge::yamlpp-events = "*"
+
+# yamlpp-events5.34
+conda-forge::yamlpp-events5.34 = "*"
+
+# yamlpp-highlight
+conda-forge::yamlpp-highlight = "*"
+
+# yamlpp-highlight5.34
+conda-forge::yamlpp-highlight5.34 = "*"
+
+# yamlpp-load
+conda-forge::yamlpp-load = "*"
+
+# yamlpp-load-dump
+conda-forge::yamlpp-load-dump = "*"
+
+# yamlpp-load-dump5.34
+conda-forge::yamlpp-load-dump5.34 = "*"
+
+# yamlpp-load5.34
+conda-forge::yamlpp-load5.34 = "*"
+
+# yamlpp-parse-emit
+conda-forge::yamlpp-parse-emit = "*"
+
+# yamlpp-parse-emit5.34
+conda-forge::yamlpp-parse-emit5.34 = "*"
+
+# yapp
+conda-forge::yapp = "*"
+
+# yapp5.34
+conda-forge::yapp5.34 = "*"
+
+# yarn
+conda-forge::yarn = "*"
+
+# yarnpkg
+conda-forge::yarnpkg = "*"
+
+# yat2m
+conda-forge::yat2m = "*"
+
+# ybmtopbm
+conda-forge::ybmtopbm = "*"
+
+# yes
+conda-forge::yes = "*"
+
+# yq
+yq = "*"
+
+# yuv-distortion
+conda-forge::yuv-distortion = "*"
+
+# yuvsplittoppm
+conda-forge::yuvsplittoppm = "*"
+
+# yuvtoppm
+conda-forge::yuvtoppm = "*"
+
+# yuy2topam
+conda-forge::yuy2topam = "*"
+
+# z3
+conda-forge::z3 = "*"
+
+# zcat
+conda-forge::zcat = "*"
+
+# zcmp
+conda-forge::zcmp = "*"
+
+# zdiff
+conda-forge::zdiff = "*"
+
+# zdump
+conda-forge::zdump = "*"
+
+# zed
+conda-forge::zed = "*"
+
+# zegrep
+conda-forge::zegrep = "*"
+
+# zeisstopnm
+conda-forge::zeisstopnm = "*"
+
+# zellij
+conda-forge::zellij = "*"
+
+# zfgrep
+conda-forge::zfgrep = "*"
+
+# zforce
+conda-forge::zforce = "*"
+
+# zgrep
+conda-forge::zgrep = "*"
+
+# zic
+conda-forge::zic = "*"
+
+# zip
+conda-forge::zip = "*"
+
+# zipcloak
+conda-forge::zipcloak = "*"
+
+# zipcmp
+conda-forge::zipcmp = "*"
+
+# zipdetails
+conda-forge::zipdetails = "*"
+
+# zipdetails5.34
+conda-forge::zipdetails5.34 = "*"
+
+# zipgrep
+conda-forge::zipgrep = "*"
+
+# zipinfo
+conda-forge::zipinfo = "*"
+
+# zipmerge
+conda-forge::zipmerge = "*"
+
+# zipnote
+conda-forge::zipnote = "*"
+
+# zipsplit
+conda-forge::zipsplit = "*"
+
+# ziptool
+conda-forge::ziptool = "*"
+
+# zkCleanup
+conda-forge::zkCleanup = "*"
+
+# zkCli
+conda-forge::zkCli = "*"
+
+# zkServer
+conda-forge::zkServer = "*"
+
+# zkServer-initialize
+conda-forge::zkServer-initialize = "*"
+
+# zkSnapShotToolkit
+conda-forge::zkSnapShotToolkit = "*"
+
+# zkSnapshotComparer
+conda-forge::zkSnapshotComparer = "*"
+
+# zkSnapshotRecursiveSummaryToolkit
+conda-forge::zkSnapshotRecursiveSummaryToolkit = "*"
+
+# zkTxnLogToolkit
+conda-forge::zkTxnLogToolkit = "*"
+
+# zless
+conda-forge::zless = "*"
+
+# zmore
+conda-forge::zmore = "*"
+
+# zmqsend
+conda-forge::zmqsend = "*"
+
+# zmqshell.py
+conda-forge::zmqshell.py = "*"
+
+# znew
+conda-forge::znew = "*"
+
+# zoxide
+conda-forge::zoxide = "*"
+
+# zprint
+conda-forge::zprint = "*"
+
+# zsh
+conda-forge::zsh = "*"
+
+# zsh-5.9
+conda-forge::zsh-5.9 = "*"
+
+# zstd
+conda-forge::zstd = "*"
+
+# zstdcat
+conda-forge::zstdcat = "*"
+
+# zstdgrep
+conda-forge::zstdgrep = "*"
+
+# zstdless
+conda-forge::zstdless = "*"
+
+# zstdmt
+conda-forge::zstdmt = "*"
+
+# ├──
+conda-forge::├── = "*"
+
+# ├── adr-tools
+conda-forge::├── adr-tools = "*"
+
+# ├── apollo-server-express
+conda-forge::├── apollo-server-express = "*"
+
+# ├── apollo-server
+conda-forge::├── apollo-server = "*"
+
+# ├── apollo
+conda-forge::├── apollo = "*"
+
+# ├── artillery-engine-playwright
+conda-forge::├── artillery-engine-playwright = "*"
+
+# ├── artillery
+conda-forge::├── artillery = "*"
+
+# ├── autocannon
+conda-forge::├── autocannon = "*"
+
+# ├── ava
+conda-forge::├── ava = "*"
+
+# ├── aws-cdk
+conda-forge::├── aws-cdk = "*"
+
+# ├── axe-core
+conda-forge::├── axe-core = "*"
+
+# ├── axios
+conda-forge::├── axios = "*"
+
+# ├── benchmark
+conda-forge::├── benchmark = "*"
+
+# ├── brave-search
+conda-forge::├── brave-search = "*"
+
+# ├── byterover-mcp
+conda-forge::├── byterover-mcp = "*"
+
+# ├── chalk
+conda-forge::├── chalk = "*"
+
+# ├── cline
+conda-forge::├── cline = "*"
+
+# ├── clinic
+conda-forge::├── clinic = "*"
+
+# ├── clipboard-cli
+conda-forge::├── clipboard-cli = "*"
+
+# ├── commander
+conda-forge::├── commander = "*"
+
+# ├── concurrently
+conda-forge::├── concurrently = "*"
+
+# ├── corepack
+conda-forge::├── corepack = "*"
+
+# ├── create-next-app
+conda-forge::├── create-next-app = "*"
+
+# ├── create-nuxt-app
+conda-forge::├── create-nuxt-app = "*"
+
+# ├── cross-env
+conda-forge::├── cross-env = "*"
+
+# ├── cypress
+conda-forge::├── cypress = "*"
+
+# ├── cytoscape
+conda-forge::├── cytoscape = "*"
+
+# ├── depcheck
+conda-forge::├── depcheck = "*"
+
+# ├── docker-mcp-server
+conda-forge::├── docker-mcp-server = "*"
+
+# ├── dotenv-cli
+conda-forge::├── dotenv-cli = "*"
+
+# ├── dotenv
+conda-forge::├── dotenv = "*"
+
+# ├── drizzle-kit
+conda-forge::├── drizzle-kit = "*"
+
+# ├── esbuild
+conda-forge::├── esbuild = "*"
+
+# ├── exa-mcp-server
+conda-forge::├── exa-mcp-server = "*"
+
+# ├── exa-mcp
+conda-forge::├── exa-mcp = "*"
+
+# ├── express
+conda-forge::├── express = "*"
+
+# ├── fastify
+conda-forge::├── fastify = "*"
+
+# ├── firebase-tools
+conda-forge::├── firebase-tools = "*"
+
+# ├── firecrawl-mcp
+conda-forge::├── firecrawl-mcp = "*"
+
+# ├── generator-jhipster
+conda-forge::├── generator-jhipster = "*"
+
+# ├── gh-home
+conda-forge::├── gh-home = "*"
+
+# ├── git-open
+conda-forge::├── git-open = "*"
+
+# ├── glob-all
+conda-forge::├── glob-all = "*"
+
+# ├── got
+conda-forge::├── got = "*"
+
+# ├── grant
+conda-forge::├── grant = "*"
+
+# ├── graphql-cli
+conda-forge::├── graphql-cli = "*"
+
+# ├── graphql-yoga
+conda-forge::├── graphql-yoga = "*"
+
+# ├── graphql
+conda-forge::├── graphql = "*"
+
+# ├── hono
+conda-forge::├── hono = "*"
+
+# ├── inquirer
+conda-forge::├── inquirer = "*"
+
+# ├── ipfs-deploy
+conda-forge::├── ipfs-deploy = "*"
+
+# ├── jest
+conda-forge::├── jest = "*"
+
+# ├── jscpd
+conda-forge::├── jscpd = "*"
+
+# ├── knip
+conda-forge::├── knip = "*"
+
+# ├── langchain
+conda-forge::├── langchain = "*"
+
+# ├── lodash
+conda-forge::├── lodash = "*"
+
+# ├── log4brains
+conda-forge::├── log4brains = "*"
+
+# ├── markdownlint-cli2
+conda-forge::├── markdownlint-cli2 = "*"
+
+# ├── mcp-code-graph
+conda-forge::├── mcp-code-graph = "*"
+
+# ├── mcp-deepwiki
+conda-forge::├── mcp-deepwiki = "*"
+
+# ├── mcp-server-code-runner
+conda-forge::├── mcp-server-code-runner = "*"
+
+# ├── mcp-server-sqlite
+conda-forge::├── mcp-server-sqlite = "*"
+
+# ├── mcp-starter
+conda-forge::├── mcp-starter = "*"
+
+# ├── mkdirp
+conda-forge::├── mkdirp = "*"
+
+# ├── mocha
+conda-forge::├── mocha = "*"
+
+# ├── mongodb
+conda-forge::├── mongodb = "*"
+
+# ├── mongoose
+conda-forge::├── mongoose = "*"
+
+# ├── mysql
+conda-forge::├── mysql = "*"
+
+# ├── n8n-mcp
+conda-forge::├── n8n-mcp = "*"
+
+# ├── n8n-nodes-mcp
+conda-forge::├── n8n-nodes-mcp = "*"
+
+# ├── n8n
+conda-forge::├── n8n = "*"
+
+# ├── neo4j-driver
+conda-forge::├── neo4j-driver = "*"
+
+# ├── nestjs
+conda-forge::├── nestjs = "*"
+
+# ├── netlify-cli
+conda-forge::├── netlify-cli = "*"
+
+# ├── next
+conda-forge::├── next = "*"
+
+# ├── np
+conda-forge::├── np = "*"
+
+# ├── npm-check-updates
+conda-forge::├── npm-check-updates = "*"
+
+# ├── npm-home
+conda-forge::├── npm-home = "*"
+
+# ├── npm-name
+conda-forge::├── npm-name = "*"
+
+# ├── npm
+conda-forge::├── npm = "*"
+
+# ├── octocode
+conda-forge::├── octocode = "*"
+
+# ├── ollama-mcp
+conda-forge::├── ollama-mcp = "*"
+
+# ├── ora
+conda-forge::├── ora = "*"
+
+# ├── parcel
+conda-forge::├── parcel = "*"
+
+# ├── passport
+conda-forge::├── passport = "*"
+
+# ├── peerflix
+conda-forge::├── peerflix = "*"
+
+# ├── pg
+conda-forge::├── pg = "*"
+
+# ├── pino
+conda-forge::├── pino = "*"
+
+# ├── playwright
+conda-forge::├── playwright = "*"
+
+# ├── prisma
+conda-forge::├── prisma = "*"
+
+# ├── puppeteer-mcp-server
+conda-forge::├── puppeteer-mcp-server = "*"
+
+# ├── qdrant-api-mcp
+conda-forge::├── qdrant-api-mcp = "*"
+
+# ├── redis
+conda-forge::├── redis = "*"
+
+# ├── ref-tools-mcp
+conda-forge::├── ref-tools-mcp = "*"
+
+# ├── rimraf
+conda-forge::├── rimraf = "*"
+
+# ├── rollup
+conda-forge::├── rollup = "*"
+
+# ├── rxjs
+conda-forge::├── rxjs = "*"
+
+# ├── sharp
+conda-forge::├── sharp = "*"
+
+# ├── slack-mcp-server
+conda-forge::├── slack-mcp-server = "*"
+
+# ├── snyk
+conda-forge::├── snyk = "*"
+
+# ├── socket.io
+conda-forge::├── socket.io = "*"
+
+# ├── speed-test
+conda-forge::├── speed-test = "*"
+
+# ├── sqlite-mcp
+conda-forge::├── sqlite-mcp = "*"
+
+# ├── tavily-mcp
+conda-forge::├── tavily-mcp = "*"
+
+# ├── testcafe
+conda-forge::├── testcafe = "*"
+
+# ├── toml-cli
+conda-forge::├── toml-cli = "*"
+
+# ├── ts-node
+conda-forge::├── ts-node = "*"
+
+# ├── tsx
+conda-forge::├── tsx = "*"
+
+# ├── turbo
+conda-forge::├── turbo = "*"
+
+# ├── turf
+conda-forge::├── turf = "*"
+
+# ├── ultimate-mcp-codegen
+conda-forge::├── ultimate-mcp-codegen = "*"
+
+# ├── vercel
+conda-forge::├── vercel = "*"
+
+# ├── vite
+conda-forge::├── vite = "*"
+
+# ├── vitest
+conda-forge::├── vitest = "*"
+
+# ├── webpack
+conda-forge::├── webpack = "*"
+
+# ├── webtorrent
+conda-forge::├── webtorrent = "*"
+
+# ├── wrangler
+conda-forge::├── wrangler = "*"
+
+# ├── xcodebuildmcp
+conda-forge::├── xcodebuildmcp = "*"
+
+# ├── xo
+conda-forge::├── xo = "*"
+
+# ├── yarn
+conda-forge::├── yarn = "*"
+
+# └── zod-to-json-schema
+conda-forge::└── zod-to-json-schema = "*"
+
+# jest
+conda-forge::jest = "*"
+
+# abseil
+conda-forge::abseil = "*"
+
+# aom
+conda-forge::aom = "*"
+
+# apache-spark
+conda-forge::apache-spark = "*"
+
+# apr
+conda-forge::apr = "*"
+
+# apr-util
+conda-forge::apr-util = "*"
+
+# aria2
+conda-forge::aria2 = "*"
+
+# aribb24
+conda-forge::aribb24 = "*"
+
+# arpack
+conda-forge::arpack = "*"
+
+# artillery
+conda-forge::artillery = "*"
+
+# avro-c
+conda-forge::avro-c = "*"
+
+# aws-sam-cli
+conda-forge::aws-sam-cli = "*"
+
+# awscli
+conda-forge::awscli = "*"
+
+# azure-cli
+conda-forge::azure-cli = "*"
+
+# bats-assert
+conda-forge::bats-assert = "*"
+
+# bats-core
+conda-forge::bats-core = "*"
+
+# bats-file
+conda-forge::bats-file = "*"
+
+# bats-support
+conda-forge::bats-support = "*"
+
+# blake3
+conda-forge::blake3 = "*"
+
+# boost
+conda-forge::boost = "*"
+
+# bottom
+conda-forge::bottom = "*"
+
+# c-ares
+conda-forge::c-ares = "*"
+
+# ca-certificates
+conda-forge::ca-certificates = "*"
+
+# cairo
+conda-forge::cairo = "*"
+
+# capstone
+conda-forge::capstone = "*"
+
+# cargo-edit
+conda-forge::cargo-edit = "*"
+
+# certifi
+conda-forge::certifi = "*"
+
+# cffi
+conda-forge::cffi = "*"
+
+# choose-rust
+conda-forge::choose-rust = "*"
+
+# cilium-cli
+conda-forge::cilium-cli = "*"
+
+# cjson
+conda-forge::cjson = "*"
+
+# cli
+conda-forge::cli = "*"
+
+# commitizen
+conda-forge::commitizen = "*"
+
+# coreutils
+conda-forge::coreutils = "*"
+
+# cpptoml
+conda-forge::cpptoml = "*"
+
+# cryptography
+conda-forge::cryptography = "*"
+
+# dbus
+conda-forge::dbus = "*"
+
+# difftastic
+conda-forge::difftastic = "*"
+
+# diffutils
+conda-forge::diffutils = "*"
+
+# docker-completion
+conda-forge::docker-completion = "*"
+
+# docker-credential-helper
+conda-forge::docker-credential-helper = "*"
+
+# dockerfile-language-server
+conda-forge::dockerfile-language-server = "*"
+
+# double-conversion
+conda-forge::double-conversion = "*"
+
+# dua-cli
+conda-forge::dua-cli = "*"
+
+# dwarfutils
+conda-forge::dwarfutils = "*"
+
+# edencommon
+conda-forge::edencommon = "*"
+
+# eigen
+conda-forge::eigen = "*"
+
+# erlang
+conda-forge::erlang = "*"
+
+# fb303
+conda-forge::fb303 = "*"
+
+# fbthrift
+conda-forge::fbthrift = "*"
+
+# fftw
+conda-forge::fftw = "*"
+
+# findutils
+conda-forge::findutils = "*"
+
+# fltk
+conda-forge::fltk = "*"
+
+# folly
+conda-forge::folly = "*"
+
+# fontconfig
+conda-forge::fontconfig = "*"
+
+# freetds
+conda-forge::freetds = "*"
+
+# freetype
+conda-forge::freetype = "*"
+
+# frei0r
+conda-forge::frei0r = "*"
+
+# gd
+conda-forge::gd = "*"
+
+# gdk-pixbuf
+conda-forge::gdk-pixbuf = "*"
+
+# gflags
+conda-forge::gflags = "*"
+
+# ghostscript
+conda-forge::ghostscript = "*"
+
+# giflib
+conda-forge::giflib = "*"
+
+# git-delta
+conda-forge::git-delta = "*"
+
+# gl2ps
+conda-forge::gl2ps = "*"
+
+# glib
+conda-forge::glib = "*"
+
+# glog
+conda-forge::glog = "*"
+
+# glpk
+conda-forge::glpk = "*"
+
+# gmp
+conda-forge::gmp = "*"
+
+# gnu-getopt
+conda-forge::gnu-getopt = "*"
+
+# gnu-sed
+conda-forge::gnu-sed = "*"
+
+# gnu-tar
+conda-forge::gnu-tar = "*"
+
+# gnupg
+conda-forge::gnupg = "*"
+
+# gnutls
+conda-forge::gnutls = "*"
+
+# go-task
+conda-forge::go-task = "*"
+
+# gradle-completion
+conda-forge::gradle-completion = "*"
+
+# graphicsmagick
+conda-forge::graphicsmagick = "*"
+
+# graphite2
+conda-forge::graphite2 = "*"
+
+# gumbo-parser
+conda-forge::gumbo-parser = "*"
+
+# harfbuzz
+conda-forge::harfbuzz = "*"
+
+# haskell-stack
+conda-forge::haskell-stack = "*"
+
+# hdf5
+conda-forge::hdf5 = "*"
+
+# helix
+conda-forge::helix = "*"
+
+# highway
+conda-forge::highway = "*"
+
+# hiredis
+conda-forge::hiredis = "*"
+
+# hwloc
+conda-forge::hwloc = "*"
+
+# icu4c@77
+conda-forge::icu4c@77 = "*"
+
+# icu4c@78
+conda-forge::icu4c@78 = "*"
+
+# imagemagick
+conda-forge::imagemagick = "*"
+
+# imath
+conda-forge::imath = "*"
+
+# influxdb
+conda-forge::influxdb = "*"
+
+# isl
+conda-forge::isl = "*"
+
+# jansson
+conda-forge::jansson = "*"
+
+# jpeg-turbo
+conda-forge::jpeg-turbo = "*"
+
+# jpeg-xl
+conda-forge::jpeg-xl = "*"
+
+# json-glib
+conda-forge::json-glib = "*"
+
+# jsoncpp
+conda-forge::jsoncpp = "*"
+
+# kafka
+conda-forge::kafka = "*"
+
+# krb5
+conda-forge::krb5 = "*"
+
+# kube-ps1
+conda-forge::kube-ps1 = "*"
+
+# kubernetes-cli
+conda-forge::kubernetes-cli = "*"
+
+# leptonica
+conda-forge::leptonica = "*"
+
+# libaec
+conda-forge::libaec = "*"
+
+# libarchive
+conda-forge::libarchive = "*"
+
+# libass
+conda-forge::libass = "*"
+
+# libassuan
+conda-forge::libassuan = "*"
+
+# libavif
+conda-forge::libavif = "*"
+
+# libb2
+conda-forge::libb2 = "*"
+
+# libblastrampoline
+conda-forge::libblastrampoline = "*"
+
+# libbluray
+conda-forge::libbluray = "*"
+
+# libcerf
+conda-forge::libcerf = "*"
+
+# libde265
+conda-forge::libde265 = "*"
+
+# libdeflate
+conda-forge::libdeflate = "*"
+
+# libestr
+conda-forge::libestr = "*"
+
+# libev
+conda-forge::libev = "*"
+
+# libevent
+conda-forge::libevent = "*"
+
+# libfastjson
+conda-forge::libfastjson = "*"
+
+# libffcall
+conda-forge::libffcall = "*"
+
+# libffi
+conda-forge::libffi = "*"
+
+# libgcrypt
+conda-forge::libgcrypt = "*"
+
+# libgit2
+conda-forge::libgit2 = "*"
+
+# libgpg-error
+conda-forge::libgpg-error = "*"
+
+# libheif
+conda-forge::libheif = "*"
+
+# libiconv
+conda-forge::libiconv = "*"
+
+# libidn
+conda-forge::libidn = "*"
+
+# libidn2
+conda-forge::libidn2 = "*"
+
+# libjodycode
+conda-forge::libjodycode = "*"
+
+# libksba
+conda-forge::libksba = "*"
+
+# liblinear
+conda-forge::liblinear = "*"
+
+# liblqr
+conda-forge::liblqr = "*"
+
+# libmicrohttpd
+conda-forge::libmicrohttpd = "*"
+
+# libmpc
+conda-forge::libmpc = "*"
+
+# libnghttp2
+conda-forge::libnghttp2 = "*"
+
+# libnghttp3
+conda-forge::libnghttp3 = "*"
+
+# libngtcp2
+conda-forge::libngtcp2 = "*"
+
+# libogg
+conda-forge::libogg = "*"
+
+# libomp
+conda-forge::libomp = "*"
+
+# libpng
+conda-forge::libpng = "*"
+
+# libpq
+conda-forge::libpq = "*"
+
+# libptytty
+conda-forge::libptytty = "*"
+
+# libraw
+conda-forge::libraw = "*"
+
+# librdkafka
+conda-forge::librdkafka = "*"
+
+# librist
+conda-forge::librist = "*"
+
+# librsvg
+conda-forge::librsvg = "*"
+
+# libsamplerate
+conda-forge::libsamplerate = "*"
+
+# libserdes
+conda-forge::libserdes = "*"
+
+# libsigsegv
+conda-forge::libsigsegv = "*"
+
+# libslirp
+conda-forge::libslirp = "*"
+
+# libsndfile
+conda-forge::libsndfile = "*"
+
+# libsodium
+conda-forge::libsodium = "*"
+
+# libsoxr
+conda-forge::libsoxr = "*"
+
+# libssh
+conda-forge::libssh = "*"
+
+# libssh2
+conda-forge::libssh2 = "*"
+
+# libtasn1
+conda-forge::libtasn1 = "*"
+
+# libtiff
+conda-forge::libtiff = "*"
+
+# libtommath
+conda-forge::libtommath = "*"
+
+# libudfread
+conda-forge::libudfread = "*"
+
+# libultrahdr
+conda-forge::libultrahdr = "*"
+
+# libunibreak
+conda-forge::libunibreak = "*"
+
+# libunistring
+conda-forge::libunistring = "*"
+
+# libusb
+conda-forge::libusb = "*"
+
+# libuv
+conda-forge::libuv = "*"
+
+# libvidstab
+conda-forge::libvidstab = "*"
+
+# libvmaf
+conda-forge::libvmaf = "*"
+
+# libvorbis
+conda-forge::libvorbis = "*"
+
+# libvpx
+conda-forge::libvpx = "*"
+
+# libx11
+conda-forge::libx11 = "*"
+
+# libxau
+conda-forge::libxau = "*"
+
+# libxcb
+conda-forge::libxcb = "*"
+
+# libxdmcp
+conda-forge::libxdmcp = "*"
+
+# libxext
+conda-forge::libxext = "*"
+
+# libxml2
+conda-forge::libxml2 = "*"
+
+# libxrender
+conda-forge::libxrender = "*"
+
+# libyaml
+conda-forge::libyaml = "*"
+
+# libzip
+conda-forge::libzip = "*"
+
+# licensefinder
+conda-forge::licensefinder = "*"
+
+# litehtml
+conda-forge::litehtml = "*"
+
+# little-cms2
+conda-forge::little-cms2 = "*"
+
+# llvm
+conda-forge::llvm = "*"
+
+# locateme
+conda-forge::locateme = "*"
+
+# logrotate
+conda-forge::logrotate = "*"
+
+# lpeg
+conda-forge::lpeg = "*"
+
+# luv
+conda-forge::luv = "*"
+
+# lzlib
+conda-forge::lzlib = "*"
+
+# lzo
+conda-forge::lzo = "*"
+
+# maven
+conda-forge::maven = "*"
+
+# mbedtls@3
+conda-forge::mbedtls@3 = "*"
+
+# mcp-toolbox
+conda-forge::mcp-toolbox = "*"
+
+# md4c
+conda-forge::md4c = "*"
+
+# midnight-commander
+conda-forge::midnight-commander = "*"
+
+# mongodb-atlas-cli
+conda-forge::mongodb-atlas-cli = "*"
+
+# mpdecimal
+conda-forge::mpdecimal = "*"
+
+# mpfr
+conda-forge::mpfr = "*"
+
+# ncurses
+conda-forge::ncurses = "*"
+
+# neovim
+conda-forge::neovim = "*"
+
+# net-snmp
+conda-forge::net-snmp = "*"
+
+# netpbm
+conda-forge::netpbm = "*"
+
+# nettle
+conda-forge::nettle = "*"
+
+# newrelic-cli
+conda-forge::newrelic-cli = "*"
+
+# npth
+conda-forge::npth = "*"
+
+# numpy
+conda-forge::numpy = "*"
+
+# nvm
+conda-forge::nvm = "*"
+
+# oniguruma
+conda-forge::oniguruma = "*"
+
+# open-mpi
+conda-forge::open-mpi = "*"
+
+# openblas
+conda-forge::openblas = "*"
+
+# openblas64
+conda-forge::openblas64 = "*"
+
+# opencore-amr
+conda-forge::opencore-amr = "*"
+
+# openexr
+conda-forge::openexr = "*"
+
+# openjdk
+conda-forge::openjdk = "*"
+
+# openjdk@17
+conda-forge::openjdk@17 = "*"
+
+# openjdk@21
+conda-forge::openjdk@21 = "*"
+
+# openjpeg
+conda-forge::openjpeg = "*"
+
+# openjph
+conda-forge::openjph = "*"
+
+# openldap
+conda-forge::openldap = "*"
+
+# openlibm
+conda-forge::openlibm = "*"
+
+# openssl@3
+conda-forge::openssl@3 = "*"
+
+# opus
+conda-forge::opus = "*"
+
+# organize-tool
+conda-forge::organize-tool = "*"
+
+# p7zip
+conda-forge::p7zip = "*"
+
+# pango
+conda-forge::pango = "*"
+
+# pcre
+conda-forge::pcre = "*"
+
+# pcre2
+conda-forge::pcre2 = "*"
+
+# pgvector
+conda-forge::pgvector = "*"
+
+# pip-tools
+conda-forge::pip-tools = "*"
+
+# pixie
+conda-forge::pixie = "*"
+
+# pixman
+conda-forge::pixman = "*"
+
+# plotutils
+conda-forge::plotutils = "*"
+
+# pmix
+conda-forge::pmix = "*"
+
+# popt
+conda-forge::popt = "*"
+
+# portaudio
+conda-forge::portaudio = "*"
+
+# postgresql@14
+conda-forge::postgresql@14 = "*"
+
+# postgresql@15
+conda-forge::postgresql@15 = "*"
+
+# postgresql@16
+conda-forge::postgresql@16 = "*"
+
+# postgresql@17
+conda-forge::postgresql@17 = "*"
+
+# powerlevel10k
+conda-forge::powerlevel10k = "*"
+
+# protobuf
+conda-forge::protobuf = "*"
+
+# pycparser
+conda-forge::pycparser = "*"
+
+# pydantic
+conda-forge::pydantic = "*"
+
+# python@3.11
+conda-forge::python@3.11 = "*"
+
+# python@3.12
+conda-forge::python@3.12 = "*"
+
+# python@3.13
+conda-forge::python@3.13 = "*"
+
+# python@3.14
+conda-forge::python@3.14 = "*"
+
+# qemu
+conda-forge::qemu = "*"
+
+# qrupdate
+conda-forge::qrupdate = "*"
+
+# qscintilla2
+conda-forge::qscintilla2 = "*"
+
+# qt5compat
+conda-forge::qt5compat = "*"
+
+# qtbase
+conda-forge::qtbase = "*"
+
+# qtdeclarative
+conda-forge::qtdeclarative = "*"
+
+# qtshadertools
+conda-forge::qtshadertools = "*"
+
+# qtsvg
+conda-forge::qtsvg = "*"
+
+# qttools
+conda-forge::qttools = "*"
+
+# r
+conda-forge::r = "*"
+
+# rabbitmq
+conda-forge::rabbitmq = "*"
+
+# rapidjson
+conda-forge::rapidjson = "*"
+
+# rcm
+conda-forge::rcm = "*"
+
+# re2
+conda-forge::re2 = "*"
+
+# readline
+conda-forge::readline = "*"
+
+# redis
+redis = "*"
+
+# ripgrep
+ripgrep = "*"
+
+# ripgrep-all
+conda-forge::ripgrep-all = "*"
+
+# rpds-py
+conda-forge::rpds-py = "*"
+
+# rsyslog
+conda-forge::rsyslog = "*"
+
+# rust
+conda-forge::rust = "*"
+
+# s-lang
+conda-forge::s-lang = "*"
+
+# sdl2
+conda-forge::sdl2 = "*"
+
+# sevenzip
+conda-forge::sevenzip = "*"
+
+# shared-mime-info
+conda-forge::shared-mime-info = "*"
+
+# simdjson
+conda-forge::simdjson = "*"
+
+# snappy
+conda-forge::snappy = "*"
+
+# speex
+conda-forge::speex = "*"
+
+# sqlite
+conda-forge::sqlite = "*"
+
+# srt
+conda-forge::srt = "*"
+
+# suite-sparse
+conda-forge::suite-sparse = "*"
+
+# sundials
+conda-forge::sundials = "*"
+
+# svt-av1
+conda-forge::svt-av1 = "*"
+
+# tbb
+conda-forge::tbb = "*"
+
+# tcl-tk
+conda-forge::tcl-tk = "*"
+
+# tealdeer
+conda-forge::tealdeer = "*"
+
+# testssl
+conda-forge::testssl = "*"
+
+# texinfo
+conda-forge::texinfo = "*"
+
+# the_silver_searcher
+conda-forge::the_silver_searcher = "*"
+
+# theora
+conda-forge::theora = "*"
+
+# tidy-html5
+conda-forge::tidy-html5 = "*"
+
+# tre
+conda-forge::tre = "*"
+
+# tree-sitter
+conda-forge::tree-sitter = "*"
+
+# tree-sitter@0.25
+conda-forge::tree-sitter@0.25 = "*"
+
+# typescript
+typescript = "*"
+
+# typos-cli
+conda-forge::typos-cli = "*"
+
+# unbound
+conda-forge::unbound = "*"
+
+# unibilium
+conda-forge::unibilium = "*"
+
+# unixodbc
+conda-forge::unixodbc = "*"
+
+# utf8proc
+conda-forge::utf8proc = "*"
+
+# uthash
+conda-forge::uthash = "*"
+
+# uvwasi
+conda-forge::uvwasi = "*"
+
+# vde
+conda-forge::vde = "*"
+
+# wangle
+conda-forge::wangle = "*"
+
+# webp
+conda-forge::webp = "*"
+
+# wxwidgets@3.2
+conda-forge::wxwidgets@3.2 = "*"
+
+# xorgproto
+conda-forge::xorgproto = "*"
+
+# xvid
+conda-forge::xvid = "*"
+
+# xxhash
+conda-forge::xxhash = "*"
+
+# yajl
+conda-forge::yajl = "*"
+
+# yaml-cpp
+conda-forge::yaml-cpp = "*"
+
+# yyjson
+conda-forge::yyjson = "*"
+
+# zeromq
+conda-forge::zeromq = "*"
+
+# zimg
+conda-forge::zimg = "*"
+
+# zlib
+conda-forge::zlib = "*"
+
+# zookeeper
+conda-forge::zookeeper = "*"
+
+# zsh-autosuggestions
+conda-forge::zsh-autosuggestions = "*"
+
+# zsh-completions
+conda-forge::zsh-completions = "*"
+
+# zsh-syntax-highlighting
+conda-forge::zsh-syntax-highlighting = "*"
+
+# 1password
+conda-forge::1password = "*"
+
+# 1password-cli
+conda-forge::1password-cli = "*"
+
+# airflow
+conda-forge::airflow = "*"
+
+# cleanmymac
+conda-forge::cleanmymac = "*"
+
+# docker-desktop
+conda-forge::docker-desktop = "*"
+
+# eclipse-java
+conda-forge::eclipse-java = "*"
+
+# font-jetbrains-mono-nerd-font
+conda-forge::font-jetbrains-mono-nerd-font = "*"
+
+# gcloud-cli
+conda-forge::gcloud-cli = "*"
+
+# hammerspoon
+conda-forge::hammerspoon = "*"
+
+# hashicorp-vagrant
+conda-forge::hashicorp-vagrant = "*"
+
+# hazel
+conda-forge::hazel = "*"
+
+# intellij-idea
+conda-forge::intellij-idea = "*"
+
+# miniconda
+conda-forge::miniconda = "*"
+
+# orbstack
+conda-forge::orbstack = "*"
+
+# osquery
+conda-forge::osquery = "*"
+
+# podman-desktop
+conda-forge::podman-desktop = "*"
+
+# pppc-utility
+conda-forge::pppc-utility = "*"
+
+# skim
+conda-forge::skim = "*"
+
+# visualvm
+conda-forge::visualvm = "*"
+
+# ast-grep v0.40.3
+conda-forge::ast-grep v0.40.3 = "*"
+
+# cargo-audit v0.22.0
+conda-forge::cargo-audit v0.22.0 = "*"
+
+# cargo-deny v0.18.9
+conda-forge::cargo-deny v0.18.9 = "*"
+
+# cargo-edit v0.13.8
+conda-forge::cargo-edit v0.13.8 = "*"
+
+# cargo-watch v8.5.3
+conda-forge::cargo-watch v8.5.3 = "*"
+
+# py-spy v0.4.1
+conda-forge::py-spy v0.4.1 = "*"
+
+# ripgrep_all v0.10.10
+conda-forge::ripgrep_all v0.10.10 = "*"
+
+# sd v1.0.0
+conda-forge::sd v1.0.0 = "*"
+
+# taplo-cli v0.10.0
+conda-forge::taplo-cli v0.10.0 = "*"
+
+# staticcheck
+conda-forge::staticcheck = "*"
+
+# gopls
+conda-forge::gopls = "*"
+
+# dlv
+conda-forge::dlv = "*"
+
+# goimports
+conda-forge::goimports = "*"

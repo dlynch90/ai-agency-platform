@@ -1,0 +1,264 @@
+{
+  "markov_analysis": {
+    "total_states": 28,
+    "total_transitions": 7,
+    "absorbing_states": 24,
+    "steady_state_distribution": {
+      "CFG_PERIPH": -6.702050183891741e-36,
+      "JS_PERIPH": -5.133814906760219e-35,
+      "OTHER_PERIPH": 0.965929665201057,
+      "DOC_PERIPH": 1.2409545143469968e-35,
+      "PY_PERIPH": 3.883838108950116e-34,
+      "TS_PERIPH": -1.6467272323427513e-34,
+      "OTHER_SERVICE": 1.6745453087624086e-34,
+      "OTHER_SURFACE": 1.3140912690959283e-35,
+      "TEST_PERIPH": 0.03407033479894292,
+      "JS_SURFACE": -8.757119823535986e-35,
+      "CFG_SURFACE": -2.1380662339682613e-35,
+      "JAVA_PERIPH": -8.404055540073356e-36,
+      "CFG_API": -3.0087851814521183e-34,
+      "JAVA_API": 7.364799609193274e-35,
+      "JAVA_SURFACE": 5.552148239522562e-35,
+      "SCRIPT_PERIPH": 1.3115490209338403e-34,
+      "OTHER_API": 2.5879804245014072e-34,
+      "OTHER_CORE": -5.434402110445053e-36,
+      "JS_CORE": -8.354112588522667e-35,
+      "CFG_CORE": -1.099337592029801e-34,
+      "TEST_SURFACE": 1.678882720616737e-34,
+      "JS_API": 6.275306685805934e-35,
+      "CFG_SERVICE": -2.5747236892570122e-34,
+      "DOC_SERVICE": -1.0842290545984102e-34,
+      "PY_SERVICE": 2.6091114624981933e-34,
+      "PY_API": 3.549034011995935e-35,
+      "TEST_SERVICE": 4.5297979453496415e-35,
+      "RS_PERIPH": 5.762042324954945e-35
+    }
+  },
+  "state_analysis": {
+    "CFG_PERIPH": {
+      "layer": 4,
+      "file_type": "config",
+      "complexity": 10.520241665339787,
+      "connections": 0
+    },
+    "JS_PERIPH": {
+      "layer": 4,
+      "file_type": "javascript",
+      "complexity": 12.763852481341164,
+      "connections": 0
+    },
+    "OTHER_PERIPH": {
+      "layer": 4,
+      "file_type": "other",
+      "complexity": 13.157323087461798,
+      "connections": 0
+    },
+    "DOC_PERIPH": {
+      "layer": 4,
+      "file_type": "documentation",
+      "complexity": 5.382999558563747,
+      "connections": 0
+    },
+    "PY_PERIPH": {
+      "layer": 4,
+      "file_type": "python",
+      "complexity": 13.413078650176042,
+      "connections": 2
+    },
+    "TS_PERIPH": {
+      "layer": 4,
+      "file_type": "typescript",
+      "complexity": 10.150041405755754,
+      "connections": 1
+    },
+    "OTHER_SERVICE": {
+      "layer": 3,
+      "file_type": "other",
+      "complexity": 10.43401542173991,
+      "connections": 0
+    },
+    "OTHER_SURFACE": {
+      "layer": 5,
+      "file_type": "other",
+      "complexity": 0.0,
+      "connections": 0
+    },
+    "TEST_PERIPH": {
+      "layer": 4,
+      "file_type": "test",
+      "complexity": 15.001615143125417,
+      "connections": 0
+    },
+    "JS_SURFACE": {
+      "layer": 5,
+      "file_type": "javascript",
+      "complexity": 7.220142450115136,
+      "connections": 0
+    },
+    "CFG_SURFACE": {
+      "layer": 5,
+      "file_type": "config",
+      "complexity": 5.939092654460525,
+      "connections": 0
+    },
+    "JAVA_PERIPH": {
+      "layer": 4,
+      "file_type": "java",
+      "complexity": 13.1943635363174,
+      "connections": 0
+    },
+    "CFG_API": {
+      "layer": 2,
+      "file_type": "config",
+      "complexity": 9.659134886757963,
+      "connections": 0
+    },
+    "JAVA_API": {
+      "layer": 2,
+      "file_type": "java",
+      "complexity": 6.505054251498059,
+      "connections": 0
+    },
+    "JAVA_SURFACE": {
+      "layer": 5,
+      "file_type": "java",
+      "complexity": 8.827640287778983,
+      "connections": 0
+    },
+    "SCRIPT_PERIPH": {
+      "layer": 4,
+      "file_type": "script",
+      "complexity": 7.994021415206125,
+      "connections": 0
+    },
+    "OTHER_API": {
+      "layer": 2,
+      "file_type": "other",
+      "complexity": 9.949957272040324,
+      "connections": 0
+    },
+    "OTHER_CORE": {
+      "layer": 0,
+      "file_type": "other",
+      "complexity": 12.671478116386638,
+      "connections": 0
+    },
+    "JS_CORE": {
+      "layer": 0,
+      "file_type": "javascript",
+      "complexity": 12.551386341412185,
+      "connections": 0
+    },
+    "CFG_CORE": {
+      "layer": 0,
+      "file_type": "config",
+      "complexity": 7.0708422774185635,
+      "connections": 0
+    },
+    "TEST_SURFACE": {
+      "layer": 5,
+      "file_type": "test",
+      "complexity": 11.128652969548488,
+      "connections": 0
+    },
+    "JS_API": {
+      "layer": 2,
+      "file_type": "javascript",
+      "complexity": 8.177604243197589,
+      "connections": 0
+    },
+    "CFG_SERVICE": {
+      "layer": 3,
+      "file_type": "config",
+      "complexity": 7.320384082186005,
+      "connections": 0
+    },
+    "DOC_SERVICE": {
+      "layer": 3,
+      "file_type": "documentation",
+      "complexity": 4.770480365792417,
+      "connections": 0
+    },
+    "PY_SERVICE": {
+      "layer": 3,
+      "file_type": "python",
+      "complexity": 0.0,
+      "connections": 2
+    },
+    "PY_API": {
+      "layer": 2,
+      "file_type": "python",
+      "complexity": 7.17171134048073,
+      "connections": 2
+    },
+    "TEST_SERVICE": {
+      "layer": 3,
+      "file_type": "test",
+      "complexity": 7.52422751560335,
+      "connections": 0
+    },
+    "RS_PERIPH": {
+      "layer": 4,
+      "file_type": "rust",
+      "complexity": 3.858641396489095,
+      "connections": 0
+    }
+  },
+  "top_transitions": [
+    [
+      [
+        "TS_PERIPH",
+        "OTHER_PERIPH"
+      ],
+      1.0
+    ],
+    [
+      [
+        "PY_API",
+        "OTHER_PERIPH"
+      ],
+      0.9940476190476191
+    ],
+    [
+      [
+        "PY_SERVICE",
+        "OTHER_PERIPH"
+      ],
+      0.9919484702093397
+    ],
+    [
+      [
+        "PY_PERIPH",
+        "OTHER_PERIPH"
+      ],
+      0.9603268127896928
+    ],
+    [
+      [
+        "PY_PERIPH",
+        "TEST_PERIPH"
+      ],
+      0.03967318721030717
+    ],
+    [
+      [
+        "PY_SERVICE",
+        "TEST_PERIPH"
+      ],
+      0.008051529790660225
+    ],
+    [
+      [
+        "PY_API",
+        "TEST_PERIPH"
+      ],
+      0.005952380952380952
+    ]
+  ],
+  "recommendations": [
+    "High connectivity between states indicates tight coupling",
+    "Absorbing states may represent dead ends in dependency chains",
+    "Steady state shows long-term probability distribution",
+    "Consider breaking cycles in state transitions for better modularity"
+  ]
+}

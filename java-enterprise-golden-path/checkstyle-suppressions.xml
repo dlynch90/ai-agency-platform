@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Suppress Javadoc checks for test classes -->
+    <suppress checks="Javadoc.*" files=".*Test\.java"/>
+    <suppress checks="Javadoc.*" files=".*IT\.java"/>
+
+    <!-- Suppress line length for test files -->
+    <suppress checks="LineLength" files=".*Test\.java"/>
+    <suppress checks="LineLength" files=".*IT\.java"/>
+
+    <!-- Suppress method length for test classes -->
+    <suppress checks="MethodLength" files=".*Test\.java"/>
+    <suppress checks="MethodLength" files=".*IT\.java"/>
+
+    <!-- Suppress magic number checks for tests -->
+    <suppress checks="MagicNumber" files=".*Test\.java"/>
+    <suppress checks="MagicNumber" files=".*IT\.java"/>
+
+    <!-- Suppress javadoc for configuration classes -->
+    <suppress checks="Javadoc.*" files=".*Config\.java"/>
+    <suppress checks="Javadoc.*" files=".*Configuration\.java"/>
+
+    <!-- Suppress checks for generated sources -->
+    <suppress files="[\\/]generated[-\\/]" checks=".*"/>
+    <suppress files="[\\/]target[\\/]" checks=".*"/>
+
+    <!-- Suppress Javadoc for DTOs and entities -->
+    <suppress checks="JavadocVariable" files=".*Dto\.java"/>
+    <suppress checks="JavadocVariable" files=".*Entity\.java"/>
+    <suppress checks="JavadocMethod" files=".*Dto\.java"/>
+    <suppress checks="JavadocMethod" files=".*Entity\.java"/>
+
+    <!-- Suppress missing Javadoc for private methods -->
+    <suppress checks="JavadocMethod" message="Missing a Javadoc comment"/>
+
+    <!-- Suppress parameter number for builder patterns -->
+    <suppress checks="ParameterNumber" files=".*Builder\.java"/>
+</suppressions>

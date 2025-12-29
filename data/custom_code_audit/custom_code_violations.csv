@@ -1,0 +1,494 @@
+file_path,violation_type,severity,vendor_alternative,replacement_strategy,complexity_score,dependencies
+mcp-launcher-commonjs.js,node_utilities,medium,npm scripts,migrate_to_npm_scripts,3.06,"child_process, path"
+.opencode-env.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.56,
+closed-loop-analysis-framework.js,node_utilities,high,npm scripts,migrate_to_npm_scripts,5.36,
+validate-vendor-tools.js,node_utilities,critical,npm scripts,migrate_to_npm_scripts,7.04,"child_process, path, fs"
+validate-mcp-servers-fixed.js,node_utilities,critical,npm scripts,migrate_to_npm_scripts,7.02,
+validate-mcp-servers.js,node_utilities,critical,npm scripts,migrate_to_npm_scripts,7.12,
+tools/python/infinitesimal_gap_analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.2,"sys, typing, platform, dataclasses, psutil"
+tools/python/numerical-methods-audit.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.82,"sys, json, math, subprocess, pathlib"
+tools/python/validate_installations.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,9.7,"sys, typing, json, sklearn, mlflow"
+tools/python/numerical-methods-audit.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,8.82,"sys, json, math, subprocess, pathlib"
+tools/python/comprehensive_gap_analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.68,"sys, typing, tempfile, dataclasses, json"
+tools/python/comprehensive_gap_analysis.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,7.68,"sys, typing, tempfile, dataclasses, json"
+tools/python/finite-element-sphere-analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.32,"sys, typing, json, math, scipy"
+tools/python/debug-deployment-issues.py,python_utilities,high,click,migrate_to_cli_frameworks,6.72,"json, subprocess, pathlib, datetime, os"
+tools/python/comprehensive_unit_tests.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.8,"sys, tempfile, json, subprocess, shutil"
+tools/python/fix_environment.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.5,"sys, subprocess, pathlib, shutil, os"
+tools/python/spherical_finite_element_markov_analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.22,"json, random, datetime, time, os"
+tools/python/audit_loose_files_fixed.py,python_utilities,high,click,migrate_to_cli_frameworks,6.76,"typing, json, pathlib, time, os"
+tools/python/debug_cursor_issues.py,python_utilities,high,click,migrate_to_cli_frameworks,5.34,"sys, json, subprocess, requests, pathlib"
+tools/python/validate_installations.py.backup.backup,python_utilities,critical,click,migrate_to_cli_frameworks,10.0,"sys, typing, json, sklearn, mlflow"
+tools/python/audit_loose_files.py,python_utilities,high,click,migrate_to_cli_frameworks,4.86,"typing, json, pathlib, time, os"
+tools/python/infinitesimal_gap_analysis.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,8.2,"sys, typing, platform, dataclasses, psutil"
+tools/python/critical_fixes.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,5.76,"sys, json, subprocess, pathlib, shutil"
+tools/python/finite_element_gap_analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.3,"concurrent, sys, typing, threading, dataclasses"
+tools/python/validate_installations.py,python_utilities,critical,click,migrate_to_cli_frameworks,10.0,"sys, typing, json, sklearn, mlflow"
+tools/python/fix_environment.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,8.5,"sys, subprocess, pathlib, shutil, os"
+tools/python/critical_fixes.py,python_utilities,high,click,migrate_to_cli_frameworks,5.74,"sys, json, subprocess, pathlib, shutil"
+tools/python/comprehensive_system_diagnostic.py,python_utilities,high,click,migrate_to_cli_frameworks,6.98,"sys, typing, socket, psutil, json"
+tools/python/comprehensive_system_diagnostic.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,7.0,"sys, typing, socket, psutil, json"
+tools/python/spherical_finite_element_markov_analysis.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,8.22,"json, random, datetime, time, os"
+tools/python/audit_loose_files_fixed.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,7.26,"typing, json, pathlib, time, os"
+tools/python/agi_integration_framework.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.1,"sys, urllib, tempfile, tarfile, json"
+tools/python/finite_element_analysis.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.36,"json, re, pathlib, networkx, matplotlib"
+tools/python/finite-element-sphere-analysis.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.32,"sys, typing, json, math, scipy"
+tools/python/agi_integration_framework.py,python_utilities,high,click,migrate_to_cli_frameworks,6.08,"sys, urllib, tempfile, tarfile, json"
+tools/python/finite-element-analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.78,"sys, typing, dataclasses, json, sklearn"
+tools/python/final-verification.py,python_utilities,critical,click,migrate_to_cli_frameworks,10.0,"pathlib, os"
+tools/python/debug_cursor_issues.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,5.36,"sys, json, subprocess, requests, pathlib"
+tools/python/debug-use-cases.py,python_utilities,critical,click,migrate_to_cli_frameworks,10.0,"sys, json, datetime, pathlib, os"
+tools/python/audit_loose_files.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,4.88,"typing, json, pathlib, time, os"
+tools/python/finite_element_analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.36,"json, re, pathlib, networkx, matplotlib"
+tools/python/comprehensive_unit_tests.py,python_utilities,high,click,migrate_to_cli_frameworks,6.78,"sys, tempfile, json, subprocess, shutil"
+tools/javascript/cursor_debug_instrumentation.js,node_utilities,high,npm scripts,migrate_to_npm_scripts,4.9,
+tools/javascript/cursor_debug_instrumentation.js.backup,node_utilities,high,npm scripts,migrate_to_npm_scripts,5.92,
+domains/ecommerce/services/personalization-engine.py,python_utilities,high,click,migrate_to_cli_frameworks,5.9,"typing, json, sklearn, numpy, os"
+domains/use-cases/deploy-all.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.43,
+domains/use-cases/01-ecommerce/comprehensive-system-test.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.34,
+domains/use-cases/01-ecommerce/final-verification.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,10.0,
+domains/use-cases/01-ecommerce/domains/use-cases/deploy-all.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.59,
+domains/use-cases/01-ecommerce/domains/use-cases/01-ecommerce/main.py,python_utilities,high,click,migrate_to_cli_frameworks,6.78,"typing, fastapi, uvicorn, asyncio, os"
+bin/gibson,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.29,
+auth/cli/authenticated-cli-wrapper.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.12,
+pixi-universe/authenticated_cli_manager.py,python_utilities,high,click,migrate_to_cli_frameworks,6.82,"sys, typing, dataclasses, json, subprocess"
+pixi-universe/mathematical_modeling.py,python_utilities,high,click,migrate_to_cli_frameworks,6.5,"typing, dataclasses, json, datetime, enum"
+pixi-universe/run_pixi_universe.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.88,
+ecommerce-personalization/setup.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.51,"docker, node, npm, npm"
+ecommerce-personalization/stop.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,0.56,
+ecommerce-personalization/start.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.79,"npm, npm"
+mcp/servers/universal-mcp-server.js,node_utilities,medium,npm scripts,migrate_to_npm_scripts,3.58,"@modelcontextprotocol/sdk/server/index.js, @modelcontextprotocol/sdk/types.js, @modelcontextprotocol/sdk/server/sse.js"
+docs/adr-architecture-organizer.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.2,
+api-smoke-tests/smoke-test.js,node_utilities,high,npm scripts,migrate_to_npm_scripts,4.96,"https, child_process, http"
+testing/finite-element-sphere-analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.32,"sys, typing, json, math, scipy"
+testing/unit/comprehensive_unit_tests.py,python_utilities,high,click,migrate_to_cli_frameworks,6.78,"sys, tempfile, json, subprocess, shutil"
+testing/integration/integration-test.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,8.88,
+testing/integration/test-template-issue.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.0,
+testing/integration/test_mcp.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.04,"npm, npm"
+testing/integration/test_version.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,0.5,
+testing/integration/test_cursor_instrumentation.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.18,node
+testing/integration/test-api-connectivity.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.33,"curl, curl"
+testing/integration/compare_images.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,0.66,
+testing/integration/vendor_mcp_test.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.76,
+testing/integration/api_smoke_tests.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.58,"curl, curl, curl, curl"
+testing/integration/api-smoke-tests.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.54,"curl, curl, curl"
+ai-ml/agi_integration_framework.py,python_utilities,high,click,migrate_to_cli_frameworks,6.08,"sys, urllib, tempfile, tarfile, json"
+ai-ml/inference/run.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.04,"__future__, sys, operator, argparse, re"
+ai-ml/inference/paint.py,python_utilities,high,click,migrate_to_cli_frameworks,5.49,turtle
+ai-ml/inference/_html_base.py,python_utilities,high,click,migrate_to_cli_frameworks,7.0,"__future__, warnings, re, xml, pathlib"
+ai-ml/inference/analyze_tool_availability.py,python_utilities,high,click,migrate_to_cli_frameworks,5.16,"json, subprocess, pathlib, time, logging"
+ai-ml/inference/ml_gap_analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.28,"sys, typing, dataclasses, json, re"
+ai-ml/inference/package_xml_2_cmake.py,python_utilities,high,click,migrate_to_cli_frameworks,5.56,"sys, catkin_pkg, argparse, collections, os"
+hooks/workflow-error-handler.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.96,
+hooks/pre-workflow-validation.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.78,"curl, curl"
+hooks/post-workflow-notification.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.42,curl
+configs/env-template.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.46,
+configs/.editorconfig,custom_docker,medium,docker-compose templates,use_infrastructure_templates,2.27,
+configs/.gitignore,custom_ci_cd,critical,GitHub Actions templates,use_ci_cd_templates,7.57,
+configs/proxy-env.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.36,
+configs/finite_element_gap_analysis_results.json,custom_config,medium,cosmiconfig,use_vendor_config_libs,3.24,
+configs/git-hooks/pre-commit,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.91,
+scripts/ultimate-integration-orchestrator.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.72,
+scripts/comprehensive_rule_audit_integration.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.36,
+scripts/chezmoi_comprehensive_audit.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.5,git
+scripts/env-select.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.48,
+scripts/install_all_tools.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.48,
+scripts/install_remaining_tools.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.26,"npm, npm, npm"
+scripts/adr-architecture-organizer.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.2,
+scripts/vendor-cli-only-fix.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.88,"curl, curl, git, git, git"
+scripts/comprehensive_fixes.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.92,
+scripts/install_priority_tools.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.92,"python, npm, npm, npm, npm"
+scripts/polyglot_integration_proxy.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.8,"typing, fastapi, json, subprocess, uvicorn"
+scripts/infinitesimal_gap_analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.2,"sys, typing, platform, dataclasses, psutil"
+scripts/containerization-setup.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.54,
+scripts/master-ai-agency-setup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.96,
+scripts/start_fea_environment.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.88,"sys, json, argparse, subprocess, pathlib"
+scripts/audit_exposed_secrets.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.48,
+scripts/start-mcp-ecosystem.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.34,
+scripts/fea_optimize.py,python_utilities,high,click,migrate_to_cli_frameworks,5.9,"scipy, matplotlib, time, numpy"
+scripts/validate_installations.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,10.0,"sys, typing, json, sklearn, mlflow"
+scripts/setup_20_mcp_servers.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.16,npm
+scripts/comprehensive_gap_analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.68,"sys, typing, tempfile, dataclasses, json"
+scripts/comprehensive_gap_analysis.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,7.68,"sys, typing, tempfile, dataclasses, json"
+scripts/gap_analysis_audit.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.2,
+scripts/finite-element-sphere-analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,4.8,"typing, json, math, pathlib, logging"
+scripts/setup_shell_tools.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,8.78,
+scripts/setup-polyglot-stack.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.8,
+scripts/install_all_missing_tools.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.62,
+scripts/comprehensive_unit_tests.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.8,"sys, tempfile, json, subprocess, shutil"
+scripts/debug_cursor_shell.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.14,
+scripts/mcp_server_health.py,python_utilities,high,click,migrate_to_cli_frameworks,5.74,"sys, typing, json, pathlib, aiohttp"
+scripts/20-real-world-use-cases-implementation.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.9,python
+scripts/prisma-setup.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.86,npm
+scripts/comprehensive_cleanup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.42,
+scripts/mcp-server-authentication.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.12,
+scripts/fix_environment.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.5,"sys, subprocess, pathlib, shutil, os"
+scripts/fix-everything-now.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.24,
+scripts/fixed-use-cases-implementation.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.5,
+scripts/setup-neo4j.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.08,
+scripts/validate-environments.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.8,
+scripts/gibson-cli-integration.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.26,
+scripts/cursor_compliance_check.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.22,"sys, json, pathlib, time, os"
+scripts/vendor_gap_analysis.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,4.0,
+scripts/fea_claude_install_optimizer.py,python_utilities,high,click,migrate_to_cli_frameworks,6.62,"sys, typing, json, subprocess, shutil"
+scripts/streamlined-fea-analysis.sh.backup,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.48,
+scripts/comprehensive_fix_script.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.54,"node, npm"
+scripts/fix_cursor_mcp.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.6,
+scripts/setup_mcp_expansion.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.96,npm
+scripts/install-vendor-tools.sh.backup,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.38,"npm, npm, npm"
+scripts/check_mcp_health.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.27,curl
+scripts/ultimate-fix-everything.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.54,
+scripts/test_mcp.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.04,"npm, npm"
+scripts/java_ecosystem_audit.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.12,
+scripts/comprehensive_debug_analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.34,"sys, platform, psutil, json, subprocess"
+scripts/simple_20step_analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.32,"sys, typing, json, pathlib, numpy"
+scripts/network-proxy-setup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.34,
+scripts/comprehensive-tool-audit.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.74,docker
+scripts/comprehensive-unit-tests.py,python_utilities,high,click,migrate_to_cli_frameworks,6.48,"sys, typing, tempfile, json, subprocess"
+scripts/init_mcp_servers.py,python_utilities,high,click,migrate_to_cli_frameworks,6.5,"sys, json, subprocess, pathlib, requests"
+scripts/audit-loose-files.py,python_utilities,high,click,migrate_to_cli_frameworks,4.84,"typing, json, pathlib, logging, mimetypes"
+scripts/run_outside_sandbox.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.88,"curl, wget, npm"
+scripts/gaussian-sphere-analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.62,"json, sklearn, math, datetime, pathlib"
+scripts/enforce-vendor-compliance.sh.backup,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.2,
+scripts/gap_analysis_audit.sh.backup,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.2,
+scripts/verify_tools.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.42,
+scripts/fea_solver.py,python_utilities,high,click,migrate_to_cli_frameworks,4.6,"json, mpl_toolkits, time, numpy, matplotlib"
+scripts/setup_polyglot_integration.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.16,
+scripts/fea_gap_analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,5.52,"json, scipy, pathlib, numpy, matplotlib"
+scripts/infinitesimal_gap_analysis.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,8.2,"sys, typing, platform, dataclasses, psutil"
+scripts/critical_fixes.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,5.76,"sys, json, subprocess, pathlib, shutil"
+scripts/setup-polyglot-stack.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.82,
+scripts/final-system-proof.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.66,
+scripts/comprehensive-tool-audit.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.78,docker
+scripts/fix-everything-now.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.24,
+scripts/database-integration-setup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.36,npm
+scripts/setup_1password.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.88,
+scripts/prisma-setup.sh.backup,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.81,npm
+scripts/security_scan.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.64,"docker, docker"
+scripts/cursor_compliance_check.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,7.78,"sys, json, pathlib, time, os"
+scripts/organize-loose-files.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.12,python
+scripts/run_outside_sandbox.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.8,"curl, wget, npm"
+scripts/comprehensive-finite-element-analysis.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.54,
+scripts/comprehensive_gap_analysis.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.74,
+scripts/setup-network-proxy.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,8.2,curl
+scripts/setup-mcp-servers.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.16,"yarn, git, docker"
+scripts/comprehensive-system-fix.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.52,
+scripts/validate_installations.py,python_utilities,critical,click,migrate_to_cli_frameworks,9.74,"sys, typing, json, sklearn, mlflow"
+scripts/validate-code.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.52,"npm, npm, npm, git, git"
+scripts/binomial-edge-case-detection.py,python_utilities,high,click,migrate_to_cli_frameworks,5.88,"typing, json, math, pathlib, numpy"
+scripts/comprehensive_20step_gap_analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.52,"concurrent, sys, typing, urllib, platform"
+scripts/fix-hardcoded-paths.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.51,
+scripts/comprehensive-cleanup-audit.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.48,
+scripts/install_phase2_tools.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.24,"npm, npm, npm, python, npm"
+scripts/start-agi-environment.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.14,node
+scripts/gaussian-sphere-analysis.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,8.62,"json, sklearn, math, datetime, pathlib"
+scripts/master-ai-agency-setup.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.96,
+scripts/polyglot-tool-integration.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.24,git
+scripts/custom-code-audit.py,python_utilities,high,click,migrate_to_cli_frameworks,5.96,"typing, dataclasses, json, re, argparse"
+scripts/fix_environment.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,8.5,"sys, subprocess, pathlib, shutil, os"
+scripts/fea_claude_integrated_optimizer.py,python_utilities,high,click,migrate_to_cli_frameworks,6.0,"sys, typing, urllib, dataclasses, json"
+scripts/finite-element-gap-analysis.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.32,"node, git, git, docker"
+scripts/critical_fixes.py,python_utilities,high,click,migrate_to_cli_frameworks,5.74,"sys, json, subprocess, pathlib, shutil"
+scripts/debug_simple.sh.backup,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.3,"curl, git, git, git"
+scripts/core-tool-integration.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.26,
+scripts/comprehensive_debug_analysis.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.36,"sys, platform, psutil, json, subprocess"
+scripts/final_debugging_summary.py,python_utilities,high,click,migrate_to_cli_frameworks,5.04,"json, os, pathlib"
+scripts/binary-audit.py,python_utilities,high,click,migrate_to_cli_frameworks,5.86,"sys, typing, dataclasses, json, subprocess"
+scripts/comprehensive-finite-element-analysis.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.52,
+scripts/enforce_cursor_rules.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.04,
+scripts/fix_environment.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.36,curl
+scripts/manual_fix_instructions.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.89,
+scripts/loose_files_audit_finite_element_analysis.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.76,
+scripts/mcp-orchestrator.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.94,"npm, npm, npm"
+scripts/comprehensive_fix_script.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.54,"node, npm"
+scripts/setup_20_mcp_servers.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.16,npm
+scripts/comprehensive_system_diagnostic.py,python_utilities,high,click,migrate_to_cli_frameworks,6.98,"sys, typing, socket, psutil, json"
+scripts/comprehensive_system_diagnostic.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,7.0,"sys, typing, socket, psutil, json"
+scripts/clean_20step_analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.3,"sys, typing, json, pathlib, numpy"
+scripts/proxy-env.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.14,
+scripts/vendor_ml_analysis.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.54,curl
+scripts/comprehensive_rule_audit_integration.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.36,
+scripts/comprehensive-hardcoded-paths-audit.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.42,
+scripts/advanced_numerical_methods.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.14,"sys, typing, dataclasses, json, pathlib"
+scripts/debug_cursor_shell.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.2,
+scripts/enforce-vendor-compliance.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.2,
+scripts/manual_fix_instructions.sh.backup,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.8,
+scripts/comprehensive-rebuild.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.48,"npm, npm"
+scripts/comprehensive-ai-agency-setup.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.2,"npm, npm, npm"
+scripts/agi_integration_framework.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.1,"sys, urllib, tempfile, tarfile, json"
+scripts/polyglot-integration-setup.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.74,"npm, npm"
+scripts/mcp_server_health.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,5.76,"sys, typing, json, pathlib, aiohttp"
+scripts/setup-postgresql.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.74,npm
+scripts/polyglot-integration-setup.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.74,"npm, npm"
+scripts/setup-neo4j.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.1,
+scripts/install-vendor-tools.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.32,"npm, npm, npm"
+scripts/setup-event-driven-architecture.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.2,curl
+scripts/polyglot-tool-integration.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.24,git
+scripts/streamlined-fea-analysis.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.52,
+scripts/comprehensive-ai-agency-setup.sh.backup,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.2,"npm, npm, npm"
+scripts/load-env.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,0.37,
+scripts/comprehensive-tool-integration.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.76,"curl, npm"
+scripts/complete_pixi_rebuild.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,7.54,"sys, json, subprocess, pathlib, datetime"
+scripts/markov-chain-analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,5.06,"typing, json, pathlib, numpy, logging"
+scripts/finite-element-gap-analysis.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.32,"node, git, git, docker"
+scripts/setup-postgresql.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.67,npm
+scripts/vendor_mcp_test.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.76,
+scripts/audit_and_cleanup_loose_files.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.04,
+scripts/markov-binomial-analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.38,"json, matplotlib, networkx, pathlib, numpy"
+scripts/network-proxy-setup.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.34,
+scripts/vendor_compliance_audit.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.26,
+scripts/init_mcp_servers.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.52,"sys, json, subprocess, pathlib, requests"
+scripts/fea_visualize.py,python_utilities,high,click,migrate_to_cli_frameworks,4.74,"matplotlib, numpy, mpl_toolkits"
+scripts/check-vendor-compliance.py,python_utilities,high,click,migrate_to_cli_frameworks,5.06,"typing, json, re, pathlib, logging"
+scripts/install_development_tools.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,8.72,"npm, npm, curl, curl, curl"
+scripts/tool-validation.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.96,
+scripts/cli-security-framework.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.5,
+scripts/fea_solver.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,4.94,"json, mpl_toolkits, time, numpy, matplotlib"
+scripts/extended-mcp-ecosystem.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.76,
+scripts/setup_mcp_env.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.4,
+scripts/agi_integration_framework.py,python_utilities,high,click,migrate_to_cli_frameworks,6.08,"sys, urllib, tempfile, tarfile, json"
+scripts/deep_infinitesimal_gap_analysis.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.54,
+scripts/research_feasibility.py,python_utilities,high,click,migrate_to_cli_frameworks,5.58,"sys, json, subprocess, pathlib, importlib"
+scripts/fix_cursor_ide.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.87,
+scripts/fea_gap_analysis_debug.py,python_utilities,high,click,migrate_to_cli_frameworks,6.68,"sys, typing, urllib, dataclasses, json"
+scripts/comprehensive-cleanup-audit.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.5,
+scripts/finite-element-analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.98,"typing, dataclasses, json, math, scipy"
+scripts/loose_files_audit_finite_element_analysis.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.76,
+scripts/start_mcp_servers.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.48,
+scripts/comprehensive_debugging_system.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.36,"sys, typing, platform, urllib, threading"
+scripts/java-workspace-setup.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.94,
+scripts/enforce_cursor_rules.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.12,
+scripts/fea-integration-pipeline.py,python_utilities,critical,click,migrate_to_cli_frameworks,10.0,"typing, json, datetime, pathlib, numpy"
+scripts/mvnw,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.96,
+scripts/start-mcp-ecosystem.sh.backup,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.36,
+scripts/fix_cursor_mcp.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.6,
+scripts/ultimate-integration-orchestrator.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.2,
+scripts/start_fea_environment.py,python_utilities,high,click,migrate_to_cli_frameworks,6.88,"sys, json, argparse, subprocess, pathlib"
+scripts/debug_simple.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.22,"curl, git, git, git"
+scripts/database_stack_setup.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.44,
+scripts/setup-mcp-servers.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.16,"yarn, git, docker"
+scripts/setup-databases.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,7.0,"curl, npm"
+scripts/generate-pixi-config.py,python_utilities,high,click,migrate_to_cli_frameworks,6.05,"typing, json, pathlib, sys"
+scripts/database_stack_setup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.44,
+scripts/comprehensive-system-fix.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.52,
+scripts/setup_polyglot_integration.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.16,
+scripts/research_feasibility.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,5.6,"sys, json, subprocess, pathlib, importlib"
+scripts/gibson-cli-integration.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.29,
+scripts/database-integration-setup.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.36,npm
+scripts/validate-environments.sh.backup,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.8,
+scripts/complete_pixi_rebuild.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.52,"sys, json, subprocess, pathlib, datetime"
+scripts/finite_element_analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.52,"typing, sys, json, yaml, datetime"
+scripts/comprehensive_unit_tests.py,python_utilities,high,click,migrate_to_cli_frameworks,6.78,"sys, tempfile, json, subprocess, shutil"
+scripts/ultimate-fix-everything.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.54,
+scripts/automated_remediation.py,python_utilities,high,click,migrate_to_cli_frameworks,6.24,"concurrent, sys, typing, threading, json"
+scripts/agi/agi-orchestrator.py,python_utilities,high,click,migrate_to_cli_frameworks,5.76,"typing, dataclasses, json, asyncio, os"
+scripts/analysis/numerical-methods-audit.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.82,"sys, json, math, subprocess, pathlib"
+scripts/analysis/analyze_tool_availability.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,5.16,"json, subprocess, pathlib, time, logging"
+scripts/analysis/comprehensive_gap_analysis.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,7.68,"sys, typing, tempfile, dataclasses, json"
+scripts/analysis/finite-element-sphere-analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.32,"sys, typing, json, math, scipy"
+scripts/analysis/debug-deployment-issues.py,python_utilities,high,click,migrate_to_cli_frameworks,6.72,"json, subprocess, pathlib, datetime, os"
+scripts/analysis/comprehensive-tool-audit.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.74,docker
+scripts/analysis/audit_loose_files_fixed.py,python_utilities,high,click,migrate_to_cli_frameworks,6.76,"typing, json, pathlib, time, os"
+scripts/analysis/audit_loose_files.py,python_utilities,high,click,migrate_to_cli_frameworks,4.86,"typing, json, pathlib, time, os"
+scripts/analysis/infinitesimal_gap_analysis.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,8.2,"sys, typing, platform, dataclasses, psutil"
+scripts/analysis/comprehensive-tool-audit.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.78,docker
+scripts/analysis/binomial-edge-detection.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.84,"typing, dataclasses, json, argparse, math"
+scripts/analysis/comprehensive_gap_analysis.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.74,
+scripts/analysis/binomial-edge-case-detection.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.96,"sys, typing, dataclasses, json, argparse"
+scripts/analysis/finite-element-gap-analysis.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.32,"node, git, git, docker"
+scripts/analysis/loose_files_audit_finite_element_analysis.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.76,
+scripts/analysis/comprehensive_system_diagnostic.py,python_utilities,high,click,migrate_to_cli_frameworks,6.98,"sys, typing, socket, psutil, json"
+scripts/analysis/comprehensive_system_diagnostic.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,7.0,"sys, typing, socket, psutil, json"
+scripts/analysis/comprehensive-hardcoded-paths-audit.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.42,
+scripts/analysis/audit_loose_files_fixed.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,7.26,"typing, json, pathlib, time, os"
+scripts/analysis/analyze_tool_availability.py,python_utilities,high,click,migrate_to_cli_frameworks,5.16,"json, subprocess, pathlib, time, logging"
+scripts/analysis/markov-chain-analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.98,"typing, dataclasses, json, argparse, math"
+scripts/analysis/finite-element-gap-analysis.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.32,"node, git, git, docker"
+scripts/analysis/finite_element_analysis.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.36,"json, re, pathlib, networkx, matplotlib"
+scripts/analysis/finite-element-sphere-analysis.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.32,"sys, typing, json, math, scipy"
+scripts/analysis/tool-validation.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.96,
+scripts/analysis/extended-mcp-ecosystem.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.76,
+scripts/analysis/loose_files_audit_finite_element_analysis.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.76,
+scripts/analysis/final-verification.py,python_utilities,critical,click,migrate_to_cli_frameworks,10.0,"pathlib, os"
+scripts/analysis/debug-use-cases.py,python_utilities,critical,click,migrate_to_cli_frameworks,10.0,"sys, json, datetime, pathlib, os"
+scripts/analysis/fea-spherical-model.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.06,"sys, typing, dataclasses, json, mpl_toolkits"
+scripts/analysis/audit_loose_files.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,4.88,"typing, json, pathlib, time, os"
+scripts/analysis/finite_element_analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.36,"json, re, pathlib, networkx, matplotlib"
+scripts/1password-setup/comprehensive-tool-ecosystem-installer.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.9,npm
+scripts/1password-setup/1password-post-auth-setup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.56,
+scripts/1password-setup/ollama-mcp-llm-judge-evaluation-framework.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.22,
+scripts/1password-setup/1password-debug-setup.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.48,
+scripts/1password-setup/1password-comprehensive-debug-continue.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,8.36,
+scripts/1password-setup/1password-final-setup.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.16,
+scripts/1password-setup/1password-enterprise-implementation.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.3,
+scripts/1password-setup/1password-status-check.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,8.46,
+scripts/1password-setup/1password-final-completion-guide.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.32,
+scripts/1password-setup/loose_files_audit_finite_element_analysis.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.34,
+scripts/1password-setup/1password-auth-helper.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.26,
+scripts/1password-setup/comprehensive_violations_fix.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.44,
+scripts/1password-setup/1password-mcp-evaluation-oss-gpt.md,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.2,
+scripts/debugging/debug_audit.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.78,"npm, npm, npm, yarn, yarn"
+scripts/debugging/debug_cursor_shell.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.14,
+scripts/debugging/cursor_debug_instrumentation.js,node_utilities,high,npm scripts,migrate_to_npm_scripts,4.9,
+scripts/debugging/fix_cursor_mcp.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.6,
+scripts/debugging/comprehensive_debug_analysis.py,python_utilities,high,click,migrate_to_cli_frameworks,6.34,"sys, platform, psutil, json, subprocess"
+scripts/debugging/debug_cursor_issues.py,python_utilities,high,click,migrate_to_cli_frameworks,5.34,"sys, json, subprocess, requests, pathlib"
+scripts/debugging/run_outside_sandbox.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.88,"curl, wget, npm"
+scripts/debugging/critical_fixes.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,5.76,"sys, json, subprocess, pathlib, shutil"
+scripts/debugging/run_outside_sandbox.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.8,"curl, wget, npm"
+scripts/debugging/critical_fixes.py,python_utilities,high,click,migrate_to_cli_frameworks,5.74,"sys, json, subprocess, pathlib, shutil"
+scripts/debugging/debug_simple.sh.backup,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.3,"curl, git, git, git"
+scripts/debugging/comprehensive_debug_analysis.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.36,"sys, platform, psutil, json, subprocess"
+scripts/debugging/debug_cursor_shell.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.2,
+scripts/debugging/debug_cursor_ide.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.56,
+scripts/debugging/fix_cursor_mcp.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.56,
+scripts/debugging/debug_audit.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.8,"npm, npm, npm, yarn, yarn"
+scripts/debugging/cursor_debug_instrumentation.js.backup,node_utilities,high,npm scripts,migrate_to_npm_scripts,5.92,
+scripts/debugging/debug_simple.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.22,"curl, git, git, git"
+scripts/debugging/debug_cursor_issues.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,5.36,"sys, json, subprocess, requests, pathlib"
+scripts/setup/ultimate-integration-orchestrator.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.72,
+scripts/setup/chezmoi_comprehensive_audit.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.5,git
+scripts/setup/install_all_tools.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.48,
+scripts/setup/install_remaining_tools.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.26,"npm, npm, npm"
+scripts/setup/vendor-cli-only-fix.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.88,"curl, curl, git, git, git"
+scripts/setup/install_priority_tools.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.92,"python, npm, npm, npm, npm"
+scripts/setup/containerization-setup.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.54,
+scripts/setup/master-ai-agency-setup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.96,
+scripts/setup/setup_20_mcp_servers.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.16,npm
+scripts/setup/setup_shell_tools.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,8.78,
+scripts/setup/install_all_missing_tools.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.62,
+scripts/setup/20-real-world-use-cases-implementation.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.9,python
+scripts/setup/mcp-server-authentication.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.12,
+scripts/setup/fix_environment.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.5,"sys, subprocess, pathlib, shutil, os"
+scripts/setup/fix-everything-now.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.24,
+scripts/setup/fixed-use-cases-implementation.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.5,
+scripts/setup/setup_mcp_expansion.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.96,npm
+scripts/setup/infrastructure-setup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.74,"docker, docker"
+scripts/setup/network-proxy-setup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.34,
+scripts/setup/setup_polyglot_integration.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.16,
+scripts/setup/database-integration-setup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.36,npm
+scripts/setup/fix-hardcoded-paths.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.51,
+scripts/setup/install_phase2_tools.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.24,"npm, npm, npm, python, npm"
+scripts/setup/master-ai-agency-setup.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.96,
+scripts/setup/polyglot-tool-integration.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.24,git
+scripts/setup/fix_environment.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,9.36,curl
+scripts/setup/setup_20_mcp_servers.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.16,npm
+scripts/setup/comprehensive-ai-agency-setup.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.2,"npm, npm, npm"
+scripts/setup/install_development_tools.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,8.72,"npm, npm, curl, curl, curl"
+scripts/setup/tool-validation.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.96,
+scripts/setup/extended-mcp-ecosystem.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.76,
+scripts/setup/setup_polyglot_integration.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.16,
+scripts/setup/database-integration-setup.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.36,npm
+scripts/user-root-cleanup/ml-adr-codebase-analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.7,"sys, typing, transformers, json, re"
+scripts/testing/simple_smoke_tests.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,9.18,"sys, json, subprocess, pathlib, time"
+scripts/testing/api_smoke_tests.py,python_utilities,high,click,migrate_to_cli_frameworks,6.48,"sys, typing, psycopg2, json, redis"
+scripts/testing/api_smoke_tests.py.backup,python_utilities,high,click,migrate_to_cli_frameworks,6.48,"sys, typing, psycopg2, json, redis"
+scripts/testing/simple_smoke_tests.py,python_utilities,critical,click,migrate_to_cli_frameworks,9.18,"sys, json, subprocess, pathlib, time"
+scripts/orchestration/event-driven-orchestrator.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.34,"typing, json, mlflow, deepeval, subprocess"
+scripts/orchestration/golden-path-setup.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.6,
+scripts/automation/ultimate-integration-orchestrator.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.72,
+scripts/automation/test-opencode-auth.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.62,
+scripts/automation/adr-architecture-organizer.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.2,
+scripts/automation/comprehensive-adr-implementation.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.52,
+scripts/automation/comprehensive_fixes.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.92,
+scripts/automation/mcp-orchestrator.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.94,"npm, npm, npm"
+scripts/automation/fix-everything-now.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.24,
+scripts/automation/fix-hardcoded-paths.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.51,
+scripts/automation/check_mcp_health.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.95,curl
+scripts/automation/finite_element_gap_analysis.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.12,"sys, typing, json, subprocess, pathlib"
+scripts/automation/mcp-launcher.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.9,
+scripts/automation/comprehensive-adr-implementation.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.54,
+scripts/automation/finite_element_gap_analysis.py.backup,python_utilities,critical,click,migrate_to_cli_frameworks,8.66,"sys, typing, json, subprocess, pathlib"
+scripts/automation/fix-hardcoded-paths.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.56,
+scripts/automation/comprehensive-cleanup-audit.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.48,
+scripts/automation/launch_agi_core.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.09,
+scripts/automation/core-tool-integration.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.26,
+scripts/automation/mcp-orchestrator.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.94,"npm, npm, npm"
+scripts/automation/comprehensive_fix_script.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.54,"node, npm"
+scripts/automation/comprehensive_rule_audit_integration.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.36,
+scripts/automation/audit_and_cleanup_loose_files.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.04,
+scripts/automation/test-opencode-mcp-integration.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.18,
+scripts/automation/launch_agi_core.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,2.12,
+scripts/automation/final_comprehensive_fix.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.16,"npm, npm, npm, docker"
+scripts/automation/comprehensive-cleanup-audit.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.5,
+scripts/automation/opencode-session-manager.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.98,
+scripts/automation/ultimate-integration-orchestrator.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.2,
+scripts/automation/demo-opencode-mcp-integration.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.22,
+scripts/automation/final_comprehensive_fix.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.26,"npm, npm, npm, docker"
+scripts/monitoring/agi_monitor.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.83,curl
+scripts/monitoring/agi_monitor.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,5.78,curl
+scripts/monitoring/monitor-mcp-servers.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.04,"npm, npm"
+use-case-1-ecommerce-personalization/setup-ecommerce-engine.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.24,
+infrastructure/deployment/setup_mcp_servers.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.04,"npm, npm, node, npm, npm"
+infrastructure/deployment/setup_mcp_pnpm.sh.backup,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.58,npm
+infrastructure/deployment/event_driven_orchestrator.sh.backup,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.44,
+infrastructure/deployment/setup_mcp_servers.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,6.04,"npm, npm, node, npm, npm"
+infrastructure/deployment/setup_mcp_pnpm.sh,shell_scripts,high,npm scripts,migrate_to_vendor_task_runners,4.58,npm
+infrastructure/deployment/event_driven_orchestrator.sh,shell_scripts,critical,npm scripts,migrate_to_vendor_task_runners,7.44,
+infrastructure/deployment/setup_cron_jobs.sh,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.34,
+infrastructure/deployment/setup_cron_jobs.sh.backup,shell_scripts,medium,npm scripts,migrate_to_vendor_task_runners,3.34,
+venv311/lib/python3.11/site-packages/websocket/_wsdump.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.32,"sys, urllib, threading, argparse, code"
+venv311/lib/python3.11/site-packages/bleach/_vendor/vendor_install.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.0,curl
+venv311/lib/python3.11/site-packages/debugpy/_vendored/pydevd/pydevd_attach_to_process/linux_and_mac/compile_mac.sh,shell_scripts,low,npm scripts,migrate_to_vendor_task_runners,1.0,
+venv311/lib/python3.11/site-packages/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode/tests/test_concrete.py,python_utilities,high,click,migrate_to_cli_frameworks,6.34,"sys, tests_python, pytest, _pydevd_frame_eval, textwrap"
+venv311/lib/python3.11/site-packages/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode/tests/test_instr.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.62,"tests_python, pytest, _pydevd_frame_eval, unittest, opcode"
+venv311/lib/python3.11/site-packages/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode/tests/test_misc.py,python_utilities,critical,click,migrate_to_cli_frameworks,9.32,"sys, contextlib, tests_python, pytest, _pydevd_frame_eval"
+venv311/lib/python3.11/site-packages/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode/tests/test_cfg.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.94,"sys, contextlib, tests_python, pytest, _pydevd_frame_eval"
+venv311/lib/python3.11/site-packages/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode/tests/test_bytecode.py,python_utilities,high,click,migrate_to_cli_frameworks,6.02,"sys, tests_python, pytest, _pydevd_frame_eval, textwrap"
+venv311/lib/python3.11/site-packages/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode/tests/test_flags.py,python_utilities,high,click,migrate_to_cli_frameworks,5.24,"tests_python, pytest, unittest, _pydevd_frame_eval"
+venv311/lib/python3.11/site-packages/torchvision/transforms/_transforms_video.py,python_utilities,critical,click,migrate_to_cli_frameworks,9.1,"random, warnings, numbers, torchvision"
+venv311/lib/python3.11/site-packages/torch/_appdirs.py,python_utilities,medium,click,migrate_to_cli_frameworks,2.98,
+venv311/lib/python3.11/site-packages/torch/distributed/logging_handlers.py,python_utilities,low,click,migrate_to_cli_frameworks,0.9,logging
+venv311/lib/python3.11/site-packages/torch/distributed/run.py,python_utilities,medium,click,migrate_to_cli_frameworks,2.88,
+venv311/lib/python3.11/site-packages/torch/distributed/argparse_util.py,python_utilities,high,click,migrate_to_cli_frameworks,5.56,"os, argparse"
+venv311/lib/python3.11/site-packages/torch/distributed/c10d_logger.py,python_utilities,high,click,migrate_to_cli_frameworks,6.22,"typing, typing_extensions, logging, functools, torch"
+venv311/lib/python3.11/site-packages/torch/distributed/collective_utils.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.98,"__future__, typing, dataclasses, importlib, logging"
+venv311/lib/python3.11/site-packages/torch/distributed/launcher/api.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.26,"typing, sys, uuid, dataclasses, torch"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/metrics/api.py,python_utilities,critical,click,migrate_to_cli_frameworks,9.42,"typing, abc, typing_extensions, time, functools"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/etcd_rendezvous.py,python_utilities,high,click,migrate_to_cli_frameworks,6.42,"sys, typing, threading, json, time"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/etcd_server.py,python_utilities,high,click,migrate_to_cli_frameworks,6.52,"typing, tempfile, socket, atexit, shutil"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py,python_utilities,high,click,migrate_to_cli_frameworks,6.68,"datetime, typing, logging, torch"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/tail_log.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.68,"concurrent, typing, threading, time, logging"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/__init__.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.26,"typing, torch"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/api.py,python_utilities,critical,click,migrate_to_cli_frameworks,9.76,"abc, sys, typing, tempfile, threading"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/subprocess_handler/subprocess_handler.py,python_utilities,critical,click,migrate_to_cli_frameworks,9.26,"typing, sys, subprocess, signal, os"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/subprocess_handler/__init__.py,python_utilities,low,click,migrate_to_cli_frameworks,1.26,torch
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/handlers.py,python_utilities,low,click,migrate_to_cli_frameworks,1.34,torch
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py,python_utilities,medium,click,migrate_to_cli_frameworks,2.68,
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/error_handler.py,python_utilities,high,click,migrate_to_cli_frameworks,6.34,"typing, warnings, json, traceback, faulthandler"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/timer/debug_info_logging.py,python_utilities,medium,click,migrate_to_cli_frameworks,2.11,torch
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/utils/store.py,python_utilities,high,click,migrate_to_cli_frameworks,6.08,"typing, contextlib, datetime, collections, torch"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/utils/logging.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.54,"typing, warnings, inspect, logging, os"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/utils/__init__.py,python_utilities,low,click,migrate_to_cli_frameworks,0.72,
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/utils/log_level.py,python_utilities,low,click,migrate_to_cli_frameworks,0.94,
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/utils/api.py,python_utilities,high,click,migrate_to_cli_frameworks,6.96,"string, typing, os, socket"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/utils/distributed.py,python_utilities,critical,click,migrate_to_cli_frameworks,9.74,"typing, contextlib, socket, datetime, os"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/health_check_server.py,python_utilities,high,click,migrate_to_cli_frameworks,4.9,"typing, torch"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/__init__.py,python_utilities,medium,click,migrate_to_cli_frameworks,2.64,
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/local_elastic_agent.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.16,"string, typing, uuid, socket, json"
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/events/handlers.py,python_utilities,low,click,migrate_to_cli_frameworks,1.5,logging
+venv311/lib/python3.11/site-packages/torch/distributed/elastic/events/api.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.28,"typing, json, enum, dataclasses"
+venv311/lib/python3.11/site-packages/torch/distributed/_shard/sharded_tensor/logging_handlers.py,python_utilities,low,click,migrate_to_cli_frameworks,0.9,logging
+venv311/lib/python3.11/site-packages/torch/distributed/_shard/sharded_tensor/logger.py,python_utilities,medium,click,migrate_to_cli_frameworks,2.8,"logging, torch"
+venv311/lib/python3.11/site-packages/torch/distributed/rpc/_testing/faulty_agent_backend_registry.py,python_utilities,high,click,migrate_to_cli_frameworks,4.9,torch
+venv311/lib/python3.11/site-packages/torch/utils/show_pickle.py,python_utilities,critical,click,migrate_to_cli_frameworks,10.0,"sys, typing, fnmatch, pprint, zipfile"
+venv311/lib/python3.11/site-packages/torch/utils/bundled_inputs.py,python_utilities,high,click,migrate_to_cli_frameworks,5.8,"textwrap, typing, collections, torch"
+venv311/lib/python3.11/site-packages/torch/utils/hipify/hipify_python.py,python_utilities,critical,click,migrate_to_cli_frameworks,7.32,"sys, typing, fnmatch, hashlib, argparse"
+venv311/lib/python3.11/site-packages/torch/utils/model_dump/__init__.py,python_utilities,medium,click,migrate_to_cli_frameworks,3.96,
+venv311/lib/python3.11/site-packages/torch/utils/model_dump/__main__.py,python_utilities,low,click,migrate_to_cli_frameworks,0.6,sys
+venv311/lib/python3.11/site-packages/numpy/distutils/conv_template.py,python_utilities,high,click,migrate_to_cli_frameworks,4.86,"sys, os, re"
+venv311/lib/python3.11/site-packages/numpy/distutils/cpuinfo.py,python_utilities,critical,click,migrate_to_cli_frameworks,8.6,"sys, platform, warnings, re, subprocess"
+venv311/lib/python3.11/site-packages/numpy/distutils/from_template.py,python_utilities,high,click,migrate_to_cli_frameworks,6.42,"sys, os, re"
+venv311/lib/python3.11/site-packages/numpy/f2py/diagnose.py,python_utilities,high,click,migrate_to_cli_frameworks,6.86,"sys, os, tempfile"
+venv311/lib/python3.11/site-packages/numpy/testing/print_coercion_tables.py,python_utilities,critical,click,migrate_to_cli_frameworks,10.0,"collections, numpy"
+venv311/lib/python3.11/site-packages/sklearn/_build_utils/version.py,python_utilities,low,click,migrate_to_cli_frameworks,1.49,os
+venv311/lib/python3.11/site-packages/sklearn/_build_utils/tempita.py,python_utilities,high,click,migrate_to_cli_frameworks,5.64,"argparse, os, Cython"
+venv311/lib/python3.11/site-packages/jupyter_lsp/specs/dockerfile_language_server_nodejs.py,custom_docker,low,docker-compose templates,use_infrastructure_templates,1.95,
+venv311/lib/python3.11/site-packages/jupyter_lsp/specs/__init__.py,custom_docker,high,docker-compose templates,use_infrastructure_templates,6.41,
+venv311/lib/python3.11/site-packages/torchgen/operator_versions/gen_mobile_upgraders.py,python_utilities,high,click,migrate_to_cli_frameworks,6.2,"__future__, typing, operator, torchgen, pathlib"
+venv311/lib/python3.11/site-packages/jupyterlab/upgrade_extension.py,custom_config,high,cosmiconfig,use_vendor_config_libs,5.58,
+venv311/lib/python3.11/site-packages/jupyterlab/staging/webpack.prod.config.js,custom_build,medium,create-react-app,use_framework_defaults,2.44,
+venv311/lib/python3.11/site-packages/jupyterlab/staging/webpack.prod.minimize.config.js,custom_build,medium,create-react-app,use_framework_defaults,3.25,
+venv311/lib/python3.11/site-packages/jupyterlab/staging/webpack.config.js,custom_build,high,create-react-app,use_framework_defaults,4.44,
+venv311/lib/python3.11/site-packages/jupyterlab/staging/yarn.js,node_utilities,critical,npm scripts,migrate_to_npm_scripts,7.68,
+venv311/lib/python3.11/site-packages/notebook/static/2343.81357d860d7aa9156d23.js,custom_docker,medium,docker-compose templates,use_infrastructure_templates,3.22,

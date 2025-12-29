@@ -1,0 +1,1 @@
+Gemini CLI invocation via `mise run gemini.run-prompt` failed with `You don't have access to this model or the model name is invalid` (HTTP 400). Error log saved at `/var/folders/44/qxdq9q9949vbbqk_4glqykrr0000gn/T/gemini-client-error-Turn.run-sendMessageStream-2025-12-19T08-36-01-669Z.json`. This indicates model access needs to be corrected or an accessible model selected.

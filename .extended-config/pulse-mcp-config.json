@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "name": "PulseMCP Integration",
+  "description": "Real-time MCP server monitoring and management",
+  "url": "https://www.pulsemcp.com/",
+  "servers": [
+    {
+      "name": "pulse-monitor",
+      "type": "monitoring",
+      "enabled": true
+    }
+  ],
+  "monitoring": {
+    "interval": 30,
+    "alerts": {
+      "enabled": true,
+      "webhook": "${PULSE_WEBHOOK_URL}"
+    }
+  }
+}

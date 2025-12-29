@@ -1,0 +1,305 @@
+# Prometheus Alerting Rules
+# Enterprise-grade alerting configuration
+
+groups:
+  # High Priority - Page immediately
+  - name: critical_alerts
+    rules:
+      # Service Down
+      - alert: ServiceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+          team: platform
+        annotations:
+          summary: "Service {{ $labels.job }} is down"
+          description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 1 minute."
+          runbook_url: "https://runbooks.example.com/ServiceDown"
+          dashboard_url: "https://grafana.example.com/d/service-health"
+
+      # High Error Rate
+      - alert: HighErrorRate
+        expr: service:http_errors:rate5m / service:http_requests:rate5m > 0.05
+        for: 5m
+        labels:
+          severity: critical
+          team: application
+        annotations:
+          summary: "High error rate on {{ $labels.service }}"
+          description: "Error rate is {{ $value | humanizePercentage }} on {{ $labels.service }}"
+          runbook_url: "https://runbooks.example.com/HighErrorRate"
+
+      # Database Connection Pool Exhausted
+      - alert: DatabaseConnectionPoolExhausted
+        expr: postgres:connections:usage_ratio > 0.95
+        for: 2m
+        labels:
+          severity: critical
+          team: database
+        annotations:
+          summary: "Database connection pool nearly exhausted"
+          description: "PostgreSQL connection usage is at {{ $value | humanizePercentage }}"
+          runbook_url: "https://runbooks.example.com/DatabaseConnectionPool"
+
+      # Disk Space Critical
+      - alert: DiskSpaceCritical
+        expr: instance:disk:usage_ratio > 0.95
+        for: 5m
+        labels:
+          severity: critical
+          team: infrastructure
+        annotations:
+          summary: "Disk space critical on {{ $labels.instance }}"
+          description: "Disk usage is at {{ $value | humanizePercentage }} on {{ $labels.instance }}"
+          runbook_url: "https://runbooks.example.com/DiskSpace"
+
+      # Memory Exhaustion
+      - alert: MemoryExhaustion
+        expr: instance:memory:usage_ratio > 0.95
+        for: 5m
+        labels:
+          severity: critical
+          team: infrastructure
+        annotations:
+          summary: "Memory nearly exhausted on {{ $labels.instance }}"
+          description: "Memory usage is at {{ $value | humanizePercentage }}"
+          runbook_url: "https://runbooks.example.com/MemoryExhaustion"
+
+      # SLA Breach Imminent
+      - alert: SLABreachImminent
+        expr: sla:error_budget:remaining < 0.1
+        for: 10m
+        labels:
+          severity: critical
+          team: sre
+        annotations:
+          summary: "SLA breach imminent - Error budget nearly exhausted"
+          description: "Only {{ $value | humanizePercentage }} of error budget remaining"
+          runbook_url: "https://runbooks.example.com/SLABreach"
+
+  # Warning Alerts
+  - name: warning_alerts
+    rules:
+      # High Latency
+      - alert: HighLatency
+        expr: service:http_request_duration_seconds:p95 > 1
+        for: 10m
+        labels:
+          severity: warning
+          team: application
+        annotations:
+          summary: "High latency on {{ $labels.service }}"
+          description: "P95 latency is {{ $value | humanizeDuration }} on {{ $labels.service }}"
+          runbook_url: "https://runbooks.example.com/HighLatency"
+
+      # High CPU Usage
+      - alert: HighCPUUsage
+        expr: instance:cpu:usage_ratio > 0.80
+        for: 15m
+        labels:
+          severity: warning
+          team: infrastructure
+        annotations:
+          summary: "High CPU usage on {{ $labels.instance }}"
+          description: "CPU usage is at {{ $value | humanizePercentage }}"
+          runbook_url: "https://runbooks.example.com/HighCPU"
+
+      # High Memory Usage
+      - alert: HighMemoryUsage
+        expr: instance:memory:usage_ratio > 0.80
+        for: 15m
+        labels:
+          severity: warning
+          team: infrastructure
+        annotations:
+          summary: "High memory usage on {{ $labels.instance }}"
+          description: "Memory usage is at {{ $value | humanizePercentage }}"
+          runbook_url: "https://runbooks.example.com/HighMemory"
+
+      # Disk Space Warning
+      - alert: DiskSpaceWarning
+        expr: instance:disk:usage_ratio > 0.80
+        for: 10m
+        labels:
+          severity: warning
+          team: infrastructure
+        annotations:
+          summary: "Disk space warning on {{ $labels.instance }}"
+          description: "Disk usage is at {{ $value | humanizePercentage }}"
+          runbook_url: "https://runbooks.example.com/DiskSpace"
+
+      # Container Restart Loop
+      - alert: ContainerRestartLoop
+        expr: container:restarts:rate1h > 3
+        for: 5m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "Container {{ $labels.container_name }} is in restart loop"
+          description: "Container has restarted {{ $value }} times in the last hour"
+          runbook_url: "https://runbooks.example.com/ContainerRestart"
+
+      # Redis Memory Warning
+      - alert: RedisMemoryWarning
+        expr: redis:memory:usage_ratio > 0.80
+        for: 10m
+        labels:
+          severity: warning
+          team: database
+        annotations:
+          summary: "Redis memory usage high"
+          description: "Redis memory usage is at {{ $value | humanizePercentage }}"
+          runbook_url: "https://runbooks.example.com/RedisMemory"
+
+      # Error Budget Consumption
+      - alert: ErrorBudgetConsumptionHigh
+        expr: sla:error_budget:remaining < 0.5
+        for: 30m
+        labels:
+          severity: warning
+          team: sre
+        annotations:
+          summary: "Error budget consumption high"
+          description: "{{ $value | humanizePercentage }} of error budget remaining"
+          runbook_url: "https://runbooks.example.com/ErrorBudget"
+
+      # Slow Database Queries
+      - alert: SlowDatabaseQueries
+        expr: histogram_quantile(0.95, rate(pg_stat_statements_seconds_bucket[5m])) > 1
+        for: 10m
+        labels:
+          severity: warning
+          team: database
+        annotations:
+          summary: "Slow database queries detected"
+          description: "P95 query latency is {{ $value | humanizeDuration }}"
+          runbook_url: "https://runbooks.example.com/SlowQueries"
+
+  # Informational Alerts
+  - name: info_alerts
+    rules:
+      # Certificate Expiry
+      - alert: CertificateExpiryWarning
+        expr: probe_ssl_earliest_cert_expiry - time() < 86400 * 30
+        for: 1h
+        labels:
+          severity: info
+          team: security
+        annotations:
+          summary: "SSL certificate expiring soon"
+          description: "Certificate for {{ $labels.instance }} expires in {{ $value | humanizeDuration }}"
+          runbook_url: "https://runbooks.example.com/CertificateExpiry"
+
+      # New Deployment
+      - alert: NewDeploymentDetected
+        expr: changes(container_start_time_seconds[5m]) > 0
+        for: 1m
+        labels:
+          severity: info
+          team: platform
+        annotations:
+          summary: "New deployment detected"
+          description: "Container {{ $labels.container_name }} was restarted"
+
+      # Unusual Traffic Pattern
+      - alert: UnusualTrafficPattern
+        expr: |
+          abs(
+            service:http_requests:rate5m -
+            avg_over_time(service:http_requests:rate5m[1h])
+          ) > 2 * stddev_over_time(service:http_requests:rate5m[1h])
+        for: 15m
+        labels:
+          severity: info
+          team: application
+        annotations:
+          summary: "Unusual traffic pattern detected on {{ $labels.service }}"
+          description: "Traffic differs significantly from historical patterns"
+          runbook_url: "https://runbooks.example.com/UnusualTraffic"
+
+  # Business Alerts
+  - name: business_alerts
+    rules:
+      # Order Processing Slowdown
+      - alert: OrderProcessingSlowdown
+        expr: business:orders:rate1m < 0.1 * avg_over_time(business:orders:rate1m[1h])
+        for: 15m
+        labels:
+          severity: warning
+          team: business
+        annotations:
+          summary: "Order processing slowdown detected"
+          description: "Order rate is significantly below normal"
+          runbook_url: "https://runbooks.example.com/OrderSlowdown"
+
+      # High Cart Abandonment
+      - alert: HighCartAbandonment
+        expr: business:cart_abandonment:rate > 0.8
+        for: 30m
+        labels:
+          severity: warning
+          team: business
+        annotations:
+          summary: "High cart abandonment rate"
+          description: "Cart abandonment rate is {{ $value | humanizePercentage }}"
+          runbook_url: "https://runbooks.example.com/CartAbandonment"
+
+  # Security Alerts
+  - name: security_alerts
+    rules:
+      # Authentication Failures Spike
+      - alert: AuthenticationFailuresSpike
+        expr: |
+          rate(authentication_failures_total[5m]) >
+          10 * avg_over_time(rate(authentication_failures_total[5m])[1h:5m])
+        for: 5m
+        labels:
+          severity: warning
+          team: security
+        annotations:
+          summary: "Spike in authentication failures"
+          description: "Authentication failure rate has spiked significantly"
+          runbook_url: "https://runbooks.example.com/AuthFailures"
+
+      # Rate Limit Exhaustion
+      - alert: RateLimitExhaustion
+        expr: rate(rate_limit_exceeded_total[5m]) > 100
+        for: 5m
+        labels:
+          severity: warning
+          team: security
+        annotations:
+          summary: "High rate limit exhaustion"
+          description: "Rate limits being exceeded frequently"
+          runbook_url: "https://runbooks.example.com/RateLimits"
+
+  # Infrastructure Capacity Alerts
+  - name: capacity_alerts
+    rules:
+      # Predicted Disk Full
+      - alert: DiskWillFillIn24Hours
+        expr: |
+          predict_linear(node_filesystem_avail_bytes{fstype!~"tmpfs|overlay"}[6h], 24*60*60) < 0
+        for: 1h
+        labels:
+          severity: warning
+          team: infrastructure
+        annotations:
+          summary: "Disk predicted to fill in 24 hours"
+          description: "Disk on {{ $labels.instance }} is predicted to fill within 24 hours"
+          runbook_url: "https://runbooks.example.com/DiskCapacity"
+
+      # Pod Scaling Near Limit
+      - alert: PodScalingNearLimit
+        expr: |
+          kube_deployment_status_replicas / kube_deployment_spec_replicas > 0.9
+        for: 15m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "Pod scaling near limit"
+          description: "Deployment {{ $labels.deployment }} is near max replicas"
+          runbook_url: "https://runbooks.example.com/PodScaling"

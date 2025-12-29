@@ -1,0 +1,28 @@
+{
+  "test_type": "dynamic_analysis",
+  "timestamp": "2025-12-28T23:21:18-05:00",
+  "event_propagation": {
+    "propagation_time_ms": 113,
+    "target_latency_ms": 100,
+    "performance_ratio": 88.49
+  },
+  "load_handling": {
+    "test_event_counts": [10 50 100 200],
+    "processing_times_ms": [30 71 122 232],
+    "average_latency_ms": 113.75,
+    "throughput_events_per_sec": 909.09,
+    "scalability_coefficient": 9.09
+  },
+  "system_resonance": {
+    "natural_frequency_hz": 1.0,
+    "damping_ratio": 0.1,
+    "amplitude_decay": .5336,
+    "stability_margin": .4664
+  },
+  "wave_propagation": {
+    "phase_velocity": 1000,
+    "group_velocity": 950,
+    "dispersion_relation": "normal"
+  },
+  "overall_score": 48
+}

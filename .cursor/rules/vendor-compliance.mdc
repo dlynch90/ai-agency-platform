@@ -1,0 +1,71 @@
+---
+description: Enforces vendor compliance and prevents custom implementations
+globs: *
+alwaysApply: true
+---
+
+# Vendor Compliance Enforcement
+
+## ❌ PROHIBITED - Custom Implementations
+- ❌ Custom React components
+- ❌ Custom hooks
+- ❌ Custom utilities
+- ❌ Custom configurations
+- ❌ Custom styling frameworks
+- ❌ Complex build setups
+- ❌ Custom business logic implementations
+- ❌ Custom UI components and designs
+- ❌ Custom database schemas and migrations
+- ❌ Custom API endpoints and services
+- ❌ Custom documentation and analysis
+
+## ✅ REQUIRED - Vendor Solutions Only
+- ✅ Use only vendor-sourced libraries and tools
+- ✅ Import from approved vendor repositories
+- ✅ Use vendor CLI tools and SDKs
+- ✅ Implement vendor architectural patterns
+- ✅ Follow vendor documentation and best practices
+
+## Architecture Patterns (Vendor-Only)
+- ✅ SAGA Pattern (vendor implementations)
+- ✅ Circuit Breaker Pattern (vendor implementations)
+- ✅ RBAC (vendor implementations)
+- ✅ Multitenant Architecture (vendor implementations)
+- ✅ rpc-js/gRPC/tRPC (vendor implementations)
+- ✅ Dynamic Load Balancing (vendor implementations)
+- ✅ Cache Optimization (vendor implementations)
+- ✅ Byzantine Coordination (vendor implementations)
+- ✅ Neural Network (vendor implementations)
+- ✅ Port Management (vendor implementations)
+- ✅ Containerization (vendor implementations)
+- ✅ Atomic Modularization (vendor implementations)
+- ✅ MCP Server Wrapper (vendor implementations)
+- ✅ Connection Pool Manager (vendor implementations)
+- ✅ DLQ Routing (vendor implementations)
+- ✅ Pipeline Retries w/ Backoff (vendor implementations)
+- ✅ Idempotency (unique message_id) (vendor implementations)
+- ✅ Log Cleanup Policy (vendor implementations)
+
+## Tool Integration Requirements
+- ✅ 20+ MCP tools for comprehensive analysis
+- ✅ Machine learning pipelines for code analysis
+- ✅ Python environments for ML/AI workloads
+- ✅ ast-grep, jq, yq, grep, blob, glob for analysis
+- ✅ Polyglot programming language support
+- ✅ API + GraphQL federation architecture
+
+## Quality Gates
+- ✅ Unit testing with TDD principles
+- ✅ Integration testing across all components
+- ✅ Performance benchmarking and optimization
+- ✅ Security auditing with vendor tools
+- ✅ Dependency analysis and cleanup
+- ✅ Code quality analysis with vendor linters
+
+## Automation Requirements
+- ✅ Event-driven architecture
+- ✅ Self-healing systems
+- ✅ Real-time monitoring and alerting
+- ✅ Automated deployment and scaling
+- ✅ Continuous integration and delivery
+- ✅ Infrastructure as code with vendor tools

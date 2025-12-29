@@ -1,0 +1,32 @@
+{
+  "name": "E-commerce Personalization",
+  "description": "MCP client configuration for e-commerce personalization",
+  "servers": {
+    "postgres": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-postgres"],
+      "env": {
+        "POSTGRES_CONNECTION_STRING": ""
+      }
+    },
+    "redis": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-redis"],
+      "env": {
+        "REDIS_URL": ""
+      }
+    },
+    "qdrant": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-qdrant"],
+      "env": {
+        "QDRANT_URL": ""
+      }
+    }
+  },
+  "workflows": {
+    "product-recommendation": ["postgres", "redis", "qdrant"],
+    "customer-segmentation": ["postgres", "redis"],
+    "inventory-optimization": ["postgres", "redis"]
+  }
+}

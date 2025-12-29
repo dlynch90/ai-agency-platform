@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  real-estate-api:
+    build: .
+    ports:
+      - "8007:8000"
+    environment:
+      - USE_CASE_ID=07

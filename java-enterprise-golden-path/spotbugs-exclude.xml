@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter
+    xmlns="https://github.com/spotbugs/filter/3.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://github.com/spotbugs/filter/3.0.0
+    https://raw.githubusercontent.com/spotbugs/spotbugs/master/spotbugs/etc/findbugsfilter.xsd">
+
+    <!-- Exclude test classes from analysis -->
+    <Match>
+        <Class name="~.*Test"/>
+    </Match>
+
+    <Match>
+        <Class name="~.*IT"/>
+    </Match>
+
+    <!-- Exclude configuration classes -->
+    <Match>
+        <Class name="~.*Config"/>
+    </Match>
+
+    <Match>
+        <Class name="~.*Configuration"/>
+    </Match>
+
+    <!-- Exclude generated sources -->
+    <Match>
+        <Source name="~.*generated.*"/>
+    </Match>
+
+    <!-- Exclude DTOs from serialization warnings -->
+    <Match>
+        <Class name="~.*Dto"/>
+        <Bug pattern="SE_NO_SERIALVERSIONID"/>
+    </Match>
+
+    <!-- Exclude entities from serialization warnings -->
+    <Match>
+        <Class name="~.*Entity"/>
+        <Bug pattern="SE_NO_SERIALVERSIONID"/>
+    </Match>
+
+    <!-- Exclude Spring annotations false positives -->
+    <Match>
+        <Bug pattern="EI_EXPOSE_REP"/>
+    </Match>
+
+    <Match>
+        <Bug pattern="EI_EXPOSE_REP2"/>
+    </Match>
+
+    <!-- Exclude unread field in DTOs -->
+    <Match>
+        <Class name="~.*Dto"/>
+        <Bug pattern="URF_UNREAD_FIELD"/>
+    </Match>
+
+    <!-- Exclude main application class -->
+    <Match>
+        <Class name="~.*Application"/>
+    </Match>
+
+    <!-- Exclude null pointer dereference in Spring managed beans -->
+    <Match>
+        <Bug pattern="NP_NONNULL_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR"/>
+    </Match>
+
+</FindBugsFilter>

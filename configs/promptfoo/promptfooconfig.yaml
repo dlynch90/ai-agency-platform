@@ -1,0 +1,175 @@
+description: AI Agency Platform LLM Evaluation Suite
+providers:
+  - id: ollama:llama3.2
+    config:
+      baseUrl: http://localhost:11434
+      temperature: 0.7
+      
+  - id: ollama:codellama
+    config:
+      baseUrl: http://localhost:11434
+      temperature: 0.3
+      
+  - id: ollama:deepseek-coder-v2
+    config:
+      baseUrl: http://localhost:11434
+      temperature: 0.5
+      
+  - id: openai:gpt-4o
+    config:
+      temperature: 0.7
+      
+  - id: anthropic:messages:claude-sonnet-4-20250514
+    config:
+      temperature: 0.7
+      
+  - id: google:gemini-1.5-pro
+    config:
+      temperature: 0.7
+
+prompts:
+  - file://prompts/code-review.txt
+  - file://prompts/security-audit.txt
+  - file://prompts/architecture-review.txt
+  - file://prompts/use-case-analysis.txt
+
+defaultTest:
+  assert:
+    - type: llm-rubric
+      value: The response is helpful, accurate, and relevant to the query
+      threshold: 0.7
+    - type: not-contains
+      value: "I don't know"
+    - type: cost
+      threshold: 0.10
+
+tests:
+  - description: E-Commerce Personalization - Product Recommendation
+    vars:
+      use_case: ecommerce
+      context: User browsing history includes electronics and gaming
+      query: Recommend products for a user interested in gaming laptops
+    assert:
+      - type: contains-any
+        value: ["laptop", "gaming", "recommendation"]
+      - type: llm-rubric
+        value: Response provides specific product recommendations with reasoning
+        threshold: 0.8
+
+  - description: Healthcare Triage - Symptom Analysis
+    vars:
+      use_case: healthcare
+      context: Patient reports headache and fatigue for 3 days
+      query: Provide initial triage assessment and recommended next steps
+    assert:
+      - type: not-contains-any
+        value: ["diagnose", "prescription", "medication"]
+      - type: llm-rubric
+        value: Response appropriately defers to medical professionals
+        threshold: 0.9
+
+  - description: Financial Portfolio - Risk Assessment
+    vars:
+      use_case: finance
+      context: Portfolio contains 60% stocks, 30% bonds, 10% cash
+      query: Assess portfolio risk and suggest rebalancing options
+    assert:
+      - type: contains-any
+        value: ["risk", "diversification", "allocation"]
+      - type: llm-rubric
+        value: Response includes quantitative risk assessment
+        threshold: 0.8
+
+  - description: Legal Document - Contract Review
+    vars:
+      use_case: legal
+      context: NDA agreement between two tech companies
+      query: Identify key clauses and potential issues in this NDA
+    assert:
+      - type: contains-any
+        value: ["confidentiality", "term", "obligations"]
+      - type: llm-rubric
+        value: Response identifies specific contract sections
+        threshold: 0.85
+
+  - description: Customer Service - Ticket Classification
+    vars:
+      use_case: customer_service
+      context: Customer reports login issues after password reset
+      query: Classify this ticket and suggest resolution steps
+    assert:
+      - type: contains-any
+        value: ["authentication", "password", "account"]
+      - type: llm-rubric
+        value: Response provides clear classification and actionable steps
+        threshold: 0.8
+
+  - description: Code Review - Security Analysis
+    vars:
+      use_case: code_review
+      context: TypeScript API endpoint handling user authentication
+      query: Review this code for security vulnerabilities
+    assert:
+      - type: contains-any
+        value: ["injection", "validation", "sanitization", "authentication"]
+      - type: llm-rubric
+        value: Response identifies specific security concerns with line references
+        threshold: 0.85
+
+  - description: Architecture Review - Scalability Assessment
+    vars:
+      use_case: architecture
+      context: Microservices architecture with GraphQL federation
+      query: Assess scalability and suggest improvements
+    assert:
+      - type: contains-any
+        value: ["scaling", "caching", "load balancing", "federation"]
+      - type: llm-rubric
+        value: Response provides actionable architectural recommendations
+        threshold: 0.8
+
+  - description: Supply Chain - Route Optimization
+    vars:
+      use_case: supply_chain
+      context: Delivery network with 50 warehouses and 200 daily routes
+      query: Suggest optimization strategies for reducing delivery times
+    assert:
+      - type: contains-any
+        value: ["route", "optimization", "warehouse", "delivery"]
+      - type: llm-rubric
+        value: Response includes quantifiable optimization metrics
+        threshold: 0.75
+
+  - description: HR Talent - Candidate Matching
+    vars:
+      use_case: hr
+      context: Senior software engineer position requiring Python and ML experience
+      query: Evaluate candidate fit based on resume and job requirements
+    assert:
+      - type: contains-any
+        value: ["skills", "experience", "match", "qualification"]
+      - type: llm-rubric
+        value: Response provides structured candidate evaluation
+        threshold: 0.8
+
+  - description: Education - Learning Path Recommendation
+    vars:
+      use_case: education
+      context: Student struggling with calculus, strong in algebra
+      query: Recommend personalized learning path for calculus mastery
+    assert:
+      - type: contains-any
+        value: ["learning", "practice", "concept", "progress"]
+      - type: llm-rubric
+        value: Response provides adaptive learning recommendations
+        threshold: 0.8
+
+outputPath: ../../reports/promptfoo/evaluation-results.json
+
+sharing:
+  apiBaseUrl: null
+  appBaseUrl: null
+
+evaluateOptions:
+  maxConcurrency: 4
+  showProgressBar: true

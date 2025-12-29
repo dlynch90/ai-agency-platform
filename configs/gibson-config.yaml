@@ -1,0 +1,296 @@
+# Gibson CLI Configuration for Neo4j Integration
+# Vendor-compliant graph database setup for AI Agency
+
+# Neo4j Connection Configuration
+neo4j:
+  uri: ${NEO4J_URI:http://localhost:7687}
+  username: ${NEO4J_USERNAME:neo4j}
+  password: ${NEO4J_PASSWORD:password}
+  database: ${NEO4J_DATABASE:neo4j}
+
+# Graph Schema Definitions
+schema:
+  # Node Labels
+  nodes:
+    - name: User
+      properties:
+        - name: id
+          type: STRING
+          required: true
+          unique: true
+        - name: email
+          type: STRING
+          required: true
+          unique: true
+        - name: username
+          type: STRING
+          unique: true
+        - name: role
+          type: STRING
+          default: "CLIENT"
+        - name: createdAt
+          type: DATETIME
+          default: "NOW()"
+        - name: updatedAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: Agency
+      properties:
+        - name: id
+          type: STRING
+          required: true
+          unique: true
+        - name: name
+          type: STRING
+          required: true
+        - name: slug
+          type: STRING
+          required: true
+          unique: true
+        - name: description
+          type: STRING
+        - name: createdAt
+          type: DATETIME
+          default: "NOW()"
+        - name: updatedAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: Project
+      properties:
+        - name: id
+          type: STRING
+          required: true
+          unique: true
+        - name: name
+          type: STRING
+          required: true
+        - name: slug
+          type: STRING
+          required: true
+          unique: true
+        - name: status
+          type: STRING
+          default: "PLANNING"
+        - name: priority
+          type: STRING
+          default: "MEDIUM"
+        - name: budget
+          type: FLOAT
+        - name: createdAt
+          type: DATETIME
+          default: "NOW()"
+        - name: updatedAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: Task
+      properties:
+        - name: id
+          type: STRING
+          required: true
+          unique: true
+        - name: title
+          type: STRING
+          required: true
+        - name: status
+          type: STRING
+          default: "TODO"
+        - name: priority
+          type: STRING
+          default: "MEDIUM"
+        - name: createdAt
+          type: DATETIME
+          default: "NOW()"
+        - name: updatedAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: AIModel
+      properties:
+        - name: id
+          type: STRING
+          required: true
+          unique: true
+        - name: name
+          type: STRING
+          required: true
+        - name: modelType
+          type: STRING
+          required: true
+        - name: framework
+          type: STRING
+        - name: accuracy
+          type: FLOAT
+        - name: createdAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: Dataset
+      properties:
+        - name: id
+          type: STRING
+          required: true
+          unique: true
+        - name: name
+          type: STRING
+          required: true
+        - name: format
+          type: STRING
+        - name: size
+          type: INTEGER
+        - name: createdAt
+          type: DATETIME
+          default: "NOW()"
+
+  # Relationship Types
+  relationships:
+    - name: BELONGS_TO
+      from: "*"
+      to: "Agency"
+      properties:
+        - name: joinedAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: OWNS
+      from: "Agency"
+      to: "Project"
+      properties:
+        - name: createdAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: ASSIGNED_TO
+      from: "Project"
+      to: "Client"
+      properties:
+        - name: assignedAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: WORKS_ON
+      from: "User"
+      to: "Project"
+      properties:
+        - name: role
+          type: STRING
+        - name: joinedAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: ASSIGNED_TASK
+      from: "User"
+      to: "Task"
+      properties:
+        - name: assignedAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: DEPENDS_ON
+      from: "Task"
+      to: "Task"
+      properties:
+        - name: dependencyType
+          type: STRING
+          default: "FINISH_TO_START"
+
+    - name: USES_MODEL
+      from: "Project"
+      to: "AIModel"
+      properties:
+        - name: addedAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: CONTAINS_DATA
+      from: "Project"
+      to: "Dataset"
+      properties:
+        - name: addedAt
+          type: DATETIME
+          default: "NOW()"
+
+    - name: TRAINED_WITH
+      from: "AIModel"
+      to: "Dataset"
+      properties:
+        - name: trainingDate
+          type: DATETIME
+          default: "NOW()"
+
+# Migration Configuration
+migrations:
+  directory: ./neo4j/migrations
+  enabled: true
+
+# Query Templates
+queries:
+  # User queries
+  get_user_projects: |
+    MATCH (u:User {id: $userId})-[:WORKS_ON]->(p:Project)
+    RETURN p ORDER BY p.createdAt DESC
+
+  get_agency_members: |
+    MATCH (a:Agency {id: $agencyId})<-[:BELONGS_TO]-(u:User)
+    RETURN u ORDER BY u.joinedAt
+
+  get_project_tasks: |
+    MATCH (p:Project {id: $projectId})<-[:BELONGS_TO]-(t:Task)
+    OPTIONAL MATCH (t)<-[:ASSIGNED_TASK]-(u:User)
+    RETURN t, u ORDER BY t.priority DESC, t.createdAt
+
+  # AI/ML queries
+  get_project_models: |
+    MATCH (p:Project {id: $projectId})-[:USES_MODEL]->(m:AIModel)
+    OPTIONAL MATCH (m)-[r:TRAINED_WITH]->(d:Dataset)
+    RETURN m, collect(d) as datasets ORDER BY m.createdAt DESC
+
+  # Analytics queries
+  project_completion_stats: |
+    MATCH (p:Project {id: $projectId})<-[:BELONGS_TO]-(t:Task)
+    RETURN
+      count(t) as totalTasks,
+      count(CASE WHEN t.status = 'COMPLETED' THEN 1 END) as completedTasks,
+      count(CASE WHEN t.status = 'IN_PROGRESS' THEN 1 END) as inProgressTasks
+
+# Indexes and Constraints
+indexes:
+  - label: User
+    property: id
+    type: unique
+  - label: User
+    property: email
+    type: unique
+  - label: Agency
+    property: slug
+    type: unique
+  - label: Project
+    property: slug
+    type: unique
+
+constraints:
+  - label: User
+    property: id
+    type: unique
+  - label: User
+    property: email
+    type: unique
+  - label: Agency
+    property: slug
+    type: unique
+  - label: Project
+    property: slug
+    type: unique
+
+# Data Import/Export Configuration
+import:
+  batch_size: 1000
+  parallel: true
+  retry_attempts: 3
+
+export:
+  format: json
+  compression: gzip
+  include_metadata: true

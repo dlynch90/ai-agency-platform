@@ -1,0 +1,98 @@
+# Lefthook Configuration for Healthy Pre/Post-Commit Event-Driven Architecture
+# Implements vendor-compliant quality gates and MCP server integration
+
+pre-commit:
+  commands:
+    # Code Quality Checks
+    lint:
+      run: npx biome check --apply-unsafe && npx oxlint
+      glob: "*.{js,ts,jsx,tsx}"
+      fail_fast: true
+
+    format:
+      run: npx biome format --write && npx dprint fmt
+      glob: "*.{js,ts,jsx,tsx,json,toml,yaml,yml}"
+      fail_fast: true
+
+    # Security and Audit
+    security:
+      run: cargo audit --deny warnings && npm audit --audit-level moderate
+      fail_fast: true
+
+    # Type Checking
+    type-check:
+      run: npx tsc --noEmit && python -m mypy src/ --ignore-missing-imports
+      fail_fast: true
+
+    # Vendor Tool Validation
+    vendor-tools:
+      run: npm run validate:tools
+      fail_fast: true
+
+    # MCP Server Validation
+    mcp-health:
+      run: npm run validate:mcp
+      fail_fast: false
+
+post-commit:
+  commands:
+    # Documentation Update
+    docs-update:
+      run: npx typedoc && python scripts/automation/update_docs.py
+      fail_fast: false
+
+    # MCP Server Synchronization
+    mcp-sync:
+      run: python scripts/automation/sync_mcp_servers.py
+      fail_fast: false
+
+    # Performance Benchmarking
+    benchmark:
+      run: python scripts/automation/run_benchmarks.py
+      fail_fast: false
+
+post-merge:
+  commands:
+    # Dependency Update Check
+    deps-check:
+      run: npx npm-check-updates && cargo outdated
+      fail_fast: false
+
+    # Environment Synchronization
+    env-sync:
+      run: python scripts/automation/sync_environment.py
+      fail_fast: false
+
+pre-push:
+  commands:
+    # Comprehensive Testing
+    test-full:
+      run: npm test && python -m pytest && cargo test
+      fail_fast: true
+
+    # Integration Tests
+    integration:
+      run: python scripts/testing/run_integration_tests.py
+      fail_fast: true
+
+    # API Smoke Tests
+    api-smoke:
+      run: python scripts/testing/api_smoke_tests.py
+      fail_fast: true
+
+    # GraphQL Validation
+    graphql-check:
+      run: npx graphql-codegen validate && python scripts/testing/validate_graphql.py
+      fail_fast: true
+
+commit-msg:
+  commands:
+    # Commit Message Validation
+    commit-lint:
+      run: npx commitlint --edit $1
+      fail_fast: true
+
+    # Semantic Version Check
+    version-check:
+      run: python scripts/automation/check_semantic_version.py
+      fail_fast: false

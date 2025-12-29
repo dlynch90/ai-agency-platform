@@ -1,0 +1,209 @@
+# Apollo Router Configuration for GraphQL Federation
+# Comprehensive federation setup for polyglot services
+
+# Server configuration
+server:
+  listen: 0.0.0.0:4000
+  introspection: true  # Enable for development
+  playground: true     # Enable GraphQL playground
+
+# Cross-origin request sharing (CORS)
+cors:
+  origins:
+    - http://localhost:3000  # Frontend development
+    - http://localhost:4000  # Self
+    - https://studio.apollographql.com  # Apollo Studio
+  methods:
+    - GET
+    - POST
+    - OPTIONS
+  headers:
+    - Content-Type
+    - Authorization
+    - X-Requested-With
+  credentials: true
+
+# Subgraph configuration
+subgraphs:
+  users:
+    routing_url: http://subgraph-users:4001
+    schema:
+      subgraph_url: http://subgraph-users:4001
+  posts:
+    routing_url: http://subgraph-posts:4002
+    schema:
+      subgraph_url: http://subgraph-posts:4002
+  analytics:
+    routing_url: http://subgraph-analytics:4003
+    schema:
+      subgraph_url: http://subgraph-analytics:4003
+
+# Entity definitions for federation
+entities:
+  - name: User
+    keys:
+      - id
+    fields:
+      - id
+      - name
+      - email
+      - createdAt
+      - updatedAt
+  - name: Post
+    keys:
+      - id
+    fields:
+      - id
+      - title
+      - content
+      - authorId
+      - createdAt
+      - updatedAt
+      - tags
+  - name: Comment
+    keys:
+      - id
+    fields:
+      - id
+      - content
+      - postId
+      - authorId
+      - createdAt
+  - name: Analytics
+    keys:
+      - id
+    fields:
+      - id
+      - metric
+      - value
+      - timestamp
+      - userId
+
+# Authentication and authorization
+authentication:
+  jwt:
+    jwks:
+      url: http://subgraph-users:4001/.well-known/jwks.json
+    header_name: Authorization
+    header_value_prefix: Bearer
+
+authorization:
+  require_authentication: false  # Allow public queries
+  allow_unauthenticated_requests: true
+
+# Caching configuration
+cache:
+  redis:
+    urls: ["redis://redis:6379"]
+    password: secure_redis_password
+
+  # Cache rules by operation type
+  rules:
+    - types: ["Query"]
+      max_age: 30s
+      private: false
+    - types: ["Mutation"]
+      max_age: 0s  # No caching for mutations
+    - types: ["Subscription"]
+      max_age: 0s  # No caching for subscriptions
+
+# Telemetry and observability
+telemetry:
+  # Apollo Studio integration
+  apollo:
+    endpoint: https://usage-reporting.api.apollographql.com/api/ingress/traces
+    apollo_key: your-apollo-studio-key
+    apollo_graph_ref: your-graph@current
+
+  # Tracing
+  tracing:
+    jaeger:
+      endpoint: http://jaeger:14268/api/traces
+    zipkin:
+      endpoint: http://zipkin:9411/api/v2/spans
+
+  # Metrics
+  metrics:
+    prometheus:
+      enabled: true
+      path: /metrics
+
+  # Logging
+  logging:
+    level: INFO
+    format: json
+
+# Error handling and retries
+error_handling:
+  send_headers: true  # Include error headers in responses
+  include_subgraph_errors: false  # Hide internal subgraph errors in production
+
+# Request processing
+limits:
+  max_request_size: 10MB
+  max_response_size: 50MB
+  request_timeout: 30s
+  query_depth_limit: 15
+  query_complexity_limit: 1000
+
+# Plugin configuration
+plugins:
+  # Response caching
+  - name: cache
+    config:
+      enabled: true
+      ttl: 300s
+
+  # Rate limiting
+  - name: rate_limit
+    config:
+      enabled: true
+      strategy: sliding_window
+      window: 60s
+      limit: 100
+
+  # Request logging
+  - name: request_logger
+    config:
+      enabled: true
+      headers: ["Authorization", "X-Request-ID"]
+      body: false  # Don't log request bodies for privacy
+
+  # Health checks
+  - name: health_check
+    config:
+      enabled: true
+      path: /health
+      interval: 30s
+
+# Development overrides
+override_subgraph_url: http://localhost:4001  # For local development
+
+# Environment-specific configuration
+environment:
+  production:
+    telemetry:
+      apollo:
+        enabled: true
+    limits:
+      query_complexity_limit: 5000
+    plugins:
+      - name: rate_limit
+        config:
+          limit: 1000  # Higher limit for production
+
+  staging:
+    telemetry:
+      apollo:
+        enabled: true
+    limits:
+      query_complexity_limit: 2000
+
+  development:
+    introspection: true
+    playground: true
+    cors:
+      origins: ["*"]  # Allow all origins in development
+    telemetry:
+      apollo:
+        enabled: false  # Disable Apollo reporting in development

@@ -1,0 +1,77 @@
+{
+  "timestamp": 1766960034.455426,
+  "installation_state": {
+    "claude_binary_exists": true,
+    "claude_in_path": true,
+    "local_bin_exists": true,
+    "local_bin_in_path": true,
+    "package_manager": "pnpm",
+    "node_version": "v25.2.1",
+    "npm_version": null,
+    "pnpm_version": "10.26.2"
+  },
+  "path_optimization": {
+    "center_density": 0.3,
+    "surface_complexity": 0.2,
+    "edge_stability": 1.0,
+    "total_dirs": 20,
+    "user_dirs": 6
+  },
+  "markov_chain": {
+    "detect": {
+      "detect": 0.5,
+      "prepare": 0.5
+    },
+    "prepare": {
+      "validate": 1.0
+    }
+  },
+  "state_history": [
+    [
+      "detect",
+      "detect",
+      1766960033.914864
+    ],
+    [
+      "detect",
+      "prepare",
+      1766960034.192013
+    ],
+    [
+      "prepare",
+      "validate",
+      1766960034.192412
+    ],
+    [
+      "validate",
+      "validate",
+      1766960034.7195141
+    ]
+  ],
+  "edge_cases": [],
+  "validation": {
+    "score": 5.0,
+    "max_score": 5.0,
+    "percentage": 100.0,
+    "state": {
+      "claude_binary_exists": true,
+      "claude_in_path": true,
+      "local_bin_exists": true,
+      "local_bin_in_path": true,
+      "package_manager": "pnpm",
+      "node_version": "v25.2.1",
+      "npm_version": null,
+      "pnpm_version": "10.26.2"
+    },
+    "path_analysis": {
+      "center_density": 0.3,
+      "surface_complexity": 0.2,
+      "edge_stability": 1.0,
+      "total_dirs": 20,
+      "user_dirs": 6
+    },
+    "markov_states": 4,
+    "edge_cases": 0
+  },
+  "recommendations": []
+}

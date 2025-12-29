@@ -1,0 +1,610 @@
+{
+  "timestamp": "2025-12-29T01:39:11.302Z",
+  "evaluations": {
+    "static": {
+      "metrics": {
+        "totalFiles": 561,
+        "totalLines": 207398,
+        "fileTypes": {
+          ".js": 51,
+          ".ts": 22,
+          ".py": 484,
+          ".rs": 2,
+          ".java": 2
+        },
+        "largeFiles": [
+          {
+            "path": "ai-ml/agi_integration_framework.py",
+            "lines": 1325
+          },
+          {
+            "path": "ai-ml/inference/ElementTree.py",
+            "lines": 2101
+          },
+          {
+            "path": "ai-ml/inference/_apply_pyprojecttoml.py",
+            "lines": 527
+          },
+          {
+            "path": "ai-ml/inference/_constrained_layout.py",
+            "lines": 806
+          },
+          {
+            "path": "ai-ml/inference/_constraints.py",
+            "lines": 599
+          },
+          {
+            "path": "ai-ml/inference/_difflib.py",
+            "lines": 2107
+          },
+          {
+            "path": "ai-ml/inference/_dispatcher.py",
+            "lines": 764
+          },
+          {
+            "path": "ai-ml/inference/_formlayout.py",
+            "lines": 593
+          },
+          {
+            "path": "ai-ml/inference/_header_value_parser.py",
+            "lines": 3045
+          },
+          {
+            "path": "ai-ml/inference/_html.py",
+            "lines": 518
+          },
+          {
+            "path": "ai-ml/inference/_html_base.py",
+            "lines": 1896
+          },
+          {
+            "path": "ai-ml/inference/_openml.py",
+            "lines": 1165
+          },
+          {
+            "path": "ai-ml/inference/_parseaddr.py",
+            "lines": 558
+          },
+          {
+            "path": "ai-ml/inference/_parser.py",
+            "lines": 692
+          },
+          {
+            "path": "ai-ml/inference/_psaix.py",
+            "lines": 547
+          },
+          {
+            "path": "ai-ml/inference/_self_training.py",
+            "lines": 581
+          },
+          {
+            "path": "ai-ml/inference/_svmlight_format_io.py",
+            "lines": 591
+          },
+          {
+            "path": "ai-ml/inference/aifc.py",
+            "lines": 985
+          },
+          {
+            "path": "ai-ml/inference/algebraicconnectivity.py",
+            "lines": 651
+          },
+          {
+            "path": "ai-ml/inference/backend_cairo.py",
+            "lines": 530
+          },
+          {
+            "path": "ai-ml/inference/brill_trainer.py",
+            "lines": 629
+          },
+          {
+            "path": "ai-ml/inference/client.py",
+            "lines": 1533
+          },
+          {
+            "path": "ai-ml/inference/client_reqrep.py",
+            "lines": 1537
+          },
+          {
+            "path": "ai-ml/inference/codegen_main.py",
+            "lines": 533
+          },
+          {
+            "path": "ai-ml/inference/connector.py",
+            "lines": 1835
+          },
+          {
+            "path": "ai-ml/inference/constructor.py",
+            "lines": 749
+          },
+          {
+            "path": "ai-ml/inference/cookiejar.py",
+            "lines": 523
+          },
+          {
+            "path": "ai-ml/inference/decoder.py",
+            "lines": 1058
+          },
+          {
+            "path": "ai-ml/inference/diff.py",
+            "lines": 973
+          },
+          {
+            "path": "ai-ml/inference/emitter.py",
+            "lines": 1138
+          },
+          {
+            "path": "ai-ml/inference/entities.py",
+            "lines": 2511
+          },
+          {
+            "path": "ai-ml/inference/estimator.py",
+            "lines": 501
+          },
+          {
+            "path": "ai-ml/inference/expatbuilder.py",
+            "lines": 966
+          },
+          {
+            "path": "ai-ml/inference/feedparser.py",
+            "lines": 535
+          },
+          {
+            "path": "ai-ml/inference/generator.py",
+            "lines": 521
+          },
+          {
+            "path": "ai-ml/inference/gml.py",
+            "lines": 880
+          },
+          {
+            "path": "ai-ml/inference/graphml.py",
+            "lines": 1054
+          },
+          {
+            "path": "ai-ml/inference/header.py",
+            "lines": 574
+          },
+          {
+            "path": "ai-ml/inference/headerregistry.py",
+            "lines": 605
+          },
+          {
+            "path": "ai-ml/inference/http_parser.py",
+            "lines": 1066
+          },
+          {
+            "path": "ai-ml/inference/junitxml.py",
+            "lines": 696
+          },
+          {
+            "path": "ai-ml/inference/laikago_ars_train.py",
+            "lines": 522
+          },
+          {
+            "path": "ai-ml/inference/laikago_interface_pb2.py",
+            "lines": 1041
+          },
+          {
+            "path": "ai-ml/inference/latex2mathml.py",
+            "lines": 1253
+          },
+          {
+            "path": "ai-ml/inference/mailbox.py",
+            "lines": 2153
+          },
+          {
+            "path": "ai-ml/inference/math2html.py",
+            "lines": 3167
+          },
+          {
+            "path": "ai-ml/inference/minidom.py",
+            "lines": 2014
+          },
+          {
+            "path": "ai-ml/inference/ml.py",
+            "lines": 959
+          },
+          {
+            "path": "ai-ml/inference/ml_gap_analysis.py",
+            "lines": 798
+          },
+          {
+            "path": "ai-ml/inference/mlab.py",
+            "lines": 914
+          },
+          {
+            "path": "ai-ml/inference/mosaicplot.py",
+            "lines": 670
+          },
+          {
+            "path": "ai-ml/inference/naive_bayes.py",
+            "lines": 1573
+          },
+          {
+            "path": "ai-ml/inference/pairwise.py",
+            "lines": 2673
+          },
+          {
+            "path": "ai-ml/inference/payload.py",
+            "lines": 1121
+          },
+          {
+            "path": "ai-ml/inference/raises.py",
+            "lines": 1518
+          },
+          {
+            "path": "ai-ml/inference/results_glm_logit_constrained.py",
+            "lines": 698
+          },
+          {
+            "path": "ai-ml/inference/results_poisson_constrained.py",
+            "lines": 666
+          },
+          {
+            "path": "ai-ml/inference/run.py",
+            "lines": 1080
+          },
+          {
+            "path": "ai-ml/inference/scanner.py",
+            "lines": 1436
+          },
+          {
+            "path": "ai-ml/inference/server.py",
+            "lines": 1005
+          },
+          {
+            "path": "ai-ml/inference/streams.py",
+            "lines": 736
+          },
+          {
+            "path": "ai-ml/inference/test_apply_pyprojecttoml.py",
+            "lines": 773
+          },
+          {
+            "path": "ai-ml/inference/test_constrainedlayout.py",
+            "lines": 744
+          },
+          {
+            "path": "ai-ml/inference/test_estimator.py",
+            "lines": 618
+          },
+          {
+            "path": "ai-ml/inference/test_gml.py",
+            "lines": 745
+          },
+          {
+            "path": "ai-ml/inference/test_graphml.py",
+            "lines": 1532
+          },
+          {
+            "path": "ai-ml/inference/test_html.py",
+            "lines": 1649
+          },
+          {
+            "path": "ai-ml/inference/test_mlab.py",
+            "lines": 1023
+          },
+          {
+            "path": "ai-ml/inference/test_mlemodel.py",
+            "lines": 1256
+          },
+          {
+            "path": "ai-ml/inference/test_mlp.py",
+            "lines": 1095
+          },
+          {
+            "path": "ai-ml/inference/test_naive_bayes.py",
+            "lines": 1052
+          },
+          {
+            "path": "ai-ml/inference/test_openml.py",
+            "lines": 1637
+          },
+          {
+            "path": "ai-ml/inference/test_pairwise_distances_reduction.py",
+            "lines": 1644
+          },
+          {
+            "path": "ai-ml/inference/test_raises.py",
+            "lines": 758
+          },
+          {
+            "path": "ai-ml/inference/test_svmlight_format.py",
+            "lines": 614
+          },
+          {
+            "path": "ai-ml/inference/test_to_html.py",
+            "lines": 1178
+          },
+          {
+            "path": "ai-ml/inference/test_to_xml.py",
+            "lines": 1376
+          },
+          {
+            "path": "ai-ml/inference/test_utils.py",
+            "lines": 775
+          },
+          {
+            "path": "ai-ml/inference/test_xml.py",
+            "lines": 2080
+          },
+          {
+            "path": "ai-ml/inference/utils.py",
+            "lines": 505
+          },
+          {
+            "path": "ai-ml/inference/web.py",
+            "lines": 593
+          },
+          {
+            "path": "ai-ml/inference/web_app.py",
+            "lines": 621
+          },
+          {
+            "path": "ai-ml/inference/web_protocol.py",
+            "lines": 793
+          },
+          {
+            "path": "ai-ml/inference/web_request.py",
+            "lines": 917
+          },
+          {
+            "path": "ai-ml/inference/web_response.py",
+            "lines": 857
+          },
+          {
+            "path": "ai-ml/inference/web_urldispatcher.py",
+            "lines": 1306
+          },
+          {
+            "path": "ai-ml/inference/web_ws.py",
+            "lines": 632
+          },
+          {
+            "path": "closed-loop-analysis-framework.js",
+            "lines": 685
+          },
+          {
+            "path": "database/infrastructure/neo4j/neo4j-graph.config.ts",
+            "lines": 741
+          },
+          {
+            "path": "database/infrastructure/redis/redis-cache.config.ts",
+            "lines": 660
+          },
+          {
+            "path": "federation/subgraphs/users/src/index.js",
+            "lines": 559
+          },
+          {
+            "path": "graphql-server/index.js",
+            "lines": 592
+          },
+          {
+            "path": "scripts/advanced_numerical_methods.py",
+            "lines": 746
+          },
+          {
+            "path": "scripts/agi_integration_framework.py",
+            "lines": 1325
+          },
+          {
+            "path": "scripts/analysis/comprehensive_system_diagnostic.py",
+            "lines": 661
+          },
+          {
+            "path": "scripts/analysis/markov-chain-analysis.py",
+            "lines": 542
+          },
+          {
+            "path": "scripts/automated_remediation.py",
+            "lines": 620
+          },
+          {
+            "path": "scripts/clean_20step_analysis.py",
+            "lines": 584
+          },
+          {
+            "path": "scripts/comprehensive-evaluator.js",
+            "lines": 706
+          },
+          {
+            "path": "scripts/comprehensive-unit-tests.py",
+            "lines": 623
+          },
+          {
+            "path": "scripts/comprehensive_20step_gap_analysis.py",
+            "lines": 970
+          },
+          {
+            "path": "scripts/comprehensive_debug_analysis.py",
+            "lines": 1105
+          },
+          {
+            "path": "scripts/comprehensive_debugging_system.py",
+            "lines": 2575
+          },
+          {
+            "path": "scripts/comprehensive_gap_analysis.py",
+            "lines": 805
+          },
+          {
+            "path": "scripts/comprehensive_system_diagnostic.py",
+            "lines": 661
+          },
+          {
+            "path": "scripts/comprehensive_unit_tests.py",
+            "lines": 515
+          },
+          {
+            "path": "scripts/critical_fixes.py",
+            "lines": 648
+          },
+          {
+            "path": "scripts/debugging/comprehensive_debug_analysis.py",
+            "lines": 1105
+          },
+          {
+            "path": "scripts/debugging/critical_fixes.py",
+            "lines": 648
+          },
+          {
+            "path": "scripts/fea_claude_install_optimizer.py",
+            "lines": 519
+          },
+          {
+            "path": "scripts/fea_claude_integrated_optimizer.py",
+            "lines": 802
+          },
+          {
+            "path": "scripts/fea_gap_analysis_debug.py",
+            "lines": 839
+          },
+          {
+            "path": "scripts/finite-element-analyzer.js",
+            "lines": 588
+          },
+          {
+            "path": "scripts/finite_element_analysis.py",
+            "lines": 523
+          },
+          {
+            "path": "scripts/infinitesimal_gap_analysis.py",
+            "lines": 784
+          },
+          {
+            "path": "scripts/neo4j-dependency-analyzer.js",
+            "lines": 613
+          },
+          {
+            "path": "scripts/simple_20step_analysis.py",
+            "lines": 619
+          },
+          {
+            "path": "scripts/start_fea_environment.py",
+            "lines": 566
+          },
+          {
+            "path": "testing/unit/comprehensive_unit_tests.py",
+            "lines": 515
+          },
+          {
+            "path": "tools/python/agi_integration_framework.py",
+            "lines": 1325
+          },
+          {
+            "path": "tools/python/comprehensive_gap_analysis.py",
+            "lines": 851
+          },
+          {
+            "path": "tools/python/comprehensive_system_diagnostic.py",
+            "lines": 661
+          },
+          {
+            "path": "tools/python/comprehensive_unit_tests.py",
+            "lines": 515
+          },
+          {
+            "path": "tools/python/critical_fixes.py",
+            "lines": 648
+          },
+          {
+            "path": "tools/python/finite-element-analysis.py",
+            "lines": 618
+          },
+          {
+            "path": "tools/python/finite_element_gap_analysis.py",
+            "lines": 582
+          },
+          {
+            "path": "tools/python/infinitesimal_gap_analysis.py",
+            "lines": 784
+          },
+          {
+            "path": "tools/python/spherical_finite_element_markov_analysis.py",
+            "lines": 634
+          },
+          {
+            "path": "venv311/lib/python3.11/site-packages/ipython_pygments_lexers.py",
+            "lines": 583
+          },
+          {
+            "path": "venv311/lib/python3.11/site-packages/six.py",
+            "lines": 1004
+          },
+          {
+            "path": "venv311/lib/python3.11/site-packages/threadpoolctl.py",
+            "lines": 1293
+          },
+          {
+            "path": "venv311/lib/python3.11/site-packages/typing_extensions.py",
+            "lines": 4318
+          }
+        ]
+      },
+      "score": 0.85
+    },
+    "structure": {
+      "requiredDirectories": 7,
+      "presentDirectories": 7,
+      "exists": {
+        "standards": true,
+        "workflows": true,
+        "tasks": true,
+        ".opencode": true,
+        ".opencode/agent": true,
+        ".opencode/command": true,
+        ".opencode/context": true
+      },
+      "completeness": 1,
+      "score": 1
+    },
+    "dependencies": {
+      "production": 16,
+      "development": 10,
+      "criticalPresent": 5,
+      "criticalTotal": 5,
+      "score": 1
+    },
+    "opencode": {
+      "totalChecks": 7,
+      "passed": 7,
+      "readiness": 1,
+      "score": 1
+    }
+  },
+  "gpa": {
+    "overall": {
+      "gpa": "3.75",
+      "letter": "A-",
+      "percentile": 94
+    },
+    "categories": {
+      "Static Analysis": {
+        "score": "0.850",
+        "gpa": "3.00",
+        "letter": "B",
+        "weight": "0.25"
+      },
+      "Structure Completeness": {
+        "score": "1.000",
+        "gpa": "4.00",
+        "letter": "A",
+        "weight": "0.30"
+      },
+      "Dependencies": {
+        "score": "1.000",
+        "gpa": "4.00",
+        "letter": "A",
+        "weight": "0.20"
+      },
+      "OpenCode Readiness": {
+        "score": "1.000",
+        "gpa": "4.00",
+        "letter": "A",
+        "weight": "0.25"
+      }
+    }
+  }
+}

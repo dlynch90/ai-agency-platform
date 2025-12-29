@@ -1,0 +1,424 @@
+{
+  "analysis": {
+    "timestamp": "2025-12-28T23:19:36.530Z",
+    "analysis": "Closed Loop Analysis - OpenCode CLI & Ollama-MCP Debugging",
+    "results": {
+      "opencode": {
+        "version": "1.0.206",
+        "agents": [
+          "build (primary)",
+          "compaction (primary)",
+          "explore (subagent)",
+          "general (subagent)",
+          "plan (primary)",
+          "summary (primary)",
+          "title (primary)"
+        ],
+        "basicCommand": {
+          "code": null,
+          "output": "```\ntest\n```\n",
+          "errorOutput": "\u001b[93m\u001b[1m! \u001b[0m agent \"general\" is a subagent, not a primary agent. Falling back to default agent\n\u001b[91m\u001b[1m| \u001b[0m\u001b[90m Bash     \u001b[0mPrints \"test\" to stdout\n\ntest\n\n"
+        }
+      },
+      "ollama": {
+        "version": "ollama version is 0.13.5",
+        "models": [
+          "llama3.2:latest    a80c4f17acd5    2.0 GB    19 seconds ago    ",
+          "llama3.2:3b        a80c4f17acd5    2.0 GB    5 hours ago       "
+        ],
+        "inference": {
+          "timeout": true
+        }
+      },
+      "mcp": {
+        "servers": {
+          "ollama-mcp": {
+            "code": null,
+            "output": "",
+            "errorOutput": ""
+          },
+          "@modelcontextprotocol/server-filesystem": {
+            "code": null,
+            "output": "",
+            "errorOutput": "Usage: mcp-server-filesystem [allowed-directory] [additional-directories...]\nNote: Allowed directories can be provided via:\n  1. Command-line arguments (shown above)\n  2. MCP roots protocol (if client supports it)\nAt least one directory must be provided by EITHER method for the server to operate.\nSecure MCP Filesystem Server running on stdio\nStarted without allowed directories - waiting for client to provide roots via MCP protocol\n"
+          },
+          "@modelcontextprotocol/server-git": {
+            "code": 1,
+            "output": "",
+            "errorOutput": "npm notice Access token expired or revoked. Please try logging in again.\nnpm error code E404\nnpm error 404 Not Found - GET https://registry.npmjs.org/@modelcontextprotocol%2fserver-git - Not found\nnpm error 404\nnpm error 404  The requested resource '@modelcontextprotocol/server-git@*' could not be found or you do not have permission to access it.\nnpm error 404\nnpm error 404 Note that you can also install from a\nnpm error 404 tarball, folder, http url, or git url.\nnpm error A complete log of this run can be found in: /Users/daniellynch/.npm/_logs/2025-12-28T23_19_24_623Z-debug-0.log\n"
+          },
+          "@modelcontextprotocol/server-sequential-thinking": {
+            "code": 1,
+            "output": "",
+            "errorOutput": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nError [ERR_UNSUPPORTED_DIR_IMPORT]: Directory import '/opt/homebrew/lib/node_modules/zod-to-json-schema/node_modules/zod/v3' is not supported resolving ES modules imported from /opt/homebrew/lib/node_modules/zod-to-json-schema/dist/esm/selectParser.js\nDid you mean to import \"zod/v3/index.js\"?\n    at finalizeResolution (node:internal/modules/esm/resolve:262:11)\n    at moduleResolve (node:internal/modules/esm/resolve:864:10)\n    at defaultResolve (node:internal/modules/esm/resolve:990:11)\n    at #cachedDefaultResolve (node:internal/modules/esm/loader:712:20)\n    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:729:38)\n    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:758:52)\n    at #resolve (node:internal/modules/esm/loader:694:17)\n    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:614:35)\n    at ModuleJob.syncLink (node:internal/modules/esm/module_job:143:33)\n    at ModuleJob.link (node:internal/modules/esm/module_job:228:17) {\n  code: 'ERR_UNSUPPORTED_DIR_IMPORT',\n  url: 'file:///opt/homebrew/lib/node_modules/zod-to-json-schema/node_modules/zod/v3'\n}\n\nNode.js v25.2.1\n"
+          }
+        }
+      },
+      "cli": {
+        "tools": {
+          "git": {
+            "status": "not_available",
+            "error": "Command failed: git --version\nxcrun: error: invalid DEVELOPER_DIR path (/Users/daniellynch/Developer), missing xcrun at: /Users/daniellynch/Developer/usr/bin/xcrun\n"
+          },
+          "node": {
+            "status": "available",
+            "version": "v25.2.1"
+          },
+          "npm": {
+            "status": "available",
+            "version": "11.7.0"
+          },
+          "yarn": {
+            "status": "available",
+            "version": "1.22.22"
+          },
+          "pnpm": {
+            "status": "available",
+            "version": "10.26.2"
+          },
+          "python": {
+            "status": "available",
+            "version": "Python 3.14.2"
+          },
+          "pip": {
+            "status": "not_available",
+            "error": "Command failed: pip --version\n/bin/sh: pip: command not found\n"
+          },
+          "rust": {
+            "status": "available",
+            "version": "cargo 1.92.0 (Homebrew)"
+          },
+          "go": {
+            "status": "available",
+            "version": "go version go1.25.5 darwin/arm64"
+          },
+          "docker": {
+            "status": "available",
+            "version": "Docker version 29.1.3, build f52814d454"
+          },
+          "kubectl": {
+            "status": "available",
+            "version": "Client Version: v1.35.0\nKustomize Version: v5.7.1"
+          },
+          "terraform": {
+            "status": "available",
+            "version": "Terraform v1.14.3\non darwin_arm64"
+          },
+          "ansible": {
+            "status": "available",
+            "version": "ansible [core 2.20.1]\n  config file = None\n  configured module search path = ['/Users/daniellynch/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']\n  ansible python module location = /opt/homebrew/Cellar/ansible/13.1.0/libexec/lib/python3.14/site-packages/ansible\n  ansible collection location = /Users/daniellynch/.ansible/collections:/usr/share/ansible/collections\n  executable location = /opt/homebrew/bin/ansible\n  python version = 3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.4.4.1)] (/opt/homebrew/Cellar/ansible/13.1.0/libexec/bin/python)\n  jinja version = 3.1.6\n  pyyaml version = 6.0.3 (with libyaml v0.2.5)"
+          },
+          "aws": {
+            "status": "available",
+            "version": "aws-cli/2.32.24 Python/3.13.11 Darwin/25.3.0 source/arm64"
+          },
+          "gcloud": {
+            "status": "available",
+            "version": "Google Cloud SDK 550.0.0\nalpha 2025.12.12\nbeta 2025.12.12\nbq 2.1.26\ncore 2025.12.12\ngcloud-crc32c 1.0.0\ngke-gcloud-auth-plugin 0.5.10\ngsutil 5.35\nkubectl 1.33.4\nminikube 1.37.0\nskaffold 2.17.0"
+          },
+          "az": {
+            "status": "available",
+            "version": "azure-cli                         2.81.0\n\ncore                              2.81.0\ntelemetry                          1.1.0\n\nDependencies:\nmsal                            1.34.0b1\nazure-mgmt-resource               23.3.0\n\nPython location '/opt/homebrew/Cellar/azure-cli/2.81.0/libexec/bin/python'\nConfig directory '/Users/daniellynch/.azure'\nExtensions directory '/Users/daniellynch/.azure/cliextensions'\n\nPython (Darwin) 3.13.11 (main, Dec  5 2025, 16:06:33) [Clang 17.0.0 (clang-1700.4.4.1)]\n\nLegal docs and information: aka.ms/AzureCliLegal\n\n\nYour CLI is up-to-date."
+          },
+          "make": {
+            "status": "not_available",
+            "error": "Command failed: make --version\nxcrun: error: invalid DEVELOPER_DIR path (/Users/daniellynch/Developer), missing xcrun at: /Users/daniellynch/Developer/usr/bin/xcrun\n"
+          },
+          "cmake": {
+            "status": "available",
+            "version": "cmake version 4.2.1\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake)."
+          },
+          "ninja": {
+            "status": "available",
+            "version": "1.13.2"
+          },
+          "brew": {
+            "status": "available",
+            "version": "Homebrew 5.0.7-99-gd61f229"
+          },
+          "apt": {
+            "status": "not_available",
+            "error": "Command failed: apt --version\n/bin/sh: apt: command not found\n"
+          },
+          "yum": {
+            "status": "not_available",
+            "error": "Command failed: yum --version\n/bin/sh: yum: command not found\n"
+          },
+          "jq": {
+            "status": "available",
+            "version": "jq-1.7.1-apple"
+          },
+          "yq": {
+            "status": "available",
+            "version": "yq (https://github.com/mikefarah/yq/) version v4.50.1"
+          },
+          "sed": {
+            "status": "not_available",
+            "error": "Command failed: sed --version\nsed: illegal option -- -\nusage: sed script [-EHalnru] [-i extension] [file ...]\n\tsed [-EHalnu] [-i extension] [-e script] ... [-f script_file] ... [file ...]\n"
+          },
+          "awk": {
+            "status": "available",
+            "version": "awk version 20200816"
+          },
+          "htop": {
+            "status": "available",
+            "version": "htop 3.4.1"
+          },
+          "iotop": {
+            "status": "not_available",
+            "error": "Command failed: iotop --version\n/usr/bin/iotop: illegal option -- -\nUSAGE: iotop [-C] [-D|-o|-P] [-j|-Z] [-d device] [-f filename]\n             [-m mount_point] [-t top] [interval [count]]\n \n                -C      # don't clear the screen\n                -D      # print delta times, elapsed, us\n                -j      # print project ID\n                -o      # print disk delta times, us\n                -P      # print %I/O (disk delta times)\n                -Z      # print zone ID\n                -d device       # instance name to snoop \n                -f filename     # snoop this file only\n                -m mount_point  # this FS only \n                -t top  \t# print top number only\n   eg,\n        iotop         # default output, 5 second samples\n        iotop 1       # 1 second samples\n        iotop -P      # print %I/O (time based)\n        iotop -m /    # snoop events on filesystem / only\n        iotop -t 20   # print top 20 lines only\n        iotop -C 5 12 # print 12 x 5 second samples\n"
+          },
+          "nmon": {
+            "status": "not_available",
+            "error": "Command failed: nmon -h\n/bin/sh: nmon: command not found\n"
+          },
+          "curl": {
+            "status": "available",
+            "version": "curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.0\nRelease-Date: 2024-03-27\nProtocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns ldap ldaps mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp\nFeatures: alt-svc AsynchDNS GSS-API HSTS HTTP2 HTTPS-proxy IPv6 Kerberos Largefile libz MultiSSL NTLM SPNEGO SSL threadsafe UnixSockets"
+          },
+          "wget": {
+            "status": "available",
+            "version": "GNU Wget 1.25.0 built on darwin25.0.0.\n\n-cares +digest -gpgme +https +ipv6 +iri +large-file -metalink +nls \n+ntlm +opie -psl +ssl/openssl \n\nWgetrc: \n    /opt/homebrew/etc/wgetrc (system)\nLocale: \n    /opt/homebrew/Cellar/wget/1.25.0/share/locale \nCompile: \n    clang -DHAVE_CONFIG_H -DSYSTEM_WGETRC=\"/opt/homebrew/etc/wgetrc\" \n    -DLOCALEDIR=\"/opt/homebrew/Cellar/wget/1.25.0/share/locale\" -I. \n    -I../lib -I../lib -I/opt/homebrew/opt/openssl@3/include \n    -I/opt/homebrew/Cellar/libidn2/2.3.8/include -DNDEBUG -g -O2 \nLink: \n    clang -I/opt/homebrew/Cellar/libidn2/2.3.8/include -DNDEBUG -g -O2 \n    -L/opt/homebrew/Cellar/libidn2/2.3.8/lib -lidn2 \n    -L/opt/homebrew/opt/openssl@3/lib -lssl -lcrypto -ldl -lz \n    ../lib/libgnu.a -liconv -lintl -Wl,-framework -Wl,CoreFoundation \n    -Wl,-framework -Wl,CoreServices -lunistring \n\nCopyright (C) 2015 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later\n<http://www.gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nOriginally written by Hrvoje Niksic <hniksic@xemacs.org>.\nPlease send bug reports and questions to <bug-wget@gnu.org>."
+          },
+          "nmap": {
+            "status": "available",
+            "version": "Nmap version 7.98 ( https://nmap.org )\nPlatform: arm-apple-darwin25.0.0\nCompiled with: liblua-5.4.8 openssl-3.6.0 libssh2-1.11.1 libz-1.2.12 libpcre2-10.47 nmap-libpcap-(libpcap version ) nmap-libdnet-1.18.0 ipv6\nCompiled without:\nAvailable nsock engines: kqueue poll select"
+          },
+          "netstat": {
+            "status": "not_available",
+            "error": "Command failed: netstat --version\n--version: illegal option -- -\nUsage:\tnetstat [-AaLlnW] [-f address_family | -p protocol]\n\tnetstat [-gilns] [-f address_family]\n\tnetstat -i | -I interface [-w wait] [-abdgRtS]\n\tnetstat -s [-s] [-f address_family | -p protocol] [-w wait]\n\tnetstat -i | -I interface -s [-f address_family | -p protocol]\n\tnetstat -m [-m]\n\tnetstat -r [-Aaln] [-f address_family]\n\tnetstat -rs [-s]\n\n"
+          },
+          "psql": {
+            "status": "available",
+            "version": "psql (PostgreSQL) 14.20 (Homebrew)"
+          },
+          "mysql": {
+            "status": "available",
+            "version": "mysql  Ver 9.5.0 for macos26.1 on arm64 (Homebrew)"
+          },
+          "redis": {
+            "status": "available",
+            "version": "redis-cli 8.4.0"
+          },
+          "mongo": {
+            "status": "not_available",
+            "error": "Command failed: mongo --version\n/bin/sh: mongo: command not found\n"
+          },
+          "openssl": {
+            "status": "available",
+            "version": "OpenSSL 3.6.0 1 Oct 2025 (Library: OpenSSL 3.6.0 1 Oct 2025)"
+          },
+          "gpg": {
+            "status": "available",
+            "version": "gpg (GnuPG) 2.4.8\nlibgcrypt 1.11.2\nCopyright (C) 2025 g10 Code GmbH\nLicense GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nHome: /Users/daniellynch/.gnupg\nSupported algorithms:\nPubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA\nCipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,\n        CAMELLIA128, CAMELLIA192, CAMELLIA256\nHash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224\nCompression: Uncompressed, ZIP, ZLIB, BZIP2"
+          },
+          "ssh": {
+            "status": "available",
+            "version": ""
+          },
+          "tmux": {
+            "status": "available",
+            "version": "tmux 3.6a"
+          },
+          "screen": {
+            "status": "not_available",
+            "error": "Command failed: screen --version"
+          },
+          "vim": {
+            "status": "available",
+            "version": "VIM - Vi IMproved 9.1 (2024 Jan 02, compiled Dec  5 2025 02:06:55)\nmacOS version - arm64\nIncluded patches: 1-1752\nCompiled by root@apple.com\nNormal version without GUI.  Features included (+) or not (-):\n+acl               +find_in_path      +multi_byte        -tcl\n-arabic            +float             +multi_lang        +termguicolors\n+autocmd           +folding           -mzscheme          +terminal\n+autochdir         -footer            +netbeans_intg     +terminfo\n-autoservername    +fork()            +num64             +termresponse\n-balloon_eval      -gettext           +packages          +textobjects\n-balloon_eval_term -hangul_input      +path_extra        +textprop\n-browse            +iconv             -perl              +timers\n++builtin_terms    +insert_expand     +persistent_undo   +title\n+byte_offset       +ipv6              +popupwin          -toolbar\n+channel           +job               +postscript        +user_commands\n+cindent           +jumplist          +printer           -vartabs\n-clientserver      -keymap            -profile           +vertsplit\n+clipboard         +lambda            -python            +vim9script\n+cmdline_compl     -langmap           -python3           +viminfo\n+cmdline_hist      +libcall           +quickfix          +virtualedit\n+cmdline_info      +linebreak         +reltime           +visual\n+comments          +lispindent        -rightleft         +visualextra\n+conceal           +listcmds          -ruby              +vreplace\n+cryptv            +localmap          +scrollbind        -wayland\n+cscope            -lua               +signs             -wayland_clipboard\n+cursorbind        +menu              +smartindent       +wildignore\n+cursorshape       +mksession         -socketserver      +wildmenu\n+dialog_con        +modify_fname      -sodium            +windows\n+diff              +mouse             -sound             +writebackup\n+digraphs          -mouseshape        +spell             -X11\n-dnd               +mouse_dec         +startuptime       -xattr\n-ebcdic            -mouse_gpm         +statusline        -xfontset\n-emacs_tags        -mouse_jsbterm     -sun_workshop      -xim\n+eval              +mouse_netterm     +syntax            -xpm\n+ex_extra          +mouse_sgr         -tabpanel          -xsmp\n+extra_search      -mouse_sysmouse    +tag_binary        -xterm_clipboard\n-farsi             +mouse_urxvt       -tag_old_static    -xterm_save\n+file_in_path      +mouse_xterm       -tag_any_white     \n   system vimrc file: \"$VIM/vimrc\"\n     user vimrc file: \"$HOME/.vimrc\"\n 2nd user vimrc file: \"~/.vim/vimrc\"\n 3rd user vimrc file: \"$XDG_CONFIG_HOME/vim/vimrc\"\n      user exrc file: \"$HOME/.exrc\"\n       defaults file: \"$VIMRUNTIME/defaults.vim\"\n  fall-back for $VIM: \"/usr/share/vim\"\nCompilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H   -DMACOS_X_UNIX  -g -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1      \nLinking: gcc   -L/usr/local/lib -o vim        -lm -lncurses  -liconv -framework Cocoa"
+          },
+          "emacs": {
+            "status": "available",
+            "version": "GNU Emacs 30.2\nCopyright (C) 2025 Free Software Foundation, Inc.\nGNU Emacs comes with ABSOLUTELY NO WARRANTY.\nYou may redistribute copies of GNU Emacs\nunder the terms of the GNU General Public License.\nFor more information about these matters, see the file named COPYING."
+          },
+          "svn": {
+            "status": "not_available",
+            "error": "Command failed: svn --version\n/bin/sh: svn: command not found\n"
+          },
+          "mercurial": {
+            "status": "not_available",
+            "error": "Command failed: hg --version\n/bin/sh: hg: command not found\n"
+          },
+          "tar": {
+            "status": "available",
+            "version": "bsdtar 3.5.3 - libarchive 3.7.4 zlib/1.2.12 liblzma/5.4.3 bz2lib/1.0.8"
+          },
+          "gzip": {
+            "status": "available",
+            "version": ""
+          },
+          "zip": {
+            "status": "available",
+            "version": "Copyright (c) 1990-2008 Info-ZIP - Type 'zip \"-L\"' for software license.\nThis is Zip 3.0 (July 5th 2008), by Info-ZIP, with modifications by Apple Inc.\nPlease report bugs to Apple.\n\nCompiled with gcc Apple LLVM 17.0.0 (clang-1700.6.3.2) [+internal-os] for Unix (Mac OS X) on Dec  4 2025.\n\nZip special compilation options:\n\tUSE_EF_UT_TIME       (store Universal Time)\n\tSYMLINK_SUPPORT      (symbolic links supported)\n\tLARGE_FILE_SUPPORT   (can read and write large files on file system)\n\tZIP64_SUPPORT        (use Zip64 to store large files in archives)\n\tSTORE_UNIX_UIDs_GIDs (store UID/GID sizes/values using new extra field)\n\tUIDGID_16BIT         (old Unix 16-bit UID/GID extra field also used)\n\t[encryption, version 2.91 of 05 Jan 2007] (modified for Zip 3)\n\nEncryption notice:\n\tThe encryption code of this program is not copyrighted and is\n\tput in the public domain.  It was originally written in Europe\n\tand, to the best of our knowledge, can be freely distributed\n\tin both source and object forms from any country, including\n\tthe USA under License Exception TSU of the U.S. Export\n\tAdministration Regulations (section 740.13(e)) of 6 June 2002.\n\nZip environment options:\n             ZIP:  [none]\n          ZIPOPT:  [none]"
+          },
+          "rsync": {
+            "status": "available",
+            "version": "openrsync: protocol version 29\nrsync version 2.6.9 compatible"
+          },
+          "scp": {
+            "status": "not_available",
+            "error": "Command failed: scp -V\nscp: illegal option -- V\nusage: scp [-346ABCOpqRrsTv] [-c cipher] [-D sftp_server_path] [-F ssh_config]\n           [-i identity_file] [-J destination] [-l limit] [-o ssh_option]\n           [-P port] [-S program] [-X sftp_option] source ... target\n"
+          },
+          "sftp": {
+            "status": "not_available",
+            "error": "Command failed: sftp -V\nsftp: illegal option -- V\nusage: sftp [-46AaCfNpqrv] [-B buffer_size] [-b batchfile] [-c cipher]\n          [-D sftp_server_command] [-F ssh_config] [-i identity_file]\n          [-J destination] [-l limit] [-o ssh_option] [-P port]\n          [-R num_requests] [-S program] [-s subsystem | sftp_server]\n          [-X sftp_option] destination\n"
+          },
+          "systemctl": {
+            "status": "not_available",
+            "error": "Command failed: systemctl --version\n/bin/sh: systemctl: command not found\n"
+          },
+          "launchctl": {
+            "status": "available",
+            "version": "Darwin Bootstrapper Version 7.0.0: Fri Dec  5 01:55:46 PST 2025; root:libxpc_executables-3089.80.8~20/launchd/RELEASE_ARM64E"
+          },
+          "perf": {
+            "status": "not_available",
+            "error": "Command failed: perf --version\n/bin/sh: perf: command not found\n"
+          },
+          "strace": {
+            "status": "not_available",
+            "error": "Command failed: strace -V\n/bin/sh: strace: command not found\n"
+          },
+          "ltrace": {
+            "status": "not_available",
+            "error": "Command failed: ltrace --version\n/bin/sh: ltrace: command not found\n"
+          },
+          "grep": {
+            "status": "available",
+            "version": "grep (BSD grep, GNU compatible) 2.6.0-FreeBSD"
+          },
+          "find": {
+            "status": "not_available",
+            "error": "Command failed: find --version\nfind: illegal option -- -\nusage: find [-H | -L | -P] [-EXdsx] [-f path] path ... [expression]\n       find [-H | -L | -P] [-EXdsx] -f path [path ...] [expression]\n"
+          },
+          "xargs": {
+            "status": "not_available",
+            "error": "Command failed: xargs --version\nxargs: unrecognized option `--version'\nusage: xargs [-0opt] [-E eofstr] [-I replstr [-R replacements] [-S replsize]]\n             [-J replstr] [-L number] [-n number [-x]] [-P maxprocs]\n             [-s size] [utility [argument ...]]\n"
+          }
+        },
+        "summary": {
+          "available": 39,
+          "total": 60
+        }
+      },
+      "system": {
+        "environment": {
+          "NODE_ENV": "set",
+          "PATH": "set",
+          "HOME": "set",
+          "USER": "set",
+          "OLLAMA_BASE_URL": "set",
+          "ANTHROPIC_API_KEY": "not_set",
+          "OPENAI_API_KEY": "not_set",
+          "GITHUB_TOKEN": "not_set",
+          "AWS_ACCESS_KEY_ID": "not_set"
+        },
+        "permissions": {
+          "package.json": {
+            "exists": true,
+            "executable": false,
+            "readable": true
+          },
+          ".cursor/mcp/servers.json": {
+            "exists": true,
+            "executable": false,
+            "readable": true
+          },
+          "validate-vendor-tools.js": {
+            "exists": true,
+            "executable": true,
+            "readable": true
+          },
+          "infrastructure-setup.sh": {
+            "exists": true,
+            "executable": true,
+            "readable": true
+          }
+        },
+        "nodeModules": {
+          "dependencies": [
+            "@1password/sdk",
+            "@clerk/clerk-sdk-node",
+            "@fastify/postgres",
+            "@prisma/client",
+            "apollo-server",
+            "graphql",
+            "hono",
+            "prom-client",
+            "redis",
+            "vitest",
+            "zod"
+          ],
+          "devDependencies": [
+            "@playwright/test",
+            "@types/node",
+            "@vitest/coverage-v8",
+            "eslint",
+            "prisma",
+            "typescript",
+            "vite"
+          ]
+        }
+      },
+      "recommendations": [
+        {
+          "category": "OpenCode",
+          "priority": "medium",
+          "issue": "OpenCode agent commands returning warnings",
+          "solution": "Verify agent configuration and update OpenCode"
+        },
+        {
+          "category": "CLI Tools",
+          "priority": "medium",
+          "issue": "21 CLI tools not available",
+          "solution": "Install missing development tools or update PATH"
+        },
+        {
+          "category": "Environment",
+          "priority": "medium",
+          "issue": "4 environment variables not set",
+          "solution": "Configure API keys and environment variables"
+        }
+      ]
+    },
+    "errors": [],
+    "warnings": [
+      "⚠️  OpenCode command exited with code null",
+      "OpenCode stderr: \u001b[93m\u001b[1m! \u001b[0m agent \"general\" is a subagent, not a primary agent. Falling back to default agent\n\u001b[91m\u001b[1m| \u001b[0m\u001b[90m Bash     \u001b[0mPrints \"test\" to stdout\n\ntest\n\n",
+      "⚠️  Ollama inference timed out (normal for slow models)",
+      "⚠️  MCP server ollama-mcp issue (code: null)",
+      "⚠️  MCP server @modelcontextprotocol/server-filesystem issue (code: null)",
+      "⚠️  MCP server @modelcontextprotocol/server-git issue (code: 1)",
+      "⚠️  MCP server @modelcontextprotocol/server-sequential-thinking issue (code: 1)",
+      "1. [MEDIUM] OpenCode: OpenCode agent commands returning warnings",
+      "2. [MEDIUM] CLI Tools: 21 CLI tools not available",
+      "3. [MEDIUM] Environment: 4 environment variables not set"
+    ],
+    "summary": {
+      "opencodeStatus": "operational",
+      "ollamaStatus": "operational",
+      "mcpWorking": 4,
+      "mcpTotal": 4,
+      "cliAvailable": 39,
+      "cliTotal": 60,
+      "recommendationsCount": 3
+    }
+  },
+  "evaluation": {
+    "systemHealth": "healthy",
+    "criticalIssues": [],
+    "improvementAreas": [
+      "CLI tool ecosystem incomplete",
+      "4 environment variables missing"
+    ],
+    "confidenceScore": 80,
+    "nextSteps": [
+      "Configure missing environment variables",
+      "Fix MCP server ES module issues",
+      "Install missing CLI tools",
+      "Re-test OpenCode and Ollama integration"
+    ]
+  },
+  "timestamp": "2025-12-28T23:19:36.532Z"
+}

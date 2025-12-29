@@ -1,0 +1,6 @@
+Repo audit for /Users/daniellynch/Developer (2025-12-21):
+- Symlink health (excluding node_modules/.venv/.git): 40 GREEN, 2 YELLOW, 0 RED. YELLOW: `Projects -> ../Projects` (points outside repo) and `packages/@shared/config/src/litellm/config.yaml -> /Users/daniellynch/.config/litellm/config.yaml` (absolute link; resolves via home config symlink). No broken symlinks.
+- Root sprawl vs tooling/sprawl/policy.json allowlist (worktree scan): unknown dirs = `1`, `backups`, `dags`, `kubernetes`, `lib`, `mlruns`, `node_modules`, `prisma`, `reports`, `~`; unknown files = 79 including many one-off .py/.js/.md reports (see audit output). Indicates local loose files not covered by policy.
+- pnpm-workspace.yaml misses real Node packages: `services/llm-evaluation`, `shared/packages/websocket-server`, `examples/a2a-integration` (all have package.json). workspace also includes `tools` (directory absent). Suggest aligning pnpm-workspace with actual packages.
+- Vendor duplication: `shared/vendor-configs/{chezmoi,google-ai}` duplicated under `vendor/configs/{chezmoi,google-ai}`.
+- Toolchain (mise): mise 2025.12.12; node 24.12.0; pnpm 10.15.0; python 3.12.8; uv 0.9.17; chezmoi 2.68.1. `package.json` packageManager=pnpm@10.15.0 matches mise.

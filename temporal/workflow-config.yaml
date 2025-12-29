@@ -1,0 +1,230 @@
+# Temporal Workflow Configuration
+# Event-driven architecture for AI Agency
+
+# Global settings
+namespace: ai-agency
+taskQueue: ai-tasks
+workerIdentity: ai-agency-worker
+
+# Workflow settings
+workflows:
+  # Project Management Workflows
+  - name: "project-creation-workflow"
+    description: "Handles project creation and initial setup"
+    timeout: "24h"
+    retryPolicy:
+      initialInterval: "1s"
+      backoffCoefficient: 2.0
+      maximumInterval: "100s"
+      maximumAttempts: 10
+
+  - name: "ai-model-training-workflow"
+    description: "Manages AI model training pipelines"
+    timeout: "72h"
+    retryPolicy:
+      initialInterval: "5s"
+      backoffCoefficient: 1.5
+      maximumInterval: "300s"
+      maximumAttempts: 5
+
+  - name: "user-onboarding-workflow"
+    description: "Handles new user onboarding process"
+    timeout: "1h"
+    retryPolicy:
+      initialInterval: "1s"
+      backoffCoefficient: 2.0
+      maximumInterval: "30s"
+      maximumAttempts: 3
+
+  - name: "billing-cycle-workflow"
+    description: "Manages monthly billing cycles"
+    timeout: "24h"
+    cronSchedule: "0 0 1 * *"  # First day of every month
+
+# Activity settings
+activities:
+  - name: "create-project-activity"
+    timeout: "15m"
+    retryPolicy:
+      initialInterval: "2s"
+      backoffCoefficient: 1.5
+      maximumAttempts: 3
+
+  - name: "setup-database-activity"
+    timeout: "10m"
+    retryPolicy:
+      initialInterval: "1s"
+      backoffCoefficient: 2.0
+      maximumAttempts: 5
+
+  - name: "train-ai-model-activity"
+    timeout: "2h"
+    retryPolicy:
+      initialInterval: "10s"
+      backoffCoefficient: 1.2
+      maximumAttempts: 3
+
+  - name: "send-notification-activity"
+    timeout: "5m"
+    retryPolicy:
+      initialInterval: "1s"
+      backoffCoefficient: 1.5
+      maximumAttempts: 3
+
+# Event triggers
+triggers:
+  - name: "project-created-trigger"
+    event: "project.created"
+    workflow: "project-creation-workflow"
+    conditions:
+      - field: "agencyId"
+        operator: "exists"
+
+  - name: "user-registered-trigger"
+    event: "user.registered"
+    workflow: "user-onboarding-workflow"
+    conditions:
+      - field: "email"
+        operator: "contains"
+        value: "@"
+
+  - name: "model-training-trigger"
+    event: "dataset.uploaded"
+    workflow: "ai-model-training-workflow"
+    conditions:
+      - field: "size"
+        operator: "greaterThan"
+        value: 1000000  # 1MB
+
+  - name: "billing-trigger"
+    event: "billing.cycle_started"
+    workflow: "billing-cycle-workflow"
+    schedule: "monthly"
+
+# Hooks configuration
+hooks:
+  - name: "pre-workflow-hook"
+    type: "pre"
+    script: "hooks/pre-workflow-validation.sh"
+    timeout: "30s"
+
+  - name: "post-workflow-hook"
+    type: "post"
+    script: "hooks/post-workflow-notification.sh"
+    timeout: "30s"
+
+  - name: "error-workflow-hook"
+    type: "error"
+    script: "hooks/workflow-error-handler.sh"
+    timeout: "60s"
+
+# Pipeline configurations
+pipelines:
+  - name: "ai-training-pipeline"
+    steps:
+      - name: "data-validation"
+        activity: "validate-dataset-activity"
+        timeout: "10m"
+      - name: "model-preparation"
+        activity: "prepare-model-activity"
+        timeout: "15m"
+      - name: "training-execution"
+        activity: "train-model-activity"
+        timeout: "2h"
+      - name: "model-validation"
+        activity: "validate-model-activity"
+        timeout: "30m"
+      - name: "deployment"
+        activity: "deploy-model-activity"
+        timeout: "10m"
+
+  - name: "user-onboarding-pipeline"
+    steps:
+      - name: "account-verification"
+        activity: "verify-account-activity"
+        timeout: "5m"
+      - name: "profile-setup"
+        activity: "setup-profile-activity"
+        timeout: "10m"
+      - name: "workspace-creation"
+        activity: "create-workspace-activity"
+        timeout: "5m"
+      - name: "welcome-notification"
+        activity: "send-welcome-activity"
+        timeout: "2m"
+
+# Event streaming configuration
+eventStreaming:
+  kafka:
+    brokers: ["localhost:9092"]
+    topics:
+      - name: "workflow-events"
+        partitions: 3
+        replicationFactor: 1
+      - name: "activity-events"
+        partitions: 2
+        replicationFactor: 1
+      - name: "system-events"
+        partitions: 1
+        replicationFactor: 1
+
+  # Event schemas
+  schemas:
+    - event: "project.created"
+      schema:
+        type: "object"
+        properties:
+          projectId: { type: "string" }
+          name: { type: "string" }
+          agencyId: { type: "string" }
+          createdBy: { type: "string" }
+        required: ["projectId", "name", "agencyId"]
+
+    - event: "user.registered"
+      schema:
+        type: "object"
+        properties:
+          userId: { type: "string" }
+          email: { type: "string" }
+          role: { type: "string" }
+          agencyId: { type: "string", nullable: true }
+        required: ["userId", "email"]
+
+# Monitoring and alerting
+monitoring:
+  metrics:
+    enabled: true
+    prometheus:
+      port: 9092
+      path: "/metrics"
+
+  alerts:
+    - name: "workflow-failure"
+      condition: "workflow.failed.count > 5"
+      severity: "critical"
+      channels: ["slack", "email"]
+
+    - name: "high-latency"
+      condition: "workflow.duration.p95 > 300"
+      severity: "warning"
+      channels: ["slack"]
+
+# Circuit breaker configuration
+circuitBreaker:
+  failureThreshold: 5
+  recoveryTimeout: "60s"
+  monitoringPeriod: "10s"
+
+# Dead letter queue configuration
+dlq:
+  enabled: true
+  kafkaTopic: "workflow-dlq"
+  maxRetries: 3
+
+# Scaling configuration
+scaling:
+  minWorkers: 2
+  maxWorkers: 20
+  targetConcurrency: 50
+  scaleUpThreshold: 0.8
+  scaleDownThreshold: 0.3

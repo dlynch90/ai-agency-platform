@@ -1,0 +1,276 @@
+// Prisma schema for AI Agency Platform
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User Management
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  avatar        String?
+  role          UserRole  @default(USER)
+  tenantId      String?
+  tenant        Tenant?   @relation(fields: [tenantId], references: [id])
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  sessions      Session[]
+  accounts      Account[]
+  projects      Project[]
+  apiKeys       ApiKey[]
+  auditLogs     AuditLog[]
+
+  @@map("users")
+}
+
+model Tenant {
+  id          String   @id @default(cuid())
+  name        String
+  domain      String?  @unique
+  plan        Plan     @default(FREE)
+  settings    Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  users       User[]
+  projects    Project[]
+  apiKeys     ApiKey[]
+
+  @@map("tenants")
+}
+
+// Authentication
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+// API Management
+model ApiKey {
+  id          String    @id @default(cuid())
+  name        String
+  key         String    @unique
+  userId      String?
+  tenantId    String?
+  permissions Json
+  expiresAt   DateTime?
+  lastUsedAt  DateTime?
+  createdAt   DateTime  @default(now())
+
+  user   User?   @relation(fields: [userId], references: [id])
+  tenant Tenant? @relation(fields: [tenantId], references: [id])
+
+  @@map("api_keys")
+}
+
+// Project Management
+model Project {
+  id          String           @id @default(cuid())
+  name        String
+  description String?
+  status      ProjectStatus    @default(ACTIVE)
+  type        ProjectType
+  userId      String
+  tenantId    String?
+  settings    Json?
+  metadata    Json?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  user     User                @relation(fields: [userId], references: [id])
+  tenant   Tenant?             @relation(fields: [tenantId], references: [id])
+  tasks    Task[]
+  files    File[]
+
+  @@map("projects")
+}
+
+model Task {
+  id          String     @id @default(cuid())
+  title       String
+  description String?
+  status      TaskStatus @default(TODO)
+  priority    Priority   @default(MEDIUM)
+  projectId   String
+  assigneeId  String?
+  parentId    String?
+  dueDate     DateTime?
+  estimatedHours Float?
+  actualHours   Float?
+  tags        String[]
+  metadata    Json?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  project   Project    @relation(fields: [projectId], references: [id])
+  assignee  User?      @relation(fields: [assigneeId], references: [id])
+  subtasks  Task[]     @relation("TaskHierarchy")
+  parent    Task?      @relation("TaskHierarchy", fields: [parentId], references: [id])
+
+  @@map("tasks")
+}
+
+model File {
+  id          String   @id @default(cuid())
+  name        String
+  path        String
+  size        Int
+  mimeType    String
+  checksum    String
+  projectId   String
+  uploadedBy  String
+  metadata    Json?
+  createdAt   DateTime @default(now())
+
+  project    Project   @relation(fields: [projectId], references: [id])
+  uploader   User      @relation(fields: [uploadedBy], references: [id])
+
+  @@map("files")
+}
+
+// AI Service Integrations
+model AIService {
+  id          String        @id @default(cuid())
+  name        String
+  provider    AIProvider
+  model       String
+  apiKeyId    String?
+  config      Json
+  isActive    Boolean       @default(true)
+  usage       Json?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  apiKey      ApiKey?       @relation(fields: [apiKeyId], references: [id])
+  requests    AIRequest[]
+
+  @@map("ai_services")
+}
+
+model AIRequest {
+  id          String      @id @default(cuid())
+  serviceId   String
+  userId      String
+  prompt      String
+  response    String?
+  tokens      Int?
+  cost        Float?
+  latency     Int?        // milliseconds
+  status      RequestStatus @default(PENDING)
+  metadata    Json?
+  createdAt   DateTime    @default(now())
+  completedAt DateTime?
+
+  service     AIService   @relation(fields: [serviceId], references: [id])
+  user        User        @relation(fields: [userId], references: [id])
+
+  @@map("ai_requests")
+}
+
+// Audit & Logging
+model AuditLog {
+  id          String     @id @default(cuid())
+  userId      String?
+  action      String
+  resource    String
+  resourceId  String?
+  details     Json?
+  ipAddress   String?
+  userAgent   String?
+  createdAt   DateTime   @default(now())
+
+  user        User?      @relation(fields: [userId], references: [id])
+
+  @@map("audit_logs")
+}
+
+// Enums
+enum UserRole {
+  USER
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum Plan {
+  FREE
+  PRO
+  ENTERPRISE
+}
+
+enum ProjectStatus {
+  ACTIVE
+  ARCHIVED
+  DELETED
+}
+
+enum ProjectType {
+  CONTENT_GENERATION
+  ECOMMERCE
+  CUSTOMER_SERVICE
+  ANALYTICS
+  CUSTOM
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  REVIEW
+  DONE
+  CANCELLED
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum AIProvider {
+  OPENAI
+  ANTHROPIC
+  HUGGINGFACE
+  COHERE
+  REPLICATE
+  CUSTOM
+}
+
+enum RequestStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}

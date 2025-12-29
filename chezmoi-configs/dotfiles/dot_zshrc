@@ -1,0 +1,20 @@
+
+# AGI Environment Zsh Configuration
+export PATH="$HOME/.local/bin:$PATH"
+export PYTHONPATH="$HOME/Developer:$PYTHONPATH"
+
+# MCP Server configurations
+export MCP_SERVER_ENDPOINT="http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab"
+
+# AI/ML configurations
+export OPENAI_API_KEY="your_key_here"
+export ANTHROPIC_API_KEY="your_key_here"
+
+# Database configurations
+export DATABASE_URL="postgresql://user:pass@localhost:5432/agi_db"
+export REDIS_URL="redis://localhost:6379"
+
+# Development tools
+alias agi-start="pixi run start"
+alias agi-test="python comprehensive_unit_tests.py"
+alias agi-debug="python critical_fixes.py"

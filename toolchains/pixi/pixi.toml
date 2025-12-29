@@ -1,0 +1,96 @@
+[workspace]
+authors = ["Daniel Lynch <developer@empathyfirstmedia.com>"]
+channels = ["conda-forge", "https://prefix.dev/conda-forge"]
+name = "pixi-node"
+platforms = ["osx-arm64", "linux-64"]
+version = "0.1.0"
+
+[dependencies]
+# Node.js runtime
+nodejs = ">=25.2.1,<25.3"
+npm = ">=10.2.0,<11"
+yarn = ">=1.22.0,<2"
+
+# Development tools
+typescript = ">=5.3.0,<6"
+eslint = ">=8.55.0,<9"
+prettier = ">=3.1.0,<4"
+
+# Testing frameworks
+vitest = ">=1.0.0,<2"
+playwright = ">=1.40.0,<2"
+
+# Build tools
+webpack = ">=5.89.0,<6"
+rollup = ">=4.9.0,<5"
+vite = ">=5.0.0,<6"
+
+# Development servers
+http-server = ">=14.1.0,<15"
+
+[feature.react]
+platforms = ["osx-arm64", "linux-64"]
+channels = ["conda-forge"]
+dependencies = { react = ">=18.2.0,<19", "react-dom" = ">=18.2.0,<19", nextjs = ">=14.0.0,<15" }
+
+[feature.vue]
+platforms = ["osx-arm64", "linux-64"]
+channels = ["conda-forge"]
+dependencies = { vue = ">=3.4.0,<4", nuxt = ">=3.9.0,<4" }
+
+[feature.testing-extended]
+platforms = ["osx-arm64", "linux-64"]
+channels = ["conda-forge"]
+dependencies = { jest = ">=29.7.0,<30", cypress = ">=13.6.0,<14", testing-library = ">=14.0.0,<15" }
+
+[tasks]
+# Package management
+install = "npm install"
+install-prod = "npm ci --only=production"
+update = "npm update"
+
+# Development
+dev = "npm run dev"
+build = "npm run build"
+start = "npm start"
+serve = "npx http-server dist -p 3000"
+
+# Testing
+test = "npm test"
+test-watch = "npm run test:watch"
+test-e2e = "npx playwright test"
+test-coverage = "npm run test:coverage"
+
+# Quality checks
+lint = "npm run lint"
+lint-fix = "npm run lint:fix"
+format = "npm run format"
+type-check = "npx tsc --noEmit"
+
+# Quality pipeline
+quality = "pixi run lint && pixi run type-check && pixi run test"
+
+# React development
+react-dev = "pixi run --feature react dev"
+react-build = "pixi run --feature react build"
+
+# Vue development
+vue-dev = "pixi run --feature vue dev"
+vue-build = "pixi run --feature vue build"
+
+# Extended testing
+test-full = "pixi run --feature testing-extended test-e2e"
+
+# Clean tasks
+clean = "rm -rf node_modules dist build .next .nuxt"
+clean-cache = "npm cache clean --force"
+
+# Full development workflow
+setup = "pixi run install && pixi run quality"
+ci = "pixi run install && pixi run quality && pixi run build && pixi run test-full"
+
+[environments]
+basic = []
+react = ["react"]
+vue = ["vue"]
+fullstack = ["react", "vue", "testing-extended"]

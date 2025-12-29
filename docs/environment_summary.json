@@ -1,0 +1,22 @@
+{
+  "timestamp": 1766952127.887763,
+  "project_root": "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}",
+  "pixi_version": "pixi 0.62.2",
+  "services_status": {
+    "neo4j": false,
+    "qdrant": false,
+    "redis": false,
+    "postgres": false,
+    "elasticsearch": false,
+    "ollama": false
+  },
+  "mcp_servers_status": {
+    "running": true
+  },
+  "environment_variables": {
+    "PATH": "${USER_HOME:-$HOME}/.codeium/windsurf/bin:${USER_HOME:-$HOME}/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/System/Cryptexes/App/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:${USER_HOME:-$HOME}/.lmstudio/bin",
+    "HOME": "${USER_HOME:-$HOME}",
+    "USER": "daniellynch",
+    "SHELL": "/bin/zsh"
+  }
+}

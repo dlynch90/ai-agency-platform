@@ -1,0 +1,1 @@
+Disabled Claude Code 1Password event logging cache flag to stop repeated "1P event logging: N events failed to export" errors by setting `cachedStatsigGates.tengu_log_1p_events` to `false` in `~/.claude.json` (backup `~/.claude.json.bak-20251219030651`).

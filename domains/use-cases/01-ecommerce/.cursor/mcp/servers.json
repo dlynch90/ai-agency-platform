@@ -1,0 +1,42 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${DEVELOPER_DIR:-$HOME/Developer}"],
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "git": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "${DEVELOPER_DIR:-$HOME/Developer}"],
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "ollama": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-ollama"],
+      "env": {
+        "OLLAMA_BASE_URL": "http://localhost:11434",
+        "NODE_ENV": "production"
+      }
+    },
+    "anthropic": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-anthropic"],
+      "env": {
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY:-}",
+        "NODE_ENV": "production"
+      }
+    },
+    "openai": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-openai"],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY:-}",
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

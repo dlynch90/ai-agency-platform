@@ -1,0 +1,220 @@
+{
+  "binomial_analysis": {
+    "parameters": {
+      "p_threshold": 0.1,
+      "n_trials": 5,
+      "confidence_level": 0.95
+    },
+    "summary": {
+      "total_lines_analyzed": 17448853,
+      "patterns_detected": {
+        "magic_numbers": 1026545,
+        "console_logging": 21142,
+        "hardcoded_paths": 6707,
+        "large_functions": 263326,
+        "custom_scripts": 816,
+        "todo_comments": 15385,
+        "complex_conditionals": 4584,
+        "empty_catches": 414,
+        "deprecated_apis": 2112,
+        "circular_imports": 756
+      },
+      "edge_cases_found": 1341787
+    },
+    "risk_assessment": {
+      "total_edge_cases": 1341787,
+      "severity_breakdown": {
+        "medium": 1034057,
+        "low": 299853,
+        "high": 7877
+      },
+      "risk_score": 2391598,
+      "normalized_risk": 1.0,
+      "risk_level": "critical"
+    },
+    "boundary_violations": {
+      "count": 149,
+      "details": [
+        {
+          "file": "infra/setup_mcp_servers.sh.backup",
+          "high_severity_issues": 11,
+          "total_issues": 39,
+          "issue_types": [
+            "hardcoded_paths",
+            "magic_numbers",
+            "custom_scripts"
+          ],
+          "risk_level": "high"
+        },
+        {
+          "file": "infra/setup_mcp_pnpm.sh.backup",
+          "high_severity_issues": 12,
+          "total_issues": 23,
+          "issue_types": [
+            "hardcoded_paths",
+            "magic_numbers",
+            "custom_scripts"
+          ],
+          "risk_level": "high"
+        },
+        {
+          "file": "infra/setup_cron_jobs.sh.backup",
+          "high_severity_issues": 15,
+          "total_issues": 35,
+          "issue_types": [
+            "hardcoded_paths",
+            "magic_numbers",
+            "complex_conditionals",
+            "custom_scripts"
+          ],
+          "risk_level": "high"
+        },
+        {
+          "file": "tools/python/infinitesimal_gap_analysis.py",
+          "high_severity_issues": 3,
+          "total_issues": 64,
+          "issue_types": [
+            "hardcoded_paths",
+            "magic_numbers",
+            "console_logging",
+            "large_functions"
+          ],
+          "risk_level": "medium"
+        },
+        {
+          "file": "tools/python/numerical-methods-audit.py",
+          "high_severity_issues": 3,
+          "total_issues": 42,
+          "issue_types": [
+            "todo_comments",
+            "console_logging",
+            "hardcoded_paths",
+            "magic_numbers",
+            "large_functions"
+          ],
+          "risk_level": "medium"
+        },
+        {
+          "file": "tools/python/comprehensive_unit_tests.py.backup",
+          "high_severity_issues": 4,
+          "total_issues": 40,
+          "issue_types": [
+            "hardcoded_paths",
+            "magic_numbers",
+            "console_logging",
+            "large_functions"
+          ],
+          "risk_level": "medium"
+        },
+        {
+          "file": "tools/python/infinitesimal_gap_analysis.py.backup",
+          "high_severity_issues": 3,
+          "total_issues": 64,
+          "issue_types": [
+            "hardcoded_paths",
+            "magic_numbers",
+            "console_logging",
+            "large_functions"
+          ],
+          "risk_level": "medium"
+        },
+        {
+          "file": "tools/python/critical_fixes.py.backup",
+          "high_severity_issues": 9,
+          "total_issues": 106,
+          "issue_types": [
+            "console_logging",
+            "magic_numbers",
+            "hardcoded_paths",
+            "large_functions"
+          ],
+          "risk_level": "high"
+        },
+        {
+          "file": "tools/python/finite-element-sphere-analysis.py.backup",
+          "high_severity_issues": 4,
+          "total_issues": 41,
+          "issue_types": [
+            "todo_comments",
+            "console_logging",
+            "hardcoded_paths",
+            "magic_numbers",
+            "large_functions"
+          ],
+          "risk_level": "medium"
+        },
+        {
+          "file": "tools/python/debug_cursor_issues.py.backup",
+          "high_severity_issues": 4,
+          "total_issues": 35,
+          "issue_types": [
+            "hardcoded_paths",
+            "magic_numbers",
+            "console_logging",
+            "large_functions"
+          ],
+          "risk_level": "medium"
+        }
+      ]
+    },
+    "pattern_analysis": {
+      "hardcoded_paths": {
+        "expected_p": 0.05,
+        "detected_cases": 6707,
+        "severity": "high"
+      },
+      "custom_scripts": {
+        "expected_p": 0.08,
+        "detected_cases": 816,
+        "severity": "medium"
+      },
+      "complex_conditionals": {
+        "expected_p": 0.07,
+        "detected_cases": 4584,
+        "severity": "medium"
+      },
+      "large_functions": {
+        "expected_p": 0.15,
+        "detected_cases": 263326,
+        "severity": "low"
+      },
+      "console_logging": {
+        "expected_p": 0.12,
+        "detected_cases": 21142,
+        "severity": "low"
+      },
+      "circular_imports": {
+        "expected_p": 0.03,
+        "detected_cases": 756,
+        "severity": "high"
+      },
+      "magic_numbers": {
+        "expected_p": 0.1,
+        "detected_cases": 1026545,
+        "severity": "medium"
+      },
+      "empty_catches": {
+        "expected_p": 0.04,
+        "detected_cases": 414,
+        "severity": "high"
+      },
+      "todo_comments": {
+        "expected_p": 0.2,
+        "detected_cases": 15385,
+        "severity": "low"
+      },
+      "deprecated_apis": {
+        "expected_p": 0.06,
+        "detected_cases": 2112,
+        "severity": "medium"
+      }
+    }
+  },
+  "recommendations": [
+    "Focus remediation on high-severity edge cases first",
+    "Address boundary violations in files with multiple issues",
+    "Implement automated detection in CI/CD pipeline",
+    "Current risk level: critical",
+    "Regular binomial analysis recommended for codebase health"
+  ]
+}

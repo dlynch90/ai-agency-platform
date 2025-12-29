@@ -1,0 +1,210 @@
+[workspace]
+name = "ai-agency-platform"
+version = "0.1.0"
+description = "Universal AI Agency Platform with Pixi Package Management"
+authors = ["AI Agency <ai@agency.com>"]
+channels = ["conda-forge", "pytorch", "nvidia"]
+platforms = ["osx-arm64"]
+
+[system-requirements]
+macos = "11.0"
+linux = "20.04"
+
+# ============================================================================
+# FEATURES - Modular dependency groups
+# ============================================================================
+
+[feature.core.dependencies]
+# Core Python ecosystem
+python = ">=3.11,<3.13"
+pip = "*"
+setuptools = "*"
+wheel = "*"
+
+[feature.cli.dependencies]
+# CLI Tools & Utilities (cross-platform)
+bat = "*"
+fd-find = "*"
+fzf = "*"
+htop = "*"
+jq = "*"
+ripgrep = "*"
+tree = "*"
+yq = "*"
+zoxide = "*"
+
+[feature.ai-ml.dependencies]
+compilers = "*"
+cxx-compiler = "*"
+c-compiler = "*"
+cmake = "*"
+ninja = "*"
+pkg-config = "*"
+pyarrow = "*"
+scikit-learn = "*"
+huggingface_hub = "*"
+langchain = "*"
+langchain-community = "*"
+langchain-core = "*"
+langgraph = "*"
+langsmith = "*"
+ollama = "*"
+openai = "*"
+anthropic = "*"
+numpy = "*"
+scipy = "*"
+pandas = "*"
+matplotlib = "*"
+seaborn = "*"
+plotly = "*"
+networkx = "*"
+jupyter = "*"
+notebook = "*"
+ipykernel = "*"
+faiss-cpu = "*"
+
+[feature.ai-ml.pypi-dependencies]
+torch = "*"
+torchvision = "*"
+transformers = "*"
+accelerate = "*"
+pydantic-ai = "*"
+datasets = "*"
+transitions = "*"
+chromadb = "*"
+sentence-transformers = "*"
+llama-index = "*"
+# Mem0.ai integration dependencies
+mem0ai = "*"
+qdrant-client = "*"
+neo4j = "*"
+mcp = "*"
+
+[feature.database.dependencies]
+# Database Systems & Clients
+neo4j-python-driver = "*"
+postgresql = "*"
+redis-py = "*"
+# prisma = "*"  # Not available in conda-forge, use pip instead
+qdrant-client = "*"
+
+[feature.infrastructure.dependencies]
+# Infrastructure & Cloud Tools
+docker-py = "*"
+kubernetes = "*"
+terraform = "*"
+
+[feature.dev-tools.dependencies]
+# Development & Code Quality Tools
+ast-grep = "*"
+black = "*"
+mypy = "*"
+pre-commit = "*"
+ruff = "*"
+pytest = "*"
+isort = "*"
+bandit = "*"
+safety = "*"
+eslint = "*"
+prettier = "*"
+typescript = "*"
+
+[feature.web.dependencies]
+fastapi = "*"
+uvicorn = "*"
+pydantic = "*"
+requests = "*"
+httpx = "*"
+graphql-core = "*"
+
+[feature.nodejs.dependencies]
+nodejs = ">=18.0.0"
+
+[feature.jupyter.dependencies]
+# Jupyter ecosystem
+jupyter = "*"
+notebook = "*"
+ipykernel = "*"
+
+[feature.utils.dependencies]
+# Utility packages
+click = "*"
+rich = "*"
+pyyaml = "*"
+
+# ============================================================================
+# ENVIRONMENTS - Combinations of features
+# ============================================================================
+
+[environments]
+# Default: core + cli + dev-tools + utils (lightweight)
+default = { features = ["core", "cli", "dev-tools", "utils"], solve-group = "default" }
+
+# AI/ML environment: everything for ML work
+ai-ml = { features = ["core", "cli", "dev-tools", "utils", "ai-ml", "jupyter"], solve-group = "ai-ml" }
+
+# Database environment: database tools only
+database = { features = ["core", "cli", "dev-tools", "utils", "database"], solve-group = "database" }
+
+# Infrastructure environment: cloud/devops tools
+infrastructure = { features = ["core", "cli", "dev-tools", "utils", "infrastructure"], solve-group = "infrastructure" }
+
+# Full-stack: everything
+full-stack = { features = ["core", "cli", "dev-tools", "utils", "ai-ml", "database", "infrastructure", "web", "nodejs", "jupyter"], solve-group = "full-stack" }
+
+[activation.env]
+# Environment variables
+DEVELOPER_DIR = "${DEVELOPER_DIR:-$HOME/Developer}"
+USER_HOME = "${USER_HOME:-$HOME}"
+CONFIG_DIR = "${CONFIG_DIR:-$HOME/.config}"
+MCP_CONFIG_DIR = "${MCP_CONFIG_DIR:-$HOME/.cursor/mcp}"
+
+[tasks]
+# Core tasks
+install = "pixi install"
+update = "pixi update"
+doctor = "pixi run check && pixi run list-tools"
+audit = "python scripts/binary-audit.py"
+analyze = "python scripts/finite-element-analysis.py"
+
+# Binary audit and organization
+binary-audit = "python scripts/binary-audit.py"
+organize-files = "python scripts/organize-loose-files.sh"
+vendor-compliance = "python scripts/check-vendor-compliance.py"
+
+# FEA tasks
+fea-spherical = "python scripts/finite-element-sphere-analysis.py"
+fea-markov = "python scripts/markov-chain-analysis.py"
+fea-binomial = "python scripts/binomial-edge-case-detection.py"
+fea-pipeline = "python scripts/fea-integration-pipeline.py"
+
+# MCP tasks
+mcp-audit = "python scripts/mcp-server-audit.py"
+mcp-test = "python scripts/test-mcp-servers.js"
+
+# Authentication tasks
+auth-setup = "python scripts/cli-authentication-wrapper.sh --setup"
+
+# Tool validation
+validate-tools = "pixi run doctor && pixi run mcp-test"
+check-compliance = "python scripts/check-vendor-compliance.py"
+
+# Consolidated binary tasks
+install-nodejs = "pixi install --feature nodejs"
+install-ai-ml = "pixi install --feature ai-ml"
+install-database = "pixi install --feature database"
+install-infrastructure = "pixi install --feature infrastructure"
+
+# Development workflow
+dev-setup = "pixi install && pixi run binary-audit && pixi run organize-files"
+full-setup = "pixi run dev-setup && pixi run auth-setup && pixi run validate-tools"
+
+# Utility tasks
+list-tools = "echo 'Available tools:' && pixi task list"
+clean = "pixi clean cache"
+
+# Self-healing & maintenance tasks
+self-heal = "bash scripts/self-healing.sh"
+vendor-audit = "bash scripts/vendor-audit.sh"
+validate-paths = "bash scripts/validate-paths.sh"
+health-check = "pixi run validate-paths && pixi run vendor-audit"

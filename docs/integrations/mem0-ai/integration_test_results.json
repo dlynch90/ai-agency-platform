@@ -1,0 +1,38 @@
+{
+  "timestamp": "2024-12-28T12:00:00Z",
+  "environment": "pixi-ai-ml",
+  "tests": {
+    "pytorch_gpu": {
+      "torch_version": "2.9.1",
+      "device": "mps",
+      "cuda_available": false,
+      "mps_available": true,
+      "gpu_computation_successful": true,
+      "tensor_shape": "torch.Size([1000, 1000])"
+    },
+    "mem0_basic": {
+      "mem0_initialization": "expected_failure_no_qdrant",
+      "mem0_error": "The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable",
+      "mem0_version": "1.0.1"
+    },
+    "pydantic_ai": {
+      "pydantic_ai_import": "successful",
+      "agent_creation": "failed",
+      "agent_error": "Unknown model: test-model"
+    },
+    "vector_databases": {
+      "qdrant_client_creation": "successful",
+      "neo4j_driver_creation": "successful"
+    },
+    "mcp_client": {
+      "mcp_import": "successful",
+      "mcp_connection": "successful",
+      "mcp_tools_count": 14
+    }
+  },
+  "summary": {
+    "total_tests": 5,
+    "successful_tests": 1,
+    "success_rate": "1/5"
+  }
+}

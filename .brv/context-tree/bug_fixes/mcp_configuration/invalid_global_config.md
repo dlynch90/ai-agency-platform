@@ -1,0 +1,1 @@
+Fixed Claude Code /doctor error for invalid global MCP config by adding missing `type: "http"` to `mcpServers.byterover-mcp` in `~/.config/mcp/ssot.json` (symlink target of `~/.mcp.json`). Backup: `~/.config/mcp/ssot.json.bak-20251219031458`.

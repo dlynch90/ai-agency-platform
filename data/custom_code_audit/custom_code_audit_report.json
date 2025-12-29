@@ -1,0 +1,251 @@
+{
+  "audit_summary": {
+    "total_scripts_audited": 493,
+    "total_violations": 493,
+    "compliance_score": 25.05,
+    "violations_by_type": {
+      "node_utilities": 12,
+      "shell_scripts": 268,
+      "python_utilities": 203,
+      "custom_docker": 4,
+      "custom_ci_cd": 1,
+      "custom_config": 2,
+      "custom_build": 3
+    },
+    "violations_by_severity": {
+      "medium": 74,
+      "high": 262,
+      "critical": 129,
+      "low": 28
+    }
+  },
+  "replacement_plan": {
+    "migrate_to_npm_scripts": 12,
+    "migrate_to_vendor_task_runners": 268,
+    "migrate_to_cli_frameworks": 203,
+    "use_infrastructure_templates": 4,
+    "use_ci_cd_templates": 1,
+    "use_vendor_config_libs": 2,
+    "use_framework_defaults": 3
+  },
+  "vendor_alternatives": {
+    "node_utilities": [
+      "npm scripts",
+      "npx",
+      "oclif",
+      "commander.js",
+      "yargs",
+      "zx",
+      "esbuild scripts"
+    ],
+    "shell_scripts": [
+      "npm scripts",
+      "Makefile",
+      "justfile",
+      "taskfile",
+      "GitHub Actions",
+      "pre-commit hooks",
+      "lefthook"
+    ],
+    "python_utilities": [
+      "click",
+      "typer",
+      "fire",
+      "invoke",
+      "doit",
+      "langchain agents",
+      "crewai tasks",
+      "prefect flows"
+    ],
+    "custom_docker": [
+      "docker-compose templates",
+      "kubernetes manifests",
+      "helm charts",
+      "kustomize"
+    ],
+    "custom_ci_cd": [
+      "GitHub Actions templates",
+      "pre-commit.ci",
+      "semantic-release",
+      "release-please"
+    ],
+    "custom_config": [
+      "cosmiconfig",
+      "rc",
+      "dotenv",
+      "convict",
+      "configstore",
+      "conf"
+    ],
+    "custom_build": [
+      "create-react-app",
+      "next.js",
+      "nuxt.js",
+      "vite templates",
+      "astro",
+      "svelte-kit"
+    ]
+  },
+  "top_violations": [
+    {
+      "file": "tools/python/validate_installations.py.backup.backup",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "tools/python/validate_installations.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "tools/python/final-verification.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "tools/python/debug-use-cases.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "domains/use-cases/01-ecommerce/final-verification.sh",
+      "type": "shell_scripts",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "npm scripts",
+      "strategy": "migrate_to_vendor_task_runners"
+    },
+    {
+      "file": "scripts/validate_installations.py.backup",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "scripts/fea-integration-pipeline.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "scripts/analysis/final-verification.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "scripts/analysis/debug-use-cases.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "venv311/lib/python3.11/site-packages/torch/utils/show_pickle.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "venv311/lib/python3.11/site-packages/numpy/testing/print_coercion_tables.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 10.0,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "venv311/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/api.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 9.76,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "scripts/validate_installations.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 9.74,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "venv311/lib/python3.11/site-packages/torch/distributed/elastic/utils/distributed.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 9.74,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "tools/python/validate_installations.py.backup",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 9.7,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "scripts/validate-code.sh",
+      "type": "shell_scripts",
+      "severity": "critical",
+      "complexity": 9.52,
+      "alternative": "npm scripts",
+      "strategy": "migrate_to_vendor_task_runners"
+    },
+    {
+      "file": "venv311/lib/python3.11/site-packages/torch/distributed/elastic/metrics/api.py",
+      "type": "python_utilities",
+      "severity": "critical",
+      "complexity": 9.42,
+      "alternative": "click",
+      "strategy": "migrate_to_cli_frameworks"
+    },
+    {
+      "file": "scripts/install-vendor-tools.sh.backup",
+      "type": "shell_scripts",
+      "severity": "critical",
+      "complexity": 9.38,
+      "alternative": "npm scripts",
+      "strategy": "migrate_to_vendor_task_runners"
+    },
+    {
+      "file": "scripts/start-mcp-ecosystem.sh.backup",
+      "type": "shell_scripts",
+      "severity": "critical",
+      "complexity": 9.36,
+      "alternative": "npm scripts",
+      "strategy": "migrate_to_vendor_task_runners"
+    },
+    {
+      "file": "scripts/fix_environment.sh",
+      "type": "shell_scripts",
+      "severity": "critical",
+      "complexity": 9.36,
+      "alternative": "npm scripts",
+      "strategy": "migrate_to_vendor_task_runners"
+    }
+  ]
+}

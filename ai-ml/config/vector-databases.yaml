@@ -1,0 +1,442 @@
+# Vector Database Configuration
+# Production-ready configuration for Qdrant, Weaviate, and Chroma
+# Version: 2.0.0
+
+# =============================================================================
+# QDRANT CONFIGURATION
+# =============================================================================
+
+qdrant:
+  # Connection settings
+  connection:
+    host: ${QDRANT_HOST:-localhost}
+    port: ${QDRANT_PORT:-6333}
+    grpc_port: ${QDRANT_GRPC_PORT:-6334}
+    prefer_grpc: true
+    api_key: ${QDRANT_API_KEY}
+    https: ${QDRANT_HTTPS:-false}
+
+  # Default collection settings
+  default_collection_config:
+    vectors:
+      size: 1536  # OpenAI text-embedding-3-small
+      distance: Cosine
+      on_disk: false
+    optimizers:
+      deleted_threshold: 0.2
+      vacuum_min_vector_number: 1000
+      default_segment_number: 4
+      max_segment_size: 200000
+      memmap_threshold: 50000
+      indexing_threshold: 20000
+      flush_interval_sec: 5
+    replication:
+      factor: 1
+      shard_number: 1
+    wal:
+      wal_capacity_mb: 32
+      wal_segments_ahead: 0
+
+  # Pre-configured collections
+  collections:
+    # Document embeddings for RAG
+    documents:
+      vectors:
+        size: 3072  # text-embedding-3-large
+        distance: Cosine
+      payload_schema:
+        source:
+          type: keyword
+          indexed: true
+        chunk_id:
+          type: keyword
+          indexed: true
+        created_at:
+          type: datetime
+          indexed: true
+        metadata:
+          type: json
+      hnsw_config:
+        m: 16
+        ef_construct: 100
+        full_scan_threshold: 10000
+
+    # Code embeddings
+    code:
+      vectors:
+        size: 1536
+        distance: Cosine
+      payload_schema:
+        file_path:
+          type: keyword
+          indexed: true
+        language:
+          type: keyword
+          indexed: true
+        function_name:
+          type: keyword
+          indexed: true
+        repository:
+          type: keyword
+          indexed: true
+
+    # Chat history for semantic search
+    conversations:
+      vectors:
+        size: 768  # nomic-embed
+        distance: Cosine
+      payload_schema:
+        conversation_id:
+          type: keyword
+          indexed: true
+        user_id:
+          type: keyword
+          indexed: true
+        timestamp:
+          type: datetime
+          indexed: true
+        role:
+          type: keyword
+          indexed: true
+
+    # Knowledge base embeddings
+    knowledge:
+      vectors:
+        size: 1024  # mxbai-embed-large
+        distance: Cosine
+      payload_schema:
+        category:
+          type: keyword
+          indexed: true
+        title:
+          type: text
+          indexed: true
+        tags:
+          type: keyword
+          indexed: true
+
+# =============================================================================
+# WEAVIATE CONFIGURATION
+# =============================================================================
+
+weaviate:
+  # Connection settings
+  connection:
+    host: ${WEAVIATE_HOST:-localhost}
+    port: ${WEAVIATE_PORT:-8080}
+    grpc_port: ${WEAVIATE_GRPC_PORT:-50051}
+    scheme: ${WEAVIATE_SCHEME:-http}
+    api_key: ${WEAVIATE_API_KEY}
+
+  # Authentication
+  auth:
+    type: api_key  # none, api_key, oidc
+    api_key: ${WEAVIATE_API_KEY}
+
+  # Module configuration
+  modules:
+    text2vec-openai:
+      enabled: true
+      api_key: ${OPENAI_API_KEY}
+      model: text-embedding-3-large
+      dimensions: 3072
+    text2vec-transformers:
+      enabled: true
+      pooling_strategy: masked_mean
+    generative-openai:
+      enabled: true
+      api_key: ${OPENAI_API_KEY}
+      model: gpt-4o
+    qna-openai:
+      enabled: true
+      api_key: ${OPENAI_API_KEY}
+      model: gpt-4o
+
+  # Schema definitions (classes)
+  schema:
+    classes:
+      - class: Document
+        description: General document storage for RAG
+        vectorizer: text2vec-openai
+        moduleConfig:
+          text2vec-openai:
+            model: text-embedding-3-large
+            dimensions: 3072
+        properties:
+          - name: content
+            dataType: [text]
+            description: The document content
+            moduleConfig:
+              text2vec-openai:
+                skip: false
+                vectorizePropertyName: false
+          - name: title
+            dataType: [text]
+            description: Document title
+          - name: source
+            dataType: [text]
+            description: Source URL or path
+          - name: chunk_id
+            dataType: [int]
+            description: Chunk identifier
+          - name: metadata
+            dataType: [object]
+            description: Additional metadata
+          - name: created_at
+            dataType: [date]
+            description: Creation timestamp
+
+      - class: CodeSnippet
+        description: Code snippets for semantic code search
+        vectorizer: text2vec-transformers
+        properties:
+          - name: code
+            dataType: [text]
+            description: The code content
+          - name: language
+            dataType: [text]
+            description: Programming language
+          - name: file_path
+            dataType: [text]
+            description: File path
+          - name: function_name
+            dataType: [text]
+            description: Function or class name
+          - name: docstring
+            dataType: [text]
+            description: Documentation string
+          - name: repository
+            dataType: [text]
+            description: Repository name
+
+      - class: Entity
+        description: Named entities from knowledge extraction
+        vectorizer: text2vec-openai
+        properties:
+          - name: name
+            dataType: [text]
+            description: Entity name
+          - name: type
+            dataType: [text]
+            description: Entity type
+          - name: description
+            dataType: [text]
+            description: Entity description
+          - name: aliases
+            dataType: [text[]]
+            description: Alternative names
+          - name: relationships
+            dataType: [text[]]
+            description: Related entities
+
+      - class: Conversation
+        description: Conversation history for contextual search
+        vectorizer: text2vec-openai
+        moduleConfig:
+          text2vec-openai:
+            model: text-embedding-3-small
+            dimensions: 1536
+        properties:
+          - name: message
+            dataType: [text]
+            description: Message content
+          - name: role
+            dataType: [text]
+            description: Message role (user/assistant)
+          - name: conversation_id
+            dataType: [text]
+            description: Conversation identifier
+          - name: user_id
+            dataType: [text]
+            description: User identifier
+          - name: timestamp
+            dataType: [date]
+            description: Message timestamp
+
+  # Replication settings
+  replication:
+    factor: 1
+
+  # Sharding settings
+  sharding:
+    desiredCount: 1
+    actualCount: 1
+    desiredVirtualCount: 128
+    actualVirtualCount: 128
+
+# =============================================================================
+# CHROMA CONFIGURATION
+# =============================================================================
+
+chroma:
+  # Connection settings
+  connection:
+    host: ${CHROMA_HOST:-localhost}
+    port: ${CHROMA_PORT:-8000}
+    ssl: ${CHROMA_SSL:-false}
+    headers:
+      Authorization: Bearer ${CHROMA_API_KEY}
+
+  # Persistence settings
+  persistence:
+    enabled: true
+    path: ${CHROMA_PERSIST_DIR:-/data/chroma}
+    anonymized_telemetry: false
+
+  # Default embedding function
+  default_embedding:
+    type: openai
+    model: text-embedding-3-small
+    api_key: ${OPENAI_API_KEY}
+
+  # Pre-configured collections
+  collections:
+    documents:
+      name: documents
+      metadata:
+        description: Document embeddings for RAG
+        embedding_model: text-embedding-3-large
+        embedding_dimension: 3072
+        hnsw_space: cosine
+        hnsw_construction_ef: 100
+        hnsw_search_ef: 100
+        hnsw_M: 16
+
+    code:
+      name: code_snippets
+      metadata:
+        description: Code embeddings for semantic search
+        embedding_model: text-embedding-3-small
+        embedding_dimension: 1536
+        hnsw_space: cosine
+
+    conversations:
+      name: conversations
+      metadata:
+        description: Conversation history embeddings
+        embedding_model: nomic-embed-text
+        embedding_dimension: 768
+        hnsw_space: cosine
+
+    knowledge:
+      name: knowledge_base
+      metadata:
+        description: Knowledge base embeddings
+        embedding_model: mxbai-embed-large
+        embedding_dimension: 1024
+        hnsw_space: cosine
+
+# =============================================================================
+# UNIFIED VECTOR DATABASE INTERFACE
+# =============================================================================
+
+unified:
+  # Default database for each use case
+  defaults:
+    documents: qdrant
+    code: qdrant
+    conversations: chroma
+    knowledge: weaviate
+    entities: weaviate
+
+  # Connection pooling
+  connection_pool:
+    max_connections: 50
+    min_connections: 5
+    connection_timeout_ms: 5000
+    idle_timeout_ms: 60000
+
+  # Batch settings
+  batch:
+    upsert_batch_size: 100
+    query_batch_size: 20
+    parallel_requests: 4
+
+  # Search settings
+  search:
+    default_limit: 10
+    max_limit: 100
+    score_threshold: 0.7
+    include_metadata: true
+    include_vectors: false
+
+  # Reranking
+  reranking:
+    enabled: true
+    model: cross-encoder/ms-marco-MiniLM-L-12-v2
+    top_k: 20
+    final_k: 10
+
+# =============================================================================
+# DOCKER COMPOSE CONFIGURATION
+# =============================================================================
+
+docker:
+  networks:
+    - ai-network
+
+  services:
+    qdrant:
+      image: qdrant/qdrant:latest
+      container_name: qdrant
+      ports:
+        - "6333:6333"
+        - "6334:6334"
+      volumes:
+        - qdrant_storage:/qdrant/storage
+      environment:
+        QDRANT__SERVICE__GRPC_PORT: 6334
+        QDRANT__SERVICE__HTTP_PORT: 6333
+        QDRANT__LOG_LEVEL: INFO
+      healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:6333/health"]
+        interval: 30s
+        timeout: 10s
+        retries: 3
+
+    weaviate:
+      image: semitechnologies/weaviate:latest
+      container_name: weaviate
+      ports:
+        - "8080:8080"
+        - "50051:50051"
+      volumes:
+        - weaviate_storage:/var/lib/weaviate
+      environment:
+        QUERY_DEFAULTS_LIMIT: 25
+        AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'false'
+        AUTHENTICATION_APIKEY_ENABLED: 'true'
+        AUTHENTICATION_APIKEY_ALLOWED_KEYS: ${WEAVIATE_API_KEY}
+        AUTHENTICATION_APIKEY_USERS: admin
+        PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+        DEFAULT_VECTORIZER_MODULE: 'text2vec-openai'
+        ENABLE_MODULES: 'text2vec-openai,generative-openai,qna-openai'
+        CLUSTER_HOSTNAME: 'weaviate-node1'
+      healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:8080/v1/.well-known/ready"]
+        interval: 30s
+        timeout: 10s
+        retries: 3
+
+    chroma:
+      image: chromadb/chroma:latest
+      container_name: chroma
+      ports:
+        - "8000:8000"
+      volumes:
+        - chroma_storage:/chroma/chroma
+      environment:
+        ANONYMIZED_TELEMETRY: False
+        ALLOW_RESET: True
+        IS_PERSISTENT: True
+        PERSIST_DIRECTORY: /chroma/chroma
+      healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
+        interval: 30s
+        timeout: 10s
+        retries: 3
+
+  volumes:
+    qdrant_storage:
+    weaviate_storage:
+    chroma_storage:

@@ -1,0 +1,10 @@
+#!/bin/bash
+# Infrastructure startup wrapper
+# Fixes applied based on runtime evidence:
+# - D2: Docker credential helper PATH - FIXED by updating Docker config to use credHelpers
+# - D1: Docker PATH configuration - VERIFIED working correctly
+
+# Execute the actual infrastructure command
+docker compose -f infra/docker-compose.development.yml up -d
+
+exit $?

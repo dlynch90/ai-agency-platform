@@ -1,0 +1,75 @@
+
+# AGI Environment GraphQL Schema
+
+type Query {
+  systemStatus: SystemStatus!
+  mcpServers: [MCPServer!]!
+  libraries: [Library!]!
+  services: [Service!]!
+  projects: [Project!]!
+}
+
+type Mutation {
+  startService(name: String!): ServiceResult!
+  stopService(name: String!): ServiceResult!
+  runTest(testName: String!): TestResult!
+  deployProject(projectId: ID!): DeploymentResult!
+}
+
+type SystemStatus {
+  cpuUsage: Float!
+  memoryUsage: Float!
+  diskUsage: Float!
+  activeServices: Int!
+  runningTests: Int!
+}
+
+type MCPServer {
+  name: String!
+  type: String!
+  status: String!
+  description: String!
+}
+
+type Library {
+  name: String!
+  version: String!
+  language: String!
+  status: String!
+}
+
+type Service {
+  name: String!
+  type: String!
+  port: Int!
+  status: String!
+  url: String
+}
+
+type Project {
+  id: ID!
+  name: String!
+  language: String!
+  status: String!
+  lastDeployed: String
+}
+
+type ServiceResult {
+  success: Boolean!
+  message: String!
+  service: Service
+}
+
+type TestResult {
+  success: Boolean!
+  testName: String!
+  duration: Float!
+  errors: [String!]
+}
+
+type DeploymentResult {
+  success: Boolean!
+  projectId: ID!
+  url: String
+  errors: [String!]
+}

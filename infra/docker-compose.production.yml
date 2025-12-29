@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+    - 8000:8000
+  nginx:
+    image: nginx:alpine
+    ports:
+    - 80:80
+  postgres:
+    image: postgres:15
+  redis:
+    image: redis:7

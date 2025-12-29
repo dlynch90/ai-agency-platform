@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  supply-chain-api:
+    build: .
+    ports:
+      - "8005:8000"
+    environment:
+      - USE_CASE_ID=05

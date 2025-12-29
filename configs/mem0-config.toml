@@ -1,0 +1,39 @@
+# Mem0.ai Platform Configuration
+# Get your API key from: https://app.mem0.ai/settings/api-keys
+
+[mem0]
+# Required: Your Mem0 API key
+api_key = "m0-your-actual-api-key-here"
+
+# Optional: Organization and Project IDs (for team accounts)
+org_id = "your-org-id-here"
+project_id = "your-project-id-here"
+
+# Optional: Custom base URL (leave as default for production)
+base_url = "https://api.mem0.ai"
+
+# Optional: Default user ID for MCP server
+default_user_id = "default-user"
+
+# Optional: Enable graph memories (set to true for enhanced relationships)
+enable_graph_default = false
+
+[vector_store]
+# Memory vector store configuration
+type = "qdrant"
+qdrant_url = "http://localhost:6333"
+qdrant_api_key = "your-qdrant-api-key-here"
+
+# Alternative vector stores (uncomment to use)
+# type = "chromadb"
+# chroma_server_url = "http://localhost:8000"
+# chroma_api_key = "your-chroma-api-key-here"
+
+# type = "redis"
+# redis_url = "redis://localhost:6379"
+
+[graph_store]
+# Neo4j for graph memories
+neo4j_uri = "bolt://localhost:7687"
+neo4j_user = "neo4j"
+neo4j_password = "your-neo4j-password-here"

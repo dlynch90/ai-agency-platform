@@ -1,0 +1,27 @@
+{
+  "name": "ai-agency-graphql-gateway",
+  "version": "1.0.0",
+  "description": "GraphQL Federation Gateway for AI Agency applications",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest",
+    "playground": "echo 'GraphQL Playground: http://localhost:4000/graphql'"
+  },
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "express": "^4.18.0",
+    "graphql": "^16.8.0",
+    "node-fetch": "^2.7.0",
+    "@prisma/client": "^5.0.0",
+    "neo4j-driver": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0",
+    "jest": "^29.0.0"
+  },
+  "keywords": ["graphql", "federation", "ai-agency", "apollo"],
+  "author": "AI Agency",
+  "license": "MIT"
+}

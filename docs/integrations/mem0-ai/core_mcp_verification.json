@@ -1,0 +1,37 @@
+{
+  "total_servers": 5,
+  "successful_connections": 5,
+  "success_rate": "5/5 (100.0%)",
+  "results": {
+    "filesystem": {
+      "server_name": "filesystem",
+      "status": "connected",
+      "tools_count": 14,
+      "error": null
+    },
+    "ollama": {
+      "server_name": "ollama",
+      "status": "connected",
+      "tools_count": 13,
+      "error": null
+    },
+    "qdrant": {
+      "server_name": "qdrant",
+      "status": "connected",
+      "tools_count": 20,
+      "error": null
+    },
+    "neo4j": {
+      "server_name": "neo4j",
+      "status": "connected",
+      "tools_count": 21,
+      "error": null
+    },
+    "playwright": {
+      "server_name": "playwright",
+      "status": "connected",
+      "tools_count": 22,
+      "error": null
+    }
+  }
+}

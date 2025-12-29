@@ -1,0 +1,30 @@
+{
+  "name": "AI Agency Content Generation",
+  "description": "MCP client configuration for content generation workflows",
+  "servers": {
+    "anthropic": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-anthropic"],
+      "env": {
+        "ANTHROPIC_API_KEY": ""
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem", "${DEVELOPER_DIR:-${DEVELOPER_DIR:-$HOME/Developer}}/content"],
+      "env": {
+        "ALLOW_FILE_READ": "true",
+        "ALLOW_FILE_WRITE": "true"
+      }
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-sequential-thinking"]
+    }
+  },
+  "workflows": {
+    "blog-post": ["anthropic", "filesystem", "sequential-thinking"],
+    "social-media": ["anthropic", "filesystem"],
+    "seo-optimization": ["anthropic", "sequential-thinking"]
+  }
+}
