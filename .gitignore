@@ -44,6 +44,17 @@ yarn.lock
 # Claude
 .claude/
 
+# Environment files
+.cipher.env
+.opencode.env
+
+# IDE files
+.project
+
+# Logs
+git-recovery.log
+*.log
+
 # OS
 .DS_Store
 Thumbs.db

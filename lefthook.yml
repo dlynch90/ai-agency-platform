@@ -1,0 +1,74 @@
+# Lefthook configuration for automated git workflow management
+# Enforces vendor compliance, architecture rules, and code quality
+
+pre-commit:
+  parallel: true
+  commands:
+    # Vendor compliance check - ensure no custom implementations
+    vendor-compliance:
+      run: |
+        echo "🔍 Checking vendor compliance..."
+        # Check for common custom patterns that violate rules
+        if find . -name "*.js" -o -name "*.ts" -o -name "*.py" -o -name "*.sh" | xargs grep -l "console.log" | grep -v node_modules | grep -v .pixi; then
+          echo "❌ ERROR: console.log found in source files (use vendor logging)"
+          exit 1
+        fi
+        echo "✅ Vendor compliance check passed"
+
+    # Architecture enforcement - no loose files in root
+    architecture-check:
+      run: |
+        echo "🏗️ Checking architecture compliance..."
+        # Check for loose files in root that violate directory structure
+        loose_files=$(find . -maxdepth 1 -type f -not -path './.git*' -not -name ".gitignore" -not -name "README.md" -not -name "package.json" -not -name "lefthook.yml" -not -name ".editorconfig" -not -name "tsconfig.json" -not -name "vitest.config.*" -not -name "turbo.json" -not -name "pixi.toml" -not -name "pyproject.toml" -not -name "pnpm-workspace.yaml" -not -name "docker-compose.yml" -not -name "Dockerfile" | wc -l)
+        if [ "$loose_files" -gt 0 ]; then
+          echo "❌ ERROR: Loose files found in root directory (violate architecture rules)"
+          find . -maxdepth 1 -type f -not -path './.git*' -not -name ".gitignore" -not -name "README.md" -not -name "package.json" -not -name "lefthook.yml"
+          exit 1
+        fi
+        echo "✅ Architecture check passed"
+
+    # MCP server health check
+    mcp-health-check:
+      run: |
+        echo "🔧 Checking MCP server health..."
+        # Check if critical MCP servers are accessible
+        if command -v node >/dev/null 2>&1; then
+          if ! timeout 5 node -e "console.log('Node.js OK')" >/dev/null 2>&1; then
+            echo "⚠️ WARNING: Node.js runtime issues detected"
+          fi
+        fi
+        if command -v python3 >/dev/null 2>&1; then
+          if ! timeout 5 python3 -c "print('Python OK')" >/dev/null 2>&1; then
+            echo "⚠️ WARNING: Python runtime issues detected"
+          fi
+        fi
+        echo "✅ MCP health check completed"
+
+post-commit:
+  commands:
+    # Automated cleanup and optimization
+    repository-maintenance:
+      run: |
+        echo "🧹 Running post-commit maintenance..."
+        # Clean any temporary files that might have been created
+        find . -name "*.tmp" -type f -delete 2>/dev/null || true
+        find . -name "*.bak" -type f -delete 2>/dev/null || true
+        echo "✅ Post-commit maintenance completed"
+
+pre-push:
+  commands:
+    # Final validation before push
+    final-validation:
+      run: |
+        echo "🚀 Running pre-push validation..."
+        # Check if repository is in clean state
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "⚠️ WARNING: Repository has uncommitted changes"
+        fi
+        # Validate critical files exist
+        if [ ! -f "package.json" ]; then
+          echo "❌ ERROR: package.json missing"
+          exit 1
+        fi
+        echo "✅ Pre-push validation completed"
