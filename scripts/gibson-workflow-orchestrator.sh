@@ -43,7 +43,7 @@ info() {
 check_gibson_health() {
     log "Checking Gibson CLI health..."
 
-    if timeout 10s bash -c "cd /Users/daniellynch/Developer && GIBSONAI_PROJECT='$GIBSON_PROJECT' ./bin/gibson-official --help >/dev/null 2>&1"; then
+    if timeout 10s bash -c "cd ${HOME}/Developer && GIBSONAI_PROJECT='$GIBSON_PROJECT' ./bin/gibson-official --help >/dev/null 2>&1"; then
         success "Gibson CLI is healthy"
         return 0
     else

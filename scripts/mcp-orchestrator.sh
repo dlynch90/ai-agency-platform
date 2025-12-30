@@ -134,7 +134,7 @@ create_mcp_clients() {
     },
     "filesystem": {
       "command": "npx",
-      "args": ["@modelcontextprotocol/server-filesystem", "/Users/daniellynch/Developer/content"],
+      "args": ["@modelcontextprotocol/server-filesystem", "${HOME}/Developer/content"],
       "env": {
         "ALLOW_FILE_READ": "true",
         "ALLOW_FILE_WRITE": "true"
@@ -213,7 +213,7 @@ EOF
     },
     "sqlite": {
       "command": "npx",
-      "args": ["@modelcontextprotocol/server-sqlite", "--db-path", "/Users/daniellynch/Developer/data/support.db"]
+      "args": ["@modelcontextprotocol/server-sqlite", "--db-path", "${HOME}/Developer/data/support.db"]
     }
   },
   "workflows": {

@@ -15,7 +15,7 @@ const logEntry = JSON.stringify({
   hypothesisId: 'A'
 }) + '\n';
 try {
-  fs.appendFileSync('/Users/daniellynch/Developer/.cursor/debug.log', logEntry);
+  fs.appendFileSync('${HOME}/Developer/.cursor/debug.log', logEntry);
 } catch (e) {
   console.error('Failed to write debug log:', e.message);
 }
@@ -241,7 +241,7 @@ const testLog = JSON.stringify({
   hypothesisId: 'B'
 }) + '\n';
 try {
-  fs.appendFileSync('/Users/daniellynch/Developer/.cursor/debug.log', testLog);
+  fs.appendFileSync('${HOME}/Developer/.cursor/debug.log', testLog);
 } catch (e) {
   console.error('Failed to write test debug log:', e.message);
 }
@@ -271,7 +271,7 @@ const summaryLog = JSON.stringify({
   hypothesisId: 'C'
 }) + '\n';
 try {
-  fs.appendFileSync('/Users/daniellynch/Developer/.cursor/debug.log', summaryLog);
+  fs.appendFileSync('${HOME}/Developer/.cursor/debug.log', summaryLog);
 } catch (e) {
   console.error('Failed to write summary debug log:', e.message);
 }

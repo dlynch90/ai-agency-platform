@@ -17,7 +17,7 @@ if (process.env.NODE_ENV !== 'production') {
 export * from '@prisma/client';
 
 export async function withTenant<T>(
-  tenantId: string,
+  _tenantId: string,
   fn: (prisma: PrismaClient) => Promise<T>
 ): Promise<T> {
   return fn(prisma);

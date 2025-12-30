@@ -31,7 +31,7 @@ function launchMCPServer(serverName, args = []) {
     // Only including servers that actually exist and work without external dependencies
     const serverMap = {
         'ollama-mcp': ['npx', ['ollama-mcp', ...args]],
-        'filesystem': ['npx', ['@modelcontextprotocol/server-filesystem', '/Users/daniellynch/Developer', ...args]],
+        'filesystem': ['npx', ['@modelcontextprotocol/server-filesystem', '${HOME}/Developer', ...args]],
         'ollama-chat': ['npx', ['ollama-mcp', ...args]],
         'task-master': ['npx', ['@gofman3/task-master-mcp', ...args]],
         'memory': ['npx', ['@danielsimonjr/memory-mcp', ...args]],

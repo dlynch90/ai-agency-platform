@@ -340,7 +340,7 @@ class SphericalArchitectureAnalyzer:
         logger.info(f"Spherical FEA analysis saved to {output_path}")
 
 def main():
-    workspace_path = "/Users/daniellynch/Developer"
+    workspace_path = "${HOME}/Developer"
 
     analyzer = SphericalArchitectureAnalyzer(workspace_path)
     analysis_results = analyzer.analyze_architecture()

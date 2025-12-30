@@ -59,12 +59,12 @@ cat > "$CURSOR_MCP_CONFIG" << 'EOF'
       "command": "npx",
       "args": ["@modelcontextprotocol/server-task-master"],
       "env": {
-        "TASK_MASTER_DB_PATH": "/Users/daniellynch/Developer/.taskmaster.db"
+        "TASK_MASTER_DB_PATH": "${HOME}/Developer/.taskmaster.db"
       }
     },
     "sqlite": {
       "command": "npx",
-      "args": ["@modelcontextprotocol/server-sqlite", "--db-path", "/Users/daniellynch/Developer/data/fea_results.db"]
+      "args": ["@modelcontextprotocol/server-sqlite", "--db-path", "${HOME}/Developer/data/fea_results.db"]
     },
     "anthropic": {
       "command": "npx",
@@ -121,14 +121,14 @@ cat > "$CURSOR_MCP_CONFIG" << 'EOF'
       "command": "npx",
       "args": ["@modelcontextprotocol/server-sequential-thinking"],
       "env": {
-        "SEQUENTIAL_THINKING_DB_PATH": "/Users/daniellynch/Developer/.sequential-thinking.db"
+        "SEQUENTIAL_THINKING_DB_PATH": "${HOME}/Developer/.sequential-thinking.db"
       }
     },
     "desktop-commander": {
       "command": "npx",
       "args": ["@modelcontextprotocol/server-desktop-commander"],
       "env": {
-        "DESKTOP_COMMANDER_ALLOWED_DIRS": "/Users/daniellynch/Developer",
+        "DESKTOP_COMMANDER_ALLOWED_DIRS": "${HOME}/Developer",
         "DESKTOP_COMMANDER_FILE_READ_LIMIT": "1000",
         "DESKTOP_COMMANDER_FILE_WRITE_LIMIT": "50"
       }

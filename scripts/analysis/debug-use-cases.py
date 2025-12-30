@@ -23,7 +23,7 @@ def log_debug(message, data=None):
 
     # Write to debug log if possible
     try:
-        with open('/Users/daniellynch/Developer/.cursor/debug.log', 'a') as f:
+        with open('${HOME}/Developer/.cursor/debug.log', 'a') as f:
             f.write(json.dumps(log_entry) + '\n')
     except:
         pass

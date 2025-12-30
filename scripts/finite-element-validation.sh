@@ -6,7 +6,7 @@
 set -e
 
 # Configuration
-WORKSPACE_DIR="/Users/daniellynch/Developer"
+WORKSPACE_DIR="${HOME}/Developer"
 LOG_DIR="$WORKSPACE_DIR/logs/fea-validation"
 RESULTS_DIR="$WORKSPACE_DIR/data/fea_results"
 

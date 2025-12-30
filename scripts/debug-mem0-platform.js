@@ -15,7 +15,7 @@ const logEntry = JSON.stringify({
   hypothesisId: 'A'
 }) + '\n';
 try {
-  fs.appendFileSync('/Users/daniellynch/Developer/.cursor/debug.log', logEntry);
+  fs.appendFileSync('${HOME}/Developer/.cursor/debug.log', logEntry);
 } catch (e) {
   console.error('Failed to write debug log:', e.message);
 }
@@ -25,7 +25,7 @@ try {
 console.log('=== TESTING MEM0AI PACKAGE ===');
 
 let mem0aiInstalled = false;
-const venvPython = '/Users/daniellynch/Developer/venv-mcp/bin/python3';
+const venvPython = '${HOME}/Developer/venv-mcp/bin/python3';
 
 try {
   execSync(`${venvPython} -c "import mem0ai; print('mem0ai version:', mem0ai.__version__)"`, { stdio: 'inherit' });
@@ -35,7 +35,7 @@ try {
   console.log('❌ mem0ai package not available in virtual environment');
   console.log('Installing mem0ai in venv...');
   try {
-    execSync(`source /Users/daniellynch/Developer/venv-mcp/bin/activate && python3 -m pip install mem0ai`, { stdio: 'inherit', shell: '/bin/bash' });
+    execSync(`source ${HOME}/Developer/venv-mcp/bin/activate && python3 -m pip install mem0ai`, { stdio: 'inherit', shell: '/bin/bash' });
     mem0aiInstalled = true;
     console.log('✅ mem0ai installed in virtual environment');
   } catch (installError) {
@@ -54,7 +54,7 @@ const packageLog = JSON.stringify({
   hypothesisId: 'B'
 }) + '\n';
 try {
-  fs.appendFileSync('/Users/daniellynch/Developer/.cursor/debug.log', packageLog);
+  fs.appendFileSync('${HOME}/Developer/.cursor/debug.log', packageLog);
 } catch (e) {
   console.error('Failed to write package debug log:', e.message);
 }
@@ -155,7 +155,7 @@ const apiLog = JSON.stringify({
   hypothesisId: 'B'
 }) + '\n';
 try {
-  fs.appendFileSync('/Users/daniellynch/Developer/.cursor/debug.log', apiLog);
+  fs.appendFileSync('${HOME}/Developer/.cursor/debug.log', apiLog);
 } catch (e) {
   console.error('Failed to write API debug log:', e.message);
 }
@@ -336,7 +336,7 @@ const memoryLog = JSON.stringify({
   hypothesisId: 'D'
 }) + '\n';
 try {
-  fs.appendFileSync('/Users/daniellynch/Developer/.cursor/debug.log', memoryLog);
+  fs.appendFileSync('${HOME}/Developer/.cursor/debug.log', memoryLog);
 } catch (e) {
   console.error('Failed to write memory debug log:', e.message);
 }
@@ -374,7 +374,7 @@ const summaryLog = JSON.stringify({
   hypothesisId: 'E'
 }) + '\n';
 try {
-  fs.appendFileSync('/Users/daniellynch/Developer/.cursor/debug.log', summaryLog);
+  fs.appendFileSync('${HOME}/Developer/.cursor/debug.log', summaryLog);
 } catch (e) {
   console.error('Failed to write summary debug log:', e.message);
 }

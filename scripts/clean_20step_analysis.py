@@ -16,7 +16,7 @@ from collections import defaultdict
 
 # Debug instrumentation
 LOG_ENDPOINT = "http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab"
-LOG_PATH = "/Users/daniellynch/Developer/.cursor/debug.log"
+LOG_PATH = "${HOME}/Developer/.cursor/debug.log"
 
 def log_debug(hypothesis_id: str, location: str, message: str, data: dict):
     payload = {

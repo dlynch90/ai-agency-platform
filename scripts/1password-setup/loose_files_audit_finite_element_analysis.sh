@@ -4,8 +4,8 @@ set -euo pipefail
 # Finite Element Gap Analysis for Cursor IDE Rules Compliance
 # Audit Loose Files and Architecture Violations
 
-export LOG_FILE="/Users/daniellynch/loose_files_audit_output.log"
-export JSON_REPORT="/Users/daniellynch/loose_files_audit_report.json"
+export LOG_FILE="${HOME}/loose_files_audit_output.log"
+export JSON_REPORT="${HOME}/loose_files_audit_report.json"
 exec > >(tee -a "$LOG_FILE") 2>&1
 
 echo "🔬 FINITE ELEMENT GAP ANALYSIS - CURSOR IDE RULES COMPLIANCE AUDIT"
@@ -70,10 +70,10 @@ analyze_file_organization() {
 }
 
 # Audit user root directory
-analyze_file_organization "/Users/daniellynch" "user_root"
+analyze_file_organization "${HOME}" "user_root"
 
 # Audit project root directory
-analyze_file_organization "/Users/daniellynch/Developer" "project_root"
+analyze_file_organization "${HOME}/Developer" "project_root"
 
 echo ""
 echo "🔍 PHASE 2: PARAMETERIZATION GAP ANALYSIS"
@@ -83,9 +83,9 @@ echo "========================================="
 echo "🔍 Checking for hardcoded paths and values..."
 
 # Find files with hardcoded paths
-find /Users/daniellynch/Developer -type f -name "*.sh" -o -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.toml" -o -name "*.yaml" -o -name "*.yml" -o -name "*.json" | \
+find ${HOME}/Developer -type f -name "*.sh" -o -name "*.py" -o -name "*.js" -o -name "*.ts" -o -name "*.toml" -o -name "*.yaml" -o -name "*.yml" -o -name "*.json" | \
 while read -r file; do
-    if grep -q "/Users/daniellynch\|/Users/.*\|~/\." "$file" 2>/dev/null; then
+    if grep -q "${HOME}\|/Users/.*\|~/\." "$file" 2>/dev/null; then
         echo "   PARAMETERIZATION VIOLATION: $file (hardcoded paths)"
 
         jq --arg file "$file" \
@@ -102,7 +102,7 @@ echo "==================================="
 echo "🔍 Checking for duplicate configurations..."
 
 # Look for multiple config files of same type
-find /Users/daniellynch/Developer -name "*.toml" -o -name "*.yaml" -o -name "*.yml" | \
+find ${HOME}/Developer -name "*.toml" -o -name "*.yaml" -o -name "*.yml" | \
 xargs -I {} basename {} | sort | uniq -c | awk '$1 > 1 {print $2 " appears " $1 " times"}'
 
 echo ""
@@ -122,7 +122,7 @@ echo "🔍 Checking for registry and catalog systems..."
 missing_registries=("mcp_servers" "cli_tools" "api_endpoints" "database_schemas" "infrastructure_resources")
 
 for registry in "${missing_registries[@]}"; do
-    if [ ! -f "/Users/daniellynch/Developer/data/registry/${registry}.json" ]; then
+    if [ ! -f "${HOME}/Developer/data/registry/${registry}.json" ]; then
         echo "   MISSING REGISTRY: $registry"
 
         jq --arg registry "$registry" \
@@ -139,11 +139,11 @@ echo "==================================="
 
 echo "🔬 Analyzing stress points..."
 # Stress points: areas where violations cluster
-find /Users/daniellynch/Developer -type f -name "*.sh" | wc -l | xargs echo "   Shell scripts stress point: {} files"
+find ${HOME}/Developer -type f -name "*.sh" | wc -l | xargs echo "   Shell scripts stress point: {} files"
 
 echo "🔬 Analyzing boundary conditions..."
 # Boundary conditions: interface points between systems
-echo "   MCP server boundaries: $(ls /Users/daniellynch/Developer/.cursor/mcp/ 2>/dev/null | wc -l) servers"
+echo "   MCP server boundaries: $(ls ${HOME}/Developer/.cursor/mcp/ 2>/dev/null | wc -l) servers"
 
 echo "🔬 Analyzing material properties..."
 # Material properties: tool ecosystem strength/weaknesses
@@ -151,7 +151,7 @@ echo "   Tool ecosystem health: Analyzing..."
 
 echo "🔬 Analyzing load distributions..."
 # Load distributions: how work is distributed across tools
-echo "   Work distribution analysis: $(find /Users/daniellynch/Developer -name "*.py" | wc -l) Python files"
+echo "   Work distribution analysis: $(find ${HOME}/Developer -name "*.py" | wc -l) Python files"
 
 echo ""
 echo "🔧 PHASE 6: MCP SERVER UTILIZATION AUDIT"
@@ -163,7 +163,7 @@ echo "🔍 Checking MCP server utilization..."
 mcp_servers=("sequential-thinking" "desktop-commander" "github" "postgres" "redis" "qdrant" "ollama" "filesystem" "memory")
 
 for server in "${mcp_servers[@]}"; do
-    if [ -f "/Users/daniellynch/Developer/.cursor/mcp/${server}.json" ]; then
+    if [ -f "${HOME}/Developer/.cursor/mcp/${server}.json" ]; then
         echo "   ✅ MCP Server configured: $server"
 
         jq --arg server "$server" \
@@ -231,11 +231,11 @@ echo "==============================================="
 # Check instrumentation setup
 echo "🔍 Checking Cursor IDE instrumentation..."
 
-if [ -f "/Users/daniellynch/Developer/.cursor/debug.log" ]; then
+if [ -f "${HOME}/Developer/.cursor/debug.log" ]; then
     echo "   ✅ Debug log exists"
 
     # Check if instrumentation is working
-    if [ -s "/Users/daniellynch/Developer/.cursor/debug.log" ]; then
+    if [ -s "${HOME}/Developer/.cursor/debug.log" ]; then
         echo "   ✅ Instrumentation active (log has content)"
     else
         echo "   ⚠️ Instrumentation configured but inactive"

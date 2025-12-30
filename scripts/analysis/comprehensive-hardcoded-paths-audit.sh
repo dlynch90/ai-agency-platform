@@ -23,7 +23,7 @@ audit_file() {
     local violations=()
 
     # Check for hardcoded paths
-    if grep -q "/Users/daniellynch" "$file" 2>/dev/null; then
+    if grep -q "${HOME}" "$file" 2>/dev/null; then
         violations+=("HARDCODED_PATH")
     fi
 
@@ -65,8 +65,8 @@ fix_file() {
     fi
 
     # Fix hardcoded paths
-    sed -i '' "s|/Users/daniellynch/Developer|\${DEVELOPER_DIR:-\$HOME/Developer}|g" "$file" 2>/dev/null || true
-    sed -i '' "s|/Users/daniellynch|\${USER_HOME:-\$HOME}|g" "$file" 2>/dev/null || true
+    sed -i '' "s|${HOME}/Developer|\${DEVELOPER_DIR:-\$HOME/Developer}|g" "$file" 2>/dev/null || true
+    sed -i '' "s|${HOME}|\${USER_HOME:-\$HOME}|g" "$file" 2>/dev/null || true
     sed -i '' "s|\$HOME/Developer|\${DEVELOPER_DIR:-\$HOME/Developer}|g" "$file" 2>/dev/null || true
     sed -i '' "s|\$HOME/.config|\${CONFIG_DIR:-\$HOME/.config}|g" "$file" 2>/dev/null || true
 

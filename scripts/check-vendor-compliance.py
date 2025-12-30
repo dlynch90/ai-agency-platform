@@ -389,7 +389,7 @@ class VendorComplianceChecker:
         logger.info(f"Vendor compliance report saved to {output_path}")
 
 def main():
-    workspace_path = "/Users/daniellynch/Developer"
+    workspace_path = "${HOME}/Developer"
 
     checker = VendorComplianceChecker(workspace_path)
     compliance_report = checker.generate_compliance_report()

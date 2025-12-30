@@ -6,7 +6,7 @@ echo "🔬 FINITE ELEMENT GAP ANALYSIS"
 echo "=============================="
 
 # Create debug instrumentation
-DEBUG_LOG="/Users/daniellynch/Developer/fea_debug.log"
+DEBUG_LOG="${HOME}/Developer/fea_debug.log"
 touch "$DEBUG_LOG"
 
 # #region agent log - FEA Start

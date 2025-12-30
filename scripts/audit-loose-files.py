@@ -287,7 +287,7 @@ class LooseFilesAuditor:
         logger.info(f"Loose files audit saved to {output_path}")
 
 def main():
-    workspace_path = "/Users/daniellynch/Developer"
+    workspace_path = "${HOME}/Developer"
 
     auditor = LooseFilesAuditor(workspace_path)
     audit_results = auditor.audit_loose_files()

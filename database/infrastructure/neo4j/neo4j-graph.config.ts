@@ -6,8 +6,6 @@
 import neo4j, {
   Driver,
   Session,
-  Transaction,
-  Result,
   Record as Neo4jRecord,
   Integer,
   Node,
@@ -114,7 +112,7 @@ export class Neo4jGraphManager {
         trust: this.config.trustStrategy,
         logging: {
           level: process.env.NODE_ENV === 'production' ? 'warn' : 'info',
-          logger: (level, message) => console.log(`[Neo4j] [${level}] ${message}`),
+          logger: (level: string, message: string) => console.log(`[Neo4j] [${level}] ${message}`),
         },
       }
     );
@@ -159,14 +157,14 @@ export class Neo4jGraphManager {
       const result = await session.run(cypher, parameters);
 
       return {
-        records: result.records.map((record) => this.transformRecord<T>(record)),
+        records: result.records.map((record: Neo4jRecord) => this.transformRecord<T>(record)),
         summary: {
           counters: {
-            nodesCreated: result.summary.counters.nodesCreated(),
-            nodesDeleted: result.summary.counters.nodesDeleted(),
-            relationshipsCreated: result.summary.counters.relationshipsCreated(),
-            relationshipsDeleted: result.summary.counters.relationshipsDeleted(),
-            propertiesSet: result.summary.counters.propertiesSet(),
+            nodesCreated: result.summary.counters.updates().nodesCreated,
+            nodesDeleted: result.summary.counters.updates().nodesDeleted,
+            relationshipsCreated: result.summary.counters.updates().relationshipsCreated,
+            relationshipsDeleted: result.summary.counters.updates().relationshipsDeleted,
+            propertiesSet: result.summary.counters.updates().propertiesSet,
           },
           queryTime: Date.now() - startTime,
         },
@@ -184,7 +182,7 @@ export class Neo4jGraphManager {
 
     for (const key of record.keys) {
       const value = record.get(key);
-      obj[key] = this.transformValue(value);
+      obj[String(key)] = this.transformValue(value);
     }
 
     return obj as T;
@@ -225,7 +223,7 @@ export class Neo4jGraphManager {
       return {
         start: this.transformValue(value.start),
         end: this.transformValue(value.end),
-        segments: value.segments.map((seg) => ({
+        segments: value.segments.map((seg: any) => ({
           start: this.transformValue(seg.start),
           relationship: this.transformValue(seg.relationship),
           end: this.transformValue(seg.end),

@@ -208,7 +208,7 @@ export class PostgresPoolManager {
     };
   }
 
-  private async checkPoolHealth(pool: Pool, name: string): Promise<PoolHealthStatus> {
+  private async checkPoolHealth(pool: Pool, _name: string): Promise<PoolHealthStatus> {
     const startTime = Date.now();
 
     try {

@@ -383,7 +383,7 @@ class BinomialEdgeCaseDetector:
         logger.info(f"Binomial edge case analysis saved to {output_path}")
 
 def main():
-    workspace_path = "/Users/daniellynch/Developer"
+    workspace_path = "${HOME}/Developer"
 
     detector = BinomialEdgeCaseDetector(workspace_path)
     analysis_results = detector.analyze_edge_cases()

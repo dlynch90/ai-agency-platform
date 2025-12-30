@@ -244,7 +244,7 @@ async def main():
 
         # Save results
         import json
-        output_file = "/Users/daniellynch/Developer/docs/integrations/mem0-ai/integration_test_results.json"
+        output_file = "${HOME}/Developer/docs/integrations/mem0-ai/integration_test_results.json"
         with open(output_file, 'w') as f:
             json.dump(results, f, indent=2)
 

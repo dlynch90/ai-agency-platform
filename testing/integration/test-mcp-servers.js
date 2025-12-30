@@ -3,8 +3,11 @@
 
 const { spawn } = require('child_process');
 const fs = require('fs');
+const path = require('path');
 
-const mcpConfig = JSON.parse(fs.readFileSync('/Users/daniellynch/.cursor/mcp.json', 'utf8'));
+const HOME = process.env.HOME || '/tmp';
+const DEVELOPER_DIR = process.env.DEVELOPER_DIR || path.join(HOME, 'Developer');
+const mcpConfig = JSON.parse(fs.readFileSync(path.join(HOME, '.cursor', 'mcp.json'), 'utf8'));
 const results = {};
 
 async function testMcpServer(serverName, config) {
@@ -91,7 +94,7 @@ async function runAllTests() {
   console.log(`🎯 Success Rate: ${((working / (working + failed)) * 100).toFixed(1)}%`);
 
   // Save results
-  fs.writeFileSync('/Users/daniellynch/Developer/mcp-test-results.json', JSON.stringify(results, null, 2));
+  fs.writeFileSync(path.join(DEVELOPER_DIR, 'mcp-test-results.json'), JSON.stringify(results, null, 2));
   console.log('\n💾 Results saved to mcp-test-results.json');
 }
 

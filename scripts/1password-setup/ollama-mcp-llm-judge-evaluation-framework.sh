@@ -126,7 +126,7 @@ evaluation_2_cursor_rules_compliance() {
                 echo "⚠️  Missing documentation in: $file"
             fi
         fi
-    done < <(find /Users/daniellynch -name "*1password*" -type f -print0 2>/dev/null)
+    done < <(find ${HOME} -name "*1password*" -type f -print0 2>/dev/null)
 
     # Calculate compliance score
     local compliance_score=$((10 - (violations * 2)))
@@ -324,8 +324,8 @@ evaluation_5_codebase_organization() {
     echo ""
 
     # Analyze directory structure
-    local dir_count=$(find /Users/daniellynch -name "*1password*" -type d 2>/dev/null | wc -l)
-    local file_count=$(find /Users/daniellynch -name "*1password*" -type f 2>/dev/null | wc -l)
+    local dir_count=$(find ${HOME} -name "*1password*" -type d 2>/dev/null | wc -l)
+    local file_count=$(find ${HOME} -name "*1password*" -type f 2>/dev/null | wc -l)
 
     echo "1Password-related files: $file_count"
     echo "1Password-related directories: $dir_count"
@@ -340,7 +340,7 @@ evaluation_5_codebase_organization() {
     fi
 
     # Check for naming conventions
-    local inconsistent_naming=$(find /Users/daniellynch -name "*1password*" -type f 2>/dev/null | grep -c -E "(setup|debug|auth|status|final|enterprise|20|gap|mcp|oss|gpt|llm|judge|evaluation|framework)" || echo "0")
+    local inconsistent_naming=$(find ${HOME} -name "*1password*" -type f 2>/dev/null | grep -c -E "(setup|debug|auth|status|final|enterprise|20|gap|mcp|oss|gpt|llm|judge|evaluation|framework)" || echo "0")
     if [ "$inconsistent_naming" -gt 10 ]; then
         judge_score "eval5" "naming_conventions" 3
         echo "✗ Inconsistent file naming ($inconsistent_naming files)"
@@ -350,7 +350,7 @@ evaluation_5_codebase_organization() {
     fi
 
     # Check for documentation
-    local md_files=$(find /Users/daniellynch -name "*1password*.md" -type f 2>/dev/null | wc -l)
+    local md_files=$(find ${HOME} -name "*1password*.md" -type f 2>/dev/null | wc -l)
     if [ $md_files -ge 4 ]; then
         judge_score "eval5" "documentation" 9
         echo "✓ Comprehensive documentation ($md_files files)"
@@ -360,7 +360,7 @@ evaluation_5_codebase_organization() {
     fi
 
     # Check for version control
-    if [[ -d /Users/daniellynch/.git ]] && git ls-files | grep -q "1password"; then
+    if [[ -d ${HOME}/.git ]] && git ls-files | grep -q "1password"; then
         judge_score "eval5" "version_control" 8
         echo "✓ Proper version control integration"
     else
@@ -565,7 +565,7 @@ evaluation_8_performance_scalability() {
     fi
 
     # Check for monitoring
-    local monitoring_files=$(find /Users/daniellynch -name "*monitor*" -o -name "*health*" 2>/dev/null | wc -l)
+    local monitoring_files=$(find ${HOME} -name "*monitor*" -o -name "*health*" 2>/dev/null | wc -l)
     if [ $monitoring_files -gt 2 ]; then
         judge_score "eval8" "monitoring" 8
         echo "✓ Good monitoring coverage ($monitoring_files files)"
@@ -611,7 +611,7 @@ evaluation_9_compliance_governance() {
     fi
 
     # Check for license compliance
-    local license_files=$(find /Users/daniellynch -name "LICENSE*" -o -name "COPYING*" 2>/dev/null | wc -l)
+    local license_files=$(find ${HOME} -name "LICENSE*" -o -name "COPYING*" 2>/dev/null | wc -l)
     if [ $license_files -gt 0 ]; then
         judge_score "eval9" "license_compliance" 8
         echo "✓ License files present"
@@ -621,7 +621,7 @@ evaluation_9_compliance_governance() {
     fi
 
     # Check for change management
-    if [[ -d /Users/daniellynch/.git ]] && git log --oneline -10 | grep -q "."; then
+    if [[ -d ${HOME}/.git ]] && git log --oneline -10 | grep -q "."; then
         judge_score "eval9" "change_management" 7
         echo "✓ Version control and change tracking present"
     else
@@ -677,7 +677,7 @@ evaluation_10_architecture_maintainability() {
     fi
 
     # Check for testing coverage
-    local test_files=$(find /Users/daniellynch -name "*test*" -o -name "*spec*" 2>/dev/null | wc -l)
+    local test_files=$(find ${HOME} -name "*test*" -o -name "*spec*" 2>/dev/null | wc -l)
     if [ $test_files -gt 3 ]; then
         judge_score "eval10" "testing" 7
         echo "✓ Good testing coverage ($test_files test files)"
@@ -687,7 +687,7 @@ evaluation_10_architecture_maintainability() {
     fi
 
     # Check for documentation quality
-    local doc_lines=$(find /Users/daniellynch -name "*1password*.md" -exec wc -l {} \; 2>/dev/null | awk '{sum += $1} END {print sum}')
+    local doc_lines=$(find ${HOME} -name "*1password*.md" -exec wc -l {} \; 2>/dev/null | awk '{sum += $1} END {print sum}')
     if [ "${doc_lines:-0}" -gt 1000 ]; then
         judge_score "eval10" "documentation" 9
         echo "✓ Comprehensive documentation (${doc_lines:-0} lines)"
@@ -697,7 +697,7 @@ evaluation_10_architecture_maintainability() {
     fi
 
     # Check for automation level
-    local script_count=$(find /Users/daniellynch -name "*1password*.sh" 2>/dev/null | wc -l)
+    local script_count=$(find ${HOME} -name "*1password*.sh" 2>/dev/null | wc -l)
     if [ $script_count -gt 10 ]; then
         judge_score "eval10" "automation" 9
         echo "✓ High automation level ($script_count scripts)"

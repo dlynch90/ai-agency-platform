@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 EVENT_BUS_PORT=9092
 CIPHER_MCP_PORT=3001
 GIBSON_API_PORT=8000
-WORKSPACE_DIR="/Users/daniellynch/Developer"
+WORKSPACE_DIR="${HOME}/Developer"
 
 # Logging function
 log() {

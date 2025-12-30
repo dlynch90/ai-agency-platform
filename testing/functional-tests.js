@@ -7,10 +7,13 @@ import path from 'path';
  * 20 Rounds of Real-World Use Cases Based on Developer Cookbooks
  */
 
+const HOME = process.env.HOME || '/tmp';
+const DEVELOPER_DIR = process.env.DEVELOPER_DIR || path.join(HOME, 'Developer');
+
 class AIFunctionalTestSuite {
     constructor() {
         this.results = [];
-        this.logPath = '/Users/daniellynch/Developer/.cursor/debug.log';
+        this.logPath = path.join(DEVELOPER_DIR, '.cursor', 'debug.log');
         this.serverEndpoint = 'http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab';
         this.sessionId = 'ai-app-functional-tests';
     }

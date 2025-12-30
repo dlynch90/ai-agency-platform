@@ -30,7 +30,12 @@ export default defineConfig({
     hookTimeout: 10000,
     teardownTimeout: 10000,
     isolate: true,
-    threads: true,
+    pool: 'threads',
+    poolOptions: {
+      threads: {
+        singleThread: false,
+      },
+    },
     reporters: ['verbose'],
     setupFiles: ['./tests/setup.ts'],
   },

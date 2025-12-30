@@ -74,9 +74,9 @@ transitions = "*"
 chromadb = "*"
 sentence-transformers = "*"
 llama-index = "*"
-# Mem0.ai integration dependencies
-mem0ai = "*"
-qdrant-client = "*"
+# Mem0.ai integration dependencies - pinned to v1.x for stability
+mem0ai = ">=1.0.0,<2.0.0"
+qdrant-client = ">=1.12.0,<2.0.0"
 neo4j = "*"
 mcp = "*"
 
@@ -86,7 +86,7 @@ neo4j-python-driver = "*"
 postgresql = "*"
 redis-py = "*"
 # prisma = "*"  # Not available in conda-forge, use pip instead
-qdrant-client = "*"
+# qdrant-client moved to ai-ml feature for unified vector DB management
 
 [feature.infrastructure.dependencies]
 # Infrastructure & Cloud Tools
@@ -133,6 +133,73 @@ rich = "*"
 pyyaml = "*"
 
 # ============================================================================
+# USE CASE FEATURES - Consolidated from 21 requirements.txt files
+# ============================================================================
+
+[feature.use-case-common.pypi-dependencies]
+# Common dependencies shared across all use cases
+httpx = ">=0.27.0"
+pydantic = ">=2.0"
+sqlalchemy = ">=2.0"
+alembic = "*"
+python-dotenv = "*"
+structlog = "*"
+tenacity = "*"
+cachetools = "*"
+
+[feature.use-case-ecommerce.pypi-dependencies]
+# E-commerce personalization use case
+stripe = "*"
+shopify-api = "*"
+elasticsearch = ">=8.0"
+
+[feature.use-case-healthcare.pypi-dependencies]
+# Healthcare triage use case
+fhir-resources = "*"
+hl7apy = "*"
+
+[feature.use-case-finance.pypi-dependencies]
+# Financial portfolio use case
+yfinance = "*"
+pandas-ta = "*"
+alpaca-trade-api = "*"
+
+[feature.use-case-education.pypi-dependencies]
+# Adaptive education use case
+spacy = "*"
+textstat = "*"
+
+[feature.use-case-supply-chain.pypi-dependencies]
+# Supply chain optimization use case
+networkx = "*"
+ortools = "*"
+
+[feature.use-case-marketing.pypi-dependencies]
+# Marketing analytics use case
+google-analytics-data = "*"
+facebook-business = "*"
+
+[feature.use-case-real-estate.pypi-dependencies]
+# Real estate use case
+geopy = "*"
+shapely = "*"
+
+[feature.use-case-customer-service.pypi-dependencies]
+# Customer service use case
+twilio = "*"
+sendgrid = "*"
+
+[feature.use-case-hr.pypi-dependencies]
+# HR talent matching use case
+textdistance = "*"
+fuzzywuzzy = "*"
+
+[feature.use-case-logistics.pypi-dependencies]
+# Logistics optimization use case
+googlemaps = "*"
+openrouteservice = "*"
+
+# ============================================================================
 # ENVIRONMENTS - Combinations of features
 # ============================================================================
 
@@ -153,11 +220,15 @@ infrastructure = { features = ["core", "cli", "dev-tools", "utils", "infrastruct
 full-stack = { features = ["core", "cli", "dev-tools", "utils", "ai-ml", "database", "infrastructure", "web", "nodejs", "jupyter"], solve-group = "full-stack" }
 
 [activation.env]
-# Environment variables
+# Environment variables - SSOT compliant (no hardcoded paths)
 DEVELOPER_DIR = "${DEVELOPER_DIR:-$HOME/Developer}"
+DEV_HOME = "${DEVELOPER_DIR:-$HOME/Developer}"
 USER_HOME = "${USER_HOME:-$HOME}"
 CONFIG_DIR = "${CONFIG_DIR:-$HOME/.config}"
-MCP_CONFIG_DIR = "${MCP_CONFIG_DIR:-$HOME/.cursor/mcp}"
+MCP_CONFIG_DIR = "${MCP_CONFIG_DIR:-$HOME/.config/mcp}"
+CHEZMOI_DEV_HOME = "${DEVELOPER_DIR:-$HOME/Developer}"
+# OpenMP conflict workaround for conda + PyTorch on Apple Silicon
+KMP_DUPLICATE_LIB_OK = "TRUE"
 
 [tasks]
 # Core tasks

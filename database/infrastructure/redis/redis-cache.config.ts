@@ -129,7 +129,7 @@ export const productionClusterConfig: RedisClusterConfig = {
  */
 export class RedisCacheManager {
   private client: RedisClientType | null = null;
-  private cluster: RedisClusterType | null = null;
+  private _cluster: RedisClusterType | null = null;
   private isClusterMode: boolean = false;
   private isConnected: boolean = false;
   private subscribers: Map<string, RedisClientType> = new Map();

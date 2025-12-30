@@ -4,7 +4,7 @@ set -euo pipefail
 # COMPREHENSIVE VIOLATIONS FIX - CURSOR IDE RULES COMPLIANCE
 # Address all violations from finite element gap analysis
 
-export LOG_FILE="/Users/daniellynch/comprehensive_fix_log_$(date +%Y%m%d_%H%M%S).log"
+export LOG_FILE="${HOME}/comprehensive_fix_log_$(date +%Y%m%d_%H%M%S).log"
 exec > >(tee -a "$LOG_FILE") 2>&1
 
 echo "🔧 COMPREHENSIVE VIOLATIONS FIX - CURSOR IDE RULES COMPLIANCE"
@@ -17,8 +17,8 @@ echo "📁 PHASE 1: ORGANIZING LOOSE FILES"
 echo "==================================="
 
 # Create proper directory structure
-mkdir -p /Users/daniellynch/Developer/{scripts,configs,tools,tests,docs/adr,data/registry}
-mkdir -p /Users/daniellynch/Developer/.local/share/chezmoi
+mkdir -p ${HOME}/Developer/{scripts,configs,tools,tests,docs/adr,data/registry}
+mkdir -p ${HOME}/Developer/.local/share/chezmoi
 
 # Move loose scripts to scripts directory
 loose_scripts=(
@@ -31,9 +31,9 @@ loose_scripts=(
 )
 
 for script in "${loose_scripts[@]}"; do
-    if [ -f "/Users/daniellynch/Developer/$script" ]; then
+    if [ -f "${HOME}/Developer/$script" ]; then
         echo "   Moving $script to scripts/"
-        mv "/Users/daniellynch/Developer/$script" "/Users/daniellynch/Developer/scripts/"
+        mv "${HOME}/Developer/$script" "${HOME}/Developer/scripts/"
     fi
 done
 
@@ -57,9 +57,9 @@ loose_configs=(
 )
 
 for config in "${loose_configs[@]}"; do
-    if [ -f "/Users/daniellynch/Developer/$config" ]; then
+    if [ -f "${HOME}/Developer/$config" ]; then
         echo "   Moving $config to configs/"
-        mv "/Users/daniellynch/Developer/$config" "/Users/daniellynch/Developer/configs/"
+        mv "${HOME}/Developer/$config" "${HOME}/Developer/configs/"
     fi
 done
 
@@ -70,9 +70,9 @@ loose_docs=(
 )
 
 for doc in "${loose_docs[@]}"; do
-    if [ -f "/Users/daniellynch/Developer/$doc" ]; then
+    if [ -f "${HOME}/Developer/$doc" ]; then
         echo "   Moving $doc to docs/"
-        mv "/Users/daniellynch/Developer/$doc" "/Users/daniellynch/Developer/docs/"
+        mv "${HOME}/Developer/$doc" "${HOME}/Developer/docs/"
     fi
 done
 
@@ -82,23 +82,23 @@ loose_tests=(
 )
 
 for test in "${loose_tests[@]}"; do
-    if [ -f "/Users/daniellynch/Developer/$test" ]; then
+    if [ -f "${HOME}/Developer/$test" ]; then
         echo "   Moving $test to tests/"
-        mv "/Users/daniellynch/Developer/$test" "/Users/daniellynch/Developer/tests/"
+        mv "${HOME}/Developer/$test" "${HOME}/Developer/tests/"
     fi
 done
 
 # Move audit files to logs directory
-mkdir -p /Users/daniellynch/Developer/logs
+mkdir -p ${HOME}/Developer/logs
 audit_files=(
     "loose_files_audit_output.log"
     "loose_files_audit_report.json"
 )
 
 for audit in "${audit_files[@]}"; do
-    if [ -f "/Users/daniellynch/Developer/$audit" ]; then
+    if [ -f "${HOME}/Developer/$audit" ]; then
         echo "   Moving $audit to logs/"
-        mv "/Users/daniellynch/Developer/$audit" "/Users/daniellynch/Developer/logs/"
+        mv "${HOME}/Developer/$audit" "${HOME}/Developer/logs/"
     fi
 done
 
@@ -110,7 +110,7 @@ echo "🏠 PHASE 2: CHEZMOI DOTFILE MANAGEMENT SETUP"
 echo "==========================================="
 
 # Initialize Chezmoi if not already done
-if [ ! -d "/Users/daniellynch/.local/share/chezmoi" ]; then
+if [ ! -d "${HOME}/.local/share/chezmoi" ]; then
     echo "   Initializing Chezmoi..."
     chezmoi init --apply
 fi
@@ -126,14 +126,14 @@ dotfiles_to_manage=(
 )
 
 for dotfile in "${dotfiles_to_manage[@]}"; do
-    if [ -f "/Users/daniellynch/$dotfile" ]; then
+    if [ -f "${HOME}/$dotfile" ]; then
         echo "   Adding $dotfile to Chezmoi..."
         chezmoi add "$dotfile"
     fi
 done
 
 # Create parameterized Chezmoi templates
-cat > "/Users/daniellynch/.local/share/chezmoi/dot_zshrc.tmpl" << 'EOF'
+cat > "${HOME}/.local/share/chezmoi/dot_zshrc.tmpl" << 'EOF'
 # Zsh Configuration - Parameterized via Chezmoi + 1Password
 
 # Oh My Zsh
@@ -186,7 +186,7 @@ echo "📚 PHASE 3: CENTRALIZED REGISTRIES SETUP"
 echo "======================================="
 
 # Create MCP servers registry
-cat > "/Users/daniellynch/Developer/data/registry/mcp_servers.json" << 'EOF'
+cat > "${HOME}/Developer/data/registry/mcp_servers.json" << 'EOF'
 {
   "mcp_servers": {
     "sequential-thinking": {
@@ -241,7 +241,7 @@ cat > "/Users/daniellynch/Developer/data/registry/mcp_servers.json" << 'EOF'
 EOF
 
 # Create CLI tools registry
-cat > "/Users/daniellynch/Developer/data/registry/cli_tools.json" << 'EOF'
+cat > "${HOME}/Developer/data/registry/cli_tools.json" << 'EOF'
 {
   "cli_tools": {
     "fd": {"category": "file_search", "priority": "high"},
@@ -265,7 +265,7 @@ cat > "/Users/daniellynch/Developer/data/registry/cli_tools.json" << 'EOF'
 EOF
 
 # Create API endpoints registry
-cat > "/Users/daniellynch/Developer/data/registry/api_endpoints.json" << 'EOF'
+cat > "${HOME}/Developer/data/registry/api_endpoints.json" << 'EOF'
 {
   "api_endpoints": {
     "anthropic": {
@@ -306,7 +306,7 @@ echo ""
 echo "🔧 PHASE 4: MCP SERVER CONFIGURATIONS"
 echo "===================================="
 
-mkdir -p /Users/daniellynch/Developer/.cursor/mcp
+mkdir -p ${HOME}/Developer/.cursor/mcp
 
 # Create MCP server configurations
 mcp_configs=(
@@ -322,7 +322,7 @@ mcp_configs=(
 )
 
 for mcp in "${mcp_configs[@]}"; do
-    cat > "/Users/daniellynch/Developer/.cursor/mcp/${mcp}.json" << EOF
+    cat > "${HOME}/Developer/.cursor/mcp/${mcp}.json" << EOF
 {
   "name": "${mcp}",
   "version": "1.0.0",
@@ -348,7 +348,7 @@ echo "🗄️ PHASE 5: DATABASE SETUP"
 echo "==========================="
 
 # Create Docker Compose for databases
-cat > "/Users/daniellynch/Developer/docker-compose.databases.yml" << 'EOF'
+cat > "${HOME}/Developer/docker-compose.databases.yml" << 'EOF'
 version: '3.8'
 
 services:
@@ -426,7 +426,7 @@ echo ""
 echo "🎯 PHASE 6: 20 AI AGENCY USE CASES"
 echo "==================================="
 
-cat > "/Users/daniellynch/Developer/docs/ai-agency-use-cases.md" << 'EOF'
+cat > "${HOME}/Developer/docs/ai-agency-use-cases.md" << 'EOF'
 # 20 Real World AI Agency Use Cases
 
 ## 1. E-commerce Personalization Engine
@@ -578,7 +578,7 @@ echo "🌐 PHASE 7: NETWORK PROXY SETUP"
 echo "==============================="
 
 # Create network proxy configuration
-cat > "/Users/daniellynch/Developer/docker-compose.proxy.yml" << 'EOF'
+cat > "${HOME}/Developer/docker-compose.proxy.yml" << 'EOF'
 version: '3.8'
 
 services:
@@ -626,7 +626,7 @@ services:
 EOF
 
 # Create smoke test collection
-cat > "/Users/daniellynch/Developer/tests/smoke/smoke-tests.postman_collection.json" << 'EOF'
+cat > "${HOME}/Developer/tests/smoke/smoke-tests.postman_collection.json" << 'EOF'
 {
   "info": {
     "name": "AI Agency Smoke Tests",
@@ -774,10 +774,10 @@ echo "🔧 PHASE 8: CURSOR IDE INSTRUMENTATION FIX"
 echo "=========================================="
 
 # Clear existing debug log
-rm -f /Users/daniellynch/Developer/.cursor/debug.log
+rm -f ${HOME}/Developer/.cursor/debug.log
 
 # Create proper instrumentation configuration
-cat > "/Users/daniellynch/Developer/.cursor/instrumentation.json" << 'EOF'
+cat > "${HOME}/Developer/.cursor/instrumentation.json" << 'EOF'
 {
   "debug_server": {
     "endpoint": "http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab",
@@ -828,7 +828,7 @@ echo "🔧 PHASE 9: GIBSON CLI INTEGRATION"
 echo "=================================="
 
 # Create Gibson CLI configuration
-cat > "/Users/daniellynch/Developer/tools/gibson-cli-config.json" << 'EOF'
+cat > "${HOME}/Developer/tools/gibson-cli-config.json" << 'EOF'
 {
   "gibson_cli": {
     "version": "1.0.0",
@@ -862,11 +862,11 @@ cat > "/Users/daniellynch/Developer/tools/gibson-cli-config.json" << 'EOF'
 EOF
 
 # Create Gibson CLI wrapper script
-cat > "/Users/daniellynch/Developer/tools/gibson-cli.sh" << 'EOF'
+cat > "${HOME}/Developer/tools/gibson-cli.sh" << 'EOF'
 #!/bin/bash
 # Gibson CLI Wrapper
 
-CONFIG_FILE="/Users/daniellynch/Developer/tools/gibson-cli-config.json"
+CONFIG_FILE="${HOME}/Developer/tools/gibson-cli-config.json"
 API_TOKEN=$(op read "op://development/gibson_api_token")
 
 if [ -z "$API_TOKEN" ]; then
@@ -904,7 +904,7 @@ case "$COMMAND" in
 esac
 EOF
 
-chmod +x "/Users/daniellynch/Developer/tools/gibson-cli.sh"
+chmod +x "${HOME}/Developer/tools/gibson-cli.sh"
 
 echo "✅ Gibson CLI integration configured"
 
@@ -913,9 +913,9 @@ echo ""
 echo "📋 PHASE 10: ADR DOCUMENTATION"
 echo "=============================="
 
-mkdir -p /Users/daniellynch/Developer/docs/adr
+mkdir -p ${HOME}/Developer/docs/adr
 
-cat > "/Users/daniellynch/Developer/docs/adr/0005-comprehensive-tool-ecosystem.md" << 'EOF'
+cat > "${HOME}/Developer/docs/adr/0005-comprehensive-tool-ecosystem.md" << 'EOF'
 # 5. Comprehensive Tool Ecosystem Implementation
 
 Date: $(date -I)
@@ -1040,42 +1040,42 @@ echo "============================="
 echo "🔍 Running final validation checks..."
 
 # Check file organization
-if [ -d "/Users/daniellynch/Developer/scripts" ] && [ -d "/Users/daniellynch/Developer/configs" ]; then
+if [ -d "${HOME}/Developer/scripts" ] && [ -d "${HOME}/Developer/configs" ]; then
     echo "✅ File organization: PASS"
 else
     echo "❌ File organization: FAIL"
 fi
 
 # Check registries
-if [ -f "/Users/daniellynch/Developer/data/registry/mcp_servers.json" ]; then
+if [ -f "${HOME}/Developer/data/registry/mcp_servers.json" ]; then
     echo "✅ MCP registry: PASS"
 else
     echo "❌ MCP registry: FAIL"
 fi
 
 # Check MCP configurations
-if [ -d "/Users/daniellynch/Developer/.cursor/mcp" ]; then
+if [ -d "${HOME}/Developer/.cursor/mcp" ]; then
     echo "✅ MCP configurations: PASS"
 else
     echo "❌ MCP configurations: FAIL"
 fi
 
 # Check database configurations
-if [ -f "/Users/daniellynch/Developer/docker-compose.databases.yml" ]; then
+if [ -f "${HOME}/Developer/docker-compose.databases.yml" ]; then
     echo "✅ Database configurations: PASS"
 else
     echo "❌ Database configurations: FAIL"
 fi
 
 # Check use cases documentation
-if [ -f "/Users/daniellynch/Developer/docs/ai-agency-use-cases.md" ]; then
+if [ -f "${HOME}/Developer/docs/ai-agency-use-cases.md" ]; then
     echo "✅ AI agency use cases: PASS"
 else
     echo "❌ AI agency use cases: FAIL"
 fi
 
 # Check network proxy
-if [ -f "/Users/daniellynch/Developer/docker-compose.proxy.yml" ]; then
+if [ -f "${HOME}/Developer/docker-compose.proxy.yml" ]; then
     echo "✅ Network proxy: PASS"
 else
     echo "❌ Network proxy: FAIL"

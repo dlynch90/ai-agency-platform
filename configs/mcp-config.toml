@@ -309,6 +309,74 @@ disabled = true
 description = "Notion workspace integration"
 
 # ==========================================
+# Semantic Code Analysis Servers
+# ==========================================
+
+[servers.serena]
+command = "uvx"
+args = ["serena-mcp"]
+env = {
+  "SERENA_PROJECT_DIR" = "${DEVELOPER_DIR:-$HOME/Developer}",
+  "SERENA_LANGUAGE_SERVERS" = "typescript,python,rust",
+  "SERENA_ENABLE_TREE_SITTER" = "true",
+  "SERENA_ENABLE_LSP" = "true"
+}
+description = "Serena MCP - Semantic code understanding with Tree-sitter and LSP"
+
+[servers.ast-grep-mcp]
+command = "npx"
+args = ["-y", "ast-grep-mcp"]
+env = { "AST_GREP_LANGUAGES" = "typescript,javascript,python,rust,go" }
+description = "AST-aware code search and pattern matching"
+
+# ==========================================
+# LLM Evaluation Servers
+# ==========================================
+
+[servers.deepeval]
+command = "python"
+args = ["-m", "deepeval.mcp_server"]
+env = {
+  "DEEPEVAL_API_KEY" = "$(op read 'op://Private/DeepEval/api_key' 2>/dev/null || echo '')",
+  "DEEPEVAL_METRICS" = "answer_relevancy,faithfulness,hallucination,toxicity,bias"
+}
+disabled = true
+description = "DeepEval LLM evaluation framework"
+
+[servers.promptfoo]
+command = "npx"
+args = ["-y", "promptfoo-mcp"]
+env = {
+  "PROMPTFOO_CONFIG" = "${DEVELOPER_DIR:-$HOME/Developer}/configs/promptfoo/promptfooconfig.yaml"
+}
+disabled = true
+description = "PromptFoo LLM testing and evaluation"
+
+# ==========================================
+# Resilience & Monitoring Servers
+# ==========================================
+
+[servers.circuit-breaker-monitor]
+command = "node"
+args = ["${DEVELOPER_DIR:-$HOME/Developer}/scripts/circuit-breaker.js", "--metrics-server"]
+env = {
+  "CIRCUIT_BREAKER_METRICS_PORT" = "9091",
+  "PROMETHEUS_PUSHGATEWAY" = "http://localhost:9091"
+}
+disabled = true
+description = "Opossum circuit breaker metrics server"
+
+[servers.jaeger]
+command = "npx"
+args = ["-y", "@opentelemetry/mcp-server"]
+env = {
+  "OTEL_EXPORTER_JAEGER_ENDPOINT" = "http://localhost:14268/api/traces",
+  "OTEL_SERVICE_NAME" = "ai-agency-platform"
+}
+disabled = true
+description = "Jaeger distributed tracing integration"
+
+# ==========================================
 # Global Configuration
 # ==========================================
 

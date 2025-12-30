@@ -33,7 +33,7 @@ TOTAL_FILES=$(find "$DEVELOPER_DIR" -type f \( ! -path "*/.git/*" ! -path "*/nod
 echo "Total files analyzed: $TOTAL_FILES"
 
 # Count violations using grep (vendor commands)
-HARDCODED_PATHS=$(grep -r "/Users/daniellynch" "$DEVELOPER_DIR" --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=.pixi 2>/dev/null | wc -l)
+HARDCODED_PATHS=$(grep -r "${HOME}" "$DEVELOPER_DIR" --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=.pixi 2>/dev/null | wc -l)
 CONSOLE_LOGS=$(grep -r "console\.log" "$DEVELOPER_DIR" --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=.pixi 2>/dev/null | wc -l)
 EVAL_USAGE=$(grep -r "eval(" "$DEVELOPER_DIR" --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=.pixi 2>/dev/null | wc -l)
 
@@ -54,9 +54,9 @@ echo "🔨 FIXING VIOLATIONS WITH SED"
 echo "============================="
 
 # Fix hardcoded paths using sed
-find "$DEVELOPER_DIR" -type f \( ! -path "*/.git/*" ! -path "*/node_modules/*" ! -path "*/.pixi/*" \) -exec grep -l "/Users/daniellynch" {} \; 2>/dev/null | head -10 | while read file; do
-    sed -i '' "s|/Users/daniellynch/Developer|\${DEVELOPER_DIR:-\$HOME/Developer}|g" "$file" 2>/dev/null
-    sed -i '' "s|/Users/daniellynch|\${USER_HOME:-\$HOME}|g" "$file" 2>/dev/null
+find "$DEVELOPER_DIR" -type f \( ! -path "*/.git/*" ! -path "*/node_modules/*" ! -path "*/.pixi/*" \) -exec grep -l "${HOME}" {} \; 2>/dev/null | head -10 | while read file; do
+    sed -i '' "s|${HOME}/Developer|\${DEVELOPER_DIR:-\$HOME/Developer}|g" "$file" 2>/dev/null
+    sed -i '' "s|${HOME}|\${USER_HOME:-\$HOME}|g" "$file" 2>/dev/null
     echo "✅ Fixed hardcoded paths in: $(basename "$file")"
 done
 
@@ -177,7 +177,7 @@ echo "📈 FINAL STATISTICS (NUMERICAL METHODS)"
 echo "======================================"
 
 # Recalculate violation rates after fixes
-NEW_HARDCODED=$(grep -r "/Users/daniellynch" "$DEVELOPER_DIR" --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=.pixi 2>/dev/null | wc -l)
+NEW_HARDCODED=$(grep -r "${HOME}" "$DEVELOPER_DIR" --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=.pixi 2>/dev/null | wc -l)
 IMPROVEMENT=$((HARDCODED_PATHS - NEW_HARDCODED))
 if [ "$HARDCODED_PATHS" -gt 0 ]; then
     IMPROVEMENT_RATE=$(echo "scale=2; $IMPROVEMENT * 100 / $HARDCODED_PATHS" | bc 2>/dev/null || echo "0")

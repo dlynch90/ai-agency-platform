@@ -242,7 +242,7 @@ clean = "pixi clean --all"
     return toml_content
 
 def main():
-    inventory_path = Path("/Users/daniellynch/Developer/docs/audit/binary-inventory.json")
+    inventory_path = Path("${HOME}/Developer/docs/audit/binary-inventory.json")
 
     if not inventory_path.exists():
         print(f"Error: Binary inventory not found at {inventory_path}")
@@ -258,7 +258,7 @@ def main():
     pixi_config = generate_pixi_toml(categories)
 
     # Write to file
-    output_path = Path("/Users/daniellynch/Developer/pixi.toml")
+    output_path = Path("${HOME}/Developer/pixi.toml")
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(pixi_config)
 

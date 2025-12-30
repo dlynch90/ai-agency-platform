@@ -1,112 +1,80 @@
 import { z } from 'zod';
 
-const EnvSchema = z.object({
+// Environment configuration schema
+const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
+  LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']).default('info'),
   DATABASE_URL: z.string().url(),
   REDIS_URL: z.string().url().optional(),
-  NEO4J_URI: z.string().optional(),
-  NEO4J_USER: z.string().default('neo4j'),
-  NEO4J_PASSWORD: z.string().optional(),
+  NEO4J_URI: z.string().url().optional(),
   QDRANT_URL: z.string().url().optional(),
-  CLERK_SECRET_KEY: z.string().optional(),
-  CLERK_PUBLISHABLE_KEY: z.string().optional(),
   OPENAI_API_KEY: z.string().optional(),
   ANTHROPIC_API_KEY: z.string().optional(),
   GOOGLE_API_KEY: z.string().optional(),
-  OLLAMA_BASE_URL: z.string().url().default('http://localhost:11434'),
-  LITELLM_BASE_URL: z.string().url().default('http://localhost:4000'),
-  MLFLOW_TRACKING_URI: z.string().url().default('http://localhost:5000'),
-  OPTUNA_STORAGE: z.string().optional(),
-  LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']).default('info'),
+  CLERK_SECRET_KEY: z.string().optional(),
 });
 
-export type Env = z.infer<typeof EnvSchema>;
+// Parse environment variables
+const env = envSchema.parse(process.env);
 
-export function getConfig(): Env {
-  const result = EnvSchema.safeParse(process.env);
-  
-  if (!result.success) {
-    const formatted = result.error.format();
-    throw new Error(`Invalid environment configuration: ${JSON.stringify(formatted)}`);
-  }
-  
-  return result.data;
-}
-
+// Configuration object
 export const config = {
-  get env() {
-    return getConfig();
+  env,
+  database: {
+    url: env.DATABASE_URL,
   },
-  
-  get isDevelopment() {
-    return this.env.NODE_ENV === 'development';
+  redis: env.REDIS_URL ? { url: env.REDIS_URL } : undefined,
+  neo4j: env.NEO4J_URI ? { uri: env.NEO4J_URI } : undefined,
+  qdrant: env.QDRANT_URL ? { url: env.QDRANT_URL } : undefined,
+  ai: {
+    openai: env.OPENAI_API_KEY ? { apiKey: env.OPENAI_API_KEY } : undefined,
+    anthropic: env.ANTHROPIC_API_KEY ? { apiKey: env.ANTHROPIC_API_KEY } : undefined,
+    google: env.GOOGLE_API_KEY ? { apiKey: env.GOOGLE_API_KEY } : undefined,
   },
-  
-  get isProduction() {
-    return this.env.NODE_ENV === 'production';
-  },
-  
-  get isTest() {
-    return this.env.NODE_ENV === 'test';
+  auth: {
+    clerk: env.CLERK_SECRET_KEY ? { secretKey: env.CLERK_SECRET_KEY } : undefined,
   },
 };
 
+// Use case configurations
 export const USE_CASE_CONFIG = {
-  ECOMMERCE_PERSONALIZATION: {
-    defaultModel: 'llama3.2',
-    subgraphs: ['PRODUCTS', 'USERS', 'ORDERS'],
-    vectorDb: 'qdrant',
+  ecommerce: {
+    name: 'E-commerce Personalization',
+    description: 'AI-powered product recommendations and personalization',
+    models: ['gpt-4', 'claude-3-sonnet', 'gemini-pro'],
+    defaultModel: 'gpt-4',
+    hyperparameters: {
+      temperature: 0.7,
+      maxTokens: 1000,
+    },
   },
-  HEALTHCARE_TRIAGE: {
-    defaultModel: 'llama3.2',
-    subgraphs: ['USERS', 'ANALYTICS'],
-    vectorDb: 'neo4j',
+  healthcare: {
+    name: 'Healthcare Analytics',
+    description: 'Medical data analysis and insights',
+    models: ['gpt-4', 'claude-3-sonnet'],
+    defaultModel: 'gpt-4',
+    hyperparameters: {
+      temperature: 0.1,
+      maxTokens: 2000,
+    },
   },
-  FINANCIAL_PORTFOLIO: {
-    defaultModel: 'gpt-4o',
-    subgraphs: ['USERS', 'ANALYTICS'],
-    vectorDb: 'qdrant',
+  finance: {
+    name: 'Financial Analysis',
+    description: 'Market analysis and financial insights',
+    models: ['gpt-4', 'claude-3-sonnet'],
+    defaultModel: 'gpt-4',
+    hyperparameters: {
+      temperature: 0.2,
+      maxTokens: 1500,
+    },
   },
-  LEGAL_DOCUMENT: {
-    defaultModel: 'claude-sonnet-4',
-    subgraphs: ['USERS', 'ANALYTICS'],
-    vectorDb: 'elasticsearch',
-  },
-  REAL_ESTATE: {
-    defaultModel: 'llama3.2',
-    subgraphs: ['PRODUCTS', 'USERS', 'ANALYTICS'],
-    vectorDb: 'postgis',
-  },
-  EDUCATION_ADAPTIVE: {
-    defaultModel: 'llama3.2',
-    subgraphs: ['USERS', 'ANALYTICS'],
-    vectorDb: 'redis',
-  },
-  MANUFACTURING_QC: {
-    defaultModel: 'llama3.2',
-    subgraphs: ['PRODUCTS', 'ANALYTICS'],
-    vectorDb: 'influxdb',
-  },
-  CUSTOMER_SERVICE: {
-    defaultModel: 'llama3.2',
-    subgraphs: ['TICKETS', 'USERS', 'KNOWLEDGE'],
-    vectorDb: 'qdrant',
-  },
-  SUPPLY_CHAIN: {
-    defaultModel: 'gpt-4o',
-    subgraphs: ['PRODUCTS', 'ORDERS', 'ANALYTICS'],
-    vectorDb: 'neo4j',
-  },
-  HR_TALENT_MATCHING: {
-    defaultModel: 'llama3.2',
-    subgraphs: ['USERS', 'ANALYTICS'],
-    vectorDb: 'qdrant',
-  },
-} as const;
+};
 
+// Hyperparameter defaults
 export const HYPERPARAMETER_DEFAULTS = {
-  model: ['llama3.2', 'codellama', 'gpt-4o', 'claude-sonnet-4'],
-  temperature: [0.0, 0.3, 0.7, 1.0],
-  topP: [0.5, 0.9, 1.0],
-  maxTokens: [256, 512, 1024, 2048],
-} as const;
+  temperature: 0.7,
+  maxTokens: 1000,
+  topP: 1.0,
+  frequencyPenalty: 0.0,
+  presencePenalty: 0.0,
+};

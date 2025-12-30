@@ -307,7 +307,7 @@ class MarkovBinomialAnalyzer:
         return recommendations
 
 def main():
-    workspace = os.getenv('WORKSPACE', '/Users/daniellynch/Developer')
+    workspace = os.getenv('WORKSPACE', '${HOME}/Developer')
 
     analyzer = MarkovBinomialAnalyzer(workspace)
     report = analyzer.generate_comprehensive_report()

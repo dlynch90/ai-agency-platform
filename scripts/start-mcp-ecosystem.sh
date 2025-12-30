@@ -255,7 +255,7 @@ const path = require('path');
 const app = express();
 app.use(express.json());
 
-const ALLOWED_DIR = process.env.MCP_FILESYSTEM_ROOT || '/Users/daniellynch/Developer';
+const ALLOWED_DIR = process.env.MCP_FILESYSTEM_ROOT || '${HOME}/Developer';
 
 app.post('/read', async (req, res) => {
     try {

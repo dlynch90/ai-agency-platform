@@ -4,7 +4,7 @@ set -euo pipefail
 # Comprehensive Tool Ecosystem Installer
 # Vendor-Only, Parameterized Configuration via Chezmoi + 1Password
 
-export LOG_FILE="/Users/daniellynch/tool-ecosystem-install-$(date +%Y%m%d-%H%M%S).log"
+export LOG_FILE="${HOME}/tool-ecosystem-install-$(date +%Y%m%d-%H%M%S).log"
 exec > >(tee -a "$LOG_FILE") 2>&1
 
 echo "🚀 Starting Comprehensive Tool Ecosystem Installation"

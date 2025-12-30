@@ -65,7 +65,7 @@ class NumericalMethodsAuditor:
     def analyze_code_quality(self, content, file_path):
         """Analyze code quality using statistical methods"""
         # Hardcoded paths (violation)
-        if '/Users/daniellynch' in content:
+        if '${HOME}' in content:
             self.violations['hardcoded_paths'] += 1
 
         # Console.log usage (violation)
@@ -216,7 +216,7 @@ class NumericalMethodsAuditor:
 
 def main():
     auditor = NumericalMethodsAuditor()
-    auditor.audit_directory('/Users/daniellynch/Developer')
+    auditor.audit_directory('${HOME}/Developer')
 
     # Save detailed results
     results = {
@@ -226,7 +226,7 @@ def main():
         'recommendations': auditor.generate_fix_recommendations()
     }
 
-    with open('/Users/daniellynch/Developer/numerical-audit-results.json', 'w') as f:
+    with open('${HOME}/Developer/numerical-audit-results.json', 'w') as f:
         json.dump(results, f, indent=2, default=str)
 
 if __name__ == "__main__":

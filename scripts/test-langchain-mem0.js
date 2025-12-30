@@ -194,7 +194,7 @@ fs.writeFileSync(testFile, langchainTest);
 
 console.log('Running LangChain + Mem0 integration test...');
 try {
-  const venvPython = '/Users/daniellynch/Developer/venv-mcp/bin/python3';
+  const venvPython = '${HOME}/Developer/venv-mcp/bin/python3';
   execSync(`${venvPython} ${testFile}`, {
     stdio: 'inherit',
     timeout: 30000,

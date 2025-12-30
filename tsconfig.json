@@ -8,6 +8,10 @@
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ai-agency/*": ["packages/*/src"]
+    },
     "isolatedModules": true,
     "noEmit": true,
     "strict": true,
@@ -16,8 +20,22 @@
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules", "dist", "venv311", ".pixi"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "tools/**/*.ts",
+    "tools/**/*.tsx",
+    "scripts/**/*.ts",
+    "scripts/**/*.tsx",
+    "temporal/**/*.ts",
+    "database/**/*.ts",
+    "services/**/*.ts",
+    "configs/**/*.ts",
+    "apps/**/*.ts",
+    "packages/**/*.ts"
+  ],
+  "exclude": ["node_modules", "dist", "venv311", ".pixi", "**/*.test.ts", "**/*.spec.ts"]
 }

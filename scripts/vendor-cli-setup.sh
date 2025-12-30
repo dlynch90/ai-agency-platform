@@ -9,7 +9,7 @@ echo "=============================================="
 
 # Gibson CLI - Official AI Development Tool
 echo "🤖 Gibson CLI Setup..."
-export PATH="/Users/daniellynch/.local/bin:$PATH"
+export PATH="${HOME}/.local/bin:$PATH"
 if command -v gibson >/dev/null 2>&1; then
     echo "✅ Gibson CLI available"
     gibson auth login --help >/dev/null 2>&1 && echo "✅ Gibson authentication available"

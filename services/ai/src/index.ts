@@ -3,7 +3,7 @@ import { cors } from 'hono/cors';
 import { logger } from 'hono/logger';
 import { zValidator } from '@hono/zod-validator';
 import pino from 'pino';
-import { AIRequestSchema, AIResponseSchema, type AIRequest, type AIResponse } from '@ai-agency/types';
+import { AIRequestSchema, type AIRequest, type AIResponse } from '@ai-agency/types';
 import { config, USE_CASE_CONFIG, HYPERPARAMETER_DEFAULTS } from '@ai-agency/config';
 
 const log = pino({ level: config.env.LOG_LEVEL });
@@ -51,8 +51,9 @@ app.post('/v1/completion', zValidator('json', AIRequestSchema), async (c) => {
 app.post('/v1/evaluate', zValidator('json', AIRequestSchema), async (c) => {
   const request = c.req.valid('json');
   
+  const models = ['gpt-4', 'claude-3-sonnet-20240229', 'gemini-pro'];
   const results = await Promise.all(
-    HYPERPARAMETER_DEFAULTS.model.map(async (model) => {
+    models.map(async (model: string) => {
       const startTime = Date.now();
       const response = await callLiteLLM({
         model,

@@ -12,7 +12,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # Configuration
-WORKSPACE_DIR="/Users/daniellynch/Developer"
+WORKSPACE_DIR="${HOME}/Developer"
 AUDIT_FILE="$WORKSPACE_DIR/docs/audit/loose-files-audit.json"
 
 # Logging functions

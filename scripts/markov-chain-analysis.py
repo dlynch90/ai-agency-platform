@@ -324,7 +324,7 @@ class MarkovChainWorkflowAnalyzer:
         logger.info(f"Markov chain analysis saved to {output_path}")
 
 def main():
-    workspace_path = "/Users/daniellynch/Developer"
+    workspace_path = "${HOME}/Developer"
 
     analyzer = MarkovChainWorkflowAnalyzer(workspace_path)
     analysis_results = analyzer.analyze_workflow()

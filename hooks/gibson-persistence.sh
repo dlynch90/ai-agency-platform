@@ -41,7 +41,7 @@ check_gibson_health() {
 
     if timeout "$timeout" bash -c "
         export GIBSONAI_PROJECT='$project'
-        cd /Users/daniellynch/Developer
+        cd \${DEVELOPER_DIR:-\$HOME/Developer}
         ./bin/gibson-official --help >/dev/null 2>&1
     " 2>/dev/null; then
         return 0

@@ -7,6 +7,9 @@ import { promisify } from 'util';
 import { writeFile, readFile, unlink } from 'fs/promises';
 import path from 'path';
 
+// SSOT: Use environment variables instead of hardcoded paths
+const DEVELOPER_DIR = process.env.DEVELOPER_DIR || `${process.env.HOME}/Developer`;
+
 export interface GibsonHealthCheckInput {
   projectId: string;
   timeoutSeconds?: number;
@@ -87,7 +90,7 @@ export async function checkGibsonHealth(input: GibsonHealthCheckInput): Promise<
     const projectId = input.projectId;
 
     // Execute health check command
-    const command = `cd /Users/daniellynch/Developer && timeout ${timeout}s ./bin/gibson-official --help`;
+    const command = `cd ${DEVELOPER_DIR} && timeout ${timeout}s ./bin/gibson-official --help`;
     execSync(command, {
       timeout: timeout * 1000,
       env: { ...process.env, GIBSONAI_PROJECT: projectId }
@@ -120,7 +123,7 @@ export async function checkGibsonHealth(input: GibsonHealthCheckInput): Promise<
 // Activity: Load Gibson Configuration
 export async function loadGibsonConfig(input: GibsonConfigLoadInput): Promise<GibsonConfigLoadOutput> {
   try {
-    const configPath = path.join(process.env.HOME || '/Users/daniellynch', '.gibsonai', 'config');
+    const configPath = path.join(process.env.HOME || '/tmp', '.gibsonai', 'config');
 
     const configContent = await readFile(configPath, 'utf-8');
     const config = JSON.parse(configContent);
@@ -153,7 +156,7 @@ export async function authenticateGibson(input: GibsonAuthInput): Promise<Gibson
     const projectId = input.projectId;
 
     // Check if already authenticated by testing a simple command
-    const testCommand = `cd /Users/daniellynch/Developer && GIBSONAI_PROJECT="${projectId}" ./bin/gibson-official list projects`;
+    const testCommand = `cd ${DEVELOPER_DIR} && GIBSONAI_PROJECT="${projectId}" ./bin/gibson-official list projects`;
     execSync(testCommand, { timeout: 10000 });
 
     return {
@@ -179,7 +182,7 @@ export async function startGibsonMcpServer(input: GibsonMcpStartInput): Promise<
 
     // Start MCP server in background
     const child = spawn('./bin/gibson-official', ['mcp', 'run'], {
-      cwd: '/Users/daniellynch/Developer',
+      cwd: DEVELOPER_DIR,
       detached: true,
       stdio: 'ignore',
       env: { ...process.env, GIBSONAI_PROJECT: projectId }
@@ -240,7 +243,7 @@ export async function generateGibsonSchema(input: GibsonSchemaGenerationInput): 
     }
 
     // Execute Gibson code generation
-    const fullCommand = `cd /Users/daniellynch/Developer && GIBSONAI_PROJECT="${projectId}" ./bin/gibson-official ${command} ${args.join(' ')}`;
+    const fullCommand = `cd ${DEVELOPER_DIR} && GIBSONAI_PROJECT="${projectId}" ./bin/gibson-official ${command} ${args.join(' ')}`;
     const result = execSync(fullCommand, {
       timeout: 30000,
       encoding: 'utf-8'
@@ -268,7 +271,7 @@ export async function syncGibsonProject(input: GibsonProjectSyncInput): Promise<
 
     // Execute Gibson project sync
     const forceFlag = force ? '--force' : '';
-    const command = `cd /Users/daniellynch/Developer && GIBSONAI_PROJECT="${projectId}" ./bin/gibson-official deploy ${forceFlag}`;
+    const command = `cd ${DEVELOPER_DIR} && GIBSONAI_PROJECT="${projectId}" ./bin/gibson-official deploy ${forceFlag}`;
 
     const result = execSync(command, {
       timeout: 60000, // 1 minute timeout for deployment

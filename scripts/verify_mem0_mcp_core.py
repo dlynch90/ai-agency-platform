@@ -145,7 +145,7 @@ async def main():
         results = await verifier.verify_core_servers()
 
         # Save results
-        output_file = Path("/Users/daniellynch/Developer/docs/integrations/mem0-ai/core_mcp_verification.json")
+        output_file = Path("${HOME}/Developer/docs/integrations/mem0-ai/core_mcp_verification.json")
         with open(output_file, 'w') as f:
             json.dump(results, f, indent=2)
 

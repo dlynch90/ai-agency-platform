@@ -29,7 +29,7 @@ echo "🔧 Step 2: Fixing System Path Integrity"
 
 # Find and fix broken symlinks
 echo "Finding broken symlinks..."
-find /Users/daniellynch/Developer -type l ! -exec test -e {} \; -print > broken_symlinks.txt
+find ${HOME}/Developer -type l ! -exec test -e {} \; -print > broken_symlinks.txt
 
 if [ -s broken_symlinks.txt ]; then
     echo "Found broken symlinks:"
@@ -43,7 +43,7 @@ fi
 
 # Fix permission issues
 echo "Checking for permission issues..."
-find /Users/daniellynch/Developer -type f -perm -2 -exec chmod o-w {} \; 2>/dev/null || true
+find ${HOME}/Developer -type f -perm -2 -exec chmod o-w {} \; 2>/dev/null || true
 check_success "Permission fixes"
 
 # Step 3: Fix Polyglot Environment
@@ -89,7 +89,7 @@ echo "🔧 Step 5: Consolidating Environment Sprawl"
 
 # Remove duplicate environments
 echo "Finding duplicate environments..."
-find /Users/daniellynch/Developer -name ".venv" -o -name "venv" -o -name "env" | head -10 > duplicate_envs.txt
+find ${HOME}/Developer -name ".venv" -o -name "venv" -o -name "env" | head -10 > duplicate_envs.txt
 
 if [ -s duplicate_envs.txt ]; then
     echo "Found potential duplicate environments:"

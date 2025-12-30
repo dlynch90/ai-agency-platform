@@ -1,7 +1,7 @@
 #!/bin/bash
 # Health check script for Developer environment
 # Run: ./scripts/health-check.sh
-# Cron: */5 * * * * /Users/daniellynch/Developer/scripts/health-check.sh >> /tmp/health-check.log 2>&1
+# Cron: */5 * * * * ${HOME}/Developer/scripts/health-check.sh >> /tmp/health-check.log 2>&1
 
 set -e
 

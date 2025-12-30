@@ -394,7 +394,7 @@ class FEAIntegrationPipeline:
         logger.info(f"Integrated FEA analysis saved to {output_path}")
 
 def main():
-    workspace_path = "/Users/daniellynch/Developer"
+    workspace_path = "${HOME}/Developer"
 
     pipeline = FEAIntegrationPipeline(workspace_path)
     integrated_results = pipeline.run_integration_pipeline()

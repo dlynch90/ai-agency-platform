@@ -10,7 +10,7 @@ import path from 'path';
 class ComprehensiveGapAnalysis {
     constructor() {
         this.results = [];
-        this.logPath = '/Users/daniellynch/Developer/.cursor/debug.log';
+        this.logPath = '${HOME}/Developer/.cursor/debug.log';
         this.serverEndpoint = 'http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab';
         this.sessionId = 'comprehensive-gap-analysis';
         this.gaps = [];

@@ -2,7 +2,7 @@
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/daniellynch/Developer"],
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${DEVELOPER_DIR}"],
       "env": {
         "NODE_ENV": "production"
       }
@@ -24,7 +24,7 @@
     },
     "ollama": {
       "command": "node",
-      "args": ["/Users/daniellynch/Developer/mcp-servers/ollama-server.cjs"],
+      "args": ["${DEVELOPER_DIR}/mcp-servers/ollama-server.cjs"],
       "env": {
         "OLLAMA_HOST": "http://localhost:11434"
       }
