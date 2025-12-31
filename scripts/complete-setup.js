@@ -50,14 +50,87 @@ class CompleteSetup {
     }
 
     async runKongReload() {
+        // #region agent log - kong reload start
+        fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                sessionId: 'debug-session',
+                runId: 'kong-reload',
+                hypothesisId: 'H2',
+                location: 'complete-setup.js:runKongReload',
+                message: 'Starting Kong configuration reload',
+                data: { timestamp: Date.now() },
+                timestamp: Date.now()
+            })
+        }).catch(() => {});
+        // #endregion
+
         this.log('🔄 Reloading Kong configuration...');
 
         try {
+            // Check Kong config file exists and read it
+            const kongConfigPath = path.join(this.rootPath, 'infra', 'kong', 'kong.yml');
+            const configExists = fs.existsSync(kongConfigPath);
+
+            // #region agent log - kong config check
+            fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    sessionId: 'debug-session',
+                    runId: 'kong-reload',
+                    hypothesisId: 'H2',
+                    location: 'complete-setup.js:kong-config-check',
+                    message: 'Checking Kong configuration file',
+                    data: { config_path: kongConfigPath, exists: configExists },
+                    timestamp: Date.now()
+                })
+            }).catch(() => {});
+            // #endregion
+
+            if (configExists) {
+                const configContent = fs.readFileSync(kongConfigPath, 'utf8');
+                const hasTemplates = configContent.includes('{{');
+
+                // #region agent log - kong config analysis
+                fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sessionId: 'debug-session',
+                        runId: 'kong-reload',
+                        hypothesisId: 'H2',
+                        location: 'complete-setup.js:kong-config-analysis',
+                        message: 'Analyzing Kong configuration content',
+                        data: { has_templates: hasTemplates, content_length: configContent.length, template_lines: configContent.split('\n').filter(line => line.includes('{{')).length },
+                        timestamp: Date.now()
+                    })
+                }).catch(() => {});
+                // #endregion
+            }
+
             // Copy Kong config to container
             execSync('docker cp infra/kong/kong.yml ai-agency-kong:/kong/declarative/kong.yml', {
                 stdio: 'pipe',
                 cwd: this.rootPath
             });
+
+            // #region agent log - kong config copy success
+            fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    sessionId: 'debug-session',
+                    runId: 'kong-reload',
+                    hypothesisId: 'H2',
+                    location: 'complete-setup.js:kong-config-copy',
+                    message: 'Kong configuration copied to container',
+                    data: { success: true },
+                    timestamp: Date.now()
+                })
+            }).catch(() => {});
+            // #endregion
 
             // Reload Kong
             execSync('docker exec ai-agency-kong kong reload', {
@@ -65,15 +138,63 @@ class CompleteSetup {
                 cwd: this.rootPath
             });
 
+            // #region agent log - kong reload success
+            fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    sessionId: 'debug-session',
+                    runId: 'kong-reload',
+                    hypothesisId: 'H2',
+                    location: 'complete-setup.js:kong-reload-success',
+                    message: 'Kong configuration reloaded successfully',
+                    data: { success: true },
+                    timestamp: Date.now()
+                })
+            }).catch(() => {});
+            // #endregion
+
             this.log('✅ Kong configuration reloaded');
             return { success: true };
         } catch (error) {
+            // #region agent log - kong reload error
+            fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    sessionId: 'debug-session',
+                    runId: 'kong-reload',
+                    hypothesisId: 'H2',
+                    location: 'complete-setup.js:kong-reload-error',
+                    message: 'Kong reload failed',
+                    data: { error: error.message, command: error.command, code: error.code },
+                    timestamp: Date.now()
+                })
+            }).catch(() => {});
+            // #endregion
+
             this.log(`❌ Kong reload failed: ${error.message}`);
             return { success: false, error: error.message };
         }
     }
 
     async verifyServices() {
+        // #region agent log - service verification start
+        fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                sessionId: 'debug-session',
+                runId: 'service-verification',
+                hypothesisId: 'H1',
+                location: 'complete-setup.js:verifyServices',
+                message: 'Starting service verification',
+                data: { timestamp: Date.now() },
+                timestamp: Date.now()
+            })
+        }).catch(() => {});
+        // #endregion
+
         this.log('🔍 Verifying service connectivity...');
 
         const services = [
@@ -90,23 +211,103 @@ class CompleteSetup {
         const results = {};
 
         for (const service of services) {
+            // #region agent log - service check start
+            fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    sessionId: 'debug-session',
+                    runId: 'service-verification',
+                    hypothesisId: 'H1',
+                    location: 'complete-setup.js:service-check',
+                    message: `Checking service: ${service.name}`,
+                    data: { service: service.name, type: service.url ? 'http' : 'tcp', url: service.url, host: service.host, port: service.port },
+                    timestamp: Date.now()
+                })
+            }).catch(() => {});
+            // #endregion
+
             try {
                 if (service.url) {
                     // HTTP check
                     const response = await this.checkHttpService(service);
                     results[service.name] = response ? 'CONNECTED' : 'FAILED';
+
+                    // #region agent log - http check result
+                    fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            sessionId: 'debug-session',
+                            runId: 'service-verification',
+                            hypothesisId: 'H1',
+                            location: 'complete-setup.js:http-check-result',
+                            message: `HTTP check result for ${service.name}`,
+                            data: { service: service.name, url: service.url, connected: response },
+                            timestamp: Date.now()
+                        })
+                    }).catch(() => {});
+                    // #endregion
                 } else {
                     // TCP check
                     const connected = await this.checkTcpService(service.host, service.port);
                     results[service.name] = connected ? 'CONNECTED' : 'FAILED';
+
+                    // #region agent log - tcp check result
+                    fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            sessionId: 'debug-session',
+                            runId: 'service-verification',
+                            hypothesisId: 'H1',
+                            location: 'complete-setup.js:tcp-check-result',
+                            message: `TCP check result for ${service.name}`,
+                            data: { service: service.name, host: service.host, port: service.port, connected: connected },
+                            timestamp: Date.now()
+                        })
+                    }).catch(() => {});
+                    // #endregion
                 }
             } catch (error) {
                 results[service.name] = 'ERROR';
+
+                // #region agent log - service check error
+                fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sessionId: 'debug-session',
+                        runId: 'service-verification',
+                        hypothesisId: 'H1',
+                        location: 'complete-setup.js:service-check-error',
+                        message: `Service check error for ${service.name}`,
+                        data: { service: service.name, error: error.message },
+                        timestamp: Date.now()
+                    })
+                }).catch(() => {});
+                // #endregion
             }
         }
 
         const connectedCount = Object.values(results).filter(r => r === 'CONNECTED').length;
         this.log(`Service connectivity: ${connectedCount}/${services.length} services connected`);
+
+        // #region agent log - verification complete
+        fetch('http://127.0.0.1:7243/ingest/5072b9ca-f4c1-41f0-9e47-ea0a9f90dfab', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                sessionId: 'debug-session',
+                runId: 'service-verification',
+                hypothesisId: 'H1',
+                location: 'complete-setup.js:verification-complete',
+                message: 'Service verification completed',
+                data: { total_services: services.length, connected: connectedCount, results: results },
+                timestamp: Date.now()
+            })
+        }).catch(() => {});
+        // #endregion
 
         return results;
     }

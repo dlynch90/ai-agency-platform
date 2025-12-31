@@ -1,49 +1,744 @@
+# =============================================================================
+# AI Agency Platform - Development Docker Compose Configuration
+# =============================================================================
+# All services configured for development with proper networking, health checks,
+# and environment variable parameterization (no hardcoded values)
+# =============================================================================
+
+version: "3.9"
+
 services:
-  elasticsearch:
-    image: elasticsearch:8.19.9
-    ports:
-    - 9200:9200
-    environment:
-    - discovery.type=single-node
-    - xpack.security.enabled=false
-  jupyter:
-    image: jupyter/scipy-notebook
-    ports:
-    - 8888:8888
-  neo4j:
-    image: neo4j:5
-    ports:
-    - 7474:7474
-    - 7687:7687
-  ollama:
-    image: ollama/ollama
-    ports:
-    - 11434:11434
+  # ===========================================================================
+  # DATABASES
+  # ===========================================================================
+
   postgres:
-    image: postgres:15
-    ports:
-    - 5432:5432
+    image: postgres:${POSTGRES_VERSION:-15}-alpine
+    container_name: ai-agency-postgres
+    hostname: postgres
+    restart: unless-stopped
     environment:
-    - POSTGRES_PASSWORD=postgres
-    - POSTGRES_USER=postgres
-    - POSTGRES_DB=ai_agency
-  redis:
-    image: redis:7
-      environment:
-      REDIS_MAX_CONNECTIONS: "20"
-      POSTGRES_MAX_CONNECTIONS: "10"
-      NEO4J_MAX_CONNECTIONS: "5"
-      KAFKA_MAX_CONNECTIONS: "10"
-      RABBITMQ_MAX_CONNECTIONS: "15"
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_agency}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+      PGDATA: /var/lib/postgresql/data/pgdata
     ports:
-    - 6379:6379
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-scripts/postgres:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-ai_agency}",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - ai-agency-network
+    deploy:
+      resources:
+        limits:
+          cpus: "${POSTGRES_CPU_LIMIT:-2}"
+          memory: ${POSTGRES_MEMORY_LIMIT:-2G}
+        reservations:
+          memory: ${POSTGRES_MEMORY_RESERVATION:-512M}
+
+  redis:
+    image: redis:${REDIS_VERSION:-7}-alpine
+    container_name: ai-agency-redis
+    hostname: redis
+    restart: unless-stopped
+    command: >
+      redis-server
+      --appendonly yes
+      --maxmemory ${REDIS_MAXMEMORY:-256mb}
+      --maxmemory-policy allkeys-lru
+      --requirepass ${REDIS_PASSWORD:-}
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ai-agency-network
+    deploy:
+      resources:
+        limits:
+          cpus: "${REDIS_CPU_LIMIT:-1}"
+          memory: ${REDIS_MEMORY_LIMIT:-512M}
+
+  neo4j:
+    image: neo4j:${NEO4J_VERSION:-5}-community
+    container_name: ai-agency-neo4j
+    hostname: neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: ${NEO4J_USER:-neo4j}/${NEO4J_PASSWORD:-changeme}
+      NEO4J_PLUGINS: '["apoc", "graph-data-science"]'
+      NEO4J_dbms_memory_heap_initial__size: ${NEO4J_HEAP_INITIAL:-512m}
+      NEO4J_dbms_memory_heap_max__size: ${NEO4J_HEAP_MAX:-1G}
+      NEO4J_dbms_memory_pagecache_size: ${NEO4J_PAGECACHE:-256m}
+      NEO4J_dbms_security_procedures_unrestricted: "apoc.*,gds.*"
+      NEO4J_dbms_security_procedures_allowlist: "apoc.*,gds.*"
+    ports:
+      - "${NEO4J_HTTP_PORT:-7474}:7474"
+      - "${NEO4J_BOLT_PORT:-7687}:7687"
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+      - neo4j_plugins:/plugins
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "wget --no-verbose --tries=1 --spider http://localhost:7474 || exit 1",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - ai-agency-network
+    deploy:
+      resources:
+        limits:
+          cpus: "${NEO4J_CPU_LIMIT:-2}"
+          memory: ${NEO4J_MEMORY_LIMIT:-2G}
+
+  qdrant:
+    image: qdrant/qdrant:${QDRANT_VERSION:-latest}
+    container_name: ai-agency-qdrant
+    hostname: qdrant
+    restart: unless-stopped
+    environment:
+      QDRANT__SERVICE__GRPC_PORT: ${QDRANT_GRPC_PORT:-6334}
+      QDRANT__SERVICE__HTTP_PORT: ${QDRANT_PORT:-6333}
+      QDRANT__STORAGE__STORAGE_PATH: /qdrant/storage
+      QDRANT__LOG_LEVEL: ${QDRANT_LOG_LEVEL:-INFO}
+    ports:
+      - "${QDRANT_PORT:-6333}:6333"
+      - "${QDRANT_GRPC_PORT:-6334}:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "wget --no-verbose --tries=1 --spider http://localhost:6333/healthz || exit 1",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ai-agency-network
+    deploy:
+      resources:
+        limits:
+          cpus: "${QDRANT_CPU_LIMIT:-2}"
+          memory: ${QDRANT_MEMORY_LIMIT:-1G}
+
+  elasticsearch:
+    image: elasticsearch:${ELASTICSEARCH_VERSION:-8.12.0}
+    container_name: ai-agency-elasticsearch
+    hostname: elasticsearch
+    restart: unless-stopped
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.security.enrollment.enabled=false
+      - "ES_JAVA_OPTS=-Xms${ELASTICSEARCH_HEAP:-512m} -Xmx${ELASTICSEARCH_HEAP:-512m}"
+      - bootstrap.memory_lock=true
+      - cluster.name=${ELASTICSEARCH_CLUSTER_NAME:-ai-agency-cluster}
+    ports:
+      - "${ELASTICSEARCH_PORT:-9200}:9200"
+      - "${ELASTICSEARCH_TRANSPORT_PORT:-9300}:9300"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -s http://localhost:9200/_cluster/health | grep -q '\"status\":\"green\"\\|\"status\":\"yellow\"'",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    networks:
+      - ai-agency-network
+    deploy:
+      resources:
+        limits:
+          cpus: "${ELASTICSEARCH_CPU_LIMIT:-2}"
+          memory: ${ELASTICSEARCH_MEMORY_LIMIT:-2G}
+
+  # ===========================================================================
+  # MESSAGE QUEUES
+  # ===========================================================================
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:${KAFKA_VERSION:-7.5.0}
+    container_name: ai-agency-zookeeper
+    hostname: zookeeper
+    restart: unless-stopped
+    environment:
+      ZOOKEEPER_CLIENT_PORT: ${ZOOKEEPER_PORT:-2181}
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_SYNC_LIMIT: 2
+    ports:
+      - "${ZOOKEEPER_PORT:-2181}:2181"
+    volumes:
+      - zookeeper_data:/var/lib/zookeeper/data
+      - zookeeper_logs:/var/lib/zookeeper/log
+    healthcheck:
+      test: ["CMD-SHELL", "echo ruok | nc localhost 2181 | grep imok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ai-agency-network
+
+  kafka:
+    image: confluentinc/cp-kafka:${KAFKA_VERSION:-7.5.0}
+    container_name: ai-agency-kafka
+    hostname: kafka
+    restart: unless-stopped
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:${ZOOKEEPER_PORT:-2181}
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:${KAFKA_PORT:-9092}
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_LOG_RETENTION_HOURS: ${KAFKA_LOG_RETENTION_HOURS:-168}
+    ports:
+      - "${KAFKA_PORT:-9092}:9092"
+      - "29092:29092"
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "kafka-broker-api-versions --bootstrap-server localhost:9092",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - ai-agency-network
+    deploy:
+      resources:
+        limits:
+          cpus: "${KAFKA_CPU_LIMIT:-2}"
+          memory: ${KAFKA_MEMORY_LIMIT:-1G}
+
+  rabbitmq:
+    image: rabbitmq:${RABBITMQ_VERSION:-3.12}-management-alpine
+    container_name: ai-agency-rabbitmq
+    hostname: rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-guest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-guest}
+      RABBITMQ_DEFAULT_VHOST: ${RABBITMQ_VHOST:-/}
+    ports:
+      - "${RABBITMQ_PORT:-5672}:5672"
+      - "${RABBITMQ_MANAGEMENT_PORT:-15672}:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - ai-agency-network
+
+  # ===========================================================================
+  # WORKFLOW ENGINE
+  # ===========================================================================
+
+  temporal:
+    image: temporalio/auto-setup:${TEMPORAL_VERSION:-1.22.0}
+    container_name: ai-agency-temporal
+    hostname: temporal
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - DB=postgresql
+      - DB_PORT=${POSTGRES_PORT:-5432}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PWD=${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+      - POSTGRES_SEEDS=postgres
+      - DYNAMIC_CONFIG_FILE_PATH=/etc/temporal/config/dynamicconfig/development.yaml
+      - ENABLE_ES=false
+      - SKIP_SCHEMA_SETUP=false
+    ports:
+      - "${TEMPORAL_PORT:-7233}:7233"
+    volumes:
+      - ./temporal/dynamicconfig:/etc/temporal/config/dynamicconfig:ro
+    healthcheck:
+      test: ["CMD", "tctl", "--address", "temporal:7233", "cluster", "health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - ai-agency-network
+
+  temporal-ui:
+    image: temporalio/ui:${TEMPORAL_UI_VERSION:-2.21.0}
+    container_name: ai-agency-temporal-ui
+    hostname: temporal-ui
+    restart: unless-stopped
+    depends_on:
+      temporal:
+        condition: service_healthy
+    environment:
+      - TEMPORAL_ADDRESS=temporal:7233
+      - TEMPORAL_CORS_ORIGINS=http://localhost:${TEMPORAL_UI_PORT:-8088}
+    ports:
+      - "${TEMPORAL_UI_PORT:-8088}:8080"
+    networks:
+      - ai-agency-network
+
+  # ===========================================================================
+  # API GATEWAY
+  # ===========================================================================
+
+  kong:
+    image: kong:${KONG_VERSION:-3.5}
+    container_name: ai-agency-kong
+    hostname: kong
+    restart: unless-stopped
+    environment:
+      KONG_DATABASE: "off"
+      KONG_DECLARATIVE_CONFIG: /kong/declarative/kong.yml
+      KONG_PROXY_ACCESS_LOG: /dev/stdout
+      KONG_ADMIN_ACCESS_LOG: /dev/stdout
+      KONG_PROXY_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_ERROR_LOG: /dev/stderr
+      KONG_ADMIN_LISTEN: "0.0.0.0:${KONG_ADMIN_PORT:-8001}, 0.0.0.0:${KONG_ADMIN_SSL_PORT:-8444} ssl"
+      KONG_PROXY_LISTEN: "0.0.0.0:${KONG_PROXY_PORT:-8000}, 0.0.0.0:${KONG_PROXY_SSL_PORT:-8443} ssl"
+      KONG_LOG_LEVEL: ${KONG_LOG_LEVEL:-info}
+      KONG_PLUGINS: "bundled,cors,rate-limiting,key-auth,jwt,prometheus"
+    ports:
+      - "${KONG_PROXY_PORT:-8000}:8000"
+      - "${KONG_PROXY_SSL_PORT:-8443}:8443"
+      - "${KONG_ADMIN_PORT:-8001}:8001"
+      - "${KONG_ADMIN_SSL_PORT:-8444}:8444"
+    volumes:
+      - ./kong:/kong/declarative:ro
+    healthcheck:
+      test: ["CMD", "kong", "health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - ai-agency-network
+    deploy:
+      resources:
+        limits:
+          cpus: "${KONG_CPU_LIMIT:-1}"
+          memory: ${KONG_MEMORY_LIMIT:-512M}
+
+  # ===========================================================================
+  # MONITORING
+  # ===========================================================================
+
+  prometheus:
+    image: prom/prometheus:${PROMETHEUS_VERSION:-v2.47.0}
+    container_name: ai-agency-prometheus
+    hostname: prometheus
+    restart: unless-stopped
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--storage.tsdb.retention.time=${PROMETHEUS_RETENTION:-15d}"
+      - "--web.enable-lifecycle"
+      - "--web.enable-admin-api"
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"
+    volumes:
+      - ./monitoring/prometheus:/etc/prometheus:ro
+      - prometheus_data:/prometheus
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--no-verbose",
+          "--tries=1",
+          "--spider",
+          "http://localhost:9090/-/healthy",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - ai-agency-network
+
+  grafana:
+    image: grafana/grafana:${GRAFANA_VERSION:-10.2.0}
+    container_name: ai-agency-grafana
+    hostname: grafana
+    restart: unless-stopped
+    depends_on:
+      prometheus:
+        condition: service_healthy
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-admin}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_SERVER_ROOT_URL: ${GRAFANA_ROOT_URL:-http://localhost:3000}
+      GF_INSTALL_PLUGINS: ${GRAFANA_PLUGINS:-grafana-clock-panel,grafana-simple-json-datasource}
+    ports:
+      - "${GRAFANA_PORT:-3000}:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - ai-agency-network
+
+  # ===========================================================================
+  # ML / AI SERVICES
+  # ===========================================================================
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:${MLFLOW_VERSION:-2.9.0}
+    container_name: ai-agency-mlflow
+    hostname: mlflow
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      MLFLOW_BACKEND_STORE_URI: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD}@postgres:5432/${MLFLOW_DB:-mlflow}
+      MLFLOW_DEFAULT_ARTIFACT_ROOT: /mlruns
+    command: >
+      mlflow server
+      --backend-store-uri postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD}@postgres:5432/${MLFLOW_DB:-mlflow}
+      --default-artifact-root /mlruns
+      --host 0.0.0.0
+      --port 5000
+    ports:
+      - "${MLFLOW_PORT:-5000}:5000"
+    volumes:
+      - mlflow_data:/mlruns
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5000/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - ai-agency-network
+
+  ollama:
+    image: ollama/ollama:${OLLAMA_VERSION:-latest}
+    container_name: ai-agency-ollama
+    hostname: ollama
+    restart: unless-stopped
+    environment:
+      OLLAMA_HOST: 0.0.0.0
+      OLLAMA_ORIGINS: "*"
+      OLLAMA_MODELS: ${OLLAMA_MODELS_PATH:-/root/.ollama/models}
+    ports:
+      - "${OLLAMA_PORT:-11434}:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:11434/api/tags || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - ai-agency-network
+    deploy:
+      resources:
+        limits:
+          cpus: "${OLLAMA_CPU_LIMIT:-4}"
+          memory: ${OLLAMA_MEMORY_LIMIT:-8G}
+        reservations:
+          memory: ${OLLAMA_MEMORY_RESERVATION:-4G}
+
+  # ===========================================================================
+  # APPLICATION SERVICES
+  # ===========================================================================
+
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+      target: ${BUILD_TARGET:-development}
+      args:
+        NODE_VERSION: ${NODE_VERSION:-20}
+    container_name: ai-agency-api
+    hostname: api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      APP_PORT: ${APP_PORT:-8080}
+      APP_HOST: 0.0.0.0
+      APP_URL: ${APP_URL:-http://localhost:8080}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      DEBUG: ${DEBUG:-false}
+
+      # Database
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-ai_agency}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-ai_agency}
+
+      # Redis
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+      REDIS_URL: redis://${REDIS_PASSWORD:+:${REDIS_PASSWORD}@}redis:6379/0
+
+      # Neo4j
+      NEO4J_URI: bolt://neo4j:7687
+      NEO4J_USER: ${NEO4J_USER:-neo4j}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD}
+
+      # Qdrant
+      QDRANT_URL: http://qdrant:6333
+
+      # Kafka
+      KAFKA_BROKERS: kafka:29092
+
+      # Temporal
+      TEMPORAL_ADDRESS: temporal:7233
+
+      # Elasticsearch
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+
+      # Authentication
+      CLERK_PUBLISHABLE_KEY: ${CLERK_PUBLISHABLE_KEY:-}
+      CLERK_SECRET_KEY: ${CLERK_SECRET_KEY:-}
+      CLERK_WEBHOOK_SECRET: ${CLERK_WEBHOOK_SECRET:-}
+
+      # Supabase
+      SUPABASE_URL: ${SUPABASE_URL:-}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY:-}
+      SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY:-}
+
+      # AI Services
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OLLAMA_URL: http://ollama:11434
+
+      # Security
+      JWT_SECRET: ${JWT_SECRET:-}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000,http://localhost:8080}
+    ports:
+      - "${APP_PORT:-8080}:8080"
+    volumes:
+      - ../src:/app/src:ro
+      - ../package.json:/app/package.json:ro
+      - api_logs:/app/logs
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -f http://localhost:${APP_PORT:-8080}/health || exit 1",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    networks:
+      - ai-agency-network
+    deploy:
+      resources:
+        limits:
+          cpus: "${API_CPU_LIMIT:-2}"
+          memory: ${API_MEMORY_LIMIT:-1G}
+
+  graphql:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.graphql
+      target: ${BUILD_TARGET:-development}
+      args:
+        NODE_VERSION: ${NODE_VERSION:-20}
+    container_name: ai-agency-graphql
+    hostname: graphql
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      GRAPHQL_PORT: ${GRAPHQL_PORT:-4000}
+      GRAPHQL_ENDPOINT: ${GRAPHQL_ENDPOINT:-/graphql}
+      GRAPHQL_PLAYGROUND: ${GRAPHQL_PLAYGROUND:-true}
+      GRAPHQL_INTROSPECTION: ${GRAPHQL_INTROSPECTION:-true}
+      API_URL: http://api:${APP_PORT:-8080}
+
+      # Database URLs (same as API)
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-ai_agency}
+      REDIS_URL: redis://${REDIS_PASSWORD:+:${REDIS_PASSWORD}@}redis:6379/0
+
+      # Authentication
+      CLERK_SECRET_KEY: ${CLERK_SECRET_KEY:-}
+    ports:
+      - "${GRAPHQL_PORT:-4000}:4000"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4000/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - ai-agency-network
+
+  # ===========================================================================
+  # DEV TOOLS
+  # ===========================================================================
+
+  jupyter:
+    image: jupyter/scipy-notebook:${JUPYTER_VERSION:-latest}
+    container_name: ai-agency-jupyter
+    hostname: jupyter
+    restart: unless-stopped
+    profiles:
+      - dev-tools
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:-ai-agency-dev}
+      NB_USER: jovyan
+      CHOWN_HOME: "yes"
+    ports:
+      - "${JUPYTER_PORT:-8888}:8888"
+    volumes:
+      - ../:/home/jovyan/work
+      - jupyter_data:/home/jovyan/.jupyter
+    networks:
+      - ai-agency-network
+
+  pgadmin:
+    image: dpage/pgadmin4:${PGADMIN_VERSION:-latest}
+    container_name: ai-agency-pgadmin
+    hostname: pgadmin
+    restart: unless-stopped
+    profiles:
+      - dev-tools
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@aiagency.local}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - ai-agency-network
+
+  redis-commander:
+    image: rediscommander/redis-commander:${REDIS_COMMANDER_VERSION:-latest}
+    container_name: ai-agency-redis-commander
+    hostname: redis-commander
+    restart: unless-stopped
+    profiles:
+      - dev-tools
+    environment:
+      REDIS_HOSTS: local:redis:6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+    ports:
+      - "${REDIS_COMMANDER_PORT:-8081}:8081"
+    networks:
+      - ai-agency-network
+
+# =============================================================================
+# NETWORKS
+# =============================================================================
 
 networks:
   ai-agency-network:
+    name: ai-agency-network
     driver: bridge
     ipam:
+      driver: default
       config:
-        - subnet: 172.20.0.0/16
-          gateway: 172.20.0.1
-  traefik-public:
-    external: true
+        - subnet: ${NETWORK_SUBNET:-172.28.0.0/16}
+          gateway: ${NETWORK_GATEWAY:-172.28.0.1}
+
+# =============================================================================
+# VOLUMES
+# =============================================================================
+
+volumes:
+  postgres_data:
+    name: ai-agency-postgres-data
+  redis_data:
+    name: ai-agency-redis-data
+  neo4j_data:
+    name: ai-agency-neo4j-data
+  neo4j_logs:
+    name: ai-agency-neo4j-logs
+  neo4j_plugins:
+    name: ai-agency-neo4j-plugins
+  qdrant_data:
+    name: ai-agency-qdrant-data
+  elasticsearch_data:
+    name: ai-agency-elasticsearch-data
+  zookeeper_data:
+    name: ai-agency-zookeeper-data
+  zookeeper_logs:
+    name: ai-agency-zookeeper-logs
+  kafka_data:
+    name: ai-agency-kafka-data
+  rabbitmq_data:
+    name: ai-agency-rabbitmq-data
+  prometheus_data:
+    name: ai-agency-prometheus-data
+  grafana_data:
+    name: ai-agency-grafana-data
+  mlflow_data:
+    name: ai-agency-mlflow-data
+  ollama_data:
+    name: ai-agency-ollama-data
+  api_logs:
+    name: ai-agency-api-logs
+  jupyter_data:
+    name: ai-agency-jupyter-data
+  pgadmin_data:
+    name: ai-agency-pgadmin-data
