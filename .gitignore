@@ -139,3 +139,7 @@ checkpoints/
 reports/
 *.report
 *.analysis
+# FEA outputs (generated; large)
+data/fea_results/edge_cases_summary.csv
+data/fea_results/edge_cases_summary.json
+data/fea_results/binomial_edge_analysis_report.json
