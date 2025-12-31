@@ -8,6 +8,7 @@
 !package.json
 !package-lock.json
 !pixi.toml
+!turbo.json
 !Makefile
 !justfile
 !.gitignore
@@ -42,6 +43,7 @@ go.*
 !/kong/
 !/testing/
 !/services/
+!/apps/
 !services/**/*.py
 !services/**/*.js
 !services/nodejs-api/server.js

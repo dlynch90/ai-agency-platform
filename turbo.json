@@ -1,0 +1,51 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "package.json", "tsconfig.json"],
+      "outputs": ["dist/**", "build/**"]
+    },
+    "lint": {
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "test/**", "__tests__/**", "*.test.*", "*.spec.*"],
+      "outputs": []
+    },
+    "test:watch": {
+      "persistent": true,
+      "cache": false
+    },
+    "dev": {
+      "dependsOn": ["^build"],
+      "persistent": true,
+      "cache": false
+    },
+    "start": {
+      "dependsOn": ["^build"],
+      "persistent": true,
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    },
+    "typecheck": {
+      "dependsOn": ["^build"]
+    },
+    "deploy": {
+      "dependsOn": ["build", "test", "lint"],
+      "outputs": []
+    }
+  },
+  "globalDependencies": [
+    "package.json",
+    "turbo.json",
+    ".env*",
+    "tsconfig.json",
+    "jest.config.*",
+    "vite.config.*"
+  ]
+}
