@@ -35,6 +35,7 @@ yarn.lock
 # IDE
 .vscode/
 .idea/
+.cursor/
 *.swp
 *.swo
 *~
@@ -58,6 +59,12 @@ git-recovery.log
 # OS
 .DS_Store
 Thumbs.db
+
+# Local vendor/template clones (large; not source of truth)
+vendor-imports/
+
+# Go toolchain/module caches (should not live in repo)
+pkg/
 
 # Logs
 logs/

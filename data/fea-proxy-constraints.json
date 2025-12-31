@@ -1,0 +1,238 @@
+{
+  "checks": {
+    "active_proxy": {
+      "name": "Active Network Proxy (Traefik/Kong)",
+      "notes": [
+        "HTTP_PROXY=(unset)",
+        "HTTPS_PROXY=(unset)",
+        "Traefik web port (compose): 18000",
+        "Traefik dashboard port mapping (compose target 8080): 8080",
+        "Traefik :18000 owner=com.docke(pid=21448) reachable=True detail=http 401 (auth required)",
+        "Kong :8001 owner=(none) status_ok=False err=<urlopen error [Errno 61] Connection refused>",
+        "Kong :8000 owner=(none) (may conflict with Kong proxy port)",
+        "Start Traefik proxy: docker compose -f infrastructure/network-proxy/docker-compose.network.yml -f infrastructure/network-proxy/docker-compose.network.local.yml up -d traefik",
+        "Start Kong (infra stack): docker compose -f infra/docker-compose.yml up -d kong-gateway kong-postgres"
+      ],
+      "passed": 1,
+      "total": 2
+    },
+    "data_model": {
+      "name": "Data Model (Prisma models)",
+      "notes": [
+        "spec: /Users/daniellynch/Desktop/cursor_vendor_driven_system_and_codebas.md",
+        "schema: prisma/schema.prisma",
+        "missing: CursorIDEResource",
+        "missing: LLMEvaluation",
+        "missing: MCPToolUsage",
+        "missing: CLIToolConfig",
+        "missing: APICRUDSpec"
+      ],
+      "passed": 3,
+      "total": 8
+    },
+    "proxy_constraints": {
+      "name": "Proxy Constraints (secrets/placeholders)",
+      "notes": [
+        "compose: infrastructure/network-proxy/docker-compose.network.yml",
+        "compose local: infrastructure/network-proxy/docker-compose.network.local.yml",
+        "placeholder: grafana:GF_SECURITY_ADMIN_PASSWORD=change_me_grafana_admin_password",
+        "placeholder: postgres:POSTGRES_PASSWORD=change_me_postgres_password",
+        "placeholder: subgraph-posts:NEO4J_PASSWORD=change_me_neo4j_password"
+      ],
+      "passed": 0,
+      "total": 1
+    }
+  },
+  "inputs": {
+    "compose": "infrastructure/network-proxy/docker-compose.network.yml",
+    "prisma": "prisma/schema.prisma",
+    "spec": "/Users/daniellynch/Desktop/cursor_vendor_driven_system_and_codebas.md"
+  },
+  "proxy_state": {
+    "env": {
+      "HTTPS_PROXY": "",
+      "HTTP_PROXY": "",
+      "NO_PROXY": ""
+    },
+    "kong": {
+      "admin_status_error": "<urlopen error [Errno 61] Connection refused>",
+      "admin_status_ok": false,
+      "port_owners": {
+        "8000": "",
+        "8001": ""
+      },
+      "ports": {
+        "8000": false,
+        "8001": false
+      }
+    },
+    "traefik": {
+      "dashboard_rawdata_error": "http 401 (auth required)",
+      "dashboard_rawdata_ok": true,
+      "port_owners": {
+        "80": "",
+        "8080": "com.docke(pid=21448)"
+      },
+      "ports": {
+        "80": false,
+        "8080": true
+      }
+    }
+  },
+  "stress": {
+    "deps": {
+      "api-tester": [
+        "neo4j",
+        "postgres",
+        "qdrant",
+        "redis",
+        "traefik"
+      ],
+      "apollo-gateway": [
+        "subgraph-analytics",
+        "subgraph-posts",
+        "subgraph-users",
+        "traefik_proxy"
+      ],
+      "grafana": [
+        "prometheus",
+        "traefik_proxy"
+      ],
+      "graphql-tester": [
+        "apollo-gateway"
+      ],
+      "kafka": [
+        "zookeeper",
+        "traefik_proxy"
+      ],
+      "kong_proxy": [],
+      "load-tester": [
+        "traefik"
+      ],
+      "loki": [
+        "traefik_proxy"
+      ],
+      "neo4j": [
+        "traefik_proxy"
+      ],
+      "postgres": [
+        "traefik_proxy"
+      ],
+      "prometheus": [
+        "traefik_proxy"
+      ],
+      "promtail": [
+        "loki"
+      ],
+      "qdrant": [
+        "traefik_proxy"
+      ],
+      "redis": [
+        "traefik_proxy"
+      ],
+      "security-tester": [
+        "traefik"
+      ],
+      "subgraph-analytics": [
+        "traefik_proxy"
+      ],
+      "subgraph-posts": [
+        "traefik_proxy"
+      ],
+      "subgraph-users": [
+        "traefik_proxy"
+      ],
+      "traefik": [
+        "traefik_proxy"
+      ],
+      "traefik_proxy": [],
+      "zookeeper": []
+    },
+    "nodes": [
+      "traefik_proxy",
+      "kong_proxy",
+      "api-tester",
+      "apollo-gateway",
+      "grafana",
+      "graphql-tester",
+      "kafka",
+      "load-tester",
+      "loki",
+      "neo4j",
+      "postgres",
+      "prometheus",
+      "promtail",
+      "qdrant",
+      "redis",
+      "security-tester",
+      "subgraph-analytics",
+      "subgraph-posts",
+      "subgraph-users",
+      "traefik",
+      "zookeeper"
+    ],
+    "stress_ranking": [
+      {
+        "displacement": 1.0,
+        "load": 1.0,
+        "node": "kong_proxy"
+      },
+      {
+        "displacement": 0.7,
+        "load": 0.7,
+        "node": "zookeeper"
+      },
+      {
+        "displacement": 0.5249999999999999,
+        "load": 0.7,
+        "node": "load-tester"
+      },
+      {
+        "displacement": 0.5249999999999999,
+        "load": 0.7,
+        "node": "promtail"
+      },
+      {
+        "displacement": 0.5249999999999999,
+        "load": 0.7,
+        "node": "security-tester"
+      },
+      {
+        "displacement": 0.4799999999999999,
+        "load": 0.7,
+        "node": "graphql-tester"
+      },
+      {
+        "displacement": 0.4666666666666666,
+        "load": 0.7,
+        "node": "kafka"
+      },
+      {
+        "displacement": 0.35,
+        "load": 0.7,
+        "node": "loki"
+      },
+      {
+        "displacement": 0.35,
+        "load": 0.7,
+        "node": "qdrant"
+      },
+      {
+        "displacement": 0.35,
+        "load": 0.7,
+        "node": "subgraph-analytics"
+      },
+      {
+        "displacement": 0.35,
+        "load": 0.7,
+        "node": "subgraph-posts"
+      },
+      {
+        "displacement": 0.35,
+        "load": 0.7,
+        "node": "subgraph-users"
+      }
+    ]
+  },
+  "timestamp": "2025-12-30T19:00:07.807989+00:00"
+}

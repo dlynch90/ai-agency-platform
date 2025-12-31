@@ -1,0 +1,315 @@
+{
+  "summary": {
+    "overallScore": 55,
+    "criticalIssues": 0,
+    "recommendations": [
+      "Start GraphQL server for full evaluation capabilities",
+      "Reorganize directory structure to match architecture requirements"
+    ]
+  },
+  "details": {
+    "sessionId": "evaluation-1767132300094",
+    "timestamp": "2025-12-30T22:05:00.094Z",
+    "phases": {
+      "infrastructure": {
+        "graphqlHealth": false,
+        "serverStatus": "failed"
+      },
+      "mcpTools": {
+        "filesystem": {
+          "connected": true,
+          "status": [
+            ".adr-dir",
+            ".brv",
+            ".claude",
+            ".claude-flow",
+            ".codex-tmp",
+            ".config",
+            ".container",
+            ".cursor",
+            ".cursorrules",
+            ".editorconfig",
+            ".env",
+            ".env.local",
+            ".envrc",
+            ".extended-config",
+            ".git",
+            ".github",
+            ".gitignore",
+            ".gitleaks.toml",
+            ".gofman3",
+            ".hive-mind",
+            ".local",
+            ".mcp",
+            ".modern_shell_config",
+            ".mvn",
+            ".mypy_cache",
+            ".npmrc",
+            ".nvmrc",
+            ".opencode",
+            ".opencode.backup.20251228-201438",
+            ".pixi",
+            ".playwright-mcp",
+            ".prettierignore",
+            ".prettierrc",
+            ".pytest_cache",
+            ".ruff_cache",
+            ".serena",
+            ".sisyphus",
+            ".swarm",
+            ".turbo",
+            ".vendor-config",
+            ".vscode",
+            ".windsurf",
+            "adr-reports",
+            "agi-core",
+            "ai-ml",
+            "analysis",
+            "analysis-results",
+            "api",
+            "api-smoke-tests",
+            "apps",
+            "architecture",
+            "auth",
+            "bin",
+            "built-applications",
+            "chezmoi-configs",
+            "ci_cd",
+            "cli-tools-analysis.js",
+            "comprehensive-debugger.js",
+            "config",
+            "configs",
+            "data",
+            "database",
+            "database-integration",
+            "deployment",
+            "docs",
+            "domains",
+            "ecommerce-personalization",
+            "federation",
+            "graphql",
+            "graphql-codebase-evaluator.js",
+            "graphql-server",
+            "hf-gpu-config.json",
+            "hf-gpu-inference-setup.js",
+            "hf-gpu-setup-report.json",
+            "hf_test.py",
+            "hooks",
+            "infra",
+            "infrastructure",
+            "init-scripts",
+            "java",
+            "java-enterprise-golden-path",
+            "java-templates",
+            "logs",
+            "mcp",
+            "mcp-servers",
+            "mcp-tools-integration.js",
+            "mlflow.db",
+            "mlruns",
+            "monitoring",
+            "node_modules",
+            "package-lock.json",
+            "package.json",
+            "packages",
+            "pipelines",
+            "pixi-node",
+            "pixi-ros2",
+            "pixi-universe",
+            "pixi.lock",
+            "pixi.toml",
+            "pkg",
+            "pnpm-lock.yaml",
+            "pnpm-workspace.yaml",
+            "polyglot-integration",
+            "prisma",
+            "reports",
+            "requirements-hf.txt",
+            "rust",
+            "scripts",
+            "services",
+            "smoke-testing",
+            "snapshots",
+            "src",
+            "storage",
+            "supabase",
+            "target",
+            "temp-mcp",
+            "templates",
+            "temporal",
+            "testing",
+            "tests",
+            "toolchains",
+            "tools",
+            "use-case-1-ecommerce-personalization",
+            "validation-report.json",
+            "vendor-imports",
+            "vendor-system-test.cjs",
+            "verdent-subagents",
+            "vip-gap-analysis",
+            "vip-platform",
+            "vite.config.js",
+            "vite.config.ts",
+            "vitest.config.js",
+            "vitest.integration.config.js",
+            "vitest.vendor.config.js"
+          ]
+        },
+        "sequentialThinking": {
+          "connected": true,
+          "status": {
+            "analysis": "Mock analysis result"
+          }
+        },
+        "huggingface": {
+          "connected": true,
+          "status": [
+            "gpt2",
+            "bert-base-uncased",
+            "distilbert-base-uncased"
+          ]
+        }
+      },
+      "cliTools": {
+        "mise": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: mise --version\n/bin/sh: mise: command not found\n"
+        },
+        "chezmoi": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: chezmoi --version\n/bin/sh: chezmoi: command not found\n"
+        },
+        "pnpm": {
+          "available": true,
+          "version": "9.15.0",
+          "error": null
+        },
+        "pixi": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: pixi --version\n/bin/sh: pixi: command not found\n"
+        },
+        "gh": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: gh --version\n/bin/sh: gh: command not found\n"
+        },
+        "ollama": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: ollama --version\n/bin/sh: ollama: command not found\n"
+        },
+        "temporal": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: temporal --version\n/bin/sh: temporal: command not found\n"
+        },
+        "kubectl": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: kubectl --version\nerror: unknown flag: --version\nSee 'kubectl --help' for usage.\n"
+        },
+        "docker": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: docker --version\n/bin/sh: docker: command not found\n"
+        },
+        "psql": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: psql --version\n/bin/sh: psql: command not found\n"
+        },
+        "redis-cli": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: redis-cli --version\n/bin/sh: redis-cli: command not found\n"
+        },
+        "cypher-shell": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: cypher-shell --version\n/bin/sh: cypher-shell: command not found\n"
+        },
+        "aws": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: aws --version\n/bin/sh: aws: command not found\n"
+        },
+        "gcloud": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: gcloud --version\n/bin/sh: gcloud: command not found\n"
+        },
+        "terraform": {
+          "available": true,
+          "version": "Terraform v1.9.8\non darwin_arm64\n\nYour version of Terraform is out of date! The latest version\nis 1.14.3. You can update by downloading from https://www.terraform.io/downloads.html",
+          "error": null
+        },
+        "ansible": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: ansible --version\n/bin/sh: ansible: command not found\n"
+        },
+        "helm": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: helm --version\nWARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/daniellynch/.kube/config\nWARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/daniellynch/.kube/config\nError: unknown flag: --version\n"
+        },
+        "kustomize": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: kustomize --version\n/bin/sh: kustomize: command not found\n"
+        },
+        "python": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: python --version\n/bin/sh: python: command not found\n"
+        },
+        "pip": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: pip --version\n/bin/sh: pip: command not found\n"
+        },
+        "jupyter": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: jupyter --version\n/bin/sh: jupyter: command not found\n"
+        },
+        "mlflow": {
+          "available": false,
+          "version": null,
+          "error": "Command failed: mlflow --version\n/bin/sh: mlflow: command not found\n"
+        }
+      },
+      "gpuAcceleration": {
+        "available": true,
+        "type": "integrated",
+        "chipset": "Chipset Model: Apple M1 Max"
+      },
+      "codeAnalysis": {
+        "success": false,
+        "error": "HuggingFace API error: 410",
+        "fallback": {
+          "type": "fallback",
+          "analysis": {
+            "complexity": 145,
+            "functions": 0,
+            "classes": 0,
+            "imports": 0
+          }
+        }
+      },
+      "architectureCompliance": {
+        "vendorSolutions": true,
+        "noCustomCode": false,
+        "directoryStructure": true,
+        "eventDrivenArchitecture": false,
+        "microservicesPattern": false
+      }
+    },
+    "recommendations": [],
+    "criticalIssues": []
+  },
+  "timestamp": "2025-12-30T22:11:34.061Z"
+}

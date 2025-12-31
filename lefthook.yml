@@ -9,7 +9,7 @@ pre-commit:
       run: |
         echo "🔒 Running gitleaks chezmoi variable enforcement..."
         if command -v gitleaks >/dev/null 2>&1; then
-          gitleaks protect --staged --config .gitleaks.toml --verbose 2>&1 || {
+          gitleaks protect --staged --config configs/.gitleaks.toml --verbose 2>&1 || {
             echo "❌ Gitleaks found violations - use \$CHEZMOI_* variables instead of hardcoded paths/ports"
             exit 1
           }
@@ -48,35 +48,152 @@ pre-commit:
         fi
         echo "✅ Type checking completed"
 
-    # Vendor compliance check - ensure no custom implementations
+    # Vendor compliance check - STRICT: no custom implementations allowed
     vendor-compliance:
       run: |
-        echo "🔍 Checking vendor compliance..."
-        # Check for common custom patterns that violate rules, but exclude dependencies
-        source_files=$(find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.py" -o -name "*.sh" \) -not -path "*/node_modules/*" -not -path "*/.pixi/*" -not -path "*/__pycache__/*" -not -path "*/.git/*" | head -20)
-        if [ -n "$source_files" ]; then
-          console_log_files=$(echo "$source_files" | xargs grep -l "console\.log" 2>/dev/null || true)
-          if [ -n "$console_log_files" ]; then
-            echo "⚠️ WARNING: console.log found in source files (consider using vendor logging)"
-            echo "Files with console.log:"
-            echo "$console_log_files"
-            # Don't fail the build for now, just warn
-          fi
+        echo "🔍 Checking STRICT vendor compliance..."
+        echo "🚫 ZERO CUSTOM CODE POLICY ENFORCEMENT"
+
+        # Check for console.log (must use Pino or vendor logging)
+        CONSOLE_LOG_FILES=$(find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.py" \) -not -path "*/node_modules/*" -not -path "*/.pixi/*" -not -path "*/__pycache__/*" -not -path "*/.git/*" | xargs grep -l "console\.log" 2>/dev/null || true)
+        if [ -n "$CONSOLE_LOG_FILES" ]; then
+          echo "❌ ERROR: console.log found (VIOLATES ZERO CUSTOM CODE RULE)"
+          echo "Must use Pino logging instead:"
+          echo "$CONSOLE_LOG_FILES"
+          echo "💡 Replace with: import pino from 'pino'; const logger = pino();"
+          exit 1
         fi
-        echo "✅ Vendor compliance check completed"
+
+        # Check for custom React components (must use vendor libraries)
+        CUSTOM_COMPONENTS=$(find . -type f -name "*.tsx" -o -name "*.jsx" | xargs grep -l "export.*function.*{" | head -5 2>/dev/null || true)
+        if [ -n "$CUSTOM_COMPONENTS" ]; then
+          echo "❌ ERROR: Custom React components found (VIOLATES VENDOR-ONLY RULE)"
+          echo "Must use vendor component libraries only:"
+          echo "$CUSTOM_COMPONENTS"
+          echo "💡 Use: Radix Vue, Shadcn/ui, or other vendor libraries"
+          exit 1
+        fi
+
+        # Check for custom hooks (must use vendor solutions)
+        CUSTOM_HOOKS=$(find . -type f \( -name "*.ts" -o -name "*.js" \) | xargs grep -l "use[A-Z].*=.*{" | head -5 2>/dev/null || true)
+        if [ -n "$CUSTOM_HOOKS" ]; then
+          echo "❌ ERROR: Custom React hooks found (VIOLATES VENDOR-ONLY RULE)"
+          echo "Must use vendor hooks only:"
+          echo "$CUSTOM_HOOKS"
+          echo "💡 Use: VueUse, TanStack Query, Zustand, etc."
+          exit 1
+        fi
+
+        # Check for custom utilities (must use vendor libraries)
+        CUSTOM_UTILS=$(find . -type f \( -name "*.ts" -o -name "*.js" -o -name "*.py" \) | xargs grep -l "export.*util" | head -5 2>/dev/null || true)
+        if [ -n "$CUSTOM_UTILS" ]; then
+          echo "❌ ERROR: Custom utilities found (VIOLATES VENDOR-ONLY RULE)"
+          echo "Must use vendor utility libraries:"
+          echo "$CUSTOM_UTILS"
+          echo "💡 Use: Lodash, date-fns, Ramda, etc."
+          exit 1
+        fi
+
+        # Check for hardcoded paths (must use chezmoi variables)
+        HARDCODED_PATHS=$(find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.py" -o -name "*.sh" \) -not -path "*/node_modules/*" | xargs grep -l "/Users/\|/home/\|/tmp/" | head -5 2>/dev/null || true)
+        if [ -n "$HARDCODED_PATHS" ]; then
+          echo "❌ ERROR: Hardcoded paths found (VIOLATES SSOT RULE)"
+          echo "Must use chezmoi variables:"
+          echo "$HARDCODED_PATHS"
+          echo "💡 Use: {{.chezmoi.homeDir}}, {{.chezmoi.configDir}}, etc."
+          exit 1
+        fi
+
+        # Check for hardcoded ports (must use chezmoi variables)
+        HARDCODED_PORTS=$(find . -type f \( -name "*.js" -o -name "*.ts" -o -name "*.py" \) -not -path "*/node_modules/*" | xargs grep -l ":[0-9]\{4\}" | head -5 2>/dev/null || true)
+        if [ -n "$HARDCODED_PORTS" ]; then
+          echo "❌ ERROR: Hardcoded ports found (VIOLATES SSOT RULE)"
+          echo "Must use chezmoi variables:"
+          echo "$HARDCODED_PORTS"
+          echo "💡 Use: {{.ports.postgres}}, {{.ports.redis}}, etc."
+          exit 1
+        fi
+
+        echo "✅ STRICT vendor compliance check passed"
 
     # Architecture enforcement - no loose files in root
     architecture-check:
       run: |
         echo "🏗️ Checking architecture compliance..."
-        # Check for loose files in root that violate directory structure
-        loose_files=$(find . -maxdepth 1 -type f -not -path './.git*' -not -name ".gitignore" -not -name "README.md" -not -name "package.json" -not -name "lefthook.yml" -not -name ".editorconfig" -not -name "tsconfig.json" -not -name "vitest.config.*" -not -name "turbo.json" -not -name "pixi.toml" -not -name "pixi.lock" -not -name "pyproject.toml" -not -name "pnpm-workspace.yaml" -not -name "docker-compose.yml" -not -name "Dockerfile" | wc -l)
-        if [ "$loose_files" -gt 0 ]; then
-          echo "❌ ERROR: Loose files found in root directory (violate architecture rules)"
-          find . -maxdepth 1 -type f -not -path './.git*' -not -name ".gitignore" -not -name "README.md" -not -name "package.json" -not -name "lefthook.yml"
+
+        # Check for loose files in root directory (violates monorepo rules)
+        LOOSE_FILES=$(find . -maxdepth 1 -type f \( -name "*.js" -o -name "*.py" -o -name "*.sh" -o -name "*.json" -o -name "*.md" -o -name "*.txt" -o -name "*.log" -o -name "*.db" \) \
+          -not -name "package.json" \
+          -not -name "pixi.toml" \
+          -not -name "tsconfig.json" \
+          -not -name "turbo.json" \
+          -not -name "lefthook.yml" \
+          -not -name "pnpm-lock.yaml" \
+          -not -name "pixi.lock" \
+          -not -name ".gitignore" \
+          -not -name "README.md" \
+          -not -name "Makefile" \
+          -not -name "*.lock" \
+          2>/dev/null | wc -l)
+
+        if [ "$LOOSE_FILES" -gt 0 ]; then
+          echo "❌ ERROR: Loose files found in root directory (violates monorepo architecture)"
+          echo "All files must be organized in proper directories:"
+          echo "  - Scripts → /scripts/"
+          echo "  - Configs → /configs/"
+          echo "  - Logs → /logs/"
+          echo "  - Docs → /docs/"
+          echo "  - Data → /data/"
+          echo "  - Tests → /testing/"
+          echo "  - Reports → /reports/"
+          echo ""
+          find . -maxdepth 1 -type f \( -name "*.js" -o -name "*.py" -o -name "*.sh" -o -name "*.json" -o -name "*.md" -o -name "*.txt" -o -name "*.log" -o -name "*.db" \) \
+            -not -name "package.json" \
+            -not -name "pixi.toml" \
+            -not -name "tsconfig.json" \
+            -not -name "turbo.json" \
+            -not -name "lefthook.yml" \
+            -not -name "pnpm-lock.yaml" \
+            -not -name "pixi.lock" \
+            -not -name ".gitignore" \
+            -not -name "README.md" \
+            -not -name "Makefile" \
+            -not -name "*.lock"
+          echo ""
+          echo "💡 Run: node scripts/organize-loose-files.mjs"
           exit 1
         fi
+
+        # Check for empty directories (violates organization rules)
+        EMPTY_DIRS=$(find . -type d -empty -not -path "./.git/*" -not -path "./node_modules/*" -not -path "./.pixi/*" | wc -l)
+        if [ "$EMPTY_DIRS" -gt 0 ]; then
+          echo "⚠️ WARNING: Empty directories found (consider removing or adding .gitkeep)"
+          find . -type d -empty -not -path "./.git/*" -not -path "./node_modules/*" -not -path "./.pixi/*"
+        fi
+
+        # Check for broken symlinks
+        BROKEN_LINKS=$(find . -type l ! -exec test -e {} \; 2>/dev/null | wc -l)
+        if [ "$BROKEN_LINKS" -gt 0 ]; then
+          echo "❌ ERROR: Broken symlinks found"
+          find . -type l ! -exec test -e {} \; 2>/dev/null
+          exit 1
+        fi
+
         echo "✅ Architecture check passed"
+
+    # Monorepo organization check
+    organization-check:
+      run: |
+        echo "📁 Running monorepo organization validation..."
+        if [ -f "scripts/validate-monorepo-structure.sh" ]; then
+          if ! bash scripts/validate-monorepo-structure.sh; then
+            echo "❌ Organization validation failed"
+            exit 1
+          fi
+        else
+          echo "⚠️ Organization validation script not found"
+        fi
+        echo "✅ Organization check passed"
 
     # MCP server health check
     mcp-health-check:

@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mcp-integration-config
+  namespace: default
+data:
+  mcp-config.json: |
+    {
+      "canonicalUrl": "~/.cursor/mcp.json",
+      "githubSync": {
+        "enabled": true,
+        "interval": "6h"
+      }
+    }
+  celery-config.py: |
+    # Celery config for Kubernetes
+    broker_url = 'redis://redis-service:6379/0'
+    result_backend = 'redis://redis-service:6379/0'
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: predictive-toolcalling-worker
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: predictive-toolcalling
+  template:
+    metadata:
+      labels:
+        app: predictive-toolcalling
+    spec:
+      containers:
+      - name: worker
+        image: python:3.12
+        command: ["celery", "-A", "configs.celery_config", "worker", "--loglevel=info"]
+        env:
+        - name: REDIS_URL
+          value: "redis://redis-service:6379/0"
+        - name: NEO4J_URI
+          value: "bolt://neo4j-service:7687"
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1"
+          limits:
+            memory: "4Gi"
+            cpu: "2"

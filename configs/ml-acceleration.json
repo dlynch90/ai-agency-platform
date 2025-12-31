@@ -1,0 +1,27 @@
+{
+  "gpu_acceleration": {
+    "enabled": "auto",
+    "memory_limit": "4GB",
+    "models": [
+      "transformers",
+      "torch",
+      "tensorflow",
+      "onnx"
+    ],
+    "optimization": "enabled",
+    "cuda_visible_devices": "auto"
+  },
+  "ml_inference": {
+    "enabled": true,
+    "models_path": "/Users/daniellynch/Developer/data/models",
+    "cache_strategy": "predictive",
+    "batch_processing": "enabled",
+    "distributed_inference": "kubernetes"
+  },
+  "kubernetes_integration": {
+    "enabled": true,
+    "namespace": "ai-agency",
+    "gpu_tolerations": true,
+    "ml_workloads": true
+  }
+}

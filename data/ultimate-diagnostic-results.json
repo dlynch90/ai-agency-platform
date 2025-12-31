@@ -1,0 +1,777 @@
+{
+  "diagnostic_id": "diag_1767146040_61801",
+  "timestamp": "2025-12-30T20:54:00.228122",
+  "system_info": {
+    "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "architecture": [
+      "64bit",
+      "Mach-O"
+    ],
+    "python_version": "3.14.2 | packaged by conda-forge | (main, Dec  6 2025, 11:34:40) [Clang 20.1.8 ]",
+    "python_executable": "/Users/daniellynch/Developer/.venv/bin/python3",
+    "working_directory": "/Users/daniellynch/Developer",
+    "user": "daniellynch",
+    "home_directory": "/Users/daniellynch",
+    "cpu_count": 10,
+    "memory_gb": 64.0,
+    "disk_gb": 926.3517189025879
+  },
+  "environment": {
+    "PATH": "/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/.pixi/bin:/Users/daniellynch/.local/share/mise/installs/python/3.14.2/bin:/Users/daniellynch/.local/share/mise/installs/node/25.2.1/bin:/Users/daniellynch/.local/share/mise/installs/java/corretto-21.0.5.11.1/bin:/Users/daniellynch/.local/share/mise/installs/go/1.25.5/bin:/Users/daniellynch/.local/share/mise/installs/terraform/1.9.8:/Users/daniellynch/.local/share/mise/installs/kubectl/1.32.0:/Users/daniellynch/.local/share/mise/installs/helm/3.16.3/darwin-arm64:/opt/homebrew/share/google-cloud-sdk/bin:/Users/daniellynch/.pyenv/shims:/Users/daniellynch/go/bin:/Users/daniellynch/.cargo/bin:/Users/daniellynch/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/System/Cryptexes/App/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin",
+    "PYTHONPATH": null,
+    "VIRTUAL_ENV": "/Users/daniellynch/Developer/.venv",
+    "HOME": "/Users/daniellynch",
+    "USER": "daniellynch",
+    "SHELL": "/bin/zsh",
+    "GITHUB_TOKEN": null,
+    "BRAVE_API_KEY": null,
+    "REDIS_URL": null,
+    "DATABASE_URL": null,
+    "NODE_ENV": null,
+    "npm_config_prefix": null,
+    "NVM_DIR": null,
+    "in_virtual_env": true,
+    "python_path_entries": 5,
+    "python_path_sample": [
+      "/Users/daniellynch/Developer",
+      "/Users/daniellynch/.pixi/envs/python/lib/python314.zip",
+      "/Users/daniellynch/.pixi/envs/python/lib/python3.14"
+    ]
+  },
+  "processes": {
+    "pid": 61801,
+    "ppid": 61799,
+    "cpu_percent": 0.0,
+    "memory_mb": 30.46875,
+    "num_threads": 1,
+    "num_fds": 9,
+    "create_time": 1767146040.16341,
+    "status": "running"
+  },
+  "network": {
+    "hostname": "MacBookPro.lan",
+    "ip_addresses": [
+      "192.168.1.3"
+    ],
+    "localhost_resolvable": true
+  },
+  "tests": {
+    "python_version": {
+      "test_name": "python_version",
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "start_time": 1767146040.2564778,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "Python 3.14.2",
+      "stderr": "",
+      "duration": 0.005661964416503906,
+      "timed_out": false,
+      "success": true
+    },
+    "node_version": {
+      "test_name": "node_version",
+      "command": [
+        "node",
+        "--version"
+      ],
+      "start_time": 1767146040.262339,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "v25.2.1",
+      "stderr": "",
+      "duration": 0.021512985229492188,
+      "timed_out": false,
+      "success": true
+    },
+    "npm_version": {
+      "test_name": "npm_version",
+      "command": [
+        "npm",
+        "--version"
+      ],
+      "start_time": 1767146040.2840729,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "11.7.0",
+      "stderr": "",
+      "duration": 0.08697223663330078,
+      "timed_out": false,
+      "success": true
+    },
+    "npx_available": {
+      "test_name": "npx_available",
+      "command": [
+        "npx",
+        "--version"
+      ],
+      "start_time": 1767146040.371295,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "11.7.0",
+      "stderr": "",
+      "duration": 0.09046506881713867,
+      "timed_out": false,
+      "success": true
+    },
+    "psql_available": {
+      "test_name": "psql_available",
+      "command": [
+        "psql",
+        "--version"
+      ],
+      "start_time": 1767146040.4620202,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "psql (PostgreSQL) 14.20 (Homebrew)",
+      "stderr": "",
+      "duration": 0.012664794921875,
+      "timed_out": false,
+      "success": true
+    },
+    "redis_cli_available": {
+      "test_name": "redis_cli_available",
+      "command": [
+        "redis-cli",
+        "--version"
+      ],
+      "start_time": 1767146040.47489,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "redis-cli 8.4.0",
+      "stderr": "",
+      "duration": 0.006491184234619141,
+      "timed_out": false,
+      "success": true
+    },
+    "docker_available": {
+      "test_name": "docker_available",
+      "command": [
+        "docker",
+        "--version"
+      ],
+      "start_time": 1767146040.4815722,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "Docker version 29.1.3, build f52814d454",
+      "stderr": "",
+      "duration": 0.013908863067626953,
+      "timed_out": false,
+      "success": true
+    },
+    "gh_available": {
+      "test_name": "gh_available",
+      "command": [
+        "gh",
+        "--version"
+      ],
+      "start_time": 1767146040.4957492,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "gh version 2.83.2 (2025-12-10)\nhttps://github.com/cli/cli/releases/tag/v2.83.2",
+      "stderr": "",
+      "duration": 0.0442967414855957,
+      "timed_out": false,
+      "success": true
+    },
+    "connectivity_postgresql": {
+      "service": "postgresql",
+      "host": "localhost",
+      "port": 5432,
+      "start_time": 1767146040.540266,
+      "connected": true,
+      "duration": 0.003523111343383789
+    },
+    "connectivity_redis": {
+      "service": "redis",
+      "host": "localhost",
+      "port": 6379,
+      "start_time": 1767146040.5438788,
+      "connected": true,
+      "duration": 0.000759124755859375
+    },
+    "connectivity_neo4j_browser": {
+      "service": "neo4j_browser",
+      "host": "localhost",
+      "port": 7474,
+      "start_time": 1767146040.544692,
+      "connected": true,
+      "duration": 0.0006940364837646484
+    },
+    "connectivity_temporal_ui": {
+      "service": "temporal_ui",
+      "host": "localhost",
+      "port": 8080,
+      "start_time": 1767146040.545461,
+      "connected": true,
+      "duration": 0.0006420612335205078
+    },
+    "mcp_install_filesystem": {
+      "test_name": "mcp_install_filesystem",
+      "command": [
+        "npm",
+        "list",
+        "-g",
+        "@modelcontextprotocol/server-filesystem"
+      ],
+      "start_time": 1767146040.5461729,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "/Users/daniellynch/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 @modelcontextprotocol/server-filesystem@2025.12.18",
+      "stderr": "",
+      "duration": 1.187554121017456,
+      "timed_out": false,
+      "success": true
+    },
+    "mcp_exec_filesystem": {
+      "test_name": "mcp_exec_filesystem",
+      "command": [
+        "timeout",
+        "5",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "--help"
+      ],
+      "start_time": 1767146041.734043,
+      "expected_success": false,
+      "returncode": 124,
+      "stdout": "",
+      "stderr": "",
+      "duration": 5.01977014541626,
+      "timed_out": false,
+      "success": true
+    },
+    "mcp_install_sequential-thinking": {
+      "test_name": "mcp_install_sequential-thinking",
+      "command": [
+        "npm",
+        "list",
+        "-g",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "start_time": 1767146046.754,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "/Users/daniellynch/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 @modelcontextprotocol/server-sequential-thinking@2025.12.18",
+      "stderr": "",
+      "duration": 1.0781841278076172,
+      "timed_out": false,
+      "success": true
+    },
+    "mcp_exec_sequential-thinking": {
+      "test_name": "mcp_exec_sequential-thinking",
+      "command": [
+        "timeout",
+        "5",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking",
+        "--help"
+      ],
+      "start_time": 1767146047.832363,
+      "expected_success": false,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Sequential Thinking MCP Server running on stdio",
+      "duration": 4.129079103469849,
+      "timed_out": false,
+      "success": false
+    },
+    "mcp_install_memory": {
+      "test_name": "mcp_install_memory",
+      "command": [
+        "npm",
+        "list",
+        "-g",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "start_time": 1767146051.961751,
+      "expected_success": true,
+      "returncode": 0,
+      "stdout": "/Users/daniellynch/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 @modelcontextprotocol/server-memory@2025.11.25",
+      "stderr": "",
+      "duration": 1.0322911739349365,
+      "timed_out": false,
+      "success": true
+    },
+    "mcp_exec_memory": {
+      "test_name": "mcp_exec_memory",
+      "command": [
+        "timeout",
+        "5",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-memory",
+        "--help"
+      ],
+      "start_time": 1767146052.994261,
+      "expected_success": false,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Knowledge Graph MCP Server running on stdio",
+      "duration": 4.38329291343689,
+      "timed_out": false,
+      "success": false
+    },
+    "mcp_install_everything": {
+      "test_name": "mcp_install_everything",
+      "command": [
+        "npm",
+        "list",
+        "-g",
+        "@modelcontextprotocol/server-everything"
+      ],
+      "start_time": 1767146057.377837,
+      "expected_success": true,
+      "returncode": 1,
+      "stdout": "/Users/daniellynch/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 (empty)",
+      "stderr": "",
+      "duration": 1.1031110286712646,
+      "timed_out": false,
+      "success": false
+    },
+    "mcp_exec_everything": {
+      "test_name": "mcp_exec_everything",
+      "command": [
+        "timeout",
+        "5",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-everything",
+        "--help"
+      ],
+      "start_time": 1767146058.4812229,
+      "expected_success": false,
+      "returncode": 1,
+      "stdout": "Available scripts:\n- stdio\n- sse\n- streamableHttp",
+      "stderr": "Unknown script: --help",
+      "duration": 4.58050012588501,
+      "timed_out": false,
+      "success": true
+    },
+    "import_asyncpg": {
+      "success": true
+    },
+    "import_aiohttp": {
+      "success": true
+    },
+    "import_torch": {
+      "success": true
+    },
+    "import_transformers": {
+      "success": true
+    },
+    "import_optuna": {
+      "success": true
+    },
+    "import_redis": {
+      "success": true
+    },
+    "file_access_comprehensive-system-validator.py": {
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '/Users/daniellynch/Developer/comprehensive-system-validator.py'"
+    },
+    "file_access_mcp.json": {
+      "success": true,
+      "size": 1964
+    },
+    "file_access_database-schema.sql": {
+      "success": true,
+      "size": 4762
+    }
+  },
+  "errors": [
+    {
+      "timestamp": "2025-12-30T20:54:11.961456",
+      "error": "Command test failed: mcp_exec_sequential-thinking",
+      "context": {
+        "test_name": "mcp_exec_sequential-thinking",
+        "command": [
+          "timeout",
+          "5",
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking",
+          "--help"
+        ],
+        "start_time": 1767146047.832363,
+        "expected_success": false,
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Sequential Thinking MCP Server running on stdio",
+        "duration": 4.129079103469849,
+        "timed_out": false,
+        "success": false
+      },
+      "traceback": "NoneType: None\n"
+    },
+    {
+      "timestamp": "2025-12-30T20:54:17.377564",
+      "error": "Command test failed: mcp_exec_memory",
+      "context": {
+        "test_name": "mcp_exec_memory",
+        "command": [
+          "timeout",
+          "5",
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-memory",
+          "--help"
+        ],
+        "start_time": 1767146052.994261,
+        "expected_success": false,
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "Knowledge Graph MCP Server running on stdio",
+        "duration": 4.38329291343689,
+        "timed_out": false,
+        "success": false
+      },
+      "traceback": "NoneType: None\n"
+    },
+    {
+      "timestamp": "2025-12-30T20:54:18.480958",
+      "error": "Command test failed: mcp_install_everything",
+      "context": {
+        "test_name": "mcp_install_everything",
+        "command": [
+          "npm",
+          "list",
+          "-g",
+          "@modelcontextprotocol/server-everything"
+        ],
+        "start_time": 1767146057.377837,
+        "expected_success": true,
+        "returncode": 1,
+        "stdout": "/Users/daniellynch/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 (empty)",
+        "stderr": "",
+        "duration": 1.1031110286712646,
+        "timed_out": false,
+        "success": false
+      },
+      "traceback": "NoneType: None\n"
+    },
+    {
+      "timestamp": "2025-12-30T20:54:24.276504",
+      "error": "File access failed: /Users/daniellynch/Developer/comprehensive-system-validator.py",
+      "context": {
+        "error": "[Errno 2] No such file or directory: '/Users/daniellynch/Developer/comprehensive-system-validator.py'"
+      },
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/daniellynch/Developer/ultimate-system-diagnostic.py\", line 322, in run_ultimate_diagnostic\n    with open(file_path, 'r') as f:\n         ~~~~^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/daniellynch/Developer/comprehensive-system-validator.py'\n"
+    }
+  ],
+  "warnings": [],
+  "debug_traces": [
+    {
+      "timestamp": "2025-12-30T20:54:00.256483",
+      "message": "Starting command test: python_version",
+      "data": {
+        "command": [
+          "python3",
+          "--version"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.262149",
+      "message": "Command test passed: python_version",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.262340",
+      "message": "Starting command test: node_version",
+      "data": {
+        "command": [
+          "node",
+          "--version"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.283864",
+      "message": "Command test passed: node_version",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.284074",
+      "message": "Starting command test: npm_version",
+      "data": {
+        "command": [
+          "npm",
+          "--version"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.371064",
+      "message": "Command test passed: npm_version",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.371296",
+      "message": "Starting command test: npx_available",
+      "data": {
+        "command": [
+          "npx",
+          "--version"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.461776",
+      "message": "Command test passed: npx_available",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.462021",
+      "message": "Starting command test: psql_available",
+      "data": {
+        "command": [
+          "psql",
+          "--version"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.474699",
+      "message": "Command test passed: psql_available",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.474891",
+      "message": "Starting command test: redis_cli_available",
+      "data": {
+        "command": [
+          "redis-cli",
+          "--version"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.481390",
+      "message": "Command test passed: redis_cli_available",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.481573",
+      "message": "Starting command test: docker_available",
+      "data": {
+        "command": [
+          "docker",
+          "--version"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.495498",
+      "message": "Command test passed: docker_available",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.495750",
+      "message": "Starting command test: gh_available",
+      "data": {
+        "command": [
+          "gh",
+          "--version"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.540056",
+      "message": "Command test passed: gh_available",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.543791",
+      "message": "Service connectivity test passed: postgresql",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.544640",
+      "message": "Service connectivity test passed: redis",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.545388",
+      "message": "Service connectivity test passed: neo4j_browser",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.546104",
+      "message": "Service connectivity test passed: temporal_ui",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:00.546174",
+      "message": "Starting command test: mcp_install_filesystem",
+      "data": {
+        "command": [
+          "npm",
+          "list",
+          "-g",
+          "@modelcontextprotocol/server-filesystem"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:01.733746",
+      "message": "Command test passed: mcp_install_filesystem",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:01.734045",
+      "message": "Starting command test: mcp_exec_filesystem",
+      "data": {
+        "command": [
+          "timeout",
+          "5",
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "--help"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:06.753824",
+      "message": "Command test passed: mcp_exec_filesystem",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:06.754001",
+      "message": "Starting command test: mcp_install_sequential-thinking",
+      "data": {
+        "command": [
+          "npm",
+          "list",
+          "-g",
+          "@modelcontextprotocol/server-sequential-thinking"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:07.832193",
+      "message": "Command test passed: mcp_install_sequential-thinking",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:07.832364",
+      "message": "Starting command test: mcp_exec_sequential-thinking",
+      "data": {
+        "command": [
+          "timeout",
+          "5",
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking",
+          "--help"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:11.961752",
+      "message": "Starting command test: mcp_install_memory",
+      "data": {
+        "command": [
+          "npm",
+          "list",
+          "-g",
+          "@modelcontextprotocol/server-memory"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:12.994052",
+      "message": "Command test passed: mcp_install_memory",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:12.994261",
+      "message": "Starting command test: mcp_exec_memory",
+      "data": {
+        "command": [
+          "timeout",
+          "5",
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-memory",
+          "--help"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:17.377838",
+      "message": "Starting command test: mcp_install_everything",
+      "data": {
+        "command": [
+          "npm",
+          "list",
+          "-g",
+          "@modelcontextprotocol/server-everything"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:18.481224",
+      "message": "Starting command test: mcp_exec_everything",
+      "data": {
+        "command": [
+          "timeout",
+          "5",
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-everything",
+          "--help"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-12-30T20:54:23.061736",
+      "message": "Command test passed: mcp_exec_everything",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:23.089554",
+      "message": "Python import successful: asyncpg",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:23.162936",
+      "message": "Python import successful: aiohttp",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:23.829587",
+      "message": "Python import successful: torch",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:24.230916",
+      "message": "Python import successful: transformers",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:24.276354",
+      "message": "Python import successful: optuna",
+      "data": null
+    },
+    {
+      "timestamp": "2025-12-30T20:54:24.276456",
+      "message": "Python import successful: redis",
+      "data": null
+    }
+  ],
+  "summary": {
+    "total_tests": 29,
+    "successful_tests": 21,
+    "error_count": 4,
+    "warning_count": 0,
+    "success_rate": 72.41379310344827,
+    "duration": 24.049023866653442
+  }
+}

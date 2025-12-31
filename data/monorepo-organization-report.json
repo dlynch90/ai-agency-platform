@@ -1,0 +1,1537 @@
+{
+  "timestamp": "2025-12-31T04:35:10.439Z",
+  "operation": "monorepo-organization",
+  "stats": {
+    "scanned": 2,
+    "moved": 294,
+    "errors": 0,
+    "skipped": 2
+  },
+  "moves": [
+    {
+      "from": "/Users/daniellynch/Developer/package.json",
+      "to": "/Users/daniellynch/Developer/configs/package.json",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/pixi.toml",
+      "to": "/Users/daniellynch/Developer/configs/pixi.toml",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/docker-compose.mem0.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.mem0.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/temporal/docker-compose.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/temporal/activities/ml-evaluation-activities.ts.backup",
+      "to": "/Users/daniellynch/Developer/backups/ml-evaluation-activities.ts.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/network-proxy/docker-compose.network.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.network.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/docker-compose.services.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.services.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/docker/docker-compose.proxy.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.proxy.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/docker-setup.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-setup.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/docker-compose.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/containerization/docker-compose.services.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.services.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/docker-compose.development.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.development.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/deployment/setup_mcp_servers.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/setup_mcp_servers.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/infra/docker-compose.comprehensive.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.comprehensive.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/python/validate_installations.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/validate_installations.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/python/numerical-methods-audit.py.backup",
+      "to": "/Users/daniellynch/Developer/logs/numerical-methods-audit.py.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/python/comprehensive_gap_analysis.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/comprehensive_gap_analysis.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/python/debug-use-cases.py.backup",
+      "to": "/Users/daniellynch/Developer/scripts/debug-use-cases.py.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/python/infinitesimal_gap_analysis.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/infinitesimal_gap_analysis.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/python/critical_fixes.py.backup",
+      "to": "/Users/daniellynch/Developer/scripts/critical_fixes.py.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/python/spherical_finite_element_markov_analysis.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/spherical_finite_element_markov_analysis.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/python/finite_element_analysis.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/finite_element_analysis.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/python/debug_cursor_issues.py.backup",
+      "to": "/Users/daniellynch/Developer/scripts/debug_cursor_issues.py.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/testing/unit/comprehensive_unit_tests.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/comprehensive_unit_tests.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/testing/vitest.vendor.config.js.backup",
+      "to": "/Users/daniellynch/Developer/configs/vitest.vendor.config.js.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/testing/test_hardcoded_paths.java.backup",
+      "to": "/Users/daniellynch/Developer/backups/test_hardcoded_paths.java.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/testing/vitest.config.js.backup",
+      "to": "/Users/daniellynch/Developer/configs/vitest.config.js.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/testing/vendor-system-test.cjs.backup",
+      "to": "/Users/daniellynch/Developer/backups/vendor-system-test.cjs.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/testing/vitest.integration.config.js.backup",
+      "to": "/Users/daniellynch/Developer/configs/vitest.integration.config.js.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/tools/testing/comprehensive-unit-tests/comprehensive-test-runner.ts.backup",
+      "to": "/Users/daniellynch/Developer/backups/comprehensive-test-runner.ts.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/.pixi/envs/default/lib/cmake/protobuf/protobuf-targets-release.cmake.bak",
+      "to": "/Users/daniellynch/Developer/backups/protobuf-targets-release.cmake.bak",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/java-enterprise-golden-path/deployment/docker-compose.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/java-enterprise-golden-path/deployment/Dockerfile.backup",
+      "to": "/Users/daniellynch/Developer/backups/Dockerfile.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/java-enterprise-golden-path/api/src/main/java/com/enterprise/api/controller/AiController.java.backup",
+      "to": "/Users/daniellynch/Developer/backups/AiController.java.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/java-enterprise-golden-path/infrastructure/target/classes/com/enterprise/infrastructure/entity/UserEntity.java.backup",
+      "to": "/Users/daniellynch/Developer/backups/UserEntity.java.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/java-enterprise-golden-path/infrastructure/src/main/java/com/enterprise/infrastructure/entity/UserEntity.java.backup",
+      "to": "/Users/daniellynch/Developer/backups/UserEntity.java.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/mcp/configs/mcp-registry.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/mcp-registry.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/docs/debug-summary-debug-1767132633435.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/debug-summary-debug-1767132633435.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/docs/debug-summary-debug-1767132986573.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/debug-summary-debug-1767132986573.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/logs/hf-gpu-setup-report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/hf-gpu-setup-report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/logs/comprehensive-debug-report-debug-1767132986573.json.backup",
+      "to": "/Users/daniellynch/Developer/scripts/comprehensive-debug-report-debug-1767132986573.json.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/logs/mcp-integration-report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/mcp-integration-report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/logs/validation-report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/validation-report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/logs/comprehensive-debug-report-debug-1767132633435.json.backup",
+      "to": "/Users/daniellynch/Developer/scripts/comprehensive-debug-report-debug-1767132633435.json.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/logs/vendor-sync-report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/vendor-sync-report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/logs/evaluation-report-evaluation-1767132300094.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/evaluation-report-evaluation-1767132300094.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/deployment/kubernetes/helm-charts/agi-environment/templates/deployment.yaml.backup",
+      "to": "/Users/daniellynch/Developer/backups/deployment.yaml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/deployment/kubernetes/helm-charts/agi-environment/templates/configmap.yaml.backup",
+      "to": "/Users/daniellynch/Developer/configs/configmap.yaml.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/federation/gateway/src/index.js.backup",
+      "to": "/Users/daniellynch/Developer/backups/index.js.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/configs/pixi.toml.backup",
+      "to": "/Users/daniellynch/Developer/configs/pixi.toml.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/configs/pnpm-lock.yaml.backup",
+      "to": "/Users/daniellynch/Developer/pnpm-lock.yaml.backup",
+      "category": "/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/configs/pixi.toml.bak",
+      "to": "/Users/daniellynch/Developer/configs/pixi.toml.bak",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/configs/pnpm-workspace.yaml.backup",
+      "to": "/Users/daniellynch/Developer/backups/pnpm-workspace.yaml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/configs/pyproject.toml.backup",
+      "to": "/Users/daniellynch/Developer/backups/pyproject.toml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/configs/mcp/mcp.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/mcp.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/configs/vite.config.ts.backup",
+      "to": "/Users/daniellynch/Developer/configs/vite.config.ts.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/configs/lefthook.yml.bak",
+      "to": "/Users/daniellynch/Developer/backups/lefthook.yml.bak",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/hf_test.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/hf_test.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/directory-organization.js.backup",
+      "to": "/Users/daniellynch/Developer/backups/directory-organization.js.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/mcp-tools-integration.js.backup",
+      "to": "/Users/daniellynch/Developer/scripts/mcp-tools-integration.js.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/hf-gpu-config.json.backup",
+      "to": "/Users/daniellynch/Developer/configs/hf-gpu-config.json.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/hf-gpu-inference-setup.js.backup",
+      "to": "/Users/daniellynch/Developer/backups/hf-gpu-inference-setup.js.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/.prettierrc.backup",
+      "to": "/Users/daniellynch/Developer/backups/.prettierrc.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/cli-tools-analysis.js.backup.backup",
+      "to": "/Users/daniellynch/Developer/scripts/cli-tools-analysis.js.backup.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/graphql-codebase-evaluator.js.backup",
+      "to": "/Users/daniellynch/Developer/backups/graphql-codebase-evaluator.js.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/mcp-tools-integration.js.backup.backup",
+      "to": "/Users/daniellynch/Developer/scripts/mcp-tools-integration.js.backup.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/comprehensive-debugger.js.backup",
+      "to": "/Users/daniellynch/Developer/scripts/comprehensive-debugger.js.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/vendor-resource-sync.js.backup",
+      "to": "/Users/daniellynch/Developer/backups/vendor-resource-sync.js.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/package.json.backup",
+      "to": "/Users/daniellynch/Developer/configs/package.json.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/starship-50-unit-testing-pipeline.mjs.bak",
+      "to": "/Users/daniellynch/Developer/backups/starship-50-unit-testing-pipeline.mjs.bak",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/hf-gpu-inference-setup.js.backup.backup",
+      "to": "/Users/daniellynch/Developer/backups/hf-gpu-inference-setup.js.backup.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/.editorconfig.backup",
+      "to": "/Users/daniellynch/Developer/configs/.editorconfig.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/comprehensive-debugger.js.backup.backup",
+      "to": "/Users/daniellynch/Developer/scripts/comprehensive-debugger.js.backup.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/vite.config.js.backup",
+      "to": "/Users/daniellynch/Developer/configs/vite.config.js.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/.modern_shell_config.backup",
+      "to": "/Users/daniellynch/Developer/configs/.modern_shell_config.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/script_refactoring.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/script_refactoring.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/DEVELOPMENT_ENVIRONMENT_SETUP.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/DEVELOPMENT_ENVIRONMENT_SETUP.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/comprehensive-audit-fix.py.backup",
+      "to": "/Users/daniellynch/Developer/scripts/comprehensive-audit-fix.py.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/postgres_setup.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/postgres_setup.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/1password-comprehensive-debug-continue.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/1password-comprehensive-debug-continue.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/production.env.backup",
+      "to": "/Users/daniellynch/Developer/backups/production.env.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/tooling_migration.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/tooling_migration.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/system_diagnostics.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/system_diagnostics.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/starship_configuration.md.backup",
+      "to": "/Users/daniellynch/Developer/configs/starship_configuration.md.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/cli_entrypoint_refactor.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/cli_entrypoint_refactor.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/DEPENDENCY_AUDIT_REPORT.md.backup",
+      "to": "/Users/daniellynch/Developer/logs/DEPENDENCY_AUDIT_REPORT.md.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/binary-inventory.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/binary-inventory.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/phase2-custom-code-audit.json.backup",
+      "to": "/Users/daniellynch/Developer/logs/phase2-custom-code-audit.json.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/vendor-cli-validation.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/vendor-cli-validation.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/help.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/help.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/dev_environment_audit.md.backup",
+      "to": "/Users/daniellynch/Developer/logs/dev_environment_audit.md.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/loose-files-audit.json.backup",
+      "to": "/Users/daniellynch/Developer/logs/loose-files-audit.json.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/comprehensive_report.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/comprehensive_report.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/docker-setup.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-setup.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/vendor-code-replacement.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/vendor-code-replacement.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/phase4-vendor-integrations.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/phase4-vendor-integrations.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/desktop-commander-filesystem.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/desktop-commander-filesystem.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/developer_environment_health.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/developer_environment_health.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/install_development_tools.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/install_development_tools.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/pixi.toml.backup",
+      "to": "/Users/daniellynch/Developer/configs/pixi.toml.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/ai_agency_configs-e9c04dc0e2cdc11d.d.backup",
+      "to": "/Users/daniellynch/Developer/configs/ai_agency_configs-e9c04dc0e2cdc11d.d.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/cache_log_cleanup.md.backup",
+      "to": "/Users/daniellynch/Developer/logs/cache_log_cleanup.md.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/config-standards.md.backup",
+      "to": "/Users/daniellynch/Developer/configs/config-standards.md.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/save_ssot_entries.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/save_ssot_entries.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/java_ecosystem_audit.sh.backup",
+      "to": "/Users/daniellynch/Developer/logs/java_ecosystem_audit.sh.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/macos_zsh_remediation.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/macos_zsh_remediation.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/monorepo_resolution_fixes.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/monorepo_resolution_fixes.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/comprehensive_tool_inventory_gap_analysis.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/comprehensive_tool_inventory_gap_analysis.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/troubleshooting_guide.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/troubleshooting_guide.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/dev_environment_standardization.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/dev_environment_standardization.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/extended-mcp-ecosystem.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/extended-mcp-ecosystem.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/audit_system_binaries.py.backup",
+      "to": "/Users/daniellynch/Developer/logs/audit_system_binaries.py.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/wordpress_bedrock_ddev_setup.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/wordpress_bedrock_ddev_setup.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/removal.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/removal.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/startup_errors_fix.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/startup_errors_fix.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/auto-fix-violations.py.backup",
+      "to": "/Users/daniellynch/Developer/scripts/auto-fix-violations.py.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/DEPLOYMENT_GUIDE.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/DEPLOYMENT_GUIDE.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/multiple_fixes.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/multiple_fixes.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/fix_cursor_mcp.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/fix_cursor_mcp.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/PIXI_CONSOLIDATION_IMPLEMENTATION.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/PIXI_CONSOLIDATION_IMPLEMENTATION.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/2025-12-30-finite-element-analysis-decomposition.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/2025-12-30-finite-element-analysis-decomposition.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/ai_agency_configs-68bf8fb778d4429b.d.backup",
+      "to": "/Users/daniellynch/Developer/configs/ai_agency_configs-68bf8fb778d4429b.d.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/OPENCODE_SETUP.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/OPENCODE_SETUP.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/README_TESTING_SETUP.md.backup",
+      "to": "/Users/daniellynch/Developer/docs/README_TESTING_SETUP.md.backup",
+      "category": "/docs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/stdout.backup",
+      "to": "/Users/daniellynch/Developer/backups/stdout.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/docker-compose.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/stabilization.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/stabilization.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/refactor_tools_gap.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/refactor_tools_gap.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/package-json.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/package-json.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/platform_summary.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/platform_summary.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/vendor_services_setup.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/vendor_services_setup.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/tool_configuration_fixes.md.backup",
+      "to": "/Users/daniellynch/Developer/configs/tool_configuration_fixes.md.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/integration_learnings.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/integration_learnings.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/infra_bring_up.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/infra_bring_up.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/Testing.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/Testing.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/setup_shell_tools.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/setup_shell_tools.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/enforce-vendor-compliance.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/enforce-vendor-compliance.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/debug_findings.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/debug_findings.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/containerization-setup.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/containerization-setup.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/verify_tools.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/verify_tools.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/debug-report.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/debug-report.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/symlink_remediation.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/symlink_remediation.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/critical_fixes.py.backup",
+      "to": "/Users/daniellynch/Developer/scripts/critical_fixes.py.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/non_compliant_scripts_cleanup.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/non_compliant_scripts_cleanup.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/detect-hardcoded-values.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/detect-hardcoded-values.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/package-spec.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/package-spec.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/comprehensive_violations_fix.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/comprehensive_violations_fix.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/mcp-server-validation-fixed-report.json.backup",
+      "to": "/Users/daniellynch/Developer/scripts/mcp-server-validation-fixed-report.json.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/package-lock-json.md.backup",
+      "to": "/Users/daniellynch/Developer/package-lock-json.md.backup",
+      "category": "/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/binomial-edge-case-detection.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/binomial-edge-case-detection.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/libai_agency_configs-68bf8fb778d4429b.rmeta.backup",
+      "to": "/Users/daniellynch/Developer/configs/libai_agency_configs-68bf8fb778d4429b.rmeta.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/final-debug-resolution-report.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/final-debug-resolution-report.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/extracted_documentation.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/extracted_documentation.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/comprehensive_audit_findings.md.backup",
+      "to": "/Users/daniellynch/Developer/logs/comprehensive_audit_findings.md.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/mcp-servers-1password.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/mcp-servers-1password.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/startup_errors.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/startup_errors.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/consolidated_tool_inventory_master_report.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/consolidated_tool_inventory_master_report.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/slack_server_config_removal.md.backup",
+      "to": "/Users/daniellynch/Developer/configs/slack_server_config_removal.md.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/no-absolute-path.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/no-absolute-path.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/extended_ai_ml_cloud_gap_analysis.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/extended_ai_ml_cloud_gap_analysis.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/node_registry_error.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/node_registry_error.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/comprehensive_code_audit.py.backup",
+      "to": "/Users/daniellynch/Developer/logs/comprehensive_code_audit.py.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/PYTHON_STANDARDS.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/PYTHON_STANDARDS.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/current_state_report.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/current_state_report.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/binomial-edge-detection.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/binomial-edge-detection.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/npm-prefix.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/npm-prefix.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/20_step_debug_gap_analysis.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/20_step_debug_gap_analysis.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/vendor_stack_automation.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/vendor_stack_automation.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/task_dependency_gaps.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/task_dependency_gaps.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/repository_scan_commands.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/repository_scan_commands.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/comprehensive_network_orchestrator.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/comprehensive_network_orchestrator.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/optimization_report.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/optimization_report.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/onepassword_integration.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/onepassword_integration.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/phase3-file-organization.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/phase3-file-organization.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/pcre2.txt.backup",
+      "to": "/Users/daniellynch/Developer/backups/pcre2.txt.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/2025-12-30-systemic-cleanup-master-plan.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/2025-12-30-systemic-cleanup-master-plan.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/npm-completion.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/npm-completion.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/java_ecosystem_validation_report.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/java_ecosystem_validation_report.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/mise_uv_migration.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/mise_uv_migration.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/toolchain_cache_secrets.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/toolchain_cache_secrets.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/de_git_history_backup.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/de_git_history_backup.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/master-ai-agency-setup.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/master-ai-agency-setup.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/final_debugging_summary.json.backup",
+      "to": "/Users/daniellynch/Developer/scripts/final_debugging_summary.json.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/postgres_secret_wiring.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/postgres_secret_wiring.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/2025-12-29-ssot-standardization-implementation.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/2025-12-29-ssot-standardization-implementation.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/PYTHON_ENVIRONMENT_QUICK_START.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/PYTHON_ENVIRONMENT_QUICK_START.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/finite_element_analysis_report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/finite_element_analysis_report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/install.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/install.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/debug_simple.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/debug_simple.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/libDeveloper-e56384207eb35846.rmeta.backup",
+      "to": "/Users/daniellynch/Developer/backups/libDeveloper-e56384207eb35846.rmeta.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/access_denied_400.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/access_denied_400.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/docker-compose.network.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.network.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/llm-evaluation-framework.js.backup",
+      "to": "/Users/daniellynch/Developer/backups/llm-evaluation-framework.js.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/enforce_cursor_rules.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/enforce_cursor_rules.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/loose_files_audit_finite_element_analysis.sh.backup",
+      "to": "/Users/daniellynch/Developer/logs/loose_files_audit_finite_element_analysis.sh.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/layout_and_infrastructure.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/layout_and_infrastructure.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/2025-12-29-chezmoi-ssot-variable-standardization-design.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/2025-12-29-chezmoi-ssot-variable-standardization-design.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/1password-debug-setup.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/1password-debug-setup.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/CONSOLIDATION_CHECKLIST.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/CONSOLIDATION_CHECKLIST.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/ai_agency_configs-2faf4769fa17054f.d.backup",
+      "to": "/Users/daniellynch/Developer/configs/ai_agency_configs-2faf4769fa17054f.d.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/Developer-e56384207eb35846.d.backup",
+      "to": "/Users/daniellynch/Developer/backups/Developer-e56384207eb35846.d.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/debug_cursor_shell.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/debug_cursor_shell.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/automation_refactor.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/automation_refactor.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/CUSTOM_CODE_DELETION_CHECKLIST.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/CUSTOM_CODE_DELETION_CHECKLIST.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/30_step_gap_analysis_debug.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/30_step_gap_analysis_debug.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/polyglot-integration-setup.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/polyglot-integration-setup.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/1password_uuid_fix.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/1password_uuid_fix.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/COMPREHENSIVE_AUDIT_REPORT.md.backup",
+      "to": "/Users/daniellynch/Developer/logs/COMPREHENSIVE_AUDIT_REPORT.md.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/shell_ssot_refactor.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/shell_ssot_refactor.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/mcp-server-registry.cjs.backup",
+      "to": "/Users/daniellynch/Developer/backups/mcp-server-registry.cjs.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/comprehensive_gap_analysis.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/comprehensive_gap_analysis.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/manual_fixes.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/manual_fixes.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/vendor-compliance-report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/vendor-compliance-report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/redis_macos_fix.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/redis_macos_fix.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/audit_findings.md.backup",
+      "to": "/Users/daniellynch/Developer/logs/audit_findings.md.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/cli_removal.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/cli_removal.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/pnpm-optimization-report.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/pnpm-optimization-report.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/gibson-cli-finite-element-analysis.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/gibson-cli-finite-element-analysis.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/ai_agency_configs-bd3e0775f8b2b8e2.d.backup",
+      "to": "/Users/daniellynch/Developer/configs/ai_agency_configs-bd3e0775f8b2b8e2.d.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/scripts.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/scripts.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/opencode-gap-analysis.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/opencode-gap-analysis.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/setup-event-driven-architecture.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/setup-event-driven-architecture.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/The content describes the setup and management of machine learning dependencies within a developer workspace, contrasting it with app-specific virtual environments, and noting the impact on testing. This falls under how the project.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/The content describes the setup and management of machine learning dependencies within a developer workspace, contrasting it with app-specific virtual environments, and noting the impact on testing. This falls under how the project.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/50-step-gap-analysis-final-report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/50-step-gap-analysis-final-report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/PYTHON_ENVIRONMENT_AUDIT.md.backup",
+      "to": "/Users/daniellynch/Developer/logs/PYTHON_ENVIRONMENT_AUDIT.md.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/optimization_runbook.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/optimization_runbook.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/environment_summary.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/environment_summary.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/PERFORMANCE_GAP_ANALYSIS.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/PERFORMANCE_GAP_ANALYSIS.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/gibson-official.backup",
+      "to": "/Users/daniellynch/Developer/backups/gibson-official.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/20-real-world-use-cases-implementation.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/20-real-world-use-cases-implementation.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/path_and_env_resolution.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/path_and_env_resolution.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/optimize_bottlenecks.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/optimize_bottlenecks.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/critical_fixes.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/critical_fixes.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/path_shims_standardization.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/path_shims_standardization.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/Developer-41b4b4696036dfb8.d.backup",
+      "to": "/Users/daniellynch/Developer/backups/Developer-41b4b4696036dfb8.d.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/cleanup_report.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/cleanup_report.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/fixed-use-cases-implementation.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/fixed-use-cases-implementation.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/FINITE_ELEMENT_ANALYSIS_REPORT.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/FINITE_ELEMENT_ANALYSIS_REPORT.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/ultimate-integration-orchestrator.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/ultimate-integration-orchestrator.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/monorepo_policy_check.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/monorepo_policy_check.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/opencode-ollama-debug-report.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/opencode-ollama-debug-report.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/binary-audit.py.backup",
+      "to": "/Users/daniellynch/Developer/logs/binary-audit.py.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/vendor_integration_gaps.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/vendor_integration_gaps.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/test_stabilization.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/test_stabilization.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/express_type_bifurcation.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/express_type_bifurcation.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/shell_migration.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/shell_migration.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/rebuild_validation_workflow.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/rebuild_validation_workflow.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/REMEDIATION_COMMANDS.txt.backup",
+      "to": "/Users/daniellynch/Developer/backups/REMEDIATION_COMMANDS.txt.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/10-step-gap-analysis-fea-report.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/10-step-gap-analysis-fea-report.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/setup_polyglot_integration.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/setup_polyglot_integration.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/phase5-crud-orchestration.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/phase5-crud-orchestration.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/libai_agency_configs-e9c04dc0e2cdc11d.rmeta.backup",
+      "to": "/Users/daniellynch/Developer/configs/libai_agency_configs-e9c04dc0e2cdc11d.rmeta.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/30_step_gap_analysis_completion_report.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/30_step_gap_analysis_completion_report.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/stale_socket_fix.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/stale_socket_fix.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/2025-12-29-gap-analysis-20-part.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/2025-12-29-gap-analysis-20-part.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/fix-python-environment.sh.backup",
+      "to": "/Users/daniellynch/Developer/scripts/fix-python-environment.sh.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/governance_audit.md.backup",
+      "to": "/Users/daniellynch/Developer/logs/governance_audit.md.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/filesystem_audit_optimizer.py.backup",
+      "to": "/Users/daniellynch/Developer/logs/filesystem_audit_optimizer.py.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/shell_config_issues.md.backup",
+      "to": "/Users/daniellynch/Developer/configs/shell_config_issues.md.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/database-integration-setup.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/database-integration-setup.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/config.md.backup",
+      "to": "/Users/daniellynch/Developer/configs/config.md.backup",
+      "category": "/configs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/Dockerfile.backup",
+      "to": "/Users/daniellynch/Developer/backups/Dockerfile.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/java-workspace-setup.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/java-workspace-setup.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/macos_audit_report.md.backup",
+      "to": "/Users/daniellynch/Developer/logs/macos_audit_report.md.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/task_failures_fix.md.backup",
+      "to": "/Users/daniellynch/Developer/scripts/task_failures_fix.md.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/health_audit.md.backup",
+      "to": "/Users/daniellynch/Developer/logs/health_audit.md.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/archive_2025/temp-files/DEPENDENCY_CONSOLIDATION_SUMMARY.md.backup",
+      "to": "/Users/daniellynch/Developer/backups/DEPENDENCY_CONSOLIDATION_SUMMARY.md.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/scripts/cli-tools-analysis.js.backup",
+      "to": "/Users/daniellynch/Developer/scripts/cli-tools-analysis.js.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/templates/java/docker-compose.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/templates/java/spring-boot/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst.backup",
+      "to": "/Users/daniellynch/Developer/backups/inputFiles.lst.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/monitoring/grafana/provisioning/dashboards/dashboards.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/dashboards.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/use-case-1-ecommerce-personalization/setup-ecommerce-engine.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/setup-ecommerce-engine.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/data/binary_audit/binary_audit_report.json.backup",
+      "to": "/Users/daniellynch/Developer/logs/binary_audit_report.json.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/data/cli-health-report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/cli-health-report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/data/cli-tool-status.json.backup",
+      "to": "/Users/daniellynch/Developer/scripts/cli-tool-status.json.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/data/self-evaluation-report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/self-evaluation-report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/data/comprehensive-audit-report.json.backup",
+      "to": "/Users/daniellynch/Developer/logs/comprehensive-audit-report.json.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/data/closed-loop-analysis-report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/closed-loop-analysis-report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/data/filesystem_audit_results.json.backup",
+      "to": "/Users/daniellynch/Developer/logs/filesystem_audit_results.json.backup",
+      "category": "/logs/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/data/comprehensive_network_orchestration.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/comprehensive_network_orchestration.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/data/NUCLEAR_UPGRADE_SUMMARY.txt.backup",
+      "to": "/Users/daniellynch/Developer/scripts/NUCLEAR_UPGRADE_SUMMARY.txt.backup",
+      "category": "/scripts/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/data/vendor-replacement-report.json.backup",
+      "to": "/Users/daniellynch/Developer/backups/vendor-replacement-report.json.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/services/ecommerce-personalization/deployment/docker-compose.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/services/use-cases/01-ecommerce/comprehensive-system-test.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/comprehensive-system-test.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/services/use-cases/01-ecommerce/final-verification.sh.backup",
+      "to": "/Users/daniellynch/Developer/backups/final-verification.sh.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/services/use-cases/01-ecommerce/infrastructure/docker-compose.yml.backup",
+      "to": "/Users/daniellynch/Developer/backups/docker-compose.yml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/services/ai-ml/config/vector-databases.yaml.backup",
+      "to": "/Users/daniellynch/Developer/backups/vector-databases.yaml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/services/ai-ml/inference/plaintext.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/plaintext.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/services/ai-ml/inference/mailcap.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/mailcap.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/services/ai-ml/inference/ml_gap_analysis.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/ml_gap_analysis.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/services/ai-ml/inference/minitaur_randomize_terrain_gym_env.py.backup",
+      "to": "/Users/daniellynch/Developer/backups/minitaur_randomize_terrain_gym_env.py.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/graphql-server/index.js.backup",
+      "to": "/Users/daniellynch/Developer/backups/index.js.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/toolchains/pixi/pixi-unified.toml.backup",
+      "to": "/Users/daniellynch/Developer/backups/pixi-unified.toml.backup",
+      "category": "/backups/"
+    },
+    {
+      "from": "/Users/daniellynch/Developer/toolchains/pixi/pixi-workspace.toml.backup",
+      "to": "/Users/daniellynch/Developer/backups/pixi-workspace.toml.backup",
+      "category": "/backups/"
+    }
+  ],
+  "governance": {
+    "version": "1.0.0",
+    "description": "Monorepo Architecture Governance Rules",
+    "rules": {
+      "no_loose_files": {
+        "description": "No files allowed in root directory except specified exceptions",
+        "exceptions": [
+          "pixi.toml",
+          "pixi.lock",
+          "package.json",
+          "pnpm-lock.yaml",
+          "yarn.lock",
+          "README.md",
+          "LICENSE",
+          "CHANGELOG.md"
+        ],
+        "enforcement": "pre-commit-hook"
+      },
+      "directory_structure": {
+        "required": [
+          "/docs/",
+          "/scripts/",
+          "/configs/",
+          "/logs/",
+          "/testing/",
+          "/infra/",
+          "/data/"
+        ],
+        "optional": [
+          "/vendor-imports/",
+          "/tools/",
+          "/services/",
+          "/mcp-servers/"
+        ]
+      },
+      "file_organization": {
+        "docs": "All .md, .txt, .rst files",
+        "scripts": "All .js, .cjs, .mjs, .sh, .py, .bash files",
+        "configs": "All .json, .yaml, .yml, .toml, .ini, .cfg files",
+        "logs": "All .log files",
+        "data": "All .db, .sqlite files",
+        "testing": "All test-related files"
+      },
+      "vendor_preference": {
+        "description": "Use vendor tools and GitHub API sync over custom code",
+        "enforcement": "CI/CD pipeline"
+      }
+    },
+    "enforcement": {
+      "pre_commit": "scripts/pre-commit-organization-check.sh",
+      "ci_cd": "scripts/ci-organization-validation.sh",
+      "periodic": "scripts/organization-health-monitor.sh"
+    }
+  },
+  "github_sync": true
+}

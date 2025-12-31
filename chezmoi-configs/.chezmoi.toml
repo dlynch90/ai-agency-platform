@@ -1,7 +1,0 @@
-# Chezmoi configuration for AGI environment
-sourceDir = "~/dotfiles"
-targetDir = "~"
-umask = 022
-[git]
-autoCommit = true
-autoPush = true

@@ -1,0 +1,17 @@
+{
+  "microservices": {
+    "query": "MATCH (m:Microservice)-[:CONNECTS_TO]->(api:API) RETURN m,api",
+    "description": "Microservice to API connections"
+  },
+  "endpoints": {
+    "query": "MATCH (e:Endpoint)-[:BELONGS_TO]->(ms:Microservice) RETURN e,ms",
+    "description": "Endpoint to microservice relationships"
+  },
+  "critical_paths": [
+    "authentication_flow",
+    "ml_inference_pipeline",
+    "data_processing_chain",
+    "api_gateway_routing",
+    "cache_invalidation_flow"
+  ]
+}

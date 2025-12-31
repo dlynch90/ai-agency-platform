@@ -1,281 +1,70 @@
 [workspace]
 name = "ai-agency-platform"
 version = "0.1.0"
-description = "Universal AI Agency Platform with Pixi Package Management"
+description = "AI Agency Platform with Pixi Package Management"
 authors = ["AI Agency <ai@agency.com>"]
-channels = ["conda-forge", "pytorch", "nvidia"]
+channels = ["conda-forge", "pytorch", "pytorch-nightly"]
 platforms = ["osx-arm64"]
 
-[system-requirements]
-macos = "11.0"
-linux = "20.04"
-
-# ============================================================================
-# FEATURES - Modular dependency groups
-# ============================================================================
-
-[feature.core.dependencies]
-# Core Python ecosystem
+[dependencies]
 python = ">=3.11,<3.13"
 pip = "*"
-setuptools = "*"
-wheel = "*"
-
-[feature.cli.dependencies]
-# CLI Tools & Utilities (cross-platform)
-bat = "*"
-fd-find = "*"
-fzf = "*"
-htop = "*"
-jq = "*"
-ripgrep = "*"
-tree = "*"
-yq = "*"
-zoxide = "*"
-
-[feature.ai-ml.dependencies]
-compilers = "*"
-cxx-compiler = "*"
-c-compiler = "*"
-cmake = "*"
-ninja = "*"
-pkg-config = "*"
-pyarrow = "*"
-scikit-learn = "*"
-huggingface_hub = "*"
-langchain = "*"
-langchain-community = "*"
-langchain-core = "*"
-langgraph = "*"
-langsmith = "*"
-ollama = "*"
-openai = "*"
-anthropic = "*"
-numpy = "*"
-scipy = "*"
-pandas = "*"
-matplotlib = "*"
-seaborn = "*"
-plotly = "*"
-networkx = "*"
-jupyter = "*"
-notebook = "*"
-ipykernel = "*"
-faiss-cpu = "*"
-
-[feature.ai-ml.pypi-dependencies]
-torch = "*"
+numpy = ">=1.24,<2.0"
+scipy = ">=1.10,<1.14"
+pandas = ">=1.5,<3.0"
+scikit-learn = ">=1.3,<1.6"
+matplotlib = ">=3.6,<4.0"
+jupyter = ">=1.0,<2.0"
+ipykernel = ">=6.0,<7.0"
+pytorch = ">=2.0,<2.5"
 torchvision = "*"
-transformers = "*"
-accelerate = "*"
-pydantic-ai = "*"
-datasets = "*"
-transitions = "*"
-chromadb = "*"
-sentence-transformers = "*"
-llama-index = "*"
-# Mem0.ai integration dependencies - pinned to v1.x for stability
-mem0ai = ">=1.0.0,<2.0.0"
-qdrant-client = ">=1.12.0,<2.0.0"
-neo4j = "*"
-mcp = "*"
+transformers = ">=4.20,<5.0"
+accelerate = ">=0.20,<1.0"
+datasets = ">=2.10,<3.0"
 
-[feature.database.dependencies]
-# Database Systems & Clients
-neo4j-python-driver = "*"
-postgresql = "*"
-redis-py = "*"
-# prisma = "*"  # Not available in conda-forge, use pip instead
-# qdrant-client moved to ai-ml feature for unified vector DB management
-
-[feature.infrastructure.dependencies]
-# Infrastructure & Cloud Tools
-docker-py = "*"
-kubernetes = "*"
-terraform = "*"
-
-[feature.dev-tools.dependencies]
-# Development & Code Quality Tools
-ast-grep = "*"
-black = "*"
-mypy = "*"
-pre-commit = "*"
-ruff = "*"
-pytest = "*"
-isort = "*"
-bandit = "*"
-safety = "*"
-eslint = "*"
-prettier = "*"
-typescript = "*"
-
-[feature.web.dependencies]
-fastapi = "*"
-uvicorn = "*"
-pydantic = "*"
-requests = "*"
-httpx = "*"
-graphql-core = "*"
-
-[feature.nodejs.dependencies]
-nodejs = ">=18.0.0"
-
-[feature.jupyter.dependencies]
-# Jupyter ecosystem
-jupyter = "*"
-notebook = "*"
-ipykernel = "*"
-
-[feature.utils.dependencies]
-# Utility packages
-click = "*"
-rich = "*"
-pyyaml = "*"
-
-# ============================================================================
-# USE CASE FEATURES - Consolidated from 21 requirements.txt files
-# ============================================================================
-
-[feature.use-case-common.pypi-dependencies]
-# Common dependencies shared across all use cases
-httpx = ">=0.27.0"
-pydantic = ">=2.0"
-sqlalchemy = ">=2.0"
-alembic = "*"
-python-dotenv = "*"
-structlog = "*"
-tenacity = "*"
-cachetools = "*"
-
-[feature.use-case-ecommerce.pypi-dependencies]
-# E-commerce personalization use case
-stripe = "*"
-shopify-api = "*"
-elasticsearch = ">=8.0"
-
-[feature.use-case-healthcare.pypi-dependencies]
-# Healthcare triage use case
-fhir-resources = "*"
-hl7apy = "*"
-
-[feature.use-case-finance.pypi-dependencies]
-# Financial portfolio use case
-yfinance = "*"
-pandas-ta = "*"
-alpaca-trade-api = "*"
-
-[feature.use-case-education.pypi-dependencies]
-# Adaptive education use case
-spacy = "*"
-textstat = "*"
-
-[feature.use-case-supply-chain.pypi-dependencies]
-# Supply chain optimization use case
-networkx = "*"
-ortools = "*"
-
-[feature.use-case-marketing.pypi-dependencies]
-# Marketing analytics use case
-google-analytics-data = "*"
-facebook-business = "*"
-
-[feature.use-case-real-estate.pypi-dependencies]
-# Real estate use case
-geopy = "*"
-shapely = "*"
-
-[feature.use-case-customer-service.pypi-dependencies]
-# Customer service use case
-twilio = "*"
-sendgrid = "*"
-
-[feature.use-case-hr.pypi-dependencies]
-# HR talent matching use case
-textdistance = "*"
-fuzzywuzzy = "*"
-
-[feature.use-case-logistics.pypi-dependencies]
-# Logistics optimization use case
-googlemaps = "*"
-openrouteservice = "*"
-
-# ============================================================================
-# ENVIRONMENTS - Combinations of features
-# ============================================================================
+[pypi-dependencies]
+cohere = ">=4.0,<5.0"
 
 [environments]
-# Default: core + cli + dev-tools + utils (lightweight)
-default = { features = ["core", "cli", "dev-tools", "utils"], solve-group = "default" }
+default = { features = ["core", "ai-ml", "ml-inference"] }
+ml-inference = { features = ["ai-ml"] }
 
-# AI/ML environment: everything for ML work
-ai-ml = { features = ["core", "cli", "dev-tools", "utils", "ai-ml", "jupyter"], solve-group = "ai-ml" }
+[feature.core.dependencies]
+python = ">=3.11,<3.13"
+pip = "*"
+numpy = ">=1.24,<2.0"
 
-# Database environment: database tools only
-database = { features = ["core", "cli", "dev-tools", "utils", "database"], solve-group = "database" }
+[feature.ai-ml.dependencies]
+pytorch = { version = ">=2.0,<2.5", channel = "pytorch" }
+torchvision = { version = "*", channel = "pytorch" }
+transformers = ">=4.20,<5.0"
+accelerate = ">=0.20,<1.0"
+datasets = ">=2.10,<3.0"
+scipy = ">=1.10,<1.14"
+scikit-learn = ">=1.3,<1.6"
 
-# Infrastructure environment: cloud/devops tools
-infrastructure = { features = ["core", "cli", "dev-tools", "utils", "infrastructure"], solve-group = "infrastructure" }
+[feature.ai-ml.pypi-dependencies]
+cohere = ">=4.0,<5.0"
 
-# Full-stack: everything
-full-stack = { features = ["core", "cli", "dev-tools", "utils", "ai-ml", "database", "infrastructure", "web", "nodejs", "jupyter"], solve-group = "full-stack" }
+[feature.ml-inference.dependencies]
+pytorch = { version = ">=2.0,<2.5", channel = "pytorch" }
+torchvision = { version = "*", channel = "pytorch" }
+transformers = ">=4.20,<5.0"
+accelerate = ">=0.20,<1.0"
+datasets = ">=2.10,<3.0"
+tokenizers = ">=0.15,<1.0"
+optuna = ">=3.0,<4.0"
+mlflow = ">=2.0,<3.0"
+scikit-learn = ">=1.3,<1.6"
 
-[activation.env]
-# Environment variables - SSOT compliant (no hardcoded paths)
-DEVELOPER_DIR = "${DEVELOPER_DIR:-$HOME/Developer}"
-DEV_HOME = "${DEVELOPER_DIR:-$HOME/Developer}"
-USER_HOME = "${USER_HOME:-$HOME}"
-CONFIG_DIR = "${CONFIG_DIR:-$HOME/.config}"
-MCP_CONFIG_DIR = "${MCP_CONFIG_DIR:-$HOME/.config/mcp}"
-CHEZMOI_DEV_HOME = "${DEVELOPER_DIR:-$HOME/Developer}"
-# OpenMP conflict workaround for conda + PyTorch on Apple Silicon
-KMP_DUPLICATE_LIB_OK = "TRUE"
+[feature.ml-inference.pypi-dependencies]
+langchain = ">=0.1,<1.0"
+langchain-community = ">=0.0.10,<1.0"
+langchain-core = ">=0.1,<1.0"
+promptfoo = "*"
 
 [tasks]
-# Core tasks
 install = "pixi install"
 update = "pixi update"
-doctor = "pixi run check && pixi run list-tools"
-audit = "python scripts/binary-audit.py"
-analyze = "python scripts/finite-element-analysis.py"
-
-# Binary audit and organization
-binary-audit = "python scripts/binary-audit.py"
-organize-files = "python scripts/organize-loose-files.sh"
-vendor-compliance = "python scripts/check-vendor-compliance.py"
-
-# FEA tasks
-fea-spherical = "python scripts/finite-element-sphere-analysis.py"
-fea-markov = "python scripts/markov-chain-analysis.py"
-fea-binomial = "python scripts/binomial-edge-case-detection.py"
-fea-pipeline = "python scripts/fea-integration-pipeline.py"
-
-# MCP tasks
-mcp-audit = "python scripts/mcp-server-audit.py"
-mcp-test = "python scripts/test-mcp-servers.js"
-
-# Authentication tasks
-auth-setup = "python scripts/cli-authentication-wrapper.sh --setup"
-
-# Tool validation
-validate-tools = "pixi run doctor && pixi run mcp-test"
-check-compliance = "python scripts/check-vendor-compliance.py"
-
-# Consolidated binary tasks
-install-nodejs = "pixi install --feature nodejs"
-install-ai-ml = "pixi install --feature ai-ml"
-install-database = "pixi install --feature database"
-install-infrastructure = "pixi install --feature infrastructure"
-
-# Development workflow
-dev-setup = "pixi install && pixi run binary-audit && pixi run organize-files"
-full-setup = "pixi run dev-setup && pixi run auth-setup && pixi run validate-tools"
-
-# Utility tasks
-list-tools = "echo 'Available tools:' && pixi task list"
-clean = "pixi clean cache"
-
-# Self-healing & maintenance tasks
-self-heal = "bash scripts/self-healing.sh"
-vendor-audit = "bash scripts/vendor-audit.sh"
-validate-paths = "bash scripts/validate-paths.sh"
-health-check = "pixi run validate-paths && pixi run vendor-audit"
+doctor = "pixi run check"
+test-ml = "pixi run python -c \"import torch, transformers; print(f'PyTorch: {torch.__version__}'); print(f'Transformers: {transformers.__version__}')\""

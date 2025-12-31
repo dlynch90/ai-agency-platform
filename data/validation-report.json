@@ -1,0 +1,197 @@
+{
+  "timestamp": "2025-12-30T21:51:58.367Z",
+  "summary": {
+    "totalChecks": 26,
+    "passed": 19,
+    "failed": 3,
+    "warnings": 4,
+    "violations": 7
+  },
+  "results": {
+    "structure": [
+      {
+        "check": "Directory docs exists",
+        "status": "PASS",
+        "details": "Directory present"
+      },
+      {
+        "check": "Directory scripts exists",
+        "status": "PASS",
+        "details": "Directory present"
+      },
+      {
+        "check": "Directory testing exists",
+        "status": "PASS",
+        "details": "Directory present"
+      },
+      {
+        "check": "Directory data exists",
+        "status": "PASS",
+        "details": "Directory present"
+      },
+      {
+        "check": "Directory infra exists",
+        "status": "PASS",
+        "details": "Directory present"
+      },
+      {
+        "check": "Directory packages exists",
+        "status": "PASS",
+        "details": "Directory present"
+      },
+      {
+        "check": "Directory services exists",
+        "status": "PASS",
+        "details": "Directory present"
+      },
+      {
+        "check": "Directory configs exists",
+        "status": "PASS",
+        "details": "Directory present"
+      },
+      {
+        "check": "Directory tools exists",
+        "status": "PASS",
+        "details": "Directory present"
+      },
+      {
+        "check": "Directory apps exists",
+        "status": "PASS",
+        "details": "Directory present"
+      },
+      {
+        "check": "No loose files in root directory",
+        "status": "WARN",
+        "details": "Found 6 unexpected root files: mlflow.db, vendor-system-test.cjs, vite.config.js, vitest.config.js, vitest.integration.config.js, vitest.vendor.config.js"
+      }
+    ],
+    "dependencies": [
+      {
+        "check": "package.json validity",
+        "status": "PASS",
+        "details": "Valid JSON structure"
+      },
+      {
+        "check": "Dependency @apollo/server exists",
+        "status": "PASS",
+        "details": "Version: ^5.2.0"
+      },
+      {
+        "check": "Dependency graphql exists",
+        "status": "PASS",
+        "details": "Version: ^16.8.1"
+      },
+      {
+        "check": "Dependency opossum exists",
+        "status": "PASS",
+        "details": "Version: ^9.0.0"
+      },
+      {
+        "check": "node_modules directory exists",
+        "status": "PASS",
+        "details": "Dependencies installed"
+      }
+    ],
+    "configuration": [
+      {
+        "check": "Config file pixi.toml exists",
+        "status": "FAIL",
+        "details": "Missing configuration file"
+      },
+      {
+        "check": "Config file tsconfig.json exists",
+        "status": "FAIL",
+        "details": "Missing configuration file"
+      },
+      {
+        "check": "Config file turbo.json exists",
+        "status": "FAIL",
+        "details": "Missing configuration file"
+      },
+      {
+        "check": "Chezmoi config file exists",
+        "status": "PASS",
+        "details": "Found at /Users/daniellynch/.config/chezmoi/chezmoi.toml"
+      },
+      {
+        "check": "Environment variable NODE_ENV set",
+        "status": "WARN",
+        "details": "Environment variable not set"
+      }
+    ],
+    "security": [
+      {
+        "check": "1Password CLI available",
+        "status": "PASS",
+        "details": "op command found"
+      },
+      {
+        "check": "No hardcoded secrets",
+        "status": "PASS",
+        "details": "No hardcoded secrets found"
+      }
+    ],
+    "performance": [
+      {
+        "check": "Build script configured",
+        "status": "PASS",
+        "details": "Build script available"
+      },
+      {
+        "check": "Turbo build system configured",
+        "status": "WARN",
+        "details": "Turbo not configured"
+      }
+    ],
+    "compliance": [
+      {
+        "check": "Cursor rules compliance",
+        "status": "WARN",
+        "details": "Found 6 unexpected root files",
+        "looseFiles": [
+          "mlflow.db",
+          "vendor-system-test.cjs",
+          "vite.config.js",
+          "vitest.config.js",
+          "vitest.integration.config.js",
+          "vitest.vendor.config.js"
+        ]
+      }
+    ]
+  },
+  "violations": [
+    {
+      "type": "loose-file",
+      "file": "mlflow.db"
+    },
+    {
+      "type": "loose-file",
+      "file": "vendor-system-test.cjs"
+    },
+    {
+      "type": "loose-file",
+      "file": "vite.config.js"
+    },
+    {
+      "type": "loose-file",
+      "file": "vitest.config.js"
+    },
+    {
+      "type": "loose-file",
+      "file": "vitest.integration.config.js"
+    },
+    {
+      "type": "loose-file",
+      "file": "vitest.vendor.config.js"
+    },
+    {
+      "type": "cursor-rule-violation",
+      "description": "Found 6 unexpected root files"
+    }
+  ],
+  "recommendations": [
+    "Remove all loose files from root directory",
+    "Fix Cursor rule violations for compliance",
+    "Address 3 failed validation checks"
+  ]
+}

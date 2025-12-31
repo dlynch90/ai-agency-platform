@@ -1,0 +1,608 @@
+{
+  "timestamp": "2025-12-30T21:42:56.566Z",
+  "summary": {
+    "totalComponents": 10,
+    "healthyComponents": 4,
+    "errors": 0
+  },
+  "results": {
+    "packageManagers": {
+      "pnpm": {
+        "status": "healthy",
+        "version": "9.15.0"
+      },
+      "pixi": {
+        "status": "healthy",
+        "version": "pixi 0.62.2"
+      },
+      "mise": {
+        "status": "healthy",
+        "version": "2025.12.12 macos-arm64 (2025-12-18)"
+      }
+    },
+    "chezmoi": {
+      "status": "healthy",
+      "version": "chezmoi version v2.68.1, commit 3a8df1b18736e7156cd37ade3907dcf0ae1d1714, built at 2025-12-10T00:40:52Z, built by Homebrew",
+      "managedFiles": 0,
+      "data": {
+        "chezmoi": {
+          "arch": "arm64",
+          "args": [
+            "chezmoi",
+            "data"
+          ],
+          "cacheDir": "/Users/daniellynch/.cache/chezmoi",
+          "command": "data",
+          "commandDir": "/Users/daniellynch/Developer",
+          "config": {
+            "add": {
+              "encrypt": false,
+              "secrets": "warning",
+              "templateSymlinks": false
+            },
+            "age": {
+              "args": null,
+              "command": "age",
+              "identities": null,
+              "identity": "",
+              "passphrase": false,
+              "recipient": "your-age-recipient-here",
+              "recipients": null,
+              "recipientsFile": "",
+              "recipientsFiles": null,
+              "suffix": ".age",
+              "symmetric": false,
+              "useBuiltin": false
+            },
+            "awsSecretsManager": {
+              "profile": "",
+              "region": ""
+            },
+            "azureKeyVault": {
+              "defaultVault": ""
+            },
+            "bitwarden": {
+              "command": "bw",
+              "unlock": false
+            },
+            "bitwardenSecrets": {
+              "command": "bws"
+            },
+            "cacheDir": "/Users/daniellynch/.cache/chezmoi",
+            "cd": {
+              "args": null,
+              "command": ""
+            },
+            "color": "auto",
+            "completion": {
+              "custom": false
+            },
+            "dashlane": {
+              "args": null,
+              "command": "dcli"
+            },
+            "data": {
+              "database": {
+                "neo4j_pool_max_idle_time": 30000,
+                "neo4j_pool_size": 15,
+                "postgresql_pool_max_idle_time": 30000,
+                "postgresql_pool_max_lifetime": 600000,
+                "postgresql_pool_size": 20,
+                "redis_pool_max_idle_time": 30000,
+                "redis_pool_size": 25
+              },
+              "email": "developer@empathyfirstmedia.com",
+              "events": {
+                "event_retention_days": 7,
+                "kafka_broker_port": 9092,
+                "max_event_batch_size": 1000,
+                "temporal_namespace": "ai-agency"
+              },
+              "infrastructure": {
+                "docker_network_name": "ai-agency-network",
+                "grafana_port": 3000,
+                "kong_admin_port": 8001,
+                "kong_proxy_port": 8000,
+                "neo4j_port": 7474,
+                "ollama_port": 11434,
+                "prometheus_port": 9090,
+                "redis_port": 6379,
+                "temporal_ui_port": 8080
+              },
+              "ml": {
+                "gpu_memory_fraction": 0.8,
+                "huggingface_cache_dir": "/tmp/huggingface_cache",
+                "inference_batch_size": 32,
+                "ollama_model_timeout": 300000
+              },
+              "monitoring": {
+                "alert_threshold_cpu": 80,
+                "alert_threshold_disk": 90,
+                "alert_threshold_memory": 85,
+                "log_retention_days": 30,
+                "metrics_collection_interval": 15000
+              },
+              "name": "Daniel Lynch",
+              "performance": {
+                "connection_retry_attempts": 3,
+                "connection_retry_delay_ms": 1000,
+                "max_concurrent_requests": 1000,
+                "request_timeout_ms": 30000
+              },
+              "security": {
+                "bcrypt_rounds": 12,
+                "cors_allowed_origins": [
+                  "http://localhost:3000",
+                  "http://localhost:4000"
+                ],
+                "jwt_expiration_hours": 24,
+                "refresh_token_expiration_days": 30
+              }
+            },
+            "destDir": "/Users/daniellynch",
+            "diff": {
+              "args": null,
+              "command": "",
+              "exclude": [],
+              "pager": "",
+              "pagerArgs": null,
+              "reverse": false,
+              "scriptContents": true
+            },
+            "docker": {
+              "command": "docker"
+            },
+            "doppler": {
+              "args": null,
+              "command": "doppler",
+              "config": "",
+              "project": ""
+            },
+            "edit": {
+              "apply": false,
+              "args": null,
+              "command": "",
+              "hardlink": true,
+              "minDuration": 1000000000,
+              "watch": false
+            },
+            "ejson": {
+              "key": "",
+              "keyDir": "/opt/ejson/keys"
+            },
+            "encryption": "age",
+            "env": null,
+            "format": "json",
+            "git": {
+              "autoadd": false,
+              "autocommit": true,
+              "autopush": true,
+              "command": "git",
+              "commitMessageTemplate": "",
+              "commitMessageTemplateFile": "",
+              "lfs": false
+            },
+            "gitHub": {
+              "refreshPeriod": 43200000000000
+            },
+            "gopass": {
+              "command": "gopass",
+              "mode": ""
+            },
+            "gpg": {
+              "args": null,
+              "command": "gpg",
+              "recipient": "",
+              "recipients": null,
+              "suffix": ".asc",
+              "symmetric": false
+            },
+            "hooks": null,
+            "interactive": false,
+            "interpreters": {
+              "fish": {
+                "args": null,
+                "command": "fish"
+              },
+              "sh": {
+                "args": null,
+                "command": "bash"
+              },
+              "zsh": {
+                "args": null,
+                "command": "zsh"
+              }
+            },
+            "keepassxc": {
+              "args": null,
+              "command": "keepassxc-cli",
+              "database": "",
+              "mode": "cache-password",
+              "prompt": true
+            },
+            "keeper": {
+              "args": null,
+              "command": "keeper"
+            },
+            "lastpass": {
+              "command": "lpass"
+            },
+            "lessInteractive": false,
+            "merge": {
+              "args": null,
+              "command": "vimdiff"
+            },
+            "mode": "file",
+            "onepassword": {
+              "command": "op",
+              "mode": "account",
+              "prompt": true
+            },
+            "pager": "less",
+            "pagerArgs": null,
+            "pass": {
+              "command": "pass"
+            },
+            "passhole": {
+              "args": null,
+              "command": "ph",
+              "prompt": true
+            },
+            "persistentState": "",
+            "pinentry": {
+              "args": null,
+              "command": "",
+              "options": [
+                "allow-external-password-cache"
+              ]
+            },
+            "progress": "auto",
+            "rbw": {
+              "command": "rbw"
+            },
+            "safe": true,
+            "scriptEnv": null,
+            "scriptTempDir": "",
+            "secret": {
+              "args": null,
+              "command": ""
+            },
+            "sourceDir": "/Users/daniellynch/.local/share/chezmoi",
+            "status": {
+              "exclude": [],
+              "pathStyle": "relative"
+            },
+            "tempDir": "/var/folders/44/qxdq9q9949vbbqk_4glqykrr0000gn/T/",
+            "template": {
+              "options": [
+                "missingkey=error"
+              ]
+            },
+            "textConv": null,
+            "umask": 18,
+            "update": {
+              "apply": true,
+              "args": null,
+              "command": "",
+              "recurseSubmodules": true
+            },
+            "useBuiltinAge": false,
+            "useBuiltinGit": "auto",
+            "vault": {
+              "command": "vault"
+            },
+            "verbose": false,
+            "verify": {
+              "exclude": []
+            },
+            "warnings": {
+              "configFileTemplateHasChanged": true
+            },
+            "workingTree": "/Users/daniellynch/.local/share/chezmoi"
+          },
+          "configFile": "/Users/daniellynch/.config/chezmoi/chezmoi.toml",
+          "destDir": "/Users/daniellynch",
+          "executable": "/opt/homebrew/bin/chezmoi",
+          "fqdnHostname": "MacBookPro.lan",
+          "gid": "20",
+          "group": "staff",
+          "homeDir": "/Users/daniellynch",
+          "hostname": "MacBookPro",
+          "kernel": {},
+          "os": "darwin",
+          "osRelease": {},
+          "pathListSeparator": ":",
+          "pathSeparator": "/",
+          "sourceDir": "/Users/daniellynch/.local/share/chezmoi",
+          "uid": "501",
+          "username": "daniellynch",
+          "version": {
+            "builtBy": "Homebrew",
+            "commit": "3a8df1b18736e7156cd37ade3907dcf0ae1d1714",
+            "date": "2025-12-10T00:40:52Z",
+            "version": "2.68.1"
+          },
+          "windowsVersion": {},
+          "workingTree": "/Users/daniellynch/.local/share/chezmoi"
+        },
+        "database": {
+          "neo4j_pool_max_idle_time": 30000,
+          "neo4j_pool_size": 15,
+          "postgresql_pool_max_idle_time": 30000,
+          "postgresql_pool_max_lifetime": 600000,
+          "postgresql_pool_size": 20,
+          "redis_pool_max_idle_time": 30000,
+          "redis_pool_size": 25
+        },
+        "email": "developer@empathyfirstmedia.com",
+        "events": {
+          "event_retention_days": 7,
+          "kafka_broker_port": 9092,
+          "max_event_batch_size": 1000,
+          "temporal_namespace": "ai-agency"
+        },
+        "infrastructure": {
+          "docker_network_name": "ai-agency-network",
+          "grafana_port": 3000,
+          "kong_admin_port": 8001,
+          "kong_proxy_port": 8000,
+          "neo4j_port": 7474,
+          "ollama_port": 11434,
+          "prometheus_port": 9090,
+          "redis_port": 6379,
+          "temporal_ui_port": 8080
+        },
+        "ml": {
+          "gpu_memory_fraction": 0.8,
+          "huggingface_cache_dir": "/tmp/huggingface_cache",
+          "inference_batch_size": 32,
+          "ollama_model_timeout": 300000
+        },
+        "monitoring": {
+          "alert_threshold_cpu": 80,
+          "alert_threshold_disk": 90,
+          "alert_threshold_memory": 85,
+          "log_retention_days": 30,
+          "metrics_collection_interval": 15000
+        },
+        "name": "Daniel Lynch",
+        "performance": {
+          "connection_retry_attempts": 3,
+          "connection_retry_delay_ms": 1000,
+          "max_concurrent_requests": 1000,
+          "request_timeout_ms": 30000
+        },
+        "security": {
+          "bcrypt_rounds": 12,
+          "cors_allowed_origins": [
+            "http://localhost:3000",
+            "http://localhost:4000"
+          ],
+          "jwt_expiration_hours": 24,
+          "refresh_token_expiration_days": 30
+        }
+      }
+    },
+    "mise": {
+      "status": "healthy",
+      "version": "2025.12.12 macos-arm64 (2025-12-18)",
+      "toolsCount": 8,
+      "tools": [
+        "go         1.23.4                ~/.config/mise/config.toml  1.23.4",
+        "helm       3.16.3                ~/.config/mise/config.toml  3.16.3",
+        "java       corretto-21.0.5.11.1  ~/.config/mise/config.toml  corretto-21.0.5.11.1",
+        "kubectl    1.32.0                ~/.config/mise/config.toml  1.32.0",
+        "node       25.2.1                ~/.config/mise/config.toml  25.2.1",
+        "python     3.12.12 (missing)     ~/.config/mise/config.toml  3.12.12",
+        "rust       1.92.0 (symlink)      ~/.config/mise/config.toml  1.92.0",
+        "terraform  1.9.8                 ~/.config/mise/config.toml  1.9.8"
+      ]
+    },
+    "github": {
+      "status": "healthy",
+      "repository": {
+        "description": "AI Agency Platform - Production-ready AI application development framework",
+        "issues": {
+          "totalCount": 0
+        },
+        "name": "ai-agency-platform",
+        "primaryLanguage": null,
+        "pullRequests": {
+          "totalCount": 0
+        },
+        "repositoryTopics": null,
+        "updatedAt": "2025-12-29T04:57:38Z"
+      },
+      "authenticated": true,
+      "issues": 0,
+      "pullRequests": 0
+    },
+    "graphql": {
+      "status": "healthy",
+      "endpoint": "http://localhost:4000/graphql",
+      "response": {
+        "data": {
+          "__typename": "Query"
+        }
+      }
+    },
+    "database": {
+      "postgresql": {
+        "name": "postgresql",
+        "status": "healthy",
+        "command": "pg_isready -h localhost -p 5432",
+        "durationMs": 62
+      },
+      "redis": {
+        "name": "redis",
+        "status": "healthy",
+        "command": "redis-cli -h localhost -p 6379 ping",
+        "response": "PONG",
+        "durationMs": 23
+      },
+      "neo4j": {
+        "name": "neo4j",
+        "status": "healthy",
+        "http": "http://localhost:7474/",
+        "bolt": "bolt://localhost:7687",
+        "command": "cypher-shell -a bolt://localhost:7687 -u neo4j -p password \"RETURN 1;\"",
+        "durationMs": 2840
+      },
+      "qdrant": {
+        "name": "qdrant",
+        "status": "healthy",
+        "url": "http://localhost:6333/healthz",
+        "command": "curl -fsS \"http://localhost:6333/healthz\" -o /dev/null",
+        "durationMs": 28
+      }
+    },
+    "gpu": {
+      "status": "available",
+      "info": "Graphics/Displays:\n\n    Apple M1 Max:\n\n      Chipset Model: Apple M1 Max\n      Type: GPU\n      Bus: Built-In\n      Total Number of Cores: 32\n      Vendor: Apple (0x106b)\n      Metal Support: Metal 4\n      Displays:\n        Color LCD:\n          Display Type: Built-in Liquid Retina XDR Display\n          Resolution: 3456 x 2234 Retina\n          Main Display: Yes\n          Mirror: Off\n          Online: Yes\n          Automatically Adjust Brightness: Yes\n          Connection Type: Internal\n\n"
+    },
+    "mcp": {
+      "filesystem": {
+        "status": "unknown",
+        "message": "MCP server connectivity requires running MCP servers"
+      },
+      "memory": {
+        "status": "unknown",
+        "message": "MCP server connectivity requires running MCP servers"
+      },
+      "sequential-thinking": {
+        "status": "unknown",
+        "message": "MCP server connectivity requires running MCP servers"
+      },
+      "ollama": {
+        "status": "unknown",
+        "message": "MCP server connectivity requires running MCP servers"
+      },
+      "neo4j": {
+        "status": "unknown",
+        "message": "MCP server connectivity requires running MCP servers"
+      },
+      "redis": {
+        "status": "unknown",
+        "message": "MCP server connectivity requires running MCP servers"
+      },
+      "temporal": {
+        "status": "unknown",
+        "message": "MCP server connectivity requires running MCP servers"
+      },
+      "kafka": {
+        "status": "unknown",
+        "message": "MCP server connectivity requires running MCP servers"
+      },
+      "qdrant": {
+        "status": "unknown",
+        "message": "MCP server connectivity requires running MCP servers"
+      }
+    },
+    "cli": {
+      "fd": {
+        "status": "available",
+        "version": "fd 10.3.0"
+      },
+      "rg": {
+        "status": "available",
+        "version": "ripgrep 15.1.0"
+      },
+      "ast-grep": {
+        "status": "available",
+        "version": "ast-grep 0.40.3"
+      },
+      "jq": {
+        "status": "available",
+        "version": "jq-1.7.1-apple"
+      },
+      "yq": {
+        "status": "available",
+        "version": "yq (https://github.com/mikefarah/yq/) version v4.50.1"
+      },
+      "gh": {
+        "status": "available",
+        "version": "gh version 2.83.2 (2025-12-10)"
+      },
+      "git": {
+        "status": "available",
+        "version": "git version 2.50.1 (Apple Git-155)"
+      },
+      "curl": {
+        "status": "available",
+        "version": "curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.0"
+      },
+      "wget": {
+        "status": "available",
+        "version": "GNU Wget 1.25.0 built on darwin25.0.0."
+      },
+      "docker": {
+        "status": "available",
+        "version": "Docker version 29.1.3, build f52814d454"
+      },
+      "kubectl": {
+        "status": "available",
+        "version": "/opt/homebrew/bin/kubectl"
+      },
+      "helm": {
+        "status": "available",
+        "version": "/opt/homebrew/bin/helm"
+      },
+      "terraform": {
+        "status": "available",
+        "version": "Terraform v1.14.3"
+      },
+      "ansible": {
+        "status": "available",
+        "version": "ansible [core 2.20.1]"
+      },
+      "just": {
+        "status": "available",
+        "version": "just 1.45.0"
+      },
+      "make": {
+        "status": "available",
+        "version": "GNU Make 3.81"
+      }
+    },
+    "cursorRules": {
+      "status": "warnings",
+      "looseFiles": [
+        "ARCHITECT_ANALYSIS_SUMMARY.md",
+        "CRITICAL_SYSTEM_FAILURE_ANALYSIS.md",
+        "CURSOR_IDE_AUDIT_REPORT.md",
+        "EXECUTION_ACTION_ITEMS.md",
+        "FILESYSTEM_AUDIT_REPORT.md",
+        "FINAL_ACHIEVEMENT_REPORT.md",
+        "FINITE_ELEMENT_ANALYSIS_REPORT.md",
+        "IMPLEMENTATION_PROGRESS_REPORT.md",
+        "REAL_WORLD_AUDIT_GOLDEN_PATH.md",
+        "REAL_WORLD_CRUD_AUDIT_REPORT.md",
+        "VENDOR_COMPLIANCE_RECOVERY_PLAN.md",
+        "VENDOR_RESEARCH_AUDIT_REPORT.md",
+        "architecture-diagram.md",
+        "audit-results.json",
+        "comprehensive-debug.log",
+        "debug-all-errors.sh",
+        "debug-bootstrap.js",
+        "debug-instrumentation.js",
+        "debug-session-plan.md",
+        "debug_opencode.sh",
+        "fea_debug.log",
+        "fix-debug-issues.sh",
+        "fix-opencode-issues.sh",
+        "mcp-server-validation-report.json",
+        "mlflow.db",
+        "pixi.toml.bak",
+        "setup_opencode_1password.sh",
+        "system-debug-report.json",
+        "system_health_analysis.json",
+        "test-database-connection.js",
+        "validation-report.json",
+        "vendor-system-test.cjs",
+        "vendor-tool-validation-report.json"
+      ],
+      "hardcodedPaths": []
+    }
+  },
+  "recommendations": []
+}

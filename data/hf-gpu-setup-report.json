@@ -1,0 +1,105 @@
+{
+  "initialization": {
+    "gpuAvailable": true,
+    "torchAvailable": false,
+    "cudaAvailable": false,
+    "device": "mps"
+  },
+  "inference_tests": {
+    "code-analysis": {
+      "success": false,
+      "model": "microsoft/codebert-base",
+      "error": "Command failed: python3 hf_test.py \"code-analysis\" \"microsoft/codebert-base\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    },
+    "code-generation": {
+      "success": false,
+      "model": "microsoft/DialoGPT-medium",
+      "error": "Command failed: python3 hf_test.py \"code-generation\" \"microsoft/DialoGPT-medium\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    },
+    "code-review": {
+      "success": false,
+      "model": "microsoft/DialoGPT-small",
+      "error": "Command failed: python3 hf_test.py \"code-review\" \"microsoft/DialoGPT-small\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    },
+    "bug-detection": {
+      "success": false,
+      "model": "microsoft/codebert-base-mlm",
+      "error": "Command failed: python3 hf_test.py \"bug-detection\" \"microsoft/codebert-base-mlm\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    },
+    "text-classification": {
+      "success": false,
+      "model": "cardiffnlp/twitter-roberta-base-sentiment",
+      "error": "Command failed: python3 hf_test.py \"text-classification\" \"cardiffnlp/twitter-roberta-base-sentiment\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    },
+    "code-embedding": {
+      "success": false,
+      "model": "microsoft/codebert-base",
+      "error": "Command failed: python3 hf_test.py \"code-embedding\" \"microsoft/codebert-base\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+    }
+  },
+  "codebase_analysis": {
+    "files": [
+      {
+        "file": ".opencode/plugin/lib/telegram-bot.ts",
+        "total_lines": 235,
+        "functions": 11,
+        "classes": 1,
+        "imports": 5,
+        "comments": 27,
+        "comment_ratio": 0.1148936170212766,
+        "avg_function_length": 21.363636363636363
+      },
+      {
+        "file": ".opencode/plugin/notify.ts",
+        "total_lines": 18,
+        "functions": 2,
+        "classes": 0,
+        "imports": 1,
+        "comments": 2,
+        "comment_ratio": 0.1111111111111111,
+        "avg_function_length": 9
+      },
+      {
+        "file": ".opencode/plugin/telegram-notify.ts",
+        "total_lines": 105,
+        "functions": 11,
+        "classes": 0,
+        "imports": 3,
+        "comments": 13,
+        "comment_ratio": 0.12380952380952381,
+        "avg_function_length": 9.545454545454545
+      },
+      {
+        "file": ".opencode/tool/env/index.ts",
+        "total_lines": 160,
+        "functions": 15,
+        "classes": 0,
+        "imports": 4,
+        "comments": 17,
+        "comment_ratio": 0.10625,
+        "avg_function_length": 10.666666666666666
+      },
+      {
+        "file": ".opencode/tool/gemini/index.ts",
+        "total_lines": 379,
+        "functions": 35,
+        "classes": 0,
+        "imports": 9,
+        "comments": 26,
+        "comment_ratio": 0.06860158311345646,
+        "avg_function_length": 10.82857142857143
+      }
+    ],
+    "summary": {
+      "total_files": 5,
+      "total_functions": 74,
+      "total_classes": 1,
+      "total_imports": 22,
+      "avg_complexity": 179.4
+    },
+    "recommendations": [
+      "Consider using more object-oriented patterns to improve code organization"
+    ]
+  },
+  "timestamp": "2025-12-30T22:07:29.615Z"
+}

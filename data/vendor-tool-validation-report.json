@@ -1,0 +1,342 @@
+{
+  "timestamp": "2025-12-30T19:21:50.189Z",
+  "mode": {
+    "mcpOnly": false,
+    "toolsOnly": true,
+    "spawnMcp": false
+  },
+  "summary": {
+    "totalTools": 39,
+    "workingTools": 37,
+    "missingTools": 2,
+    "missingRequiredTools": [],
+    "envMissingRequired": [],
+    "mcpStatus": "skipped",
+    "mcpConfigs": 0,
+    "mcpServers": 0,
+    "mcpWorking": 0,
+    "mcpErrors": 0
+  },
+  "details": {
+    "tools": [
+      {
+        "name": "npm",
+        "status": "working",
+        "vendor": "npmjs.com",
+        "description": "Node.js package manager",
+        "validation": "npm --version"
+      },
+      {
+        "name": "pnpm",
+        "status": "working",
+        "vendor": "pnpm.io",
+        "description": "Fast, disk space efficient package manager",
+        "validation": "pnpm --version"
+      },
+      {
+        "name": "yarn",
+        "status": "missing",
+        "vendor": "yarnpkg.com",
+        "description": "Package manager from Meta",
+        "validation": "yarn --version",
+        "error": "Command failed: yarn --version\nThis project is configured to use pnpm because /Users/daniellynch/Developer/package.json has a \"packageManager\" field\n"
+      },
+      {
+        "name": "pixi",
+        "status": "working",
+        "vendor": "pixi.sh",
+        "description": "Package management for Python, Rust, and more",
+        "validation": "pixi --version"
+      },
+      {
+        "name": "docker",
+        "status": "working",
+        "vendor": "docker.com",
+        "description": "Container runtime",
+        "validation": "docker --version"
+      },
+      {
+        "name": "dockerCompose",
+        "status": "working",
+        "vendor": "docker.com",
+        "description": "Container orchestration",
+        "validation": "docker-compose --version"
+      },
+      {
+        "name": "terraform",
+        "status": "working",
+        "vendor": "hashicorp.com",
+        "description": "Infrastructure as Code",
+        "validation": "terraform --version"
+      },
+      {
+        "name": "aws",
+        "status": "working",
+        "vendor": "aws.amazon.com",
+        "description": "AWS CLI",
+        "validation": "aws --version"
+      },
+      {
+        "name": "ansible",
+        "status": "working",
+        "vendor": "ansible.com",
+        "description": "Configuration management",
+        "validation": "ansible --version"
+      },
+      {
+        "name": "gh",
+        "status": "working",
+        "vendor": "github.com",
+        "description": "GitHub CLI",
+        "validation": "gh --version"
+      },
+      {
+        "name": "git",
+        "status": "working",
+        "vendor": "git-scm.com",
+        "description": "Version control",
+        "validation": "git --version"
+      },
+      {
+        "name": "node",
+        "status": "working",
+        "vendor": "nodejs.org",
+        "description": "JavaScript runtime",
+        "validation": "node --version"
+      },
+      {
+        "name": "python",
+        "status": "working",
+        "vendor": "python.org",
+        "description": "Python runtime",
+        "validation": "python --version"
+      },
+      {
+        "name": "rust",
+        "status": "working",
+        "vendor": "rust-lang.org",
+        "description": "Rust toolchain",
+        "validation": "cargo --version"
+      },
+      {
+        "name": "ollama",
+        "status": "working",
+        "vendor": "ollama.ai",
+        "description": "Local AI model runner",
+        "validation": "ollama --version"
+      },
+      {
+        "name": "opencode",
+        "status": "working",
+        "vendor": "opencode.dev",
+        "description": "AI coding assistant",
+        "validation": "opencode --version"
+      },
+      {
+        "name": "op",
+        "status": "working",
+        "vendor": "1password.com",
+        "description": "1Password CLI",
+        "validation": "op --version"
+      },
+      {
+        "name": "sentry",
+        "status": "working",
+        "vendor": "sentry.io",
+        "description": "Error tracking CLI",
+        "validation": "sentry-cli --version"
+      },
+      {
+        "name": "datadog",
+        "status": "missing",
+        "vendor": "datadoghq.com",
+        "description": "Monitoring and analytics",
+        "validation": "datadog --version",
+        "error": "Command failed: datadog --version\n/bin/sh: datadog: command not found\n"
+      },
+      {
+        "name": "rg",
+        "status": "working",
+        "vendor": "github.com/BurntSushi/ripgrep",
+        "description": "Fast text search (ripgrep)",
+        "validation": "rg --version"
+      },
+      {
+        "name": "fd",
+        "status": "working",
+        "vendor": "github.com/sharkdp/fd",
+        "description": "Fast file finder",
+        "validation": "fd --version"
+      },
+      {
+        "name": "fzf",
+        "status": "working",
+        "vendor": "github.com/junegunn/fzf",
+        "description": "Fuzzy finder",
+        "validation": "fzf --version"
+      },
+      {
+        "name": "jq",
+        "status": "working",
+        "vendor": "jqlang.github.io/jq",
+        "description": "JSON processor",
+        "validation": "jq --version"
+      },
+      {
+        "name": "yq",
+        "status": "working",
+        "vendor": "github.com/mikefarah/yq",
+        "description": "YAML processor",
+        "validation": "yq --version"
+      },
+      {
+        "name": "bat",
+        "status": "working",
+        "vendor": "github.com/sharkdp/bat",
+        "description": "cat with syntax highlighting",
+        "validation": "bat --version"
+      },
+      {
+        "name": "eza",
+        "status": "working",
+        "vendor": "github.com/eza-community/eza",
+        "description": "Modern ls replacement",
+        "validation": "eza --version"
+      },
+      {
+        "name": "tree",
+        "status": "working",
+        "vendor": "mama.indstate.edu/users/ice/tree",
+        "description": "Directory tree viewer",
+        "validation": "tree --version"
+      },
+      {
+        "name": "dust",
+        "status": "working",
+        "vendor": "github.com/bootandy/dust",
+        "description": "Disk usage analyzer",
+        "validation": "dust --version"
+      },
+      {
+        "name": "dua",
+        "status": "working",
+        "vendor": "github.com/Byron/dua-cli",
+        "description": "Disk usage analyzer (dua-cli)",
+        "validation": "dua --version"
+      },
+      {
+        "name": "duf",
+        "status": "working",
+        "vendor": "github.com/muesli/duf",
+        "description": "Disk usage/free (df replacement)",
+        "validation": "duf --version"
+      },
+      {
+        "name": "hyperfine",
+        "status": "working",
+        "vendor": "github.com/sharkdp/hyperfine",
+        "description": "Command-line benchmarking",
+        "validation": "hyperfine --version"
+      },
+      {
+        "name": "just",
+        "status": "working",
+        "vendor": "github.com/casey/just",
+        "description": "Command runner",
+        "validation": "just --version"
+      },
+      {
+        "name": "direnv",
+        "status": "working",
+        "vendor": "direnv.net",
+        "description": "Directory-based env loader",
+        "validation": "direnv --version"
+      },
+      {
+        "name": "shellcheck",
+        "status": "working",
+        "vendor": "github.com/koalaman/shellcheck",
+        "description": "Shell script static analysis",
+        "validation": "shellcheck --version"
+      },
+      {
+        "name": "shfmt",
+        "status": "working",
+        "vendor": "github.com/mvdan/sh",
+        "description": "Shell script formatter",
+        "validation": "shfmt --version"
+      },
+      {
+        "name": "gitleaks",
+        "status": "working",
+        "vendor": "github.com/gitleaks/gitleaks",
+        "description": "Secrets scanning",
+        "validation": "gitleaks version"
+      },
+      {
+        "name": "hadolint",
+        "status": "working",
+        "vendor": "github.com/hadolint/hadolint",
+        "description": "Dockerfile linter",
+        "validation": "hadolint --version"
+      },
+      {
+        "name": "actionlint",
+        "status": "working",
+        "vendor": "github.com/rhysd/actionlint",
+        "description": "GitHub Actions workflow linter",
+        "validation": "actionlint -version"
+      },
+      {
+        "name": "pre-commit",
+        "status": "working",
+        "vendor": "pre-commit.com",
+        "description": "Multi-language pre-commit hooks",
+        "validation": "pre-commit --version"
+      }
+    ],
+    "environment": [
+      {
+        "name": "NODE_ENV",
+        "status": "missing",
+        "required": false
+      },
+      {
+        "name": "DEVELOPER_DIR",
+        "status": "missing",
+        "required": false
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "status": "missing",
+        "required": false
+      },
+      {
+        "name": "OPENAI_API_KEY",
+        "status": "missing",
+        "required": false
+      },
+      {
+        "name": "GITHUB_TOKEN",
+        "status": "missing",
+        "required": false
+      },
+      {
+        "name": "AWS_ACCESS_KEY_ID",
+        "status": "missing",
+        "required": false
+      },
+      {
+        "name": "POSTGRES_PASSWORD",
+        "status": "missing",
+        "required": false
+      }
+    ],
+    "mcp": {
+      "status": "skipped",
+      "configs": [],
+      "results": [],
+      "errors": []
+    }
+  }
+}

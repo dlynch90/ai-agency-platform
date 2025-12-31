@@ -1,0 +1,692 @@
+{
+  "timestamp": "2025-12-30T22:22:21.615Z",
+  "analysis": {
+    "rootFiles": [
+      ".adr-dir",
+      ".cursorrules",
+      ".editorconfig.backup",
+      ".env",
+      ".env.local",
+      ".envrc",
+      ".gitattributes",
+      ".gitignore.backup",
+      ".gitleaks.toml.backup",
+      ".modern_shell_config.backup",
+      ".npmrc",
+      ".nvmrc",
+      ".prettierignore",
+      ".prettierrc.backup",
+      "cli-tools-analysis.js.backup.backup",
+      "comprehensive-debug-report-debug-1767132633435.json.backup",
+      "comprehensive-debug-report-debug-1767132986573.json.backup",
+      "comprehensive-debugger.js.backup.backup",
+      "debug-summary-debug-1767132633435.md.backup",
+      "debug-summary-debug-1767132986573.md.backup",
+      "directory-organization.js.backup",
+      "evaluation-report-evaluation-1767132300094.json.backup",
+      "graphql-codebase-evaluator.js.backup",
+      "hf-gpu-config.json.backup",
+      "hf-gpu-inference-setup.js.backup.backup",
+      "hf-gpu-setup-report.json.backup",
+      "hf_test.py.backup",
+      "mcp-integration-report.json.backup",
+      "mcp-tools-integration.js.backup.backup",
+      "package.json.backup",
+      "pixi.lock",
+      "pixi.toml.backup",
+      "pnpm-lock.yaml.backup",
+      "pnpm-workspace.yaml.backup",
+      "pyproject.toml.backup",
+      "requirements-hf.txt",
+      "validation-report.json.backup",
+      "vendor-resource-sync.js.backup",
+      "vendor-sync-report.json.backup",
+      "vendor-system-test.cjs.backup",
+      "vite.config.js.backup",
+      "vite.config.ts.backup",
+      "vitest.config.js.backup",
+      "vitest.integration.config.js.backup",
+      "vitest.vendor.config.js.backup"
+    ],
+    "directories": [
+      "adr-reports",
+      "agi-core",
+      "ai-ml",
+      "analysis",
+      "analysis-results",
+      "api",
+      "api-smoke-tests",
+      "apps",
+      "architecture",
+      "auth",
+      "bin",
+      "built-applications",
+      "chezmoi-configs",
+      "ci_cd",
+      "config",
+      "configs",
+      "data",
+      "database",
+      "database-integration",
+      "deployment",
+      "docs",
+      "domains",
+      "ecommerce-personalization",
+      "federation",
+      "graphql",
+      "graphql-server",
+      "hooks",
+      "infra",
+      "infrastructure",
+      "init-scripts",
+      "java",
+      "java-enterprise-golden-path",
+      "java-templates",
+      "logs",
+      "mcp",
+      "mcp-servers",
+      "mlruns",
+      "monitoring",
+      "packages",
+      "pipelines",
+      "pixi-node",
+      "pixi-ros2",
+      "pixi-universe",
+      "pkg",
+      "polyglot-integration",
+      "prisma",
+      "reports",
+      "rust",
+      "scripts",
+      "services",
+      "smoke-testing",
+      "snapshots",
+      "src",
+      "storage",
+      "supabase",
+      "target",
+      "temp-mcp",
+      "templates",
+      "temporal",
+      "testing",
+      "tests",
+      "toolchains",
+      "tools",
+      "use-case-1-ecommerce-personalization",
+      "verdent-subagents",
+      "vip-gap-analysis",
+      "vip-platform"
+    ],
+    "looseFiles": [
+      ".editorconfig.backup",
+      ".gitignore.backup",
+      ".gitleaks.toml.backup",
+      ".modern_shell_config.backup",
+      ".prettierrc.backup",
+      "cli-tools-analysis.js.backup.backup",
+      "comprehensive-debug-report-debug-1767132633435.json.backup",
+      "comprehensive-debug-report-debug-1767132986573.json.backup",
+      "comprehensive-debugger.js.backup.backup",
+      "debug-summary-debug-1767132633435.md.backup",
+      "debug-summary-debug-1767132986573.md.backup",
+      "directory-organization.js.backup",
+      "evaluation-report-evaluation-1767132300094.json.backup",
+      "graphql-codebase-evaluator.js.backup",
+      "hf-gpu-config.json.backup",
+      "hf-gpu-inference-setup.js.backup.backup",
+      "hf-gpu-setup-report.json.backup",
+      "hf_test.py.backup",
+      "mcp-integration-report.json.backup",
+      "mcp-tools-integration.js.backup.backup",
+      "package.json.backup",
+      "pixi.toml.backup",
+      "pnpm-lock.yaml.backup",
+      "pnpm-workspace.yaml.backup",
+      "pyproject.toml.backup",
+      "validation-report.json.backup",
+      "vendor-resource-sync.js.backup",
+      "vendor-sync-report.json.backup",
+      "vendor-system-test.cjs.backup",
+      "vite.config.js.backup",
+      "vite.config.ts.backup",
+      "vitest.config.js.backup",
+      "vitest.integration.config.js.backup",
+      "vitest.vendor.config.js.backup"
+    ],
+    "organizedFiles": 11,
+    "totalFiles": 45
+  },
+  "plan": {
+    "moves": [
+      {
+        "source": ".editorconfig.backup",
+        "target": "scripts/.editorconfig.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": ".gitignore.backup",
+        "target": "scripts/.gitignore.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": ".gitleaks.toml.backup",
+        "target": "configs/.gitleaks.toml.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": ".modern_shell_config.backup",
+        "target": "scripts/.modern_shell_config.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": ".prettierrc.backup",
+        "target": "scripts/.prettierrc.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "cli-tools-analysis.js.backup.backup",
+        "target": "scripts/cli-tools-analysis.js.backup.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "comprehensive-debug-report-debug-1767132633435.json.backup",
+        "target": "logs/comprehensive-debug-report-debug-1767132633435.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "comprehensive-debug-report-debug-1767132986573.json.backup",
+        "target": "logs/comprehensive-debug-report-debug-1767132986573.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "comprehensive-debugger.js.backup.backup",
+        "target": "scripts/comprehensive-debugger.js.backup.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "debug-summary-debug-1767132633435.md.backup",
+        "target": "docs/debug-summary-debug-1767132633435.md.backup",
+        "category": "docs",
+        "reason": "All markdown documentation"
+      },
+      {
+        "source": "debug-summary-debug-1767132986573.md.backup",
+        "target": "docs/debug-summary-debug-1767132986573.md.backup",
+        "category": "docs",
+        "reason": "All markdown documentation"
+      },
+      {
+        "source": "directory-organization.js.backup",
+        "target": "scripts/directory-organization.js.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "evaluation-report-evaluation-1767132300094.json.backup",
+        "target": "logs/evaluation-report-evaluation-1767132300094.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "graphql-codebase-evaluator.js.backup",
+        "target": "scripts/graphql-codebase-evaluator.js.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "hf-gpu-config.json.backup",
+        "target": "scripts/hf-gpu-config.json.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "hf-gpu-inference-setup.js.backup.backup",
+        "target": "scripts/hf-gpu-inference-setup.js.backup.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "hf-gpu-setup-report.json.backup",
+        "target": "logs/hf-gpu-setup-report.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "hf_test.py.backup",
+        "target": "scripts/hf_test.py.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "mcp-integration-report.json.backup",
+        "target": "logs/mcp-integration-report.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "mcp-tools-integration.js.backup.backup",
+        "target": "scripts/mcp-tools-integration.js.backup.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "package.json.backup",
+        "target": "scripts/package.json.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "pixi.toml.backup",
+        "target": "configs/pixi.toml.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": "pnpm-lock.yaml.backup",
+        "target": "configs/pnpm-lock.yaml.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": "pnpm-workspace.yaml.backup",
+        "target": "configs/pnpm-workspace.yaml.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": "pyproject.toml.backup",
+        "target": "configs/pyproject.toml.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": "validation-report.json.backup",
+        "target": "logs/validation-report.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "vendor-resource-sync.js.backup",
+        "target": "scripts/vendor-resource-sync.js.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "vendor-sync-report.json.backup",
+        "target": "logs/vendor-sync-report.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "vendor-system-test.cjs.backup",
+        "target": "testing/vendor-system-test.cjs.backup",
+        "category": "testing",
+        "reason": "All tests and test suites"
+      },
+      {
+        "source": "vite.config.js.backup",
+        "target": "scripts/vite.config.js.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "vite.config.ts.backup",
+        "target": "configs/vite.config.ts.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": "vitest.config.js.backup",
+        "target": "testing/vitest.config.js.backup",
+        "category": "testing",
+        "reason": "All tests and test suites"
+      },
+      {
+        "source": "vitest.integration.config.js.backup",
+        "target": "testing/vitest.integration.config.js.backup",
+        "category": "testing",
+        "reason": "All tests and test suites"
+      },
+      {
+        "source": "vitest.vendor.config.js.backup",
+        "target": "testing/vitest.vendor.config.js.backup",
+        "category": "testing",
+        "reason": "All tests and test suites"
+      },
+      {
+        "source": "architecture",
+        "target": "docs/architecture",
+        "category": "reorganization",
+        "reason": "Architecture docs should go to docs/"
+      },
+      {
+        "source": "monitoring",
+        "target": "infra/monitoring",
+        "category": "reorganization",
+        "reason": "Monitoring should go to infra/"
+      },
+      {
+        "source": "src",
+        "target": ".",
+        "category": "reorganization",
+        "reason": "Source files should be reorganized into proper directories"
+      }
+    ],
+    "creates": [
+      "scripts",
+      "configs",
+      "logs",
+      "docs",
+      "testing"
+    ],
+    "deletes": []
+  },
+  "execution": {
+    "created": [
+      "scripts",
+      "configs",
+      "logs",
+      "docs",
+      "testing"
+    ],
+    "moved": [
+      {
+        "source": ".editorconfig.backup",
+        "target": "scripts/.editorconfig.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": ".gitignore.backup",
+        "target": "scripts/.gitignore.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": ".gitleaks.toml.backup",
+        "target": "configs/.gitleaks.toml.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": ".modern_shell_config.backup",
+        "target": "scripts/.modern_shell_config.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": ".prettierrc.backup",
+        "target": "scripts/.prettierrc.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "cli-tools-analysis.js.backup.backup",
+        "target": "scripts/cli-tools-analysis.js.backup.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "comprehensive-debug-report-debug-1767132633435.json.backup",
+        "target": "logs/comprehensive-debug-report-debug-1767132633435.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "comprehensive-debug-report-debug-1767132986573.json.backup",
+        "target": "logs/comprehensive-debug-report-debug-1767132986573.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "comprehensive-debugger.js.backup.backup",
+        "target": "scripts/comprehensive-debugger.js.backup.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "debug-summary-debug-1767132633435.md.backup",
+        "target": "docs/debug-summary-debug-1767132633435.md.backup",
+        "category": "docs",
+        "reason": "All markdown documentation"
+      },
+      {
+        "source": "debug-summary-debug-1767132986573.md.backup",
+        "target": "docs/debug-summary-debug-1767132986573.md.backup",
+        "category": "docs",
+        "reason": "All markdown documentation"
+      },
+      {
+        "source": "directory-organization.js.backup",
+        "target": "scripts/directory-organization.js.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "evaluation-report-evaluation-1767132300094.json.backup",
+        "target": "logs/evaluation-report-evaluation-1767132300094.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "graphql-codebase-evaluator.js.backup",
+        "target": "scripts/graphql-codebase-evaluator.js.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "hf-gpu-config.json.backup",
+        "target": "scripts/hf-gpu-config.json.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "hf-gpu-inference-setup.js.backup.backup",
+        "target": "scripts/hf-gpu-inference-setup.js.backup.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "hf-gpu-setup-report.json.backup",
+        "target": "logs/hf-gpu-setup-report.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "hf_test.py.backup",
+        "target": "scripts/hf_test.py.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "mcp-integration-report.json.backup",
+        "target": "logs/mcp-integration-report.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "mcp-tools-integration.js.backup.backup",
+        "target": "scripts/mcp-tools-integration.js.backup.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "package.json.backup",
+        "target": "scripts/package.json.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "pixi.toml.backup",
+        "target": "configs/pixi.toml.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": "pnpm-lock.yaml.backup",
+        "target": "configs/pnpm-lock.yaml.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": "pnpm-workspace.yaml.backup",
+        "target": "configs/pnpm-workspace.yaml.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": "pyproject.toml.backup",
+        "target": "configs/pyproject.toml.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": "validation-report.json.backup",
+        "target": "logs/validation-report.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "vendor-resource-sync.js.backup",
+        "target": "scripts/vendor-resource-sync.js.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "vendor-sync-report.json.backup",
+        "target": "logs/vendor-sync-report.json.backup",
+        "category": "logs",
+        "reason": "All log files and reports"
+      },
+      {
+        "source": "vendor-system-test.cjs.backup",
+        "target": "testing/vendor-system-test.cjs.backup",
+        "category": "testing",
+        "reason": "All tests and test suites"
+      },
+      {
+        "source": "vite.config.js.backup",
+        "target": "scripts/vite.config.js.backup",
+        "category": "scripts",
+        "reason": "All scripts and automation"
+      },
+      {
+        "source": "vite.config.ts.backup",
+        "target": "configs/vite.config.ts.backup",
+        "category": "configs",
+        "reason": "All configuration files"
+      },
+      {
+        "source": "vitest.config.js.backup",
+        "target": "testing/vitest.config.js.backup",
+        "category": "testing",
+        "reason": "All tests and test suites"
+      },
+      {
+        "source": "vitest.integration.config.js.backup",
+        "target": "testing/vitest.integration.config.js.backup",
+        "category": "testing",
+        "reason": "All tests and test suites"
+      },
+      {
+        "source": "vitest.vendor.config.js.backup",
+        "target": "testing/vitest.vendor.config.js.backup",
+        "category": "testing",
+        "reason": "All tests and test suites"
+      }
+    ],
+    "errors": [
+      {
+        "operation": "move",
+        "source": "architecture",
+        "target": "docs/architecture",
+        "error": "ENOTEMPTY: directory not empty, rename 'architecture' -> 'docs/architecture'"
+      },
+      {
+        "operation": "move",
+        "source": "monitoring",
+        "target": "infra/monitoring",
+        "error": "ENOTEMPTY: directory not empty, rename 'monitoring' -> 'infra/monitoring'"
+      },
+      {
+        "operation": "move",
+        "source": "src",
+        "target": ".",
+        "error": "EINVAL: invalid argument, rename 'src' -> '.'"
+      }
+    ]
+  },
+  "validation": {
+    "compliant": false,
+    "issues": [
+      {
+        "type": "remaining_loose_files",
+        "files": [
+          ".editorconfig.backup.backup",
+          ".gitignore.backup.backup",
+          ".gitleaks.toml.backup.backup",
+          ".modern_shell_config.backup.backup",
+          ".prettierrc.backup.backup",
+          "cli-tools-analysis.js.backup.backup.backup",
+          "comprehensive-debug-report-debug-1767132633435.json.backup.backup",
+          "comprehensive-debug-report-debug-1767132986573.json.backup.backup",
+          "comprehensive-debugger.js.backup.backup.backup",
+          "debug-summary-debug-1767132633435.md.backup.backup",
+          "debug-summary-debug-1767132986573.md.backup.backup",
+          "directory-organization.js.backup.backup",
+          "evaluation-report-evaluation-1767132300094.json.backup.backup",
+          "graphql-codebase-evaluator.js.backup.backup",
+          "hf-gpu-config.json.backup.backup",
+          "hf-gpu-inference-setup.js.backup.backup.backup",
+          "hf-gpu-setup-report.json.backup.backup",
+          "hf_test.py.backup.backup",
+          "mcp-integration-report.json.backup.backup",
+          "mcp-tools-integration.js.backup.backup.backup",
+          "package.json.backup.backup",
+          "pixi.toml.backup.backup",
+          "pnpm-lock.yaml.backup.backup",
+          "pnpm-workspace.yaml.backup.backup",
+          "pyproject.toml.backup.backup",
+          "validation-report.json.backup.backup",
+          "vendor-resource-sync.js.backup.backup",
+          "vendor-sync-report.json.backup.backup",
+          "vendor-system-test.cjs.backup.backup",
+          "vite.config.js.backup.backup",
+          "vite.config.ts.backup.backup",
+          "vitest.config.js.backup.backup",
+          "vitest.integration.config.js.backup.backup",
+          "vitest.vendor.config.js.backup.backup"
+        ],
+        "count": 34,
+        "severity": "medium"
+      }
+    ],
+    "statistics": {
+      "directories": 8,
+      "looseFiles": 34,
+      "totalFiles": 138
+    }
+  },
+  "elimination": {
+    "wrappersRemoved": [],
+    "blockersEliminated": [],
+    "customCodeReplaced": []
+  },
+  "summary": {
+    "sprawlEliminated": false,
+    "organizationAchieved": false,
+    "directoriesCreated": 5,
+    "filesMoved": 34,
+    "wrappersEliminated": 0,
+    "blockersRemoved": 0
+  }
+}

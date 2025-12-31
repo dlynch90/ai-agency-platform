@@ -1,0 +1,56 @@
+{
+  "version": "null",
+  "lastSync": "2025-12-31T04:14:46Z",
+  "repository": "modelcontextprotocol/servers",
+  "servers": [
+  {
+    "name": "everything",
+    "type": "server",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+    "path": "src/everything",
+    "sha": "29b590b67d0f7ae9c5c35191ac0619aaa588ed2e"
+  },
+  {
+    "name": "fetch",
+    "type": "server",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+    "path": "src/fetch",
+    "sha": "0bea85c8f2221e094105c4af7933ae6c295042a4"
+  },
+  {
+    "name": "filesystem",
+    "type": "server",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+    "path": "src/filesystem",
+    "sha": "e8c646aa8386e7512ff0de69facf30030cbed1a2"
+  },
+  {
+    "name": "git",
+    "type": "server",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+    "path": "src/git",
+    "sha": "609702a78a9642e49c4aed26ab483eea6cf3312a"
+  },
+  {
+    "name": "memory",
+    "type": "server",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+    "path": "src/memory",
+    "sha": "f35938da59142c6c23efe79d0fe2d17d5cbc5ba6"
+  },
+  {
+    "name": "sequentialthinking",
+    "type": "server",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+    "path": "src/sequentialthinking",
+    "sha": "cca3b0e09f19089b8731c8c4ac7b60941108c43e"
+  },
+  {
+    "name": "time",
+    "type": "server",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+    "path": "src/time",
+    "sha": "414b7cd47a20492c32ce8a0168a9d0b92586bbfe"
+  }
+]
+}

@@ -1,0 +1,29 @@
+# Cursor IDE - Ignore loose files
+# All files should be organized in proper directories
+
+# Loose files in root (except allowed)
+/*
+!pixi.toml
+!package.json
+!package-lock.json
+!yarn.lock
+!Makefile
+!justfile
+!Taskfile.yml
+!README.md
+!LICENSE
+!.gitignore
+!docker-compose.yml
+
+# Allow organized directories
+!/docs/
+!/scripts/
+!/configs/
+!/testing/
+!/infra/
+!/data/
+!/api/
+!/graphql/
+!/federation/
+!/logs/
+!/tools/
