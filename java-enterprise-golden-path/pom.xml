@@ -37,7 +37,7 @@
         <spring-cloud.version>2024.0.0</spring-cloud.version>
 
         <!-- Database & Persistence -->
-        <postgresql.version>42.7.1</postgresql.version>
+        <postgresql.version>42.7.2</postgresql.version>
         <flyway.version>9.22.3</flyway.version>
         <hikaricp.version>5.0.1</hikaricp.version>
 
