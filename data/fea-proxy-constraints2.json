@@ -14,8 +14,8 @@
     "data_model": {
       "name": "Data Model (Prisma models)",
       "notes": [
-        "spec: /Users/daniellynch/Desktop/cursor_vendor_driven_system_and_codebas.md",
-        "schema: /Users/daniellynch/Developer/prisma/schema.prisma",
+        "spec: ${process.env.HOME}/Desktop/cursor_vendor_driven_system_and_codebas.md",
+        "schema: ${process.env.HOME}/Developer/prisma/schema.prisma",
         "missing: VendorService",
         "missing: CRUDOperation",
         "missing: OrchestrationFlow",
@@ -39,7 +39,7 @@
     "proxy_constraints": {
       "name": "Proxy Constraints (secrets/placeholders)",
       "notes": [
-        "compose: /Users/daniellynch/Developer/infra/network-proxy/docker-compose.network.yml",
+        "compose: ${process.env.HOME}/Developer/infra/network-proxy/docker-compose.network.yml",
         "missing env: postgres:POSTGRES_PASSWORD",
         "missing env: subgraph-posts:NEO4J_PASSWORD",
         "placeholder: grafana:GF_SECURITY_ADMIN_PASSWORD=admin_password_change_me",
@@ -50,9 +50,9 @@
     }
   },
   "inputs": {
-    "compose": "/Users/daniellynch/Developer/infra/network-proxy/docker-compose.network.yml",
-    "prisma": "/Users/daniellynch/Developer/prisma/schema.prisma",
-    "spec": "/Users/daniellynch/Desktop/cursor_vendor_driven_system_and_codebas.md"
+    "compose": "${process.env.HOME}/Developer/infra/network-proxy/docker-compose.network.yml",
+    "prisma": "${process.env.HOME}/Developer/prisma/schema.prisma",
+    "spec": "${process.env.HOME}/Desktop/cursor_vendor_driven_system_and_codebas.md"
   },
   "proxy_state": {
     "env": {

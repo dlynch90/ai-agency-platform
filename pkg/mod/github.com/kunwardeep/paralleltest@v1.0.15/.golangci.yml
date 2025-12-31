@@ -1,0 +1,33 @@
+version: "2"
+
+linters:
+  enable:
+    - gochecknoglobals
+    - gochecknoinits
+    - goconst
+    - gocritic
+    - gosec
+    - misspell
+    - nakedret
+    - revive
+    - unconvert
+    - unparam
+  settings:
+    govet:
+      enable:
+        - shadow
+    misspell:
+      locale: US
+  exclusions:
+    presets:
+      - comments
+      - common-false-positives
+      - std-error-handling
+
+formatters:
+  enable:
+    - goimports
+  settings:
+    goimports:
+      local-prefixes:
+        - github.com/kunwardeep/paralleltest

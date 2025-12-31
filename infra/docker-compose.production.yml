@@ -11,3 +11,19 @@ services:
     image: postgres:15
   redis:
     image: redis:7
+      environment:
+      REDIS_MAX_CONNECTIONS: "20"
+      POSTGRES_MAX_CONNECTIONS: "10"
+      NEO4J_MAX_CONNECTIONS: "5"
+      KAFKA_MAX_CONNECTIONS: "10"
+      RABBITMQ_MAX_CONNECTIONS: "15"
+
+networks:
+  ai-agency-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+          gateway: 172.20.0.1
+  traefik-public:
+    external: true

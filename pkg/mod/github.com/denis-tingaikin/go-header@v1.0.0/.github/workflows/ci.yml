@@ -1,0 +1,29 @@
+name: ci
+on: [push, pull_request]
+jobs:
+
+  build:
+    name: ci
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: oldstable
+
+      - name: Build
+        run: go build
+
+      - name: Test
+        run: go test ./... -race -v
+
+      - name: Install
+        run: go install ./...
+
+      - name: Self-check
+        run: go-header ./...

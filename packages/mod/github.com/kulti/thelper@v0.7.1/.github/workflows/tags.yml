@@ -1,0 +1,23 @@
+name: "Release a tag"
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Create release
+        uses: goreleaser/goreleaser-action@v6
+        with:
+          version: latest
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

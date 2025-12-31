@@ -1,0 +1,124 @@
+package p
+
+import ( // want "fiximports: Fix imports"
+	"fmt"
+	"strings"
+)
+
+func positive() {
+	var s string
+	words := []string{"one", "two", "three"}
+	var sSb10 strings.Builder
+	for w := range words {
+		sSb10.WriteString(words[w]) // want "concat-loop: string concatenation in a loop"
+	}
+	s += sSb10.String()
+	var sSb13 strings.Builder
+	for w := range words {
+		sSb13.WriteString(words[w]) // want "concat-loop: string concatenation in a loop"
+	}
+	s += sSb13.String()
+	var sSb16 strings.Builder
+	for w := 0; w < 10; w++ {
+		sSb16.WriteString("y") // want "concat-loop: string concatenation in a loop"
+	}
+	s += sSb16.String()
+	var sSb19 strings.Builder
+	for w := 0; w < 10; w++ {
+		if w%2 == 1 {
+			sSb19.WriteString("y") // want "concat-loop: string concatenation in a loop"
+		}
+	}
+	s += sSb19.String()
+	nb := 0
+	var sSb25 strings.Builder
+	for w := 0; w < 10; w++ {
+		if w%2 == 1 {
+			nb += 1
+		} else {
+			sSb25.WriteString("y") // want "concat-loop: string concatenation in a loop"
+		}
+	}
+	s += sSb25.String()
+	var sSb32 strings.Builder
+	for w := 0; w < 10; w++ {
+		if w%2 == 1 {
+			sSb32.WriteString("x") // want "concat-loop: string concatenation in a loop"
+		} else {
+			sSb32.WriteString("y")
+		}
+	}
+	s += sSb32.String()
+	s2 := "prefix"
+	var sSb40 strings.Builder
+	var s2Sb40 strings.Builder
+	for w := 0; w < 10; w++ {
+		if w%2 == 1 {
+			s2Sb40.WriteString("x")
+		} else {
+			sSb40.WriteString("y") // want "concat-loop: string concatenation in a loop"
+		}
+	}
+	s += sSb40.String()
+	s2 += s2Sb40.String()
+	// FIXME check usages of string identifier s (and mayber others) in loop
+	var sSb47 strings.Builder
+	for w := 0; w < 10; w++ {
+		sSb47.WriteString("y") // want "concat-loop: string concatenation in a loop"
+		if len(s)%3 == 1 {
+			sSb47.WriteString(",")
+		}
+	}
+	s += sSb47.String()
+
+	// FIXME check usages of string identifier s (and mayber others) in loop
+	var sSb54 strings.Builder
+	for w := 0; w < 10; w++ {
+		s = fmt.Sprintf("%s+%s", s, "y")
+		if w%2 == 1 {
+			sSb54.WriteString(",") // want "concat-loop: string concatenation in a loop"
+		}
+	}
+	s += sSb54.String()
+}
+
+func negative() {
+	for w := 0; w < 10; w++ {
+		s := "local"
+		s = s + "y"
+	}
+	for w := 0; w < 10; w++ {
+		var s string
+		s = s + "y"
+	}
+	for w := 0; w < 10; w++ {
+		var s2, s string
+		s = s + "y"
+		_ = s
+		_ = s2
+	}
+	for w := 0; w < 10; w++ {
+		s2, s := "local", "same"
+		s = s + "y"
+		_ = s
+		_ = s2
+	}
+	nb := 0
+	for w := 0; w < 10; w++ {
+		nb += w
+	}
+	for w := 0; w < 10; w++ {
+		nb = nb + w
+	}
+	words := []string{"one", "two", "three"}
+	var s string
+	for w := range words {
+		s = "toto" + words[w]
+	}
+	var s2 string
+	for w := range words {
+		s = s2 + words[w]
+	}
+	_ = s
+	_ = s2
+}

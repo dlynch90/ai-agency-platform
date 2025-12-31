@@ -39,7 +39,7 @@
         "vendor": "yarnpkg.com",
         "description": "Package manager from Meta",
         "validation": "yarn --version",
-        "error": "Command failed: yarn --version\nThis project is configured to use pnpm because /Users/daniellynch/Developer/package.json has a \"packageManager\" field\n"
+        "error": "Command failed: yarn --version\nThis project is configured to use pnpm because ${process.env.HOME}/Developer/package.json has a \"packageManager\" field\n"
       },
       {
         "name": "pixi",

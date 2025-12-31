@@ -2574,7 +2574,7 @@
         "smoke-testing",
         "snapshots",
         "snapshots/tmp",
-        "snapshots/tmp/upload",
+        "snapshots${process.env.TMPDIR || "/tmp"}/",
         "src",
         "src/lib",
         "src/lib/auth",

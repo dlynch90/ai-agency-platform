@@ -1,0 +1,23 @@
+version: "2"
+issues:
+  fix: true
+linters:
+  default: all
+  disable:
+    - depguard
+    - exhaustruct
+    - nonamedreturns
+    - wsl
+  settings:
+    cyclop:
+      max-complexity: 15
+formatters:
+  enable:
+    - goimports
+    - gofmt
+    - gofumpt
+    - golines
+  settings:
+    goimports:
+      local-prefixes:
+        - go.augendre.info/arangolint

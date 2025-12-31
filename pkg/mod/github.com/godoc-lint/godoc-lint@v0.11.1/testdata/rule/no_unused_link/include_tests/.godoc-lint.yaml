@@ -1,0 +1,5 @@
+default: none
+enable:
+  - no-unused-link
+options:
+  no-unused-link/include-tests: true

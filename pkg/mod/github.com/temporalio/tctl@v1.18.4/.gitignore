@@ -1,0 +1,17 @@
+.tmp/
+
+.idea/
+.vscode/settings.json
+.vscode/*.log
+*.code-workspace
+.DS_Store
+
+# Executables
+/tctl
+/tctl-authorization-plugin
+/bin
+
+# Goreleaser
+/dist
+
+__debug_bin

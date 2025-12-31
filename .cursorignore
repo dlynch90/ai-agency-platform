@@ -1,29 +1,120 @@
-# Cursor IDE - Ignore loose files
-# All files should be organized in proper directories
+# CURSOR IDE - MAXIMUM SECURITY ENFORCEMENT
+# ZERO TOLERANCE for loose files in root directory
+# STRICT 8-DIRECTORY ARCHITECTURE ENFORCEMENT
 
-# Loose files in root (except allowed)
+# BLOCK ALL loose files in root directory (whitelist approach)
 /*
-!pixi.toml
+# Only allow these essential root files
 !package.json
 !package-lock.json
-!yarn.lock
+!pixi.toml
 !Makefile
 !justfile
-!Taskfile.yml
-!README.md
-!LICENSE
 !.gitignore
-!docker-compose.yml
+!.cursorignore
+!.env.template
+!.cursor/
+!.mcp/
 
-# Allow organized directories
+# BLOCK common loose file patterns (explicit deny)
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.txt
+*.yml
+*.lock
+*.sum
+*.mod
+go.*
+*.envrc
+*.pid
+*.sock
+
+# Allow markdown files in docs directory
+!docs/**/*.md
+!*.md
+
+# Allow ONLY organized directories
 !/docs/
 !/scripts/
 !/configs/
+!/kong/
 !/testing/
+!/services/
+!services/**/*.py
+!services/**/*.js
+!services/nodejs-api/server.js
 !/infra/
+!*.yml
+!*.yaml
 !/data/
 !/api/
 !/graphql/
 !/federation/
 !/logs/
 !/tools/
+!/vendors/
+!vendors/**/*.py
+!vendors/**/*.js
+!vendors/**/*.sh
+!vendors/**/*.yml
+!vendors/**/*.yaml
+!vendors/**/*.json
+!vendors/**/*.toml
+!/templates/
+!/pkg/
+!/prisma/
+!/.cursor/
+!/.mcp/
+!/.mcp/**
+
+# Allow testing files
+!testing/**/*.py
+!testing/**/*.js
+!testing/**/*.json
+
+# Allow infrastructure configuration files
+!infra/**/*.yml
+!infra/**/*.yaml
+!infra/**/*.json
+!infra/**/*.conf
+!infra/**/*.cypher
+
+# Allow source files
+!src/
+!src/**/*.py
+!src/**/*.js
+!src/**/*.ts
+!src/**/*.java
+!src/**/*.rs
+!src/**/*.go
+!src/**/*.json
+!src/**/*.yaml
+!src/**/*.yml
+!src/polyglot/
+!src/polyglot/**/*.py
+!src/polyglot/**
+!src/workflows/
+!src/workflows/**/*.ts
+!src/activities/
+!src/activities/**/*.ts
+!src/workers/
+!src/workers/**/*.ts
+!src/clients/
+!src/clients/**/*.ts
+
+# Block common development artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+node_modules/
+.next/
+.nuxt/
+dist/
+build/
+target/
+.vscode/
+.idea/

@@ -1,0 +1,85 @@
+package testpkg
+
+import "fmt"
+
+func Call(fn func()) func() {
+	return fn
+}
+
+func trailingWhitespace() {
+	fmt.Println("Hello, World") // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+}
+
+func trailingCommentThenWhitespace() {
+	fmt.Println("Hello, World") // want +2 `unnecessary whitespace \(trailing-whitespace\)`
+	// Comment with wihtespace
+}
+
+func trailingCommentNoWhitespace() {
+	fmt.Println("Hello, World")
+	// Comment without space before or after.
+}
+
+func multipleTrailingComments() {
+	_ = 1
+	// Comment with
+
+	// a newline between
+}
+
+func trailingIf() {
+	if true {
+		_ = 1 // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	}
+}
+
+func trailingIfElseChain() {
+	if true {
+		_ = 1 // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	} else if true {
+		_ = 1 // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	} else {
+		_ = 1 // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	}
+}
+
+func variousTrailingBlocks(a string, b any, s []string) {
+	if true {
+		_ = 1 // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	} else if true {
+		_ = 1 // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	}
+
+	for i := 0; i < 1; i++ {
+		_ = 1 // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	}
+
+	for n := range []int{} {
+		_ = n // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	}
+
+	for range s {
+		_ = 1 // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	}
+
+	switch a {
+	case "a":
+
+	}
+
+	switch b.(type) {
+	case int:
+
+	}
+
+	f := func() {
+		_ = 1 // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	}
+
+	f2 := Call(func() {
+		_ = 1 // want +1 `unnecessary whitespace \(trailing-whitespace\)`
+	})
+
+	_ = f
+	_ = f2
+}

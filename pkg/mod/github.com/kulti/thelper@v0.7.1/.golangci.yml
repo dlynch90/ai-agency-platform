@@ -1,0 +1,29 @@
+version: "2"
+
+linters:
+  default: all
+  disable:
+    - cyclop
+    - depguard
+    - dupl
+    - exhaustruct
+    - gocognit
+    - err113
+    - mnd
+    - lll
+    - nestif
+    - nilnil
+    - nlreturn
+    - paralleltest
+    - prealloc
+    - varnamelen
+    - wsl
+  settings:
+    goconst:
+      min-len: 2
+      min-occurrences: 3
+    misspell:
+      locale: US
+    nolintlint:
+      require-explanation: true
+      require-specific: true

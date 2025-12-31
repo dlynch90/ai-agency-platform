@@ -1,0 +1,78 @@
+version: "2"
+
+formatters:
+  enable:
+    - gci
+    - gofumpt
+
+linters:
+  default: all
+  disable:
+    - bodyclose
+    - cyclop
+    - err113
+    - exhaustive
+    - exhaustruct
+    - lll
+    - makezero
+    - mnd
+    - nlreturn
+    - noinlineerr
+    - paralleltest
+    - prealloc
+    - rowserrcheck # not relevant (SQL)
+    - sqlclosecheck # not relevant (SQL)
+    - testpackage
+    - tparallel
+    - varnamelen
+    - wrapcheck
+    - wsl # deprecated
+  settings:
+    depguard:
+      rules:
+        main:
+          deny:
+            - pkg: github.com/instana/testify
+              desc: not allowed
+            - pkg: github.com/pkg/errors
+              desc: Should be replaced by standard lib errors package
+    forbidigo:
+      forbid:
+        - pattern: ^print(ln)?$
+        - pattern: ^fmt\.Print(f|ln)?$
+        - pattern: ^spew\.Print(f|ln)?$
+        - pattern: ^spew\.Dump$
+    funlen:
+      lines: 60
+      statements: 40
+    goconst:
+      min-len: 3
+      min-occurrences: 3
+    gocyclo:
+      min-complexity: 14
+    godox:
+      keywords:
+        - FIXME
+    govet:
+      enable:
+        - shadow
+    misspell:
+      locale: US
+  exclusions:
+    warn-unused: true
+    rules:
+      - linters:
+          - funlen
+        path: (.+)_test.go
+      - linters:
+          - forbidigo
+        path: goproxy/client_test.go
+      - linters:
+          - revive
+          - staticcheck
+        path: goenv/names.go
+        text: use ALL_CAPS in Go names; use CamelCase
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0

@@ -1,8 +1,0 @@
-version: '3.8'
-services:
-  energy-api:
-    build: .
-    ports:
-      - "8019:8000"
-    environment:
-      - USE_CASE_ID=19

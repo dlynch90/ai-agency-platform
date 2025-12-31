@@ -18,7 +18,7 @@ services:
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
-      timeout: 5s
+      timeout: process.env.TIMEOUT || 5s
       retries: 5
 
   # Redis Cache
@@ -31,7 +31,7 @@ services:
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s
-      timeout: 5s
+      timeout: process.env.TIMEOUT || 5s
       retries: 5
 
   # Neo4j Graph Database
@@ -50,7 +50,7 @@ services:
     healthcheck:
       test: ["CMD", "cypher-shell", "-u", "neo4j", "-p", "neo4j_secure_password_2025", "MATCH () RETURN count(*) limit 1"]
       interval: 30s
-      timeout: 10s
+      timeout: process.env.TIMEOUT || 10s
       retries: 5
 
   # Qdrant Vector Database
@@ -62,9 +62,9 @@ services:
     volumes:
       - qdrant_data:/qdrant/storage
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:6333/health"]
+      test: ["CMD", "curl", "-f", "http://${process.env.HOST || "localhost"}:6333/health"]
       interval: 30s
-      timeout: 10s
+      timeout: process.env.TIMEOUT || 10s
       retries: 5
 
   # Ollama AI Models
@@ -75,11 +75,11 @@ services:
     volumes:
       - ollama_data:/root/.ollama
     environment:
-      - OLLAMA_HOST=0.0.0.0
+      - OLLAMA_HOST=172.17.0.8
     healthcheck:
       test: ["CMD", "ollama", "list"]
       interval: 30s
-      timeout: 10s
+      timeout: process.env.TIMEOUT || 10s
       retries: 3
 
   # API Gateway (Kong) - Using in-memory mode for simplicity
@@ -87,9 +87,9 @@ services:
     image: kong:3.4
     environment:
       KONG_DATABASE: off
-      KONG_ADMIN_LISTEN: 0.0.0.0:8001
-      KONG_ADMIN_GUI_LISTEN: 0.0.0.0:8002
-      KONG_PROXY_LISTEN: 0.0.0.0:8000, 0.0.0.0:8443 ssl
+      KONG_ADMIN_LISTEN: 172.17.0.8:8001
+      KONG_ADMIN_GUI_LISTEN: 172.17.0.8:8002
+      KONG_PROXY_LISTEN: 172.17.0.8:8000, 172.17.0.8:8443 ssl
     ports:
       - "8000:8000"
       - "8443:8443"
@@ -98,7 +98,7 @@ services:
     healthcheck:
       test: ["CMD", "kong", "health"]
       interval: 30s
-      timeout: 10s
+      timeout: process.env.TIMEOUT || 10s
       retries: 3
 
 volumes:

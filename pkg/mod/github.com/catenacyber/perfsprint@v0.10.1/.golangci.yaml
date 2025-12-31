@@ -1,0 +1,25 @@
+version: "2"
+run:
+  allow-parallel-runners: true
+linters:
+  enable:
+    - errcheck
+    - gosec
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - perfsprint
+  exclusions:
+    rules:
+      - linters:
+          - staticcheck
+          - perfsprint
+        path: '(.+)_test\.go'
+  settings:
+    staticcheck:
+      checks:
+        - "all"
+formatters:
+  enable:
+    - gofmt

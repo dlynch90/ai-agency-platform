@@ -1,0 +1,7 @@
+default: none
+enable:
+  - require-doc
+options:
+  require-doc/include-tests: true
+  require-doc/ignore-exported: false
+  require-doc/ignore-unexported: false

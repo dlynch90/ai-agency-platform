@@ -19,7 +19,7 @@
     "data_model": {
       "name": "Data Model (Prisma models)",
       "notes": [
-        "spec: /Users/daniellynch/Desktop/cursor_vendor_driven_system_and_codebas.md",
+        "spec: ${process.env.HOME}/Desktop/cursor_vendor_driven_system_and_codebas.md",
         "schema: prisma/schema.prisma",
         "missing: CursorIDEResource",
         "missing: LLMEvaluation",
@@ -46,7 +46,7 @@
   "inputs": {
     "compose": "infrastructure/network-proxy/docker-compose.network.yml",
     "prisma": "prisma/schema.prisma",
-    "spec": "/Users/daniellynch/Desktop/cursor_vendor_driven_system_and_codebas.md"
+    "spec": "${process.env.HOME}/Desktop/cursor_vendor_driven_system_and_codebas.md"
   },
   "proxy_state": {
     "env": {

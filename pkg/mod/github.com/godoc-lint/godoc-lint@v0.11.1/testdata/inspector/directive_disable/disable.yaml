@@ -1,0 +1,64 @@
+disabled-rules:
+  all: true
+  rules:
+    - max-len
+    - pkg-doc
+    - require-pkg-doc
+    - single-pkg-doc
+package-doc:
+  disabled-rules:
+    all: true
+    rules:
+      - pkg-doc
+      - require-pkg-doc
+symbol-decl:
+  - doc:
+      disabled-rules:
+        rules:
+          - start-with-name
+    kind: var
+    name: Foo
+  - doc:
+      disabled-rules:
+        rules:
+          - start-with-name
+      text: |
+        some godoc
+    kind: var
+    name: Bar
+  - doc:
+      disabled-rules:
+        all: true
+        rules:
+          - start-with-name
+      text: |
+        some godoc
+    kind: var
+    name: Baz
+  - doc:
+      disabled-rules:
+        rules:
+          - pkg-doc
+      text: |
+        first godoc
+    kind: var
+    multi-spec-decl: true
+    multi-spec-index: 0
+    name: MultiFoo
+    parent-doc:
+      disabled-rules:
+        all: true
+      text: |
+        parent godoc
+  - doc:
+      text: |
+        second godoc
+    kind: var
+    multi-spec-decl: true
+    multi-spec-index: 1
+    name: MultiBar
+    parent-doc:
+      disabled-rules:
+        all: true
+      text: |
+        parent godoc

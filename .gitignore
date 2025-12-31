@@ -1,152 +1,56 @@
-# Large Environment Directories (exclude from scanning)
-.pixi/
-pixi-ros2/
-pixi-node/
-pixi-universe/
-venv311/
-venv/
-.venv/
+# pixi environments
+.pixi/*
+!.pixi/config.toml
 
-# Dependencies
+# Cursor IDE Rules - Prohibited directories
+/desktop/
+/downloads/
+/Dropbox/
+/OneDrive/
+/SharePoint/
+/Google Drive/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Node.js
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.pytest_cache/
-.coverage
-htmlcov/
-*.egg-info/
-dist/
+*.py[cod]
+*$py.class
+*.so
+.Python
 build/
-*.whl
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Package manager lock files (pnpm only)
-package-lock.json
-yarn.lock
-
-# Environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# IDE
+# IDEs
 .vscode/
 .idea/
-.cursor/
 *.swp
 *.swo
-*~
-.project
-.settings/
-
-# Claude
-.claude/
-
-# Environment files
-.cipher.env
-.opencode.env
-
-# IDE files
-.project
-
-# Logs
-git-recovery.log
-*.log
 
 # OS
 .DS_Store
 Thumbs.db
-
-# Local vendor/template clones (large; not source of truth)
-vendor-imports/
-
-# Go toolchain/module caches (should not live in repo)
-pkg/
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Temporary files
-temp/
-tmp/
-*.tmp
-
-# Cache
-.cache/
-.parcel-cache/
-.next/
-.nuxt/
-.serena/
-
-# Build outputs
-target/
-out/
-dist/
-build/
-
-# Test results
-coverage/
-.nyc_output/
-
-# Database
-*.sqlite
-*.db
-
-# Secrets (never commit these)
-secrets/
-*.key
-*.pem
-*.crt
-
-# Loose files prevention - these should be in proper directories
-# If any of these appear in root, they violate architecture rules
-**/comprehensive_pixi.toml
-**/phase1_pixi.toml
-**/justfile
-**/mcp-config.toml
-**/debug_all_errors.test.js
-**/test-mcp-servers.js
-
-# Allow in specific directories only
-!configs/comprehensive_pixi.toml
-!configs/phase1_pixi.toml
-!configs/justfile
-!configs/mcp-config.toml
-!testing/debug_all_errors.test.js
-!testing/integration/test-mcp-servers.js
-
-# AI/ML artifacts
-models/
-checkpoints/
-*.h5
-*.pb
-*.onnx
-
-# Docker
-.dockerignore
-
-# Git
-.git/
-*.patch
-*.diff
-
-# Backup files
-*.backup
-*.bak
-*.orig
-
-# Reports and analysis
-reports/
-*.report
-*.analysis
-# FEA outputs (generated; large)
-data/fea_results/edge_cases_summary.csv
-data/fea_results/edge_cases_summary.json
-data/fea_results/binomial_edge_analysis_report.json

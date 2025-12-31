@@ -1,0 +1,174 @@
+package testpkg
+
+import (
+	"errors"
+	"fmt"
+)
+
+func errFoundForAnyName() {
+	err := errors.New("x") // want +1 `unnecessary whitespace \(err\)`
+	if err != nil {
+		panic(err)
+	}
+
+	err2 := errors.New("y") // want +1 `unnecessary whitespace \(err\)`
+	if err2 == nil {
+		panic(err)
+	}
+}
+
+func noReportsWithComment() {
+	err := errors.New("x")
+	// Some comment
+	if err != nil {
+		panic(err)
+	}
+}
+
+func noReportsWithCommentAndWhitespace() {
+	err := errors.New("x")
+
+	// Some comment
+	if err != nil {
+		panic(err)
+	}
+}
+
+func multiAssignSplit() {
+	a := 1
+
+	err := errors.New("x") // want +1 `unnecessary whitespace \(err\)`
+	if err != nil {
+		panic(err)
+	}
+
+	_ = a
+}
+
+func alreadyCuddledErrReportsOther() {
+	a := 1
+
+	err := errors.New("x") // want `missing whitespace above this line \(too many statements above if\)`
+	if err != nil {
+		panic(err)
+	}
+
+	_ = a
+}
+
+func noReportsForNonErrors() {
+	msg := "not an error"
+	err := &msg
+
+	if err != nil {
+		panic(err)
+	}
+}
+
+func noReportsIfNotErrCheck() {
+	err := errors.New("x")
+
+	if false {
+		panic(err)
+	}
+}
+
+func noReportsIfBoolCheck() {
+	err, ok := errors.New("x"), true
+
+	if !ok {
+		panic(err)
+	}
+}
+
+func noReportsForMultipleErrors() {
+	aErr := errors.New("a")
+	bErr := errors.New("b")
+
+	if aErr != nil && bErr != nil {
+		panic(aErr)
+	}
+}
+
+func noReportsForLabeledStatements() {
+	err := errors.New("x")
+
+LABEL:
+	if err != nil {
+		panic(err)
+	}
+
+	goto LABEL
+}
+
+func aFunctionThatCanFail() error {
+	return nil
+}
+
+func noReportsForNonErrorAndErrWithInit() error {
+	withContext := func(err error) error {
+		return fmt.Errorf("some error, %w", err)
+	}
+
+	if err := aFunctionThatCanFail(); err != nil {
+		return withContext(err)
+	}
+
+	return nil
+}
+
+func noReportsForErrWithInit(maybeErr error) error {
+	err := fmt.Errorf("some error, %w", maybeErr)
+
+	if err := aFunctionThatCanFail(); err != nil {
+		return err
+	}
+
+	return err
+}
+
+func noReportsForNoNError(err error) error {
+	withContext := func(err error) error {
+		return fmt.Errorf("some error, %w", err)
+	}
+
+	if err != nil {
+		return withContext(err)
+	}
+
+	return nil
+}
+
+func noReportsForNonErrorWithErrName() error {
+	err := func(err error) error {
+		return fmt.Errorf("some error, %w", err)
+	}
+
+	if err != nil {
+		return err(nil)
+	}
+
+	return nil
+}
+
+func complexErrAssignWithChecking(err error) error {
+	withContext := func(err error) error {
+		return fmt.Errorf("some error, %w", err)
+	}(nil) // want +1 `unnecessary whitespace \(err\)`
+	if withContext != nil {
+		return withContext
+	}
+
+	return nil
+}
+
+func notTheAssignedErrorChecked(err error) error {
+	var notErr = fmt.Errorf("some error, %w", err)
+
+	if err != nil {
+		return notErr
+	}
+
+	return nil
+}
+

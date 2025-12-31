@@ -1,0 +1,31 @@
+name: Linting
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-go@v6
+        with:
+          go-version: stable
+
+      - name: Check and get dependencies
+        run: |
+          go mod tidy
+          git diff --exit-code go.mod
+          git diff --exit-code go.sum
+
+      - uses: golangci/golangci-lint-action@v8
+        with:
+          version: latest

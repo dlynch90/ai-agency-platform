@@ -1,8 +1,0 @@
-version: '3.8'
-services:
-  agriculture-api:
-    build: .
-    ports:
-      - "8014:8000"
-    environment:
-      - USE_CASE_ID=14

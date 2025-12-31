@@ -9,8 +9,8 @@
       "Mach-O"
     ],
     "python_version": "3.14.2 | packaged by conda-forge | (main, Dec  6 2025, 11:34:40) [Clang 20.1.8 ]",
-    "python_executable": "/Users/daniellynch/Developer/.venv/bin/python3",
-    "working_directory": "/Users/daniellynch/Developer",
+    "python_executable": "${process.env.HOME}/Developer/.venv/bin/python3",
+    "working_directory": "${process.env.HOME}/Developer",
     "user": "daniellynch",
     "home_directory": "/Users/daniellynch",
     "cpu_count": 10,
@@ -18,9 +18,9 @@
     "disk_gb": 926.3517189025879
   },
   "environment": {
-    "PATH": "/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/Developer/.venv/bin:/Users/daniellynch/.pixi/bin:/Users/daniellynch/.local/share/mise/installs/python/3.14.2/bin:/Users/daniellynch/.local/share/mise/installs/node/25.2.1/bin:/Users/daniellynch/.local/share/mise/installs/java/corretto-21.0.5.11.1/bin:/Users/daniellynch/.local/share/mise/installs/go/1.25.5/bin:/Users/daniellynch/.local/share/mise/installs/terraform/1.9.8:/Users/daniellynch/.local/share/mise/installs/kubectl/1.32.0:/Users/daniellynch/.local/share/mise/installs/helm/3.16.3/darwin-arm64:/opt/homebrew/share/google-cloud-sdk/bin:/Users/daniellynch/.pyenv/shims:/Users/daniellynch/go/bin:/Users/daniellynch/.cargo/bin:/Users/daniellynch/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/System/Cryptexes/App/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin",
+    "PATH": "${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/Developer/.venv/bin:${process.env.HOME}/.pixi/bin:${process.env.HOME}/.local/share/mise/installs/python/3.14.2/bin:${process.env.HOME}/.local/share/mise/installs/node/25.2.1/bin:${process.env.HOME}/.local/share/mise/installs/java/corretto-21.0.5.11.1/bin:${process.env.HOME}/.local/share/mise/installs/go/1.25.5/bin:${process.env.HOME}/.local/share/mise/installs/terraform/1.9.8:${process.env.HOME}/.local/share/mise/installs/kubectl/1.32.0:${process.env.HOME}/.local/share/mise/installs/helm/3.16.3/darwin-arm64:/opt/homebrew/share/google-cloud-sdk/bin:${process.env.HOME}/.pyenv/shims:${process.env.HOME}/go/bin:${process.env.HOME}/.cargo/bin:${process.env.HOME}/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/System/Cryptexes/App/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin",
     "PYTHONPATH": null,
-    "VIRTUAL_ENV": "/Users/daniellynch/Developer/.venv",
+    "VIRTUAL_ENV": "${process.env.HOME}/Developer/.venv",
     "HOME": "/Users/daniellynch",
     "USER": "daniellynch",
     "SHELL": "/bin/zsh",
@@ -34,9 +34,9 @@
     "in_virtual_env": true,
     "python_path_entries": 5,
     "python_path_sample": [
-      "/Users/daniellynch/Developer",
-      "/Users/daniellynch/.pixi/envs/python/lib/python314.zip",
-      "/Users/daniellynch/.pixi/envs/python/lib/python3.14"
+      "${process.env.HOME}/Developer",
+      "${process.env.HOME}/.pixi/envs/python/lib/python314.zip",
+      "${process.env.HOME}/.pixi/envs/python/lib/python3.14"
     ]
   },
   "processes": {
@@ -54,7 +54,7 @@
     "ip_addresses": [
       "192.168.1.3"
     ],
-    "localhost_resolvable": true
+    "${process.env.HOST || "localhost"}_resolvable": true
   },
   "tests": {
     "python_version": {
@@ -179,7 +179,7 @@
     },
     "connectivity_postgresql": {
       "service": "postgresql",
-      "host": "localhost",
+      "host": "${process.env.HOST || "localhost"}",
       "port": 5432,
       "start_time": 1767146040.540266,
       "connected": true,
@@ -187,7 +187,7 @@
     },
     "connectivity_redis": {
       "service": "redis",
-      "host": "localhost",
+      "host": "${process.env.HOST || "localhost"}",
       "port": 6379,
       "start_time": 1767146040.5438788,
       "connected": true,
@@ -195,7 +195,7 @@
     },
     "connectivity_neo4j_browser": {
       "service": "neo4j_browser",
-      "host": "localhost",
+      "host": "${process.env.HOST || "localhost"}",
       "port": 7474,
       "start_time": 1767146040.544692,
       "connected": true,
@@ -203,7 +203,7 @@
     },
     "connectivity_temporal_ui": {
       "service": "temporal_ui",
-      "host": "localhost",
+      "host": "${process.env.HOST || "localhost"}",
       "port": 8080,
       "start_time": 1767146040.545461,
       "connected": true,
@@ -220,7 +220,7 @@
       "start_time": 1767146040.5461729,
       "expected_success": true,
       "returncode": 0,
-      "stdout": "/Users/daniellynch/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 @modelcontextprotocol/server-filesystem@2025.12.18",
+      "stdout": "${process.env.HOME}/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 @modelcontextprotocol/server-filesystem@2025.12.18",
       "stderr": "",
       "duration": 1.187554121017456,
       "timed_out": false,
@@ -256,7 +256,7 @@
       "start_time": 1767146046.754,
       "expected_success": true,
       "returncode": 0,
-      "stdout": "/Users/daniellynch/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 @modelcontextprotocol/server-sequential-thinking@2025.12.18",
+      "stdout": "${process.env.HOME}/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 @modelcontextprotocol/server-sequential-thinking@2025.12.18",
       "stderr": "",
       "duration": 1.0781841278076172,
       "timed_out": false,
@@ -292,7 +292,7 @@
       "start_time": 1767146051.961751,
       "expected_success": true,
       "returncode": 0,
-      "stdout": "/Users/daniellynch/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 @modelcontextprotocol/server-memory@2025.11.25",
+      "stdout": "${process.env.HOME}/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 @modelcontextprotocol/server-memory@2025.11.25",
       "stderr": "",
       "duration": 1.0322911739349365,
       "timed_out": false,
@@ -328,7 +328,7 @@
       "start_time": 1767146057.377837,
       "expected_success": true,
       "returncode": 1,
-      "stdout": "/Users/daniellynch/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 (empty)",
+      "stdout": "${process.env.HOME}/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 (empty)",
       "stderr": "",
       "duration": 1.1031110286712646,
       "timed_out": false,
@@ -373,7 +373,7 @@
     },
     "file_access_comprehensive-system-validator.py": {
       "success": false,
-      "error": "[Errno 2] No such file or directory: '/Users/daniellynch/Developer/comprehensive-system-validator.py'"
+      "error": "[Errno 2] No such file or directory: '${process.env.HOME}/Developer/comprehensive-system-validator.py'"
     },
     "file_access_mcp.json": {
       "success": true,
@@ -447,7 +447,7 @@
         "start_time": 1767146057.377837,
         "expected_success": true,
         "returncode": 1,
-        "stdout": "/Users/daniellynch/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 (empty)",
+        "stdout": "${process.env.HOME}/.local/share/mise/installs/node/25.2.1/lib\n\u2514\u2500\u2500 (empty)",
         "stderr": "",
         "duration": 1.1031110286712646,
         "timed_out": false,
@@ -457,11 +457,11 @@
     },
     {
       "timestamp": "2025-12-30T20:54:24.276504",
-      "error": "File access failed: /Users/daniellynch/Developer/comprehensive-system-validator.py",
+      "error": "File access failed: ${process.env.HOME}/Developer/comprehensive-system-validator.py",
       "context": {
-        "error": "[Errno 2] No such file or directory: '/Users/daniellynch/Developer/comprehensive-system-validator.py'"
+        "error": "[Errno 2] No such file or directory: '${process.env.HOME}/Developer/comprehensive-system-validator.py'"
       },
-      "traceback": "Traceback (most recent call last):\n  File \"/Users/daniellynch/Developer/ultimate-system-diagnostic.py\", line 322, in run_ultimate_diagnostic\n    with open(file_path, 'r') as f:\n         ~~~~^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/daniellynch/Developer/comprehensive-system-validator.py'\n"
+      "traceback": "Traceback (most recent call last):\n  File \"${process.env.HOME}/Developer/ultimate-system-diagnostic.py\", line 322, in run_ultimate_diagnostic\n    with open(file_path, 'r') as f:\n         ~~~~^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '${process.env.HOME}/Developer/comprehensive-system-validator.py'\n"
     }
   ],
   "warnings": [],

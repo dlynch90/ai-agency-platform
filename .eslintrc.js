@@ -1,1 +1,0 @@
-configs/linting/.eslintrc.js

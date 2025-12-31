@@ -1,0 +1,5 @@
+default: none
+enable:
+  - single-pkg-doc
+options:
+  single-pkg-doc/include-tests: true

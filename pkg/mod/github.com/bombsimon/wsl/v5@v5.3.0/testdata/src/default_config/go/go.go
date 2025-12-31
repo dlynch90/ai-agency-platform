@@ -1,0 +1,57 @@
+package testpkg
+
+import "fmt"
+
+func NewT() func() {
+	return func() {}
+}
+
+func Fn(_ int) {}
+
+func Go() {
+	fooFunc := func() {}
+	go fooFunc()
+
+	barFunc := func() {}
+	go fooFunc() // want `missing whitespace above this line \(no shared variables above go\)`
+
+	_ = barFunc
+
+	go func() {
+		fmt.Println("hey")
+	}()
+
+	cuddled := true
+	go func() { // want `missing whitespace above this line \(no shared variables above go\)`
+		fmt.Println("hey")
+	}()
+
+	_ = cuddled
+
+	argToGo := 1
+	go Fn(argToGo)
+
+	notArgToGo := 1
+	go Fn(argToGo) // want `missing whitespace above this line \(no shared variables above go\)`
+
+	_ = notArgToGo
+
+	t1 := NewT()
+	t2 := NewT()
+	t3 := NewT()
+
+	go t1()
+	go t2()
+	go t3()
+
+	multiCuddle1 := NewT()
+	multiCuddle2 := NewT() // want `missing whitespace above this line \(too many statements above go\)`
+	go multiCuddle2()
+
+	t4 := NewT()
+	t5 := NewT() // want `missing whitespace above this line \(too many statements above go\)`
+	go t5()
+	go t4()
+
+	_, _, _, _, _, _, _ = t1, t2, t3, t4, t5, multiCuddle1, multiCuddle2
+}

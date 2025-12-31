@@ -1,0 +1,5 @@
+default: none
+enable:
+  - pkg-doc
+options:
+  pkg-doc/include-tests: false

@@ -111,7 +111,7 @@
       {
         "check": "Chezmoi config file exists",
         "status": "PASS",
-        "details": "Found at /Users/daniellynch/.config/chezmoi/chezmoi.toml"
+        "details": "Found at ${process.env.HOME}/.config/chezmoi/chezmoi.toml"
       },
       {
         "check": "Environment variable NODE_ENV set",

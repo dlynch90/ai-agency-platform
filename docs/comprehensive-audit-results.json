@@ -1,6 +1,6 @@
 {
   "timestamp": "2025-12-31T04:15:05.372Z",
-  "workspace": "/Users/daniellynch/Developer",
+  "workspace": "${process.env.HOME}/Developer",
   "stats": {
     "filesScanned": 678,
     "violationsFound": 1464,
@@ -24,9 +24,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/agi_integration_framework.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -129,9 +129,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/_psaix.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -150,9 +150,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/app.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -171,9 +171,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/client.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -394,9 +394,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/main.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -492,16 +492,16 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/pytest_plugin.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/relay.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -541,9 +541,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/server.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -576,9 +576,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/test_js.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -646,9 +646,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/test_utils.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -667,9 +667,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/web.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -695,9 +695,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/web_request.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -709,9 +709,9 @@
       {
         "type": "prohibited_pattern",
         "file": "ai-ml/inference/web_runner.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -751,9 +751,9 @@
       {
         "type": "prohibited_pattern",
         "file": "api-smoke-tests/index.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -765,9 +765,9 @@
       {
         "type": "prohibited_pattern",
         "file": "api-smoke-tests/smoke-test.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -859,9 +859,9 @@
       {
         "type": "prohibited_pattern",
         "file": "comprehensive-cache-debugger.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -880,9 +880,9 @@
       {
         "type": "prohibited_pattern",
         "file": "comprehensive-integration-orchestrator.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -901,9 +901,9 @@
       {
         "type": "prohibited_pattern",
         "file": "configs/debug_all_errors.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -922,9 +922,9 @@
       {
         "type": "prohibited_pattern",
         "file": "database/infrastructure/neo4j/neo4j-graph.config.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -936,9 +936,9 @@
       {
         "type": "prohibited_pattern",
         "file": "database/infrastructure/postgres/pg-pool.config.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "missing_vendor_database",
@@ -963,9 +963,9 @@
       {
         "type": "prohibited_pattern",
         "file": "database/infrastructure/redis/redis-cache.config.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "missing_vendor_database",
@@ -983,9 +983,9 @@
       {
         "type": "prohibited_pattern",
         "file": "database-integration/config.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1004,16 +1004,16 @@
       {
         "type": "prohibited_pattern",
         "file": "domains/ecommerce/services/personalization-engine.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "domains/use-cases/01-ecommerce/domains/use-cases/01-ecommerce/main.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1045,9 +1045,9 @@
       {
         "type": "prohibited_pattern",
         "file": "federation/gateway/src/index.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1066,9 +1066,9 @@
       {
         "type": "prohibited_pattern",
         "file": "federation/gateway.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1087,9 +1087,9 @@
       {
         "type": "prohibited_pattern",
         "file": "federation/subgraphs/users/src/index.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1114,9 +1114,9 @@
       {
         "type": "prohibited_pattern",
         "file": "graphql-server/index.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1190,9 +1190,9 @@
       {
         "type": "prohibited_pattern",
         "file": "mcp/clients/authenticated-client.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "missing_vendor_auth",
@@ -1210,9 +1210,9 @@
       {
         "type": "prohibited_pattern",
         "file": "mcp-servers/mem0-server.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1231,9 +1231,9 @@
       {
         "type": "prohibited_pattern",
         "file": "nuclear-bottleneck-eliminator.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1252,9 +1252,9 @@
       {
         "type": "prohibited_pattern",
         "file": "nuclear-mcp-integration.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1266,9 +1266,9 @@
       {
         "type": "prohibited_pattern",
         "file": "polyglot-integration/api-gateway/index.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1280,9 +1280,9 @@
       {
         "type": "prohibited_pattern",
         "file": "polyglot-integration/services/python-ml/app.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1301,16 +1301,16 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/30-step-gap-analysis.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/advanced_numerical_methods.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1322,9 +1322,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/agi_integration_framework.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1343,30 +1343,30 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/analysis/comprehensive_system_diagnostic.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/analysis/debug-deployment-issues.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/analysis/debug-use-cases.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/analysis/final-verification.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1399,9 +1399,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/automated_remediation.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1427,9 +1427,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/clean_20step_analysis.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1455,9 +1455,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/complete-30-step-gap-analysis.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1476,9 +1476,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/comprehensive-fix-engine.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1497,16 +1497,16 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/comprehensive-gap-analysis.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/comprehensive_20step_gap_analysis.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1525,9 +1525,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/comprehensive_debugging_system.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1539,16 +1539,16 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/comprehensive_gap_analysis.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/comprehensive_system_diagnostic.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1560,9 +1560,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/cursor-gpu-optimizer.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1637,23 +1637,23 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/fea_claude_install_optimizer.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/fea_claude_integrated_optimizer.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/fea_gap_analysis_debug.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1665,9 +1665,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/final_debugging_summary.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1686,9 +1686,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/finite_element_analysis.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1707,9 +1707,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/fix-cursor-mcp-canonical.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1735,9 +1735,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/health-check-vendor.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1749,9 +1749,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/infinitesimal_gap_analysis.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1763,9 +1763,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/init_mcp_servers.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1777,9 +1777,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/jaeger-tracing.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1791,9 +1791,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/llm-judge-x2-validator.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1854,9 +1854,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/mcp-llm-validation-test.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1875,9 +1875,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/neo4j-dependency-analyzer.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1896,16 +1896,16 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/orchestration/event-driven-orchestrator.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/polyglot_integration_proxy.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1917,16 +1917,16 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/redis-rate-limiter-middleware.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/research_feasibility.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1952,16 +1952,16 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/service-initializer.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/simple_20step_analysis.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1973,9 +1973,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/start_fea_environment.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -1994,9 +1994,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/sync-mcp-github-catalog.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2015,9 +2015,9 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/test_mem0_integration.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2029,23 +2029,23 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/testing/api_smoke_tests.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/testing/api_smoke_tests.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "scripts/testing/simple_smoke_tests.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2092,30 +2092,30 @@
       {
         "type": "prohibited_pattern",
         "file": "scripts/verify_mem0_mcp_core.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "services/ai/mem0-pydantic-agent.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "services/ai/src/index.test.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "services/graph/src/index.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2127,9 +2127,9 @@
       {
         "type": "prohibited_pattern",
         "file": "smoke-testing/proxy-server.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2155,9 +2155,9 @@
       {
         "type": "prohibited_pattern",
         "file": "temporal/activities/gibson-activities.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2169,9 +2169,9 @@
       {
         "type": "prohibited_pattern",
         "file": "temporal/workflows/gibson-integration.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2190,9 +2190,9 @@
       {
         "type": "prohibited_pattern",
         "file": "testing/api/api_smoke_tests.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2211,9 +2211,9 @@
       {
         "type": "prohibited_pattern",
         "file": "testing/functional-tests.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2232,9 +2232,9 @@
       {
         "type": "prohibited_pattern",
         "file": "testing/mem0-integration-tests.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2260,9 +2260,9 @@
       {
         "type": "prohibited_pattern",
         "file": "tests/integration/system-integration.test.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2288,16 +2288,16 @@
       {
         "type": "prohibited_pattern",
         "file": "tests/unit/comprehensive-vendor-tests.test.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "tests/unit/llm-judge-x2.test.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2330,9 +2330,9 @@
       {
         "type": "prohibited_pattern",
         "file": "tools/health-analyzer/src/api/server.ts",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2358,9 +2358,9 @@
       {
         "type": "prohibited_pattern",
         "file": "tools/javascript/api_smoke_tests.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2379,9 +2379,9 @@
       {
         "type": "prohibited_pattern",
         "file": "tools/javascript/debug_all_errors.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2400,9 +2400,9 @@
       {
         "type": "prohibited_pattern",
         "file": "tools/mem0-mcp-integration.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2414,23 +2414,23 @@
       {
         "type": "prohibited_pattern",
         "file": "tools/python/agi_integration_framework.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "tools/python/comprehensive_gap_analysis.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "tools/python/comprehensive_system_diagnostic.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2442,30 +2442,30 @@
       {
         "type": "prohibited_pattern",
         "file": "tools/python/debug-deployment-issues.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "tools/python/debug-use-cases.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "tools/python/debug_cursor_issues.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
         "file": "tools/python/final-verification.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2491,9 +2491,9 @@
       {
         "type": "prohibited_pattern",
         "file": "tools/python/finite_element_gap_analysis.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2505,9 +2505,9 @@
       {
         "type": "prohibited_pattern",
         "file": "tools/python/infinitesimal_gap_analysis.py",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       },
       {
         "type": "prohibited_pattern",
@@ -2554,9 +2554,9 @@
       {
         "type": "prohibited_pattern",
         "file": "~/Developer/services/events-api-consumer/index.js",
-        "pattern": "localhostUrls",
+        "pattern": "${process.env.HOST || "localhost"}Urls",
         "severity": "high",
-        "message": "File contains prohibited localhostUrls pattern"
+        "message": "File contains prohibited ${process.env.HOST || "localhost"}Urls pattern"
       }
     ],
     "schemaModeling": [

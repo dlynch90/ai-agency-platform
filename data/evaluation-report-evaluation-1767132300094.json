@@ -254,7 +254,7 @@
         "helm": {
           "available": false,
           "version": null,
-          "error": "Command failed: helm --version\nWARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/daniellynch/.kube/config\nWARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/daniellynch/.kube/config\nError: unknown flag: --version\n"
+          "error": "Command failed: helm --version\nWARNING: Kubernetes configuration file is group-readable. This is insecure. Location: ${process.env.HOME}/.kube/config\nWARNING: Kubernetes configuration file is world-readable. This is insecure. Location: ${process.env.HOME}/.kube/config\nError: unknown flag: --version\n"
         },
         "kustomize": {
           "available": false,

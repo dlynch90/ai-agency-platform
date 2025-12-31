@@ -34,7 +34,7 @@
         "ai-agency-grafana             Up 12 hours             0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp",
         "temporal-server               Up 3 hours              0.0.0.0:7233-7235->7233-7235/tcp, [::]:7233-7235->7233-7235/tcp, 0.0.0.0:7239->7239/tcp, [::]:7239->7239/tcp",
         "temporal-postgresql           Up 12 hours             5432/tcp",
-        "minikube                      Up 12 hours             127.0.0.1:52261->22/tcp, 127.0.0.1:52257->2376/tcp, 127.0.0.1:52259->5000/tcp, 127.0.0.1:52260->8443/tcp, 127.0.0.1:52258->32443/tcp",
+        "minikube                      Up 12 hours             ${process.env.HOST || "127.0.0.1"}:52261->22/tcp, ${process.env.HOST || "127.0.0.1"}:52257->2376/tcp, ${process.env.HOST || "127.0.0.1"}:52259->5000/tcp, ${process.env.HOST || "127.0.0.1"}:52260->8443/tcp, ${process.env.HOST || "127.0.0.1"}:52258->32443/tcp",
         "kong-database                 Up 6 hours (healthy)    5432/tcp",
         "temporal-ui                   Up 13 hours             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp",
         "temporal-admin-tools          Up 13 hours             ",
@@ -80,46 +80,46 @@
     "databases": {
       "PostgreSQL": {
         "status": "healthy",
-        "host": "localhost",
+        "host": "${process.env.HOST || "localhost"}",
         "port": 5432,
         "type": "tcp"
       },
       "Redis": {
         "status": "healthy",
-        "host": "localhost",
+        "host": "${process.env.HOST || "localhost"}",
         "port": 6379,
         "type": "tcp"
       },
       "Neo4j": {
         "status": "healthy",
-        "host": "localhost",
+        "host": "${process.env.HOST || "localhost"}",
         "port": 7687,
         "type": "tcp"
       },
       "Neo4j HTTP": {
         "status": "healthy",
-        "host": "localhost",
+        "host": "${process.env.HOST || "localhost"}",
         "port": 7474,
         "type": "http",
         "httpStatus": "reachable"
       },
       "Qdrant": {
         "status": "healthy",
-        "host": "localhost",
+        "host": "${process.env.HOST || "localhost"}",
         "port": 6333,
         "type": "http",
         "httpStatus": "reachable"
       },
       "Weaviate": {
         "status": "healthy",
-        "host": "localhost",
+        "host": "${process.env.HOST || "localhost"}",
         "port": 8080,
         "type": "http",
         "httpStatus": "reachable"
       },
       "Chroma": {
         "status": "healthy",
-        "host": "localhost",
+        "host": "${process.env.HOST || "localhost"}",
         "port": 8000,
         "type": "http",
         "httpStatus": "reachable"
@@ -128,7 +128,7 @@
     "apis": {
       "Ollama": {
         "status": "healthy",
-        "url": "http://localhost:11434/api/version",
+        "url": "http://${process.env.HOST || "localhost"}:11434/api/version",
         "type": "http",
         "responseTime": 2
       },
@@ -154,13 +154,13 @@
     "mcpServers": {
       "Filesystem MCP": {
         "status": "healthy",
-        "url": "http://localhost:7243/health",
+        "url": "http://${process.env.HOST || "localhost"}:7243/health",
         "type": "http",
         "responseTime": 3
       },
       "Universal MCP": {
         "status": "healthy",
-        "url": "http://localhost:7243/health",
+        "url": "http://${process.env.HOST || "localhost"}:7243/health",
         "type": "http",
         "responseTime": 1
       }
@@ -172,7 +172,7 @@
     "networks": {
       "internet": "connected",
       "dns": "working",
-      "localhost": "not accessible"
+      "${process.env.HOST || "localhost"}": "not accessible"
     }
   },
   "recommendations": []

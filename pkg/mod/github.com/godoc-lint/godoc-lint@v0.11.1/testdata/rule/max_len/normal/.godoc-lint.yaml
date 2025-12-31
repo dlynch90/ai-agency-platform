@@ -1,0 +1,6 @@
+default: none
+enable:
+  - max-len
+options:
+  max-len/length: 77
+  max-len/include-tests: false

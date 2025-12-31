@@ -258,7 +258,7 @@
             "helm": {
               "available": false,
               "version": null,
-              "error": "Command failed: helm --version\nWARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/daniellynch/.kube/config\nWARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/daniellynch/.kube/config\nError: unknown flag: --version\n"
+              "error": "Command failed: helm --version\nWARNING: Kubernetes configuration file is group-readable. This is insecure. Location: ${process.env.HOME}/.kube/config\nWARNING: Kubernetes configuration file is world-readable. This is insecure. Location: ${process.env.HOME}/.kube/config\nError: unknown flag: --version\n"
             },
             "kustomize": {
               "available": false,
@@ -328,32 +328,32 @@
         "code-analysis": {
           "success": false,
           "model": "microsoft/codebert-base",
-          "error": "Command failed: python3 hf_test.py \"code-analysis\" \"microsoft/codebert-base\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+          "error": "Command failed: python3 hf_test.py \"code-analysis\" \"microsoft/codebert-base\"\nTraceback (most recent call last):\n  File \"${process.env.HOME}/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
         },
         "code-generation": {
           "success": false,
           "model": "microsoft/DialoGPT-medium",
-          "error": "Command failed: python3 hf_test.py \"code-generation\" \"microsoft/DialoGPT-medium\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+          "error": "Command failed: python3 hf_test.py \"code-generation\" \"microsoft/DialoGPT-medium\"\nTraceback (most recent call last):\n  File \"${process.env.HOME}/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
         },
         "code-review": {
           "success": false,
           "model": "microsoft/DialoGPT-small",
-          "error": "Command failed: python3 hf_test.py \"code-review\" \"microsoft/DialoGPT-small\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+          "error": "Command failed: python3 hf_test.py \"code-review\" \"microsoft/DialoGPT-small\"\nTraceback (most recent call last):\n  File \"${process.env.HOME}/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
         },
         "bug-detection": {
           "success": false,
           "model": "microsoft/codebert-base-mlm",
-          "error": "Command failed: python3 hf_test.py \"bug-detection\" \"microsoft/codebert-base-mlm\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+          "error": "Command failed: python3 hf_test.py \"bug-detection\" \"microsoft/codebert-base-mlm\"\nTraceback (most recent call last):\n  File \"${process.env.HOME}/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
         },
         "text-classification": {
           "success": false,
           "model": "cardiffnlp/twitter-roberta-base-sentiment",
-          "error": "Command failed: python3 hf_test.py \"text-classification\" \"cardiffnlp/twitter-roberta-base-sentiment\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+          "error": "Command failed: python3 hf_test.py \"text-classification\" \"cardiffnlp/twitter-roberta-base-sentiment\"\nTraceback (most recent call last):\n  File \"${process.env.HOME}/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
         },
         "code-embedding": {
           "success": false,
           "model": "microsoft/codebert-base",
-          "error": "Command failed: python3 hf_test.py \"code-embedding\" \"microsoft/codebert-base\"\nTraceback (most recent call last):\n  File \"/Users/daniellynch/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
+          "error": "Command failed: python3 hf_test.py \"code-embedding\" \"microsoft/codebert-base\"\nTraceback (most recent call last):\n  File \"${process.env.HOME}/Developer/hf_test.py\", line 2, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n"
         }
       },
       "codebase_analysis": {
@@ -2998,7 +2998,7 @@
             "smoke-testing",
             "snapshots",
             "snapshots/tmp",
-            "snapshots/tmp/upload",
+            "snapshots${process.env.TMPDIR || "/tmp"}/",
             "src",
             "src/lib",
             "src/lib/auth",

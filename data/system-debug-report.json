@@ -31,9 +31,9 @@
             "chezmoi",
             "data"
           ],
-          "cacheDir": "/Users/daniellynch/.cache/chezmoi",
+          "cacheDir": "${process.env.HOME}/.cache/chezmoi",
           "command": "data",
-          "commandDir": "/Users/daniellynch/Developer",
+          "commandDir": "${process.env.HOME}/Developer",
           "config": {
             "add": {
               "encrypt": false,
@@ -68,7 +68,7 @@
             "bitwardenSecrets": {
               "command": "bws"
             },
-            "cacheDir": "/Users/daniellynch/.cache/chezmoi",
+            "cacheDir": "${process.env.HOME}/.cache/chezmoi",
             "cd": {
               "args": null,
               "command": ""
@@ -111,7 +111,7 @@
               },
               "ml": {
                 "gpu_memory_fraction": 0.8,
-                "huggingface_cache_dir": "/tmp/huggingface_cache",
+                "huggingface_cache_dir": "${process.env.TMPDIR || "/tmp"}/",
                 "inference_batch_size": 32,
                 "ollama_model_timeout": 300000
               },
@@ -132,8 +132,8 @@
               "security": {
                 "bcrypt_rounds": 12,
                 "cors_allowed_origins": [
-                  "http://localhost:3000",
-                  "http://localhost:4000"
+                  "http://${process.env.HOST || "localhost"}:3000",
+                  "http://${process.env.HOST || "localhost"}:4000"
                 ],
                 "jwt_expiration_hours": 24,
                 "refresh_token_expiration_days": 30
@@ -267,7 +267,7 @@
               "args": null,
               "command": ""
             },
-            "sourceDir": "/Users/daniellynch/.local/share/chezmoi",
+            "sourceDir": "${process.env.HOME}/.local/share/chezmoi",
             "status": {
               "exclude": [],
               "pathStyle": "relative"
@@ -298,9 +298,9 @@
             "warnings": {
               "configFileTemplateHasChanged": true
             },
-            "workingTree": "/Users/daniellynch/.local/share/chezmoi"
+            "workingTree": "${process.env.HOME}/.local/share/chezmoi"
           },
-          "configFile": "/Users/daniellynch/.config/chezmoi/chezmoi.toml",
+          "configFile": "${process.env.HOME}/.config/chezmoi/chezmoi.toml",
           "destDir": "/Users/daniellynch",
           "executable": "/opt/homebrew/bin/chezmoi",
           "fqdnHostname": "MacBookPro.lan",
@@ -313,7 +313,7 @@
           "osRelease": {},
           "pathListSeparator": ":",
           "pathSeparator": "/",
-          "sourceDir": "/Users/daniellynch/.local/share/chezmoi",
+          "sourceDir": "${process.env.HOME}/.local/share/chezmoi",
           "uid": "501",
           "username": "daniellynch",
           "version": {
@@ -323,7 +323,7 @@
             "version": "2.68.1"
           },
           "windowsVersion": {},
-          "workingTree": "/Users/daniellynch/.local/share/chezmoi"
+          "workingTree": "${process.env.HOME}/.local/share/chezmoi"
         },
         "database": {
           "neo4j_pool_max_idle_time": 30000,
@@ -354,7 +354,7 @@
         },
         "ml": {
           "gpu_memory_fraction": 0.8,
-          "huggingface_cache_dir": "/tmp/huggingface_cache",
+          "huggingface_cache_dir": "${process.env.TMPDIR || "/tmp"}/",
           "inference_batch_size": 32,
           "ollama_model_timeout": 300000
         },
@@ -375,8 +375,8 @@
         "security": {
           "bcrypt_rounds": 12,
           "cors_allowed_origins": [
-            "http://localhost:3000",
-            "http://localhost:4000"
+            "http://${process.env.HOST || "localhost"}:3000",
+            "http://${process.env.HOST || "localhost"}:4000"
           ],
           "jwt_expiration_hours": 24,
           "refresh_token_expiration_days": 30
@@ -419,7 +419,7 @@
     },
     "graphql": {
       "status": "healthy",
-      "endpoint": "http://localhost:4000/graphql",
+      "endpoint": "http://${process.env.HOST || "localhost"}:4000/graphql",
       "response": {
         "data": {
           "__typename": "Query"
@@ -430,29 +430,29 @@
       "postgresql": {
         "name": "postgresql",
         "status": "healthy",
-        "command": "pg_isready -h localhost -p 5432",
+        "command": "pg_isready -h ${process.env.HOST || "localhost"} -p 5432",
         "durationMs": 62
       },
       "redis": {
         "name": "redis",
         "status": "healthy",
-        "command": "redis-cli -h localhost -p 6379 ping",
+        "command": "redis-cli -h ${process.env.HOST || "localhost"} -p 6379 ping",
         "response": "PONG",
         "durationMs": 23
       },
       "neo4j": {
         "name": "neo4j",
         "status": "healthy",
-        "http": "http://localhost:7474/",
-        "bolt": "bolt://localhost:7687",
-        "command": "cypher-shell -a bolt://localhost:7687 -u neo4j -p password \"RETURN 1;\"",
+        "http": "http://${process.env.HOST || "localhost"}:7474/",
+        "bolt": "bolt://${process.env.HOST || "localhost"}:7687",
+        "command": "cypher-shell -a bolt://${process.env.HOST || "localhost"}:7687 -u neo4j -p password \"RETURN 1;\"",
         "durationMs": 2840
       },
       "qdrant": {
         "name": "qdrant",
         "status": "healthy",
-        "url": "http://localhost:6333/healthz",
-        "command": "curl -fsS \"http://localhost:6333/healthz\" -o /dev/null",
+        "url": "http://${process.env.HOST || "localhost"}:6333/healthz",
+        "command": "curl -fsS \"http://${process.env.HOST || "localhost"}:6333/healthz\" -o /dev/null",
         "durationMs": 28
       }
     },

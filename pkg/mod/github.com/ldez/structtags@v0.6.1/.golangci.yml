@@ -1,0 +1,72 @@
+version: "2"
+
+formatters:
+  enable:
+    - gofumpt
+    - goimports
+  settings:
+    gofumpt:
+      extra-rules: true
+
+linters:
+  default: all
+  disable:
+    - rowserrcheck # SQL
+    - sqlclosecheck # SQL
+    - cyclop # duplicate of gocyclo
+    - wsl # Deprecated
+    - err113
+    - exhaustive
+    - exhaustruct
+    - gochecknoglobals
+    - lll
+    - noinlineerr
+    - paralleltest
+    - prealloc
+    - testpackage
+    - tparallel
+    - varnamelen
+    - wrapcheck
+    - tagalign
+    - nilnil # This is expected in this project
+
+  settings:
+    funlen:
+      lines: -1
+      statements: 50
+    godox:
+      keywords:
+        - FIXME
+    gocyclo:
+      min-complexity: 20
+    gosec:
+      excludes:
+        - G204
+    depguard:
+      rules:
+        main:
+          deny:
+            - pkg: github.com/instana/testify
+              desc: not allowed
+            - pkg: github.com/pkg/errors
+              desc: Should be replaced by standard lib errors package
+
+  exclusions:
+    warn-unused: true
+    presets:
+      - comments
+      - common-false-positives
+      - std-error-handling
+    rules:
+      - path: parser/tag.go
+        text: "Tag returns generic interface \\(T\\) of type param any"
+        linters:
+          - ireturn
+      - path: structtag_example_test.go
+        text: "SA5008: duplicate struct tag \"b\""
+        linters:
+          - staticcheck
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0

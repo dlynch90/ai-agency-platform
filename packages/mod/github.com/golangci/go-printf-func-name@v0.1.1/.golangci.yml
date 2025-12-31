@@ -1,0 +1,100 @@
+version: "2"
+
+formatters:
+  enable:
+    - gci
+    - gofumpt
+
+linters:
+  default: none
+  enable:
+    - asasalint
+    - asciicheck
+    - bidichk
+    - containedctx
+    - contextcheck
+    - copyloopvar
+    - cyclop
+    - dogsled
+    - dupl
+    - dupword
+    - durationcheck
+    - err113
+    - errcheck
+    - errname
+    - errorlint
+    - fatcontext
+    - forbidigo
+    - funlen
+    - gocheckcompilerdirectives
+    - gochecknoglobals
+    - gochecknoinits
+    - gocognit
+    - goconst
+    - gocritic
+    - gocyclo
+    - godot
+    - godox
+    - gomoddirectives
+    - gomodguard
+    - goprintffuncname
+    - gosec
+    - govet
+    - importas
+    - inamedparam
+    - ineffassign
+    - interfacebloat
+    - intrange
+    - ireturn
+    - loggercheck
+    - maintidx
+    - makezero
+    - mirror
+    - misspell
+    - musttag
+    - nestif
+    - nilerr
+    - nlreturn
+    - noctx
+    - nolintlint
+    - nonamedreturns
+    - perfsprint
+    - predeclared
+    - reassign
+    - revive
+    - staticcheck
+    - tagalign
+    - tagliatelle
+    - testableexamples
+    - testifylint
+    - thelper
+    - tparallel
+    - unconvert
+    - unparam
+    - unused
+    - usestdlibvars
+    - wastedassign
+    - whitespace
+    - wrapcheck
+    - wsl_v5
+
+  settings:
+    cyclop:
+      max-complexity: 15
+    staticcheck:
+      checks:
+        - '*'
+        - -ST1000
+  exclusions:
+    warn-unused: true
+    presets:
+      - comments
+    rules:
+      - linters:
+          - gochecknoglobals
+        path: pkg/analyzer/analyzer.go
+        text: Analyzer is a global variable
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0

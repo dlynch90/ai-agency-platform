@@ -1,8 +1,0 @@
-version: '3.8'
-services:
-  content-management-api:
-    build: .
-    ports:
-      - "8011:8000"
-    environment:
-      - USE_CASE_ID=11

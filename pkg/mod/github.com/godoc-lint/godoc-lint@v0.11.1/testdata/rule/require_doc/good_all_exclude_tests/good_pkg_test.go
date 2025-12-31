@@ -1,0 +1,21 @@
+package good_test
+
+// (NG: no godoc)
+
+const FooTestNG = 0
+
+type TFooTestNG int
+
+func FFooTestNG() {}
+
+func (*TFooTestNG) FooFooTest() {}
+
+func (*TFooTestNG) fooFooTest() {}
+
+const fooTestNG = 0
+
+type ttFooTestNG int
+
+func fFooTestNG() {}
+
+func (*ttFooTestNG) FooFooTestNG() {}

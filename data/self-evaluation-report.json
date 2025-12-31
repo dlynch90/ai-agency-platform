@@ -45,7 +45,7 @@
           "@modelcontextprotocol/server-git": {
             "code": 1,
             "output": "",
-            "errorOutput": "npm notice Access token expired or revoked. Please try logging in again.\nnpm error code E404\nnpm error 404 Not Found - GET https://registry.npmjs.org/@modelcontextprotocol%2fserver-git - Not found\nnpm error 404\nnpm error 404  The requested resource '@modelcontextprotocol/server-git@*' could not be found or you do not have permission to access it.\nnpm error 404\nnpm error 404 Note that you can also install from a\nnpm error 404 tarball, folder, http url, or git url.\nnpm error A complete log of this run can be found in: /Users/daniellynch/.npm/_logs/2025-12-28T23_19_24_623Z-debug-0.log\n"
+            "errorOutput": "npm notice Access token expired or revoked. Please try logging in again.\nnpm error code E404\nnpm error 404 Not Found - GET https://registry.npmjs.org/@modelcontextprotocol%2fserver-git - Not found\nnpm error 404\nnpm error 404  The requested resource '@modelcontextprotocol/server-git@*' could not be found or you do not have permission to access it.\nnpm error 404\nnpm error 404 Note that you can also install from a\nnpm error 404 tarball, folder, http url, or git url.\nnpm error A complete log of this run can be found in: ${process.env.HOME}/.npm/_logs/2025-12-28T23_19_24_623Z-debug-0.log\n"
           },
           "@modelcontextprotocol/server-sequential-thinking": {
             "code": 1,
@@ -58,7 +58,7 @@
         "tools": {
           "git": {
             "status": "not_available",
-            "error": "Command failed: git --version\nxcrun: error: invalid DEVELOPER_DIR path (/Users/daniellynch/Developer), missing xcrun at: /Users/daniellynch/Developer/usr/bin/xcrun\n"
+            "error": "Command failed: git --version\nxcrun: error: invalid DEVELOPER_DIR path (${process.env.HOME}/Developer), missing xcrun at: ${process.env.HOME}/Developer/usr/bin/xcrun\n"
           },
           "node": {
             "status": "available",
@@ -106,7 +106,7 @@
           },
           "ansible": {
             "status": "available",
-            "version": "ansible [core 2.20.1]\n  config file = None\n  configured module search path = ['/Users/daniellynch/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']\n  ansible python module location = /opt/homebrew/Cellar/ansible/13.1.0/libexec/lib/python3.14/site-packages/ansible\n  ansible collection location = /Users/daniellynch/.ansible/collections:/usr/share/ansible/collections\n  executable location = /opt/homebrew/bin/ansible\n  python version = 3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.4.4.1)] (/opt/homebrew/Cellar/ansible/13.1.0/libexec/bin/python)\n  jinja version = 3.1.6\n  pyyaml version = 6.0.3 (with libyaml v0.2.5)"
+            "version": "ansible [core 2.20.1]\n  config file = None\n  configured module search path = ['${process.env.HOME}/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']\n  ansible python module location = /opt/homebrew/Cellar/ansible/13.1.0/libexec/lib/python3.14/site-packages/ansible\n  ansible collection location = ${process.env.HOME}/.ansible/collections:/usr/share/ansible/collections\n  executable location = /opt/homebrew/bin/ansible\n  python version = 3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.4.4.1)] (/opt/homebrew/Cellar/ansible/13.1.0/libexec/bin/python)\n  jinja version = 3.1.6\n  pyyaml version = 6.0.3 (with libyaml v0.2.5)"
           },
           "aws": {
             "status": "available",
@@ -118,11 +118,11 @@
           },
           "az": {
             "status": "available",
-            "version": "azure-cli                         2.81.0\n\ncore                              2.81.0\ntelemetry                          1.1.0\n\nDependencies:\nmsal                            1.34.0b1\nazure-mgmt-resource               23.3.0\n\nPython location '/opt/homebrew/Cellar/azure-cli/2.81.0/libexec/bin/python'\nConfig directory '/Users/daniellynch/.azure'\nExtensions directory '/Users/daniellynch/.azure/cliextensions'\n\nPython (Darwin) 3.13.11 (main, Dec  5 2025, 16:06:33) [Clang 17.0.0 (clang-1700.4.4.1)]\n\nLegal docs and information: aka.ms/AzureCliLegal\n\n\nYour CLI is up-to-date."
+            "version": "azure-cli                         2.81.0\n\ncore                              2.81.0\ntelemetry                          1.1.0\n\nDependencies:\nmsal                            1.34.0b1\nazure-mgmt-resource               23.3.0\n\nPython location '/opt/homebrew/Cellar/azure-cli/2.81.0/libexec/bin/python'\nConfig directory '${process.env.HOME}/.azure'\nExtensions directory '${process.env.HOME}/.azure/cliextensions'\n\nPython (Darwin) 3.13.11 (main, Dec  5 2025, 16:06:33) [Clang 17.0.0 (clang-1700.4.4.1)]\n\nLegal docs and information: aka.ms/AzureCliLegal\n\n\nYour CLI is up-to-date."
           },
           "make": {
             "status": "not_available",
-            "error": "Command failed: make --version\nxcrun: error: invalid DEVELOPER_DIR path (/Users/daniellynch/Developer), missing xcrun at: /Users/daniellynch/Developer/usr/bin/xcrun\n"
+            "error": "Command failed: make --version\nxcrun: error: invalid DEVELOPER_DIR path (${process.env.HOME}/Developer), missing xcrun at: ${process.env.HOME}/Developer/usr/bin/xcrun\n"
           },
           "cmake": {
             "status": "available",
@@ -210,7 +210,7 @@
           },
           "gpg": {
             "status": "available",
-            "version": "gpg (GnuPG) 2.4.8\nlibgcrypt 1.11.2\nCopyright (C) 2025 g10 Code GmbH\nLicense GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nHome: /Users/daniellynch/.gnupg\nSupported algorithms:\nPubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA\nCipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,\n        CAMELLIA128, CAMELLIA192, CAMELLIA256\nHash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224\nCompression: Uncompressed, ZIP, ZLIB, BZIP2"
+            "version": "gpg (GnuPG) 2.4.8\nlibgcrypt 1.11.2\nCopyright (C) 2025 g10 Code GmbH\nLicense GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nHome: ${process.env.HOME}/.gnupg\nSupported algorithms:\nPubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA\nCipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,\n        CAMELLIA128, CAMELLIA192, CAMELLIA256\nHash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224\nCompression: Uncompressed, ZIP, ZLIB, BZIP2"
           },
           "ssh": {
             "status": "available",

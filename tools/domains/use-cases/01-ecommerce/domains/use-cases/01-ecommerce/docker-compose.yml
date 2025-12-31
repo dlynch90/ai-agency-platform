@@ -1,8 +1,0 @@
-version: '3.8'
-services:
-  ecommerce-api:
-    build: .
-    ports:
-      - "8001:8000"
-    environment:
-      - USE_CASE_ID=01
